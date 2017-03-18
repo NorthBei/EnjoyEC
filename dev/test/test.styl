@@ -1,0 +1,45 @@
+@import "../../node_modules/kouto-swiss"
+
+meyer-reset()
+
+$xx = 50px
+
+foo = @block {
+  width: 20px
+  height: 20px
+}
+
+hh = @block{
+  color yellow
+}
+
+border-radius()
+  -webkit-border-radius arguments
+  -moz-border-radius arguments
+  border-radius arguments
+
+.www
+  color white
+  
+$www
+  color blue
+   
+$back
+    background red
+
+.back
+    background red
+    {foo}
+    {hh}
+
+.aa
+  width $xx
+  height $xx
+  background yellow
+  @extends .www
+    
+  @media screen and (max-width: 600px)
+      border-radius(5px)
+      @extends $back
+      {hh}
+      {foo}
