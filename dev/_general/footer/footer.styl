@@ -10,21 +10,35 @@
 #footer_link
     display: flex
     
-    ul
+    >ul
         display: flex
 
-        li
-            margin: 0 35px
+.footer_link
+        margin: 0 35px
 
-            i
-                margin-right: 10px
+        i
+            margin-right: 10px
 
 .copyright
     margin-top: 20px
 
 
++media-query( only screen ,max-width 850px )
+    #footer_link
+        flex-direction: column-reverse
+
+        ul
+            flex-direction: column
+            flex-axis: center center
+
+    .footer_link
+        margin-bottom: 30px
+
+    .copyright
+        margin-top: 0
 
 
+    
 
 
 

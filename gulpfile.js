@@ -18,7 +18,7 @@ gulp.task('default',['jade','stylus'], function() {
   console.log("default gulp running~");
 });
 
-gulp.task('initEnv',['webserver','watch'], function() {
+gulp.task('initEnv',['webserver','watch','default'], function() {
   console.log("gulp init environment~");
 });
 

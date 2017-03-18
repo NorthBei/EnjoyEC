@@ -2539,18 +2539,40 @@ a {
   display: -ms-flexbox;
   display: flex;
 }
-#footer_link ul {
+#footer_link >ul {
   display: -ms-flexbox;
   display: flex;
 }
-#footer_link ul li {
+.footer_link {
   margin: 0 35px;
 }
-#footer_link ul li i {
+.footer_link i {
   margin-right: 10px;
 }
 .copyright {
   margin-top: 20px;
+}
+@media only screen and (max-width: 850px) {
+  #footer_link {
+    -ms-flex-direction: column-reverse;
+    flex-direction: column-reverse;
+  }
+  #footer_link ul {
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-justify-content: center;
+    -ms-flex-pack: center;
+        justify-content: center;
+    -ms-align-items: center;
+    -ms-flex-align: center;
+        align-items: center;
+  }
+  .footer_link {
+    margin-bottom: 30px;
+  }
+  .copyright {
+    margin-top: 0;
+  }
 }
 
 /*# sourceMappingURL=all.css.map */
