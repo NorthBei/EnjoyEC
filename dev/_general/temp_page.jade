@@ -1,9 +1,11 @@
+doctype html
 html
     head
+        link(href='all.css', rel='stylesheet')
         block css
     body
-        include ./header.jade
-        main
+        include ./header/header.jade
+        main#main
             block content
             
-        include ./footer.jade
+        include ./footer/footer.jade
