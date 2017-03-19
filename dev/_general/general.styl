@@ -12,9 +12,17 @@ $fa-font-path = "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/fonts"
 //   fa(user)
 
 /*Define variable*/
-$font_pink = #D6645F
+$header_height = 156px
+$footer_height = 106px
 
-$small_font = 12px
+$pink_light = #FFF8F6
+$pink_medium = #D6645F
+$pink_deep = #D5948E
+$brown = #8B572A
+
+$font12 = 12px
+$font13 = 13px
+$font18 = 18px
 
 /*CSS reset*/
 ul
@@ -26,11 +34,13 @@ a
     text-decoration: none
     color: inherit
 
-//@import "header"
+/*header*/
+@import "./header/header"
 /*footer*/
 @import "./footer/footer"
 
-
+#main
+    min-height: calc("100vh - "+$header_height+" - "+$footer_height)
 
 
 

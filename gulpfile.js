@@ -89,6 +89,7 @@ gulp.task('stylus', function () {
 gulp.task('clean:css', function(){
     var deletedPath = del.sync(['./build/'+workingFolder+'/*.css','!build/**']);
     console.log('Files and folders that would be deleted:\n', deletedPath.join('\n'));
+
     // del(['tmp/*.js', '!tmp/unicorn.js']).then(paths => {
     // console.log('Deleted files and folders:\n', paths.join('\n'));
     // });

@@ -1,0 +1,49 @@
+$nav_btns_margin = 13.2%
+
+#header
+    height: $header_height
+
+.nav_btns_wrapper
+    background: $pink_deep
+    color: white
+    height: 45px
+    line-height: 45px
+
+.nav_btns
+    position: absolute
+    
+    &.left
+        left: $nav_btns_margin
+    
+    &.right
+        right: $nav_btns_margin
+    
+    i
+        margin: 0 5px
+        font-style: normal
+        font-size: $font18
+
+.nav_list_wrapper
+    background: $pink_light
+    display: flex
+    flex-direction: column
+    flex-axis: center center
+    font-size: $font13
+    color: $brown
+    padding-bottom: 10px
+
+#logo_img
+    height: 47px
+    width: 168px
+    margin: 20px 0
+       
+.nav_list
+    display: flex
+
+    >li
+        margin: 0 30px
+
+
+//+media-query( only screen ,max-width 900px )
+
+
