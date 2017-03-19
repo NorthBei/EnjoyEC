@@ -12,8 +12,6 @@ $fa-font-path = "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/fonts"
 //   fa(user)
 
 /*Define variable*/
-$header_height = 156px
-$footer_height = 106px
 
 $pink_light = #FFF8F6
 $pink_medium = #D6645F
@@ -39,8 +37,16 @@ a
 /*footer*/
 @import "./footer/footer"
 
+html
+  height: 100%;
+
+body
+  min-height: 100%
+  display: flex
+  flex-direction: column
+
 #main
-    min-height: calc("100vh - "+$header_height+" - "+$footer_height)
+    flex: 1
 
 
 

@@ -2519,9 +2519,6 @@ a {
   text-decoration: none;
   color: inherit;
 }
-#header {
-  height: 156px;
-}
 .nav_btns_wrapper {
   background: #d5948e;
   color: #fff;
@@ -2585,7 +2582,6 @@ a {
   -ms-flex-align: center;
       align-items: center;
   font-size: 12px;
-  height: 106px;
   box-sizing: border-box;
 }
 #footer_link {
@@ -2627,8 +2623,19 @@ a {
     margin-top: 0;
   }
 }
+html {
+  height: 100%;
+}
+body {
+  min-height: 100%;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
 #main {
-  min-height: calc(100vh - 156px - 106px);
+  -ms-flex: 1;
+  flex: 1;
 }
 
 /*# sourceMappingURL=all.css.map */
