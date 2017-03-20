@@ -17,6 +17,7 @@ $pink_light = #FFF8F6
 $pink_medium = #D6645F
 $pink_deep = #D5948E
 $brown = #8B572A
+$brown_icon_hover = #8E5651
 
 $font12 = 12px
 $font13 = 13px
@@ -34,6 +35,17 @@ a
     text-decoration: none
     color: inherit
 
+input
+    border: none
+    outline: none
+
+/*minix*/
+
+topDownTriangle(height,width,face-color)
+    border-top: height solid face-color
+    border-left: (width/2) solid transparent
+    border-right: (width/2) solid transparent
+
 /*header*/
 @import "./header/header"
 /*footer*/
@@ -41,6 +53,7 @@ a
 
 html
   height: 100%;
+  font-size: $font12
 
 body
   min-height: 100%

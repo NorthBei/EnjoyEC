@@ -1,5 +1,7 @@
 include ./logoImgBase64.jade
 
+-var line = "|"
+
 header#header
     nav.nav_btns_wrapper
         .nav_btns.left
@@ -7,23 +9,51 @@ header#header
                 i.fa.fa-instagram(aria-hidden='true')
             a(href="#")
                 i.fa.fa-facebook-official(aria-hidden='true')
-            i |
-            a(href="#")
+
+            | <i>|</i>
+            
+            span.dropdown_block_wrapper
                 i.fa.fa-user-circle-o.small_icon(aria-hidden='true')
+
+                ul.dropdown_block
+                    li 
+                        a(href="#") 訂單查詢
+                    li
+                        a(href="#") 我的收藏清單
+                    li
+                        a(href="#") 購物金折抵券
+                    li
+                        a(href="#") 帳戶設定
+                    li
+                        a(href="#") 登出
+
+
             a(href="#")
-             i.fa.fa-heart.small_icon(aria-hidden='true')
+                i.fa.fa-heart.small_icon(aria-hidden='true')
 
         .nav_btns.right
-            a(href="#")
+
+            span.dropdown_block_wrapper
                 i.fa.fa-search.small_icon(aria-hidden='true')
+                form.dropdown_block
+                    input(type="text" placeholder="Search...")#search_input
+                    input(type="submit" value="GO")#search_go
+
             a(href="#")
                 i.fa.fa-shopping-cart(aria-hidden='true')
 
     nav.nav_list_wrapper
         img(alt="Embedded Image" src=logoImgBase64)#logo_img
         
-        ul.nav_list
+        ul.parent_category_list
             li 限時優惠
+                div.child_category_wrapper
+                    ul.child_category_list
+                        li C&CHAT 幻彩系指油貼任選兩件500元
+                        li Dear Mia系列產品消費滿2,000元現折200元
+                        li 歡慶母親節·美體保養消費滿1500元現折500元
+                    img(src="./asset/pic1.png")
+                    
             li 最新商品
             li 熱門商品
             li 美甲彩繪

@@ -1,10 +1,11 @@
 $nav_btns_margin = 13.2%
-
+$search_component_height = 20px
+$nav_btns_wrapper_height = 45px
 .nav_btns_wrapper
     background: $pink_deep
     color: white
-    height: 45px
-    line-height: 45px
+    height: $nav_btns_wrapper_height
+    line-height: $nav_btns_wrapper_height
 
 .nav_btns
     position: absolute
@@ -14,14 +15,75 @@ $nav_btns_margin = 13.2%
     
     &.right
         right: $nav_btns_margin
+
+    >a,.dropdown_block_wrapper
+        &:hover
+            color: $brown_icon_hover
+
+    .dropdown_block_wrapper
+        display: inline-flex
+        flex-direction: column
+        flex-axis: center center
     
     i
         margin: 0 5px
         font-style: normal
         font-size: $font18
+        cursor: pointer
     
     .small_icon
         font-size: $font16
+
+.dropdown_block
+    background: white
+    display: flex
+    flex-axis: center center
+    padding: 0 10px
+    box-sizing: border-box
+    box-shadow: 0 2px 4px 0 #F0E1DB
+    position: absolute
+    white-space: nowrap
+    margin-top: 42px
+    height: 40px
+
+    >li
+        margin: 0 10px
+        color: $brown
+        line-height: 40px
+        cursor: pointer
+        &:hover
+            color: $pink_medium 
+    &:before
+        content: ''
+        position: absolute
+        left: 50%;
+        transform: translateX(-50%);
+        topDownTriangle( 7px, 6px , $pink_deep )
+        align-self: flex-start;
+
+    .nav_btns.right &
+        /*因為nav icon高度都不同，所以排列不整齊，導致margin會有些許差距需要特別設定*/
+        margin-top: 44px
+
+#search_input
+    border-bottom: 1px solid $pink_medium
+    height: ($search_component_height - 3)
+    flex: 1;
+    
+    &::placeholder
+        color: $pink_medium
+
+#search_go
+    size: 45px $search_component_height
+    background: $pink_medium
+    border: 1px solid $pink_medium
+    color: white
+    cursor: pointer
+    box-sizing: border-box
+
+    &:active
+        background: white
+        color: $pink_medium
 
 .nav_list_wrapper
     background: $pink_light
@@ -37,11 +99,45 @@ $nav_btns_margin = 13.2%
     width: 168px
     margin: 20px 0
        
-.nav_list
+.parent_category_list
     display: flex
 
     >li
         margin: 0 30px
+        cursor: pointer
+        display: flex
+        flex-direction: column
+        position: relative
+
+        &:hover
+            color: $pink_medium
+
+
+.child_category_wrapper
+    color: $brown_icon_hover
+    display: flex;
+    background: white
+    height: 220px
+    padding: 17px 20px
+    box-sizing: border-box
+    box-shadow: 0 1px 2px 0 rgba(97,97,97,0.70)
+    position: absolute
+    left: -40px
+    margin-top: 10px
+    white-space: nowrap
+
+    .child_category_list
+        padding-left: 10px
+        padding-right: 40px
+
+        >li
+            padding-top: 15px
+            width: 230px
+            white-space: normal
+
+
+            &:hover
+                color: $pink_medium
 
 /*special request*/
 
@@ -51,6 +147,7 @@ $nav_btns_margin = 13.2%
     top: -1px;
     font-size: $font15
 }
+
 
 //+media-query( only screen ,max-width 900px )
 
