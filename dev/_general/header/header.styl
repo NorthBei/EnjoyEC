@@ -19,6 +19,9 @@ $nav_btns_margin = 13.2%
         margin: 0 5px
         font-style: normal
         font-size: $font18
+    
+    .small_icon
+        font-size: $font16
 
 .nav_list_wrapper
     background: $pink_light
@@ -40,6 +43,14 @@ $nav_btns_margin = 13.2%
     >li
         margin: 0 30px
 
+/*special request*/
+
+//search icon min and move up 1px
+.fa-search:before {
+    position: relative;
+    top: -1px;
+    font-size: $font15
+}
 
 //+media-query( only screen ,max-width 900px )
 

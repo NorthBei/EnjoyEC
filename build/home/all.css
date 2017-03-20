@@ -2539,6 +2539,9 @@ a {
   font-style: normal;
   font-size: 18px;
 }
+.nav_btns .small_icon {
+  font-size: 16px;
+}
 .nav_list_wrapper {
   background: #fff8f6;
   display: -ms-flexbox;
@@ -2566,6 +2569,11 @@ a {
 }
 .nav_list >li {
   margin: 0 30px;
+}
+.fa-search:before {
+  position: relative;
+  top: -1px;
+  font-size: 15px;
 }
 #footer {
   background: #fff8f6;
