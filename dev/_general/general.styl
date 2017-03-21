@@ -38,13 +38,38 @@ a
 input
     border: none
     outline: none
-
+    
 /*minix*/
 
 topDownTriangle(height,width,face-color)
     border-top: height solid face-color
     border-left: (width/2) solid transparent
     border-right: (width/2) solid transparent
+
+/*OOCSS for reuse*/
+
+//1.animation
+
+show_dropdown_animation(trgger_hover_selector)
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px)
+    transition: visibility 0.15s linear, opacity 0.3s ease, transform 0.3s ease;
+
+    &:hover,/{trgger_hover_selector}
+        visibility: visible;
+        opacity: 1;
+        transform: translateY(0);
+    
+    &:after
+        content: '';
+        position: absolute;
+        top: -15px;
+        left: 50%;
+        transform: translateX(-50%);
+        height: 15px;
+        width: 100%;
+    
 
 /*header*/
 @import "./header/header"

@@ -45,6 +45,7 @@ $nav_btns_wrapper_height = 45px
     white-space: nowrap
     margin-top: 42px
     height: 40px
+    show_dropdown_animation(".dropdown_block_wrapper>i:hover + &")
 
     >li
         margin: 0 10px
@@ -69,8 +70,9 @@ $nav_btns_wrapper_height = 45px
     border-bottom: 1px solid $pink_medium
     height: ($search_component_height - 3)
     flex: 1;
-    
-    &::placeholder
+
+    //&::placeholder
+    +placeholder()
         color: $pink_medium
 
 #search_go
@@ -111,11 +113,11 @@ $nav_btns_wrapper_height = 45px
 
         &:hover
             color: $pink_medium
-
+            
 
 .child_category_wrapper
     color: $brown_icon_hover
-    display: flex;
+    display: flex
     background: white
     height: 220px
     padding: 17px 20px
@@ -125,7 +127,9 @@ $nav_btns_wrapper_height = 45px
     left: -40px
     margin-top: 10px
     white-space: nowrap
-
+    /*show*/
+    show_dropdown_animation(".parent_category_list>li:hover  &")
+    
     .child_category_list
         padding-left: 10px
         padding-right: 40px
@@ -147,7 +151,6 @@ $nav_btns_wrapper_height = 45px
     top: -1px;
     font-size: $font15
 }
-
 
 //+media-query( only screen ,max-width 900px )
 
