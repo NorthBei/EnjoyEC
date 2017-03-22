@@ -2564,6 +2564,9 @@ input {
 .nav_btns .small_icon {
   font-size: 16px;
 }
+.dropdown_block_wrapper>i.fa {
+  padding-bottom: 16px;
+}
 .dropdown_block {
   background: #fff;
   display: -ms-flexbox;
@@ -2579,7 +2582,7 @@ input {
   box-shadow: 0 2px 4px 0 #f0e1db;
   position: absolute;
   white-space: nowrap;
-  margin-top: 42px;
+  margin-top: 34px;
   height: 40px;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
   filter: alpha(opacity=0);
@@ -2596,14 +2599,14 @@ input {
   opacity: 1;
   transform: translateY(0);
 }
-.dropdown_block:after {
-  content: '';
-  position: absolute;
-  top: -15px;
-  left: 50%;
-  transform: translateX(-50%);
-  height: 15px;
-  width: 100%;
+.dropdown_block:hover:before {
+  border-top-width: 7px;
+  transform: translateY(0);
+}
+.dropdown_block_wrapper>i:hover + .dropdown_block:before {
+  border-top-width: 7px;
+  transform: translateY(0);
+  transition: transform 0.15s linear 0.4s, border-top-width 0.15s linear 0.4s;
 }
 .dropdown_block >li {
   margin: 0 10px;
@@ -2618,17 +2621,18 @@ input {
   content: '';
   position: absolute;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translateX(-50%) translateY(-7px);
   border-top: 7px solid #d5948e;
   border-left: 3px solid transparent;
   border-right: 3px solid transparent;
+  border-top-width: 0;
   -ms-align-self: flex-start;
   -ms-flex-item-align: start;
       align-self: flex-start;
 }
 .nav_btns.right .dropdown_block {
 /*因為nav icon高度都不同，所以排列不整齊，導致margin會有些許差距需要特別設定*/
-  margin-top: 44px;
+  margin-top: 36px;
 }
 #search_input {
   border-bottom: 1px solid #d6645f;
@@ -2727,14 +2731,14 @@ input {
   opacity: 1;
   transform: translateY(0);
 }
-.child_category_wrapper:after {
-  content: '';
-  position: absolute;
-  top: -15px;
-  left: 50%;
-  transform: translateX(-50%);
-  height: 15px;
-  width: 100%;
+.child_category_wrapper:hover:before {
+  border-top-width: 7px;
+  transform: translateY(0);
+}
+.parent_category_list>li:hover  .child_category_wrapper:before {
+  border-top-width: 7px;
+  transform: translateY(0);
+  transition: transform 0.15s linear 0.4s, border-top-width 0.15s linear 0.4s;
 }
 .child_category_wrapper .child_category_list {
   padding-left: 10px;

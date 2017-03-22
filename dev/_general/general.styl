@@ -60,15 +60,30 @@ show_dropdown_animation(trgger_hover_selector)
         visibility: visible;
         opacity: 1;
         transform: translateY(0);
+
+    &:hover:before
+        border-top-width: 7px;
+        transform: translateY(0);
+    // &:after
+    //     content: '';
+    //     position: absolute;
+    //     top: -15px;
+    //     left: 50%;
+    //     transform: translateX(-50%);
+    //     height: 15px;
+    //     width: 100%;
+
     
-    &:after
-        content: '';
-        position: absolute;
-        top: -15px;
-        left: 50%;
-        transform: translateX(-50%);
-        height: 15px;
-        width: 100%;
+    // &:hover:after
+    //     border-top-width: 7px
+    //     cursor: pointer
+    
+    {trgger_hover_selector}:before
+        border-top-width: 7px
+        transform: translateY(0)
+        transition: transform 0.15s linear 0.4s,border-top-width 0.15s linear 0.4s
+    
+    
     
 
 /*header*/
