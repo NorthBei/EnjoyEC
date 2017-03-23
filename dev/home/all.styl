@@ -1,1 +1,156 @@
 @import "../_general/general"
+
+
+$row_border_line_padding = 20px
+$row_border_line_color = #F1EFAB
+$row_after_layer = 3
+
+
+.bg_skin_light
+  background: #FFF8F6
+
+.bg_skin_deep
+  background: #F3E0D8
+
+.bg_pink_medium
+    background: #C8837C
+
+.bg_pink_deep
+    background: #8E5651
+
+#main
+    display: flex
+    flex-direction: column
+
+#top_banner
+    width:100%
+    background: #000
+    display:inline-flex
+    flex-wrap:wrap
+
+.col_left,.col_right
+    width:14%;
+    display:flex
+    flex-direction:column
+    order:3;
+
+.col_left
+  order:1
+
+.col_center
+  width:72%
+  order:2
+  padding-bottom:44.3%
+
+.row
+    width:100%
+    padding-bottom:160%
+    position:relative
+
+    &:hover:after
+        background: rgba(79,51,37,0.7);
+    
+    &:hover .category_text
+        opacity: 1
+
+    &:hover .category_text_en
+        transform: translateY(0)
+
+.row:after 
+    content: ''
+    position: absolute
+    width: 100%
+    height: 100%
+    z-index: $row_after_layer
+    transition: background 1.5s ease 0s
+
+
+.category_text
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    color: #fff;
+    text-align: center;
+    z-index: ($row_after_layer+2)
+    opacity:0
+    transition: opacity 1.5s ease 0s, transform 1.5s ease 0s
+
+.category_text_zhtw
+    font-size: $font35
+    margin-bottom: 5px
+
+.category_text_en
+    font-size: $font18
+    transform: translateY(20px)
+    transition: inherit
+
+.row>a
+    width: 100%;
+    display: block;
+    height: 100%;
+    position: absolute;
+
+    >img
+        position: absolute;
+        width:100%
+        height 100%
+
+
+.row:hover a::before, .row:hover a::after {
+    opacity: 1;
+    transform: scale(1);
+    z-index: ($row_after_layer + 1);
+}
+
+.row a::before {
+    border-bottom: 1px solid $row_border_line_color;
+    border-top: 1px solid $row_border_line_color;
+    transform: scale(0, 1);
+}
+
+.row a::after {
+    border-left: 1px solid $row_border_line_color ;
+    border-right: 1px solid $row_border_line_color ;
+    transform: scale(1, 0);
+}
+
+.row a::before, .row a::after {
+    bottom: $row_border_line_padding;
+    content: "";
+    left: $row_border_line_padding;
+    opacity: 0;
+    position: absolute;
+    right: $row_border_line_padding;
+    top: $row_border_line_padding;
+    transition: opacity 0.35s ease 0s, transform 0.35s ease 0s;
+}
+
+#bottom_banner
+    display: flex
+
+.col
+    width: 33.3%
+    padding-bottom: 18%
+
+@media screen and (max-width: 700px) {
+  
+    .col_center{
+        width:100%;
+        order:1;
+    }
+    .col_left,.col_right{
+        width:50%;
+        order:2;
+    }
+
+    #bottom_banner{
+        flex-direction: column
+        flex-wrap: wrap
+    }
+
+    .col{
+        width: 100%;
+        padding-bottom: 54%;
+    }
+}
