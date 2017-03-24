@@ -1,7 +1,7 @@
 extends ../_general/temp_page.jade
 
 block content
-    #top_banner
+    section#top_banner
         .col_center.bg_pink_medium
         .col_left
             .row.bg_skin_deep
@@ -27,7 +27,7 @@ block content
                 a(href="#")
                     img(src="./asset/香氛香氣banner.png")
 
-    #bottom_banner
+    section#bottom_banner
         
             .col.row.bg_skin_light
                 a(href="#")
@@ -52,4 +52,14 @@ block content
                         h2.category_text_zhtw 熱門商品
                         h6.category_text_en Hot Deals
     
-    
+    section#subscribe_newsletters
+        h1 訂閱電子報取得第一手優惠資訊！
+        h2 SIGN UP TO OUR WEEKLY NEWSLETTER
+        form
+            input(type='eamil' placeholder='Your email address')
+            input(type='submit' value='SUBSCRIBE')#subscribe_btn
+        div
+            a(href="#")
+                i.fa.fa-instagram(aria-hidden='true')
+            a(href="#")
+                i.fa.fa-facebook-official(aria-hidden='true')

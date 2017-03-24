@@ -134,6 +134,55 @@ $row_after_layer = 3
     width: 33.3%
     padding-bottom: 18%
 
+#subscribe_newsletters
+    display: flex
+    flex-axis: center
+    flex-direction: column
+    color: $pink_medium
+    padding: 50px 0
+
+    &>h1
+        font-size: $font20
+        
+    &>h2
+        font-weight: lighter;
+        color: #DFA69F
+        font-size: $font15
+    &>form
+        height: 40px
+        width: 370px
+        border-radius: 20px
+        display: flex
+        border: 1px solid $pink_medium
+        overflow: hidden
+        margin: 15px 0 55px
+
+        &>input[type="eamil"]
+            height: inherit
+            flex: 1
+            padding: 10px 20px
+            box-sizing: border-box
+
+            +placeholder()
+                color: $pink_deep
+                font-size: $font12
+
+    i
+        font-size: $font24
+        margin: 0 5px
+    
+    #subscribe_btn
+        height: inherit
+        width: 100px
+        color: white
+        background: $pink_medium
+        border-left: 1px solid $pink_medium
+
+        &:active
+            background: white
+            color: $pink_medium
+
+
 @media screen and (max-width: 700px) {
   
     .col_center{

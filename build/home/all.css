@@ -2994,6 +2994,76 @@ body {
   width: 33.3%;
   padding-bottom: 18%;
 }
+#subscribe_newsletters {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-justify-content: center;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-align-items: center;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  color: #d6645f;
+  padding: 50px 0;
+}
+#subscribe_newsletters>h1 {
+  font-size: 20px;
+}
+#subscribe_newsletters>h2 {
+  font-weight: lighter;
+  color: #dfa69f;
+  font-size: 15px;
+}
+#subscribe_newsletters>form {
+  height: 40px;
+  width: 370px;
+  border-radius: 20px;
+  display: -ms-flexbox;
+  display: flex;
+  border: 1px solid #d6645f;
+  overflow: hidden;
+  margin: 15px 0 55px;
+}
+#subscribe_newsletters>form>input[type="eamil"] {
+  height: inherit;
+  -ms-flex: 1;
+  flex: 1;
+  padding: 10px 20px;
+  box-sizing: border-box;
+}
+#subscribe_newsletters>form>input[type="eamil"]::-webkit-input-placeholder {
+  color: #d5948e;
+  font-size: 12px;
+}
+#subscribe_newsletters>form>input[type="eamil"]:-moz-placeholder {
+  color: #d5948e;
+  font-size: 12px;
+}
+#subscribe_newsletters>form>input[type="eamil"]::-moz-placeholder {
+  color: #d5948e;
+  font-size: 12px;
+}
+#subscribe_newsletters>form>input[type="eamil"]:-ms-input-placeholder {
+  color: #d5948e;
+  font-size: 12px;
+}
+#subscribe_newsletters i {
+  font-size: 24px;
+  margin: 0 5px;
+}
+#subscribe_newsletters #subscribe_btn {
+  height: inherit;
+  width: 100px;
+  color: #fff;
+  background: #d6645f;
+  border-left: 1px solid #d6645f;
+}
+#subscribe_newsletters #subscribe_btn:active {
+  background: #fff;
+  color: #d6645f;
+}
 @media screen and (max-width: 700px) {
   .col_center {
     width: 100%;
