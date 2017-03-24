@@ -1,9 +1,11 @@
 @import "../_general/general"
 
+//@import "../_general/third_part/slick-1.6.0/slick/slick-theme.css"
 
 $row_border_line_padding = 20px
 $row_border_line_color = #F1EFAB
 $row_after_layer = 3
+$slide_arrow_side_distance = 25px
 
 
 .bg_skin_light
@@ -40,11 +42,11 @@ $row_after_layer = 3
 .col_center
   width:72%
   order:2
-  padding-bottom:44.3%
+  padding-bottom:43.1%
 
 .row
     width:100%
-    padding-bottom:160%
+    padding-bottom:154%
     position:relative
 
     &:hover:after
@@ -191,6 +193,65 @@ $row_after_layer = 3
             color: $pink_medium
 
 
+/*add for third part lib slick http://kenwheeler.github.io/slick/ */
+.slick_slide
+    position: relative;
+    overflow:  hidden
+    display: flex;
+    height: 0;
+    
+    img
+        height: 100%;
+
+.slick-arrow
+    position: absolute
+    z-index: 5
+
+.slick-list.draggable
+    position: absolute;
+    width: 100%;
+    display: flex;
+    height: 100%
+
+.slick-track
+    display: flex;
+
+.slick-dotted.slick-slider
+    margin: 0
+.slick-dots
+    bottom: 10px
+
+.slick-prev,.slick-next
+    border: 1px solid white
+    border-radius: 50%
+    size: 30px
+
+    &:before
+        transform: scale(0.8, 1.4) translate(-60%, -51%);
+        position: absolute;
+        top: 50%;
+        height: 20px;
+        
+    //left/right arrow
+.slick-prev
+    left: $slide_arrow_side_distance
+    &:before
+        content: '<';
+        
+.slick-next
+    right: $slide_arrow_side_distance
+    &:before
+        content: '>';
+
+    //dots
+.slick-dots li button:before,
+.slick-dots li.slick-active button:before
+    color: white
+
+.slick-dots li
+    margin: 0
+
+/*add for third part lib slick http://kenwheeler.github.io/slick/ */
 +media-query( screen , max-width 1050px , min-width 700px )
     .category_text_zhtw
         font-size: $font22
@@ -218,5 +279,9 @@ $row_after_layer = 3
     .col{
         width: 100%;
         padding-bottom: 54%;
+    }
+
+    .slick_slide{
+        padding-bottom: 61%;
     }
 }

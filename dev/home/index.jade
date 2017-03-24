@@ -1,8 +1,26 @@
 extends ../_general/temp_page.jade
 
+block css
+    //link(rel='stylesheet', type='text/css', href='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.css')
+    link(rel='stylesheet', type='text/css', href='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.css')
+
+block js
+    script(type='text/javascript', src='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.js')
+    script
+        $(document).ready(function(){$('.slick_slide').slick({dots: true});});
+
 block content
     section#top_banner
-        .col_center.bg_pink_medium
+        .col_center.bg_pink_medium.slick_slide
+            div
+                img(src="./asset/banner.png", alt="")
+            div
+                img(src="./asset/banner.png", alt="")
+            div
+                img(src="./asset/banner.png", alt="")
+            div
+                img(src="./asset/banner.png", alt="")
+
         .col_left
             .row.bg_skin_deep
                 a(href="#")
