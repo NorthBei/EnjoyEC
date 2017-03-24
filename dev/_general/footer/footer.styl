@@ -1,7 +1,7 @@
 #footer
     background: $pink_light
     padding: 30px 0
-    color: $pink_medium
+    color: $pink_deep
     display: flex
     flex-direction: column
     flex-axis: center center
@@ -13,15 +13,20 @@
     
     >ul
         display: flex
+    a
+        &:hover
+            color:$pink_medium
+        
+        &:active
+            color:$pink_deep
+
 
 .footer_link
         margin: 0 35px
 
         i
             margin-right: 10px
-        
-        &:hover
-            color:$pink_deep
+
 
 .copyright
     margin-top: 20px
