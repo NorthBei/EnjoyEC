@@ -3010,11 +3010,13 @@ body {
 }
 #subscribe_newsletters>h1 {
   font-size: 20px;
+  margin-bottom: 5px;
 }
 #subscribe_newsletters>h2 {
   font-weight: lighter;
   color: #dfa69f;
   font-size: 15px;
+  margin-left: -7px;
 }
 #subscribe_newsletters>form {
   height: 40px;
@@ -3051,7 +3053,10 @@ body {
 }
 #subscribe_newsletters i {
   font-size: 24px;
-  margin: 0 5px;
+  margin: 0 10px;
+}
+#subscribe_newsletters i:hover {
+  color: #8e5651;
 }
 #subscribe_newsletters #subscribe_btn {
   height: inherit;
@@ -3059,6 +3064,7 @@ body {
   color: #fff;
   background: #d6645f;
   border-left: 1px solid #d6645f;
+  cursor: pointer;
 }
 #subscribe_newsletters #subscribe_btn:active {
   background: #fff;
