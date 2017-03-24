@@ -74,7 +74,7 @@ $row_after_layer = 3
     text-align: center;
     z-index: ($row_after_layer+2)
     opacity:0
-    transition: opacity 1.5s ease 0s, transform 1.5s ease 0s
+    transition: opacity 1s ease 0s, transform 0.8s ease 0s
 
 .category_text_zhtw
     font-size: $font35
@@ -123,7 +123,8 @@ $row_after_layer = 3
     position: absolute;
     right: $row_border_line_padding;
     top: $row_border_line_padding;
-    transition: opacity 0.35s ease 0s, transform 0.35s ease 0s;
+    transition: opacity 0.8s ease 0s, transform 0.8s ease 0s;
+    z-index: ($row_after_layer+2);
 }
 
 #bottom_banner
