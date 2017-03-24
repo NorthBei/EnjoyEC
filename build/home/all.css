@@ -2807,6 +2807,9 @@ p {
 .footer_link i {
   margin-right: 10px;
 }
+.footer_link:hover {
+  color: #d5948e;
+}
 .copyright {
   margin-top: 20px;
 }
@@ -3006,7 +3009,7 @@ body {
   -ms-flex-direction: column;
   flex-direction: column;
   color: #d6645f;
-  padding: 50px 0;
+  padding: 50px 40px;
 }
 #subscribe_newsletters>h1 {
   font-size: 20px;
@@ -3020,7 +3023,8 @@ body {
 }
 #subscribe_newsletters>form {
   height: 40px;
-  width: 370px;
+  max-width: 370px;
+  width: 100%;
   border-radius: 20px;
   display: -ms-flexbox;
   display: flex;
