@@ -2783,7 +2783,7 @@ select {
 #footer {
   background: #fff8f6;
   padding: 30px 0;
-  color: #d5948e;
+  color: #d6645f;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-direction: column;
@@ -2975,4 +2975,7 @@ body {
 .commodity_filter,
 .commodity_count {
   display: none;
+}
+#sub_section .page_nav {
+  margin-bottom: 32px;
 }

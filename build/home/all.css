@@ -2783,7 +2783,7 @@ select {
 #footer {
   background: #fff8f6;
   padding: 30px 0;
-  color: #d5948e;
+  color: #d6645f;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-direction: column;
@@ -3038,7 +3038,7 @@ body {
   display: flex;
   border: 1px solid #d6645f;
   overflow: hidden;
-  margin: 15px 0 55px;
+  margin: 15px 0 30px;
 }
 #subscribe_newsletters>form>input[type="eamil"] {
   height: inherit;
@@ -3066,6 +3066,7 @@ body {
 #subscribe_newsletters i {
   font-size: 24px;
   margin: 0 10px;
+  outline: none;
 }
 #subscribe_newsletters i:hover {
   color: #8e5651;
@@ -3164,6 +3165,10 @@ body {
   #subscribe_newsletters>h2 {
     font-size: 12px;
   }
+  #subscribe_newsletters i {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
 }
 @media screen and (max-width: 700px) {
   .col_center {
@@ -3193,5 +3198,3 @@ body {
     padding-bottom: 61%;
   }
 }
-
-/*# sourceMappingURL=all.css.map */

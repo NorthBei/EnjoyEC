@@ -161,7 +161,7 @@ $slide_arrow_side_distance = 25px
         display: flex
         border: 1px solid $pink_medium
         overflow: hidden
-        margin: 15px 0 55px
+        margin: 15px 0 30px
 
         &>input[type="eamil"]
             height: inherit
@@ -176,6 +176,7 @@ $slide_arrow_side_distance = 25px
     i
         font-size: $font24
         margin: 0 10px
+        outline: none
 
         &:hover
             color: $brown_icon_hover
@@ -262,10 +263,14 @@ $slide_arrow_side_distance = 25px
         font-size: $font13
 
 +media-query( screen , max-width 450px )
-    #subscribe_newsletters>h1
-        font-size: $font16
-    #subscribe_newsletters>h2
-        font-size: $font12
+    #subscribe_newsletters
+        &>h1
+            font-size: $font16
+        &>h2
+            font-size: $font12
+        i
+            margin-top:20px
+            margin-bottom: 20px
 
 @media screen and (max-width: 700px) {
   
