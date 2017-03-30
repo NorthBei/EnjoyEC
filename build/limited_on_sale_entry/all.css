@@ -2943,6 +2943,13 @@ body {
   #main {
     padding: 0 40px;
   }
+  .page_top_button {
+    display: none;
+    visibility: hidden;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: alpha(opacity=0);
+    opacity: 0;
+  }
 }
 @media only screen and (max-width: 850px) {
   #main {
