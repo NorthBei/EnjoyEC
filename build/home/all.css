@@ -3165,10 +3165,6 @@ body {
   #subscribe_newsletters>h2 {
     font-size: 12px;
   }
-  #subscribe_newsletters i {
-    margin-top: 20px;
-    margin-bottom: 20px;
-  }
 }
 @media screen and (max-width: 700px) {
   .col_center {
@@ -3198,3 +3194,5 @@ body {
     padding-bottom: 61%;
   }
 }
+
+/*# sourceMappingURL=all.css.map */
