@@ -11,25 +11,30 @@ const changed = require('gulp-changed');
 const plumber = require('gulp-plumber');
 const filter = require('gulp-filter');
 const progeny = require('gulp-progeny');
+const gutil = require("gulp-util");
 
-var workingFolder = "home";
+const webpack = require("webpack");
+const webpackConfig = require("./webpack.config.js");
+
+var workingFolder = "limited_on_sale_entry";
+//var workingFolder = "home";
 
 gulp.task('default',['jade','stylus'], function() {
   console.log("default gulp running~");
 });
 
-gulp.task('initEnv',['webserver','watch','default'], function() {
+gulp.task('initEnv',['webserver','watch','default','webpack'], function() {
   console.log("gulp init environment~");
 });
 
 gulp.task('webserver', function() {
-  gulp.src('./build/'+workingFolder)
+  gulp.src('./build/')
     .pipe(webserver({
       port:2234,
       livereload: true,
       directoryListing: false,
       open: true,
-      fallback: './index.html'
+      //fallback: './index.html'
     }));
 });
 
@@ -40,7 +45,7 @@ gulp.task('jade', function(){
 
     //find files that depend on the files that have changed 
     .pipe(jadeInheritance({basedir: './dev/'}))
-
+    .pipe(plumber())
     .on('error', handleError)
 
     //filter out partials (folders and files starting with "_" ) 
@@ -59,7 +64,7 @@ gulp.task('jade', function(){
     .pipe(gulp.dest('./build/'))
 });
 
-gulp.task('stylus', function () {
+gulp.task('stylus',['clean:css'], function () {
   return gulp.src('./dev/**/*.styl')
     .pipe(sourcemaps.init())
 
@@ -87,8 +92,11 @@ gulp.task('stylus', function () {
 });
 
 gulp.task('clean:css', function(){
-    var deletedPath = del.sync(['./build/'+workingFolder+'/*.css','!build/**']);
+    //var deletedPath = del.sync(['./build/'+workingFolder+'/*.css','!build/**']);
+    return del.sync(['./build/'+workingFolder+'/*.css','!build/**']);
     console.log('Files and folders that would be deleted:\n', deletedPath.join('\n'));
+    // Return the promise that del produces.
+    //return deletedPath;
 
     // del(['tmp/*.js', '!tmp/unicorn.js']).then(paths => {
     // console.log('Deleted files and folders:\n', paths.join('\n'));
@@ -97,9 +105,26 @@ gulp.task('clean:css', function(){
 
 gulp.task('watch', function() {
   gulp.watch('./dev/**/*.jade', ['jade'], {initialRun: false});
-  gulp.watch('./dev/**/*.styl', ['clean:css','stylus'], {initialRun: false});
+  gulp.watch('./dev/**/*.styl', ['stylus'], {initialRun: false});
+  gulp.watch('./dev/**/*.js', ['webpack'], {initialRun: false});
   //gulp.watch('public/javascripts/*js', ['scripts']);
 });
+
+gulp.task("webpack", function(callback) {
+  // run webpack
+  webpack(webpackConfig, function(err, stats) {
+    if(err) throw new gutil.PluginError("webpack", err);
+    gutil.log("[webpack]", stats.toString({
+      // output options
+      colors: true,
+      children: false,
+      chunks: false
+    }));
+    callback();
+  });
+});
+
+//or use it https://www.npmjs.com/package/gulp-webpack
 
 function handleError(err) {
     console.log(err.toString());

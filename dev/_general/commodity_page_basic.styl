@@ -1,0 +1,102 @@
+/*this css file include 
+1. the #main section css
+2.the top banner css 
+of commodity page
+*/
+
+#main
+    padding: 0 125px
+    margin-bottom: 60px
+    position: relative
+
+.page_top_button
+    position: fixed
+    bottom: 22px 
+    right: 55px
+    cursor: pointer
+    display: none
+
+.is_bottom
+    position: absolute;
+    bottom: 0;
+
+/*#main_banner css*/
+#main_banner
+    margin: 10px 0
+    
+#sub_section
+    display: flex
+    justify-content: space-between
+
+    .page_nav
+        color: $gray_link
+        margin-bottom: 15px
+
+.page_link
+    size 100% 0
+    display: block
+    position: relative
+    padding-bottom: 25.5%
+    margin-bottom: 30px
+
+    >img
+        position: absolute;
+        z-index: -1;
+        transform: translateX(-50%);
+        left: 50%;
+        size 100%
+
+    &:hover
+        background: rgba(214,100,95,0.33)
+
+&:last-child
+    margin-bottom: 0;
+
+.page_nav_separate
+    width: 12px;
+    display: inline-block;
+    text-align: center;
+
+.commodity_filter
+
+    &:after
+        content:'\25BC';
+        display:inline-block;
+        color:#C3C2C3;
+        background-color:#fff;
+        margin-left:-17px;   /* remove the damn :after space */
+        pointer-events:none; /* let the click pass trough */
+        transform: scale(0.6);
+
+    &>select
+        background: white
+        border-radius: 0
+        -webkit-appearance:initial
+        padding: 6px
+        border: 1px solid #C3C2C3;
+        size 145px 32px
+        margin-bottom: 20px
+
+.commodity_count       
+    color: $gray_link
+
++media-query( only screen ,max-width ($tablet_rwd_width + 150) )
+    #main
+        padding: 0 40px
++media-query( only screen ,max-width $tablet_rwd_width )
+    #main
+        padding: 0
+        margin-bottom: 0;
+
+    .page_nav
+        display: none
+
+    .page_link
+        padding-bottom: 33%;
+        margin-bottom: 5px;
+        >img
+            width: initial;
+
++media-query( only screen ,max-width $phone_rwd_width )
+    .page_link
+        padding-bottom: 40%;

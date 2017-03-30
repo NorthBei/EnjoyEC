@@ -2858,340 +2858,114 @@ body {
   -ms-flex: 1;
   flex: 1;
 }
-.bg_skin_light {
-  background: #fff8f6;
-}
-.bg_skin_deep {
-  background: #f3e0d8;
-}
-.bg_pink_medium {
-  background: #c8837c;
-}
-.bg_pink_deep {
-  background: #8e5651;
-}
 #main {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-direction: column;
-  flex-direction: column;
-}
-#top_banner {
-  width: 100%;
-  background: #000;
-  display: -ms-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-}
-.col_left,
-.col_right {
-  width: 14%;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -ms-order: 3;
-  -ms-flex-order: 3;
-      order: 3;
-}
-.col_left {
-  -ms-order: 1;
-  -ms-flex-order: 1;
-      order: 1;
-}
-.col_center {
-  width: 72%;
-  -ms-order: 2;
-  -ms-flex-order: 2;
-      order: 2;
-  padding-bottom: 43.1%;
-}
-.row {
-  width: 100%;
-  padding-bottom: 154%;
+  padding: 0 125px;
+  margin-bottom: 60px;
   position: relative;
 }
-.row:hover:after {
-  background: rgba(79,51,37,0.7);
-}
-.row:hover .category_text {
-  -ms-filter: none;
-  filter: none;
-  opacity: 1;
-}
-.row:hover .category_text_en {
-  transform: translateY(0);
-}
-.row:after {
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  z-index: 3;
-  transition: background 1.5s ease 0s;
-}
-.category_text {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  color: #fff;
-  text-align: center;
-  z-index: 5;
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
-  filter: alpha(opacity=0);
-  opacity: 0;
-  transition: opacity 1s ease 0s, transform 0.8s ease 0s;
-}
-.category_text_zhtw {
-  font-size: 35px;
-  margin-bottom: 5px;
-}
-.category_text_en {
-  font-size: 18px;
-  transform: translateY(20px);
-  transition: inherit;
-}
-.row>a {
-  width: 100%;
-  display: block;
-  height: 100%;
-  position: absolute;
-}
-.row>a >img {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-}
-.row:hover a::before,
-.row:hover a::after {
-  -ms-filter: none;
-  filter: none;
-  opacity: 1;
-  transform: scale(1);
-  z-index: 4;
-}
-.row a::before {
-  border-bottom: 1px solid #f1efab;
-  border-top: 1px solid #f1efab;
-  transform: scale(0, 1);
-}
-.row a::after {
-  border-left: 1px solid #f1efab;
-  border-right: 1px solid #f1efab;
-  transform: scale(1, 0);
-}
-.row a::before,
-.row a::after {
-  bottom: 20px;
-  content: "";
-  left: 20px;
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
-  filter: alpha(opacity=0);
-  opacity: 0;
-  position: absolute;
-  right: 20px;
-  top: 20px;
-  transition: opacity 0.8s ease 0s, transform 0.8s ease 0s;
-  z-index: 5;
-}
-#bottom_banner {
-  display: -ms-flexbox;
-  display: flex;
-}
-.col {
-  width: 33.3%;
-  padding-bottom: 18%;
-}
-#subscribe_newsletters {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-justify-content: center;
-  -ms-flex-pack: center;
-      justify-content: center;
-  -ms-align-items: center;
-  -ms-flex-align: center;
-      align-items: center;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  color: #d6645f;
-  padding: 50px 40px;
-}
-#subscribe_newsletters>h1 {
-  font-size: 20px;
-  margin-bottom: 5px;
-}
-#subscribe_newsletters>h2 {
-  font-weight: lighter;
-  color: #dfa69f;
-  font-size: 15px;
-  margin-left: -7px;
-}
-#subscribe_newsletters>form {
-  height: 40px;
-  max-width: 370px;
-  width: 100%;
-  border-radius: 20px;
-  display: -ms-flexbox;
-  display: flex;
-  border: 1px solid #d6645f;
-  overflow: hidden;
-  margin: 15px 0 55px;
-}
-#subscribe_newsletters>form>input[type="eamil"] {
-  height: inherit;
-  -ms-flex: 1;
-  flex: 1;
-  padding: 10px 20px;
-  box-sizing: border-box;
-}
-#subscribe_newsletters>form>input[type="eamil"]::-webkit-input-placeholder {
-  color: #d5948e;
-  font-size: 12px;
-}
-#subscribe_newsletters>form>input[type="eamil"]:-moz-placeholder {
-  color: #d5948e;
-  font-size: 12px;
-}
-#subscribe_newsletters>form>input[type="eamil"]::-moz-placeholder {
-  color: #d5948e;
-  font-size: 12px;
-}
-#subscribe_newsletters>form>input[type="eamil"]:-ms-input-placeholder {
-  color: #d5948e;
-  font-size: 12px;
-}
-#subscribe_newsletters i {
-  font-size: 24px;
-  margin: 0 10px;
-}
-#subscribe_newsletters i:hover {
-  color: #8e5651;
-}
-#subscribe_btn {
-  height: inherit;
-  width: 100px;
-  color: #fff;
-  background: #d6645f;
-  border-left: 1px solid #d6645f;
+.page_top_button {
+  position: fixed;
+  bottom: 22px;
+  right: 55px;
   cursor: pointer;
-  border-radius: 0;
+  display: none;
 }
-#subscribe_btn:active {
-  background: #fff;
-  color: #d6645f;
+.is_bottom {
+  position: absolute;
+  bottom: 0;
 }
-/*add for third part lib slick http://kenwheeler.github.io/slick/ */
-.slick_slide {
-  position: relative;
-  overflow: hidden;
+#main_banner {
+  margin: 10px 0;
+}
+#sub_section {
   display: -ms-flexbox;
   display: flex;
-  height: 0;
+  -ms-justify-content: space-between;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
 }
-.slick_slide img {
-  height: 100%;
+#sub_section .page_nav {
+  color: #9b9b9b;
+  margin-bottom: 15px;
 }
-.slick-arrow {
-  position: absolute;
-  z-index: 5;
-}
-.slick-list.draggable {
-  position: absolute;
+.page_link {
   width: 100%;
-  display: -ms-flexbox;
-  display: flex;
+  height: 0;
+  display: block;
+  position: relative;
+  padding-bottom: 25.5%;
+  margin-bottom: 30px;
+}
+.page_link >img {
+  position: absolute;
+  z-index: -1;
+  transform: translateX(-50%);
+  left: 50%;
+  width: 100%;
   height: 100%;
 }
-.slick-track {
-  display: -ms-flexbox;
-  display: flex;
+.page_link:hover {
+  background: rgba(214,100,95,0.33);
 }
-.slick-dotted.slick-slider {
-  margin: 0;
+:last-child {
+  margin-bottom: 0;
 }
-.slick-dots {
-  bottom: 10px;
+.page_nav_separate {
+  width: 12px;
+  display: inline-block;
+  text-align: center;
 }
-.slick-prev,
-.slick-next {
-  border: 1px solid #fff;
-  border-radius: 50%;
-  width: 30px;
-  height: 30px;
+.commodity_filter:after {
+  content: '\25BC';
+  display: inline-block;
+  color: #c3c2c3;
+  background-color: #fff;
+  margin-left: -17px;
+/* remove the damn :after space */
+  pointer-events: none;
+/* let the click pass trough */
+  transform: scale(0.6);
 }
-.slick-prev:before,
-.slick-next:before {
-  transform: scale(0.8, 1.4) translate(-60%, -51%);
-  position: absolute;
-  top: 50%;
-  height: 20px;
+.commodity_filter>select {
+  background: #fff;
+  border-radius: 0;
+  -webkit-appearance: initial;
+  padding: 6px;
+  border: 1px solid #c3c2c3;
+  width: 145px;
+  height: 32px;
+  margin-bottom: 20px;
 }
-.slick-prev {
-  left: 25px;
+.commodity_count {
+  color: #9b9b9b;
 }
-.slick-prev:before {
-  content: '<';
-}
-.slick-next {
-  right: 25px;
-}
-.slick-next:before {
-  content: '>';
-}
-.slick-dots li button:before,
-.slick-dots li.slick-active button:before {
-  color: #fff;
-}
-.slick-dots li {
-  margin: 0;
-}
-/*add for third part lib slick http://kenwheeler.github.io/slick/ */
-@media screen and (max-width: 1050px) and (min-width: 700px) {
-  .category_text_zhtw {
-    font-size: 22px;
-  }
-  .category_text_en {
-    font-size: 13px;
+@media only screen and (max-width: 1000px) {
+  #main {
+    padding: 0 40px;
   }
 }
-@media screen and (max-width: 450px) {
-  #subscribe_newsletters>h1 {
-    font-size: 16px;
+@media only screen and (max-width: 850px) {
+  #main {
+    padding: 0;
+    margin-bottom: 0;
   }
-  #subscribe_newsletters>h2 {
-    font-size: 12px;
+  .page_nav {
+    display: none;
   }
-}
-@media screen and (max-width: 700px) {
-  .col_center {
-    width: 100%;
-    -ms-order: 1;
-    -ms-flex-order: 1;
-        order: 1;
+  .page_link {
+    padding-bottom: 33%;
+    margin-bottom: 5px;
   }
-  .col_left,
-  .col_right {
-    width: 50%;
-    -ms-order: 2;
-    -ms-flex-order: 2;
-        order: 2;
-  }
-  #bottom_banner {
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-  }
-  .col {
-    width: 100%;
-    padding-bottom: 54%;
-  }
-  .slick_slide {
-    padding-bottom: 61%;
+  .page_link >img {
+    width: initial;
   }
 }
-
-/*# sourceMappingURL=all.css.map */
+@media only screen and (max-width: 550px) {
+  .page_link {
+    padding-bottom: 40%;
+  }
+}
+.commodity_filter,
+.commodity_count {
+  display: none;
+}
