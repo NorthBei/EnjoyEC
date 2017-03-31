@@ -5,7 +5,9 @@ of commodity page
 */
 
 #main
-    padding: 0 125px
+    display: flex
+    flex-axis: center
+    flex-direction: column
     margin-bottom: 60px
     position: relative
 
@@ -33,24 +35,19 @@ of commodity page
         margin-bottom: 15px
 
 .page_link
-    size 100% 0
-    display: block
+    display: inline-flex
+    flex-axis: center
     position: relative
-    padding-bottom: 25.5%
     margin-bottom: 30px
 
     >img
-        position: absolute;
-        z-index: -1;
-        transform: translateX(-50%);
-        left: 50%;
-        size 100%
+        size 1185px 300px
 
     &:hover
         background: rgba(214,100,95,0.33)
-
-&:last-child
-    margin-bottom: 0;
+    
+    &:last-child
+        margin-bottom: 0
 
 .page_nav_separate
     width: 12px;
@@ -81,27 +78,30 @@ of commodity page
     color: $gray_link
 
 +media-query( only screen ,max-width ($tablet_rwd_width + 150) )
-    #main
-        padding: 0 40px
 
     .page_top_button
         display: none
         visibility: hidden
         opacity: 0
-+media-query( only screen ,max-width $tablet_rwd_width )
-    #main
-        padding: 0
-        margin-bottom: 0;
 
     .page_nav
         display: none
 
++media-query( only screen ,max-width $tablet_rwd_width )
+    #main
+        margin-bottom: 0;
+
     .page_link
-        padding-bottom: 33%;
-        margin-bottom: 5px;
+        margin-bottom: 5px
+
         >img
-            width: initial;
+            height: 200px
+            width: initial
+            position: relative
+            z-index: -1
+        &:last-child
+            margin-bottom: 10px
 
 +media-query( only screen ,max-width $phone_rwd_width )
-    .page_link
-        padding-bottom: 40%;
+    .page_link>img
+        height: 130px

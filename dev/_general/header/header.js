@@ -1,0 +1,21 @@
+$(document).ready(function() {
+    var navHeight = $("#header").height();
+    var isCrossHeader = false;
+    
+    $(document).on("scroll",function(){
+        
+        var topHeight = document.documentElement.scrollTop||document.body.scrollTop;
+        // console.log("topHeight1:"+topHeight);
+        // console.log("navHeight:"+navHeight);
+        
+        if(topHeight>= navHeight && isCrossHeader == false){
+            isCrossHeader = true;
+            $("#header").addClass("scroll_header");
+        }
+        else if(topHeight<= 0 && isCrossHeader == true){
+            isCrossHeader = false;
+            $("#header").removeClass("scroll_header");
+        }
+
+    });
+});
