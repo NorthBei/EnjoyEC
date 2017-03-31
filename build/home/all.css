@@ -2808,7 +2808,8 @@ select {
   flex-direction: row;
   height: 45px;
   padding: 0;
-  width: 1185px;
+  max-width: 1185px;
+  width: 100%;
   -ms-justify-content: space-between;
   -ms-flex-pack: justify;
       justify-content: space-between;
@@ -2957,7 +2958,7 @@ body {
   -ms-order: 2;
   -ms-flex-order: 2;
       order: 2;
-  padding-bottom: 43.1%;
+  padding-bottom: 43.12%;
 }
 .row {
   width: 100%;
@@ -3149,6 +3150,9 @@ body {
 .slick-arrow {
   position: absolute;
   z-index: 5;
+  transform: translateY(-50%);
+  top: 50%;
+  cursor: pointer;
 }
 .slick-list.draggable {
   position: absolute;
@@ -3167,31 +3171,17 @@ body {
 .slick-dots {
   bottom: 10px;
 }
-.slick-prev,
-.slick-next {
-  border: 1px solid #fff;
+#slick-prev,
+#slick-next {
   border-radius: 50%;
   width: 30px;
   height: 30px;
 }
-.slick-prev:before,
-.slick-next:before {
-  transform: scale(0.8, 1.4) translate(-60%, -51%);
-  position: absolute;
-  top: 50%;
-  height: 20px;
-}
-.slick-prev {
+#slick-prev {
   left: 25px;
 }
-.slick-prev:before {
-  content: '<';
-}
-.slick-next {
+#slick-next {
   right: 25px;
-}
-.slick-next:before {
-  content: '>';
 }
 .slick-dots li button:before,
 .slick-dots li.slick-active button:before {

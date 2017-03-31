@@ -42,7 +42,7 @@ $slide_arrow_side_distance = 25px
 .col_center
   width:72%
   order:2
-  padding-bottom:43.1%
+  padding-bottom:43.12%
 
 .row
     width:100%
@@ -208,6 +208,9 @@ $slide_arrow_side_distance = 25px
 .slick-arrow
     position: absolute
     z-index: 5
+    transform: translateY(-50%);
+    top: 50%;
+    cursor: pointer
 
 .slick-list.draggable
     position: absolute;
@@ -223,27 +226,16 @@ $slide_arrow_side_distance = 25px
 .slick-dots
     bottom: 10px
 
-.slick-prev,.slick-next
-    border: 1px solid white
+#slick-prev,#slick-next
     border-radius: 50%
     size: 30px
 
-    &:before
-        transform: scale(0.8, 1.4) translate(-60%, -51%);
-        position: absolute;
-        top: 50%;
-        height: 20px;
-        
     //left/right arrow
-.slick-prev
+#slick-prev
     left: $slide_arrow_side_distance
-    &:before
-        content: '<';
         
-.slick-next
+#slick-next
     right: $slide_arrow_side_distance
-    &:before
-        content: '>';
 
     //dots
 .slick-dots li button:before,
