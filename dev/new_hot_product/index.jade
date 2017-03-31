@@ -1,0 +1,7 @@
+extends ../_general/temp_page.jade
+include ../_general/banner_section/banner_section.jade
+
+block content
+    include ../_general/page_top/page_top_button.jade
+    -var navArray = ["首頁","限時優惠","C&CHAT 幻彩系指油貼任選兩件500元"]
+    +banner_section("","./asset/banner.png",navArray,true)

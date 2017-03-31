@@ -1,8 +1,44 @@
 @import "../_general/general"
-@import "../_general/commodity_page_basic"
+@import "../_general/page_top/page_top_button"
+
+
+#main
+    display: flex
+    flex-axis: center
+    flex-direction: column
+    margin-bottom: 60px
+
+//只有限時優惠總頁是連結
+.page_link
+    position: relative
+    margin-bottom: 30px
+    cursor: pointer
+
+    >img
+        position: relative;
+        z-index: -1;
+        size $banner_max_width 300px
+
+    &:hover
+        background: rgba(214,100,95,0.33)
+    
+    &:last-child
+        margin-bottom: 0
 
 .commodity_filter,.commodity_count
     display: none
 
-#sub_section .page_nav
+#page_info
     margin-bottom: 32px
+
++media-query( only screen ,max-width $tablet_rwd_width )
+    #main
+        margin-bottom: 0;
+
+    .page_link
+        margin-bottom: 5px
+        
+        &:last-child
+            margin-bottom: 10px
+
+@import "../_general/banner_section/banner_section"

@@ -2936,54 +2936,6 @@ body {
 #main {
   display: -ms-flexbox;
   display: flex;
-  -ms-justify-content: center;
-  -ms-flex-pack: center;
-      justify-content: center;
-  -ms-align-items: center;
-  -ms-flex-align: center;
-      align-items: center;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  margin-bottom: 60px;
-}
-.page_link {
-  position: relative;
-  margin-bottom: 30px;
-  cursor: pointer;
-}
-.page_link >img {
-  position: relative;
-  z-index: -1;
-  width: 1185px;
-  height: 300px;
-}
-.page_link:hover {
-  background: rgba(214,100,95,0.33);
-}
-.page_link:last-child {
-  margin-bottom: 0;
-}
-.commodity_filter,
-.commodity_count {
-  display: none;
-}
-#page_info {
-  margin-bottom: 32px;
-}
-@media only screen and (max-width: 850px) {
-  #main {
-    margin-bottom: 0;
-  }
-  .page_link {
-    margin-bottom: 5px;
-  }
-  .page_link:last-child {
-    margin-bottom: 10px;
-  }
-}
-#main {
-  display: -ms-flexbox;
-  display: flex;
   -ms-flex-direction: column;
   flex-direction: column;
   -ms-align-items: center;
@@ -3078,6 +3030,27 @@ body {
   .page_link>img {
     height: 130px;
   }
+}
+.commodity_filter:after {
+  content: '\25BC';
+  display: inline-block;
+  color: #c3c2c3;
+  background-color: #fff;
+  margin-left: -17px;
+/* remove the damn :after space */
+  pointer-events: none;
+/* let the click pass trough */
+  transform: scale(0.6);
+}
+.commodity_filter>select {
+  background: #fff;
+  border-radius: 0;
+  -webkit-appearance: initial;
+  padding: 6px;
+  border: 1px solid #c3c2c3;
+  width: 145px;
+  height: 32px;
+  margin-bottom: 20px;
 }
 
 /*# sourceMappingURL=all.css.map */

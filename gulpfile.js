@@ -92,16 +92,17 @@ gulp.task('stylus',['clean:css'], function () {
 });
 
 gulp.task('clean:css', function(){
-    //var deletedPath = del.sync(['./build/'+workingFolder+'/*.css','!build/**']);
-    return del.sync(['./build/'+workingFolder+'/*.css','!build/**']);
+    var deletedPath = del.sync(['./build/**/*.css','!build/**']);
+    //return del.sync(['./build/**/all.css','!build/**']);
     console.log('Files and folders that would be deleted:\n', deletedPath.join('\n'));
     // Return the promise that del produces.
-    //return deletedPath;
+    return deletedPath;
 
     // del(['tmp/*.js', '!tmp/unicorn.js']).then(paths => {
     // console.log('Deleted files and folders:\n', paths.join('\n'));
     // });
 });
+/* del with pipe https://www.npmjs.com/package/vinyl-paths*/
 
 gulp.task('watch', function() {
   gulp.watch('./dev/**/*.jade', ['jade'], {initialRun: false});

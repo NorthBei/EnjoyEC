@@ -146,10 +146,6 @@ $(document).ready(function() {
 
 __webpack_require__(2);
 __webpack_require__(0);
-// $(document).ready(function() { 
-    
-// });
-
 
 /***/ })
 /******/ ]);

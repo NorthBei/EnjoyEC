@@ -1,0 +1,68 @@
+#main
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+#main_section
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-axis:center
+
+#main_banner
+    margin: 10px 0
+
+#sub_section
+    display: flex
+    flex-direction: column
+    width: 100%;
+    max-width: $banner_max_width
+
+#page_info
+    display: flex
+    justify-content: space-between
+    margin-bottom: 17px;
+    color: $gray_link
+
+.page_nav_separate
+    width: 12px;
+    display: inline-block;
+    text-align: center;
+
+.page_link
+    display: inline-flex
+    flex-axis: center
+    cursor: default
+    
+
++media-query( only screen ,max-width ($banner_max_width) )
+    .page_link>img
+        height: 250px
+        width: initial
+
+    .page_nav
+        display: none
+
+    #sub_section
+        flex-direction: row-reverse
+        justify-content: space-between
+        //height is change frome 300px to 205px
+        max-width: ($banner_max_width * 250/300)
+
++media-query( only screen ,max-width ($banner_max_width * 250/300) )
+    .commodity_count
+        padding-right: 10px
+    .commodity_filter
+        padding-left: 10px
+
++media-query( only screen ,max-width $tablet_rwd_width )
+
+    .page_link>img
+        height: 200px
+        width: initial
+
+    #sub_section
+        max-width: ($banner_max_width * 200/300)
++media-query( only screen ,max-width $phone_rwd_width )
+    .page_link>img
+        height: 130px

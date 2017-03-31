@@ -133,9 +133,11 @@ d.slice(e-c+1,e+c+2).addClass("slick-active").attr("aria-hidden","false")),0===a
 __webpack_require__(3);
 __webpack_require__(0);
 $(document).ready(function(){
-    $('.slick_slide').slick({dots: true,
-    prevArrow:'<img src="./asset/Circled-Chevron-Left.png" id="slick-prev" class="slick-arrow">',
-    nextArrow:'<img src="./asset/Circled-Chevron-Right.png" id="slick-next" class="slick-arrow">'});
+    $('.slick_slide').slick({
+        dots: true,
+        prevArrow:'<img src="./asset/Circled-Chevron-Left.png" id="slick-prev" class="slick-arrow">',
+        nextArrow:'<img src="./asset/Circled-Chevron-Right.png" id="slick-next" class="slick-arrow">'
+    });
 });
 
 /***/ }),
