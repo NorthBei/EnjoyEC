@@ -1,0 +1,119 @@
+$tag_size = 62px
+$icon_button_size = 57px
+$product_name_lineHeight = 18px
+
+.product_wrapper
+    max-width:285px
+    width: 100%
+    position: relative
+    color: white
+    display: flex
+    flex-direction: column
+    align-items: center
+    
+    .tag
+        border-radius: 50%
+        size $tag_size
+        position: absolute
+        top: -9px
+        right: -9px
+        font-size: 16px
+        display: flex
+        flex-axis: center
+
+    // &:nth-child(4n)
+    //     margin-right: 0;
+
+.product_info
+    color: black
+    padding: 0 5px
+    text-align: center
+    font-size: 16px
+    width: 100%
+.product_name
+    margin: 10px 0
+    line-height: $product_name_lineHeight
+    min-height: $product_name_lineHeight*2
+    
+.product.price
+    border: 1px solid $pink_deep
+    border-left:none
+    border-right:none
+    padding: 10px 0
+
+.product_img_wrapper
+    size 285px 300px
+
+    &:hover
+        background: rgba(214,100,95,0.33);
+        transition: background 0.5s ease-in-out
+    &:hover .icon_wrapper
+        opacity: 1
+    img
+        absolute: 0
+        z-index: -1
+        width: 100%;
+
+.icon_wrapper
+    size 100%
+    display: flex;
+    justify-content: center;
+    flex-axis: center
+    opacity: 0
+    transition: all 0.5s ease-in-out
+    &>.icon_btn
+        size: $icon_button_size
+        background: $pink_medium
+        transition: inherit
+        border-radius: 50%
+        display: flex;
+        flex-axis: center
+        font-size: 25px;
+        margin: 0 10px;
+        cursor: pointer
+
+        &:hover
+            transform: scale(1.1)
+
+.add_shopping_cart
+    border: 1px solid $pink_deep
+    size 201px 40px
+    border-radius: 10px
+    color: $pink_medium
+    font-size: 18px
+    display: flex
+    flex-axis: center
+    margin-top: 20px
+    cursor: pointer
+
+    &:hover
+        background: $pink_deep
+        color: white
+
+.hot
+    background: #E6939D
+.new
+    background: #87DCC2
+.sale
+    background: #F7CC87
+
++media-query( only screen ,max-width $tablet_rwd_width )
+    .product_wrapper
+        max-width:172px
+    
+        .tag
+            size: 34px
+
+    .product_img_wrapper
+        size: 172px 180px
+    
+    .product_info,.tag
+        font-size: 12px
+    
+    .icon_btn
+        size 42px
+        font-size: 20px
+    
+    .add_shopping_cart
+        size: 130px 30px
+        font-size: 13px

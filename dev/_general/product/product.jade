@@ -1,0 +1,23 @@
+mixin product(imgPath,isNeedCartButton,tag)
+
+    section.product_wrapper
+
+        if tag == "new"
+            .tag.new New
+        else if tag == "hot"
+            .tag.hot Hot
+        else if tag == "sale"
+            .tag.sale Sale
+
+        .product_img_wrapper
+            div.icon_wrapper
+                .icon_btn.fa.fa-heart
+                .icon_btn.fa.fa-shopping-cart
+            //a(href="")
+            img(src=imgPath)
+        .product_info
+            .product_name 如膠似漆2.0系列-We The Female 凱莉的最愛 ISLW64
+            .product.price $ 250
+
+        if isNeedCartButton
+            .add_shopping_cart 加入購物車

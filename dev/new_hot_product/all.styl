@@ -2,3 +2,34 @@
 @import "../_general/page_top/page_top_button"
 @import "../_general/banner_section/banner_section"
 @import "../_general/filter/filter"
+@import "../_general/product/product"
+@import "../_general/page_num/page_num"
+
+/*override css in page_top_button*/
+.is_bottom
+    bottom: 160px;
+/*override css in page_top_button*/
+
+#product
+    max-width: $banner_max_width
+    width: 100%
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+
+.product_wrapper
+    margin-bottom: 50px
+
+#page_num
+    margin: 20px 0 70px
+
++media-query( only screen ,max-width ($banner_max_width) )
+    #product
+        max-width: ($banner_max_width * 250/300)
+        justify-content: space-around
+
+//+media-query( only screen ,max-width ($banner_max_width * 250/300) )
+    
++media-query( only screen ,max-width $tablet_rwd_width )
+    .product_wrapper
+        margin-bottom: 20px
