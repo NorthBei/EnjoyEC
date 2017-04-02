@@ -1,0 +1,69 @@
+//login section
+.login_section
+    display: flex
+    flex-direction: column
+    flex-axis: center
+    width: 289px
+
+    &>h1
+        color: #D6645F
+        font-size: 28px
+        margin-bottom: 32px
+        font-weight: lighter
+    &>hr
+        width: 100%
+        padding: 0;
+        border: none;
+        border-top: 1px solid #9B9B9B;
+        color: #9B9B9B;
+        text-align: center;
+        &:after
+            content: "or";
+            display: inline-block;
+            position: relative;
+            top: -0.7em;
+            font-size: 14px;
+            padding: 0 0.5em;
+            background: white;
+
+.login_input,.login_button
+    width: 100%
+    height: 51px
+    border-radius: 10px
+    box-sizing: border-box
+    margin: 8px 0
+
+.login_input
+    border: 1px solid #979797
+    padding: 15px 25px
+    +placeholder()
+        color: #C3C2C3
+        font-size: 14px
+
+.login_button
+    display: flex
+    flex-axis: center
+    color: white
+    font-size: 18px
+    cursor: pointer
+
+.fb_login
+    background: $fb_background
+
+    &:hover
+        background: $fb_background_hover
+
+.email_login
+    background: $pink_deep
+    margin-top: 15px
+    &:hover
+        background: #C8837C
+.error_message
+    color: #950012
+    font-size: 12px
+    text-align: center
+.forget_password
+    margin-top: 15px
+    color: $pink_medium
+    
+//login section

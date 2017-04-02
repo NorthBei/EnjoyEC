@@ -3176,6 +3176,9 @@ body {
   .page_link>img {
     height: 130px;
   }
+  .commodity_filter {
+    padding-left: 2px;
+  }
 }
 
 /*# sourceMappingURL=all.css.map */

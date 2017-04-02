@@ -1,0 +1,78 @@
+@import "../_general/general"
+@import "../_general/login/login"
+
+$button_and_input_width = 289px
+
+#main
+    display: flex;
+    flex-axis: center
+
+.section_wrapper
+    display: flex;
+    flex-axis: center
+
+.split_line
+    height: 100%;
+    min-height: 500px;
+    width: 1px;
+    background: #c3c2c3;
+    margin: 0 96px;
+
+//login.styl
+
+.first_buy
+    display: flex
+    flex-direction: column
+    flex-axis:center
+    color: $pink_medium
+
+    .title
+        font-size: 46px
+        font-weight: lighter
+    .not_count
+        font-weight: lighter
+        font-size: 31px
+    .go_to_pay
+        width: $button_and_input_width
+        height: 51px
+        background: $pink_deep
+        margin-top: 40px
+        color: white  
+        display: flex;
+        flex-axis:center
+        font-size: 18px;
+        border-radius: 10px;
+
+        &:hover
+            background: #C8837C
+#footer
+    display: none
+
++media-query( only screen ,max-width $tablet_rwd_width )
+    .split_line
+        margin: 0
+    .section_wrapper
+        justify-content: space-around;
+        width: 100%;
+
++media-query( only screen ,max-width ($phone_rwd_width + 100) )
+    .section_wrapper
+        flex-direction: column-reverse;
+        width: initial
+    
+    .slogan_wrapper
+        display: flex
+
+        .title,.not_count
+            font-size: 23px
+            margin: 0 5px
+        .title
+            font-weight: initial
+            
+    .first_buy>.go_to_pay
+            margin-top: 10px
+
+    .split_line
+        min-height: 1px;
+        width: 120%;
+        margin: 25px 0 15px;

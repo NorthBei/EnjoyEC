@@ -1,0 +1,15 @@
+extends ../_general/temp_page.jade
+include ../_general/login/login.jade
+
+block content
+    div.section_wrapper
+
+        +login()
+
+        section.split_line
+
+        section.first_buy
+            div.slogan_wrapper
+                h1.title 首次購物
+                h2.not_count 還沒有帳戶?
+            a(href="").go_to_pay 直接前往結帳
