@@ -1,8 +1,9 @@
 extends ../_general/temp_page.jade
 include ../_general/banner_section/banner_section.jade
+include ../_general/product/product.jade
 
 block css
-    link(rel='stylesheet', type='text/css', href='../general/slick/slick-theme.css')
+    //link(rel='stylesheet', type='text/css', href='../general/slick/slick-theme.css')
 
 block js
     script(type='text/javascript', src='../general/slick/slick.min.js')
@@ -11,5 +12,62 @@ block content
     -var navArray = ["首頁","限時優惠","指甲油","Dear Mia 美甲光凝膠-瓶裝 一步膠 色膠-螢光系列 粉紅檸檬汁"]
     +banner_section("","./asset/banner.png",navArray,false)
 
-    div#product_intro_wrapper
+    div.product_intro_wrapper
+        section
+            div#product_photo_list
+                img(src="./asset/商品係圖-1.png")
+                img(src="./asset/商品係圖-2.png")
+                img(src="./asset/商品係圖-3.png")
+                img(src="./asset/商品係圖-4.png")
+                img(src="./asset/商品係圖-5.png")
+                img(src="./asset/商品係圖-1.png")
+                img(src="./asset/商品係圖-2.png")
 
+            img(src="./asset/商品圖.png")#product_photo
+        section.product_info_wrapper
+            span.coupon Dear Mia系列產品消費滿2,000元現折200元
+            h1 Dear Mia 美甲光凝膠-瓶裝 一步膠 色膠-螢光系列 粉紅檸檬汁
+            span.product_info_sub_wrapper
+                h2 商品介紹 |
+                p 採用法國Durlin大廠原料，發色飽滿、刷感均勻 不含甲醛與鄰苯二甲酸脂類（Phthalate esters）孕婦美人也能一起艷光四射！ 每罐均含維他命F（Glyceryl Linoleate, Glyceryl Linolenate） 不傷甲、抗微刮、滑順無刷痕 讓女孩的纖纖十指更晶瑩閃耀。也許妳不是收集狂，但擁有一套經典指甲彩是身為漂亮女生的美麗道德。
+                div.color_img_list
+                    img(src="./asset/color-1.png")
+                    img(src="./asset/color-2.png")
+                    img(src="./asset/color-3.png")
+                div.price
+                    span.fake_price_strikethrough
+                        span.fake_price $ 250
+                    span SALE
+                    span.true_price $ 200
+                div.buttons
+                    input(type="number" value="1" min="1" max="5")#product_num
+                    button#add_shopping_cart  添加到購物車
+                    div#add_favorite
+                        i.fa.fa-heart-o(aria-hidden="true")
+    
+    section.product_detial
+        div
+            span.key 商品編號 |&nbsp;
+            span.value
+                span NP00123456
+        div
+            span.key 商品規格 |&nbsp;
+            span.value
+                span 品牌名稱：Dear Mia
+                span 容量：15 ml
+                span 保存期限：三年      
+                span 產地：台灣
+                span 認證：北市衛妝廣字第1234574534號
+    
+    section.product_histroy
+        h2最近瀏覽過的商品
+        hr
+        div
+            +product("../general/img/商品一.png",false,"")
+            +product("../general/img/商品一.png",false,"")
+            +product("../general/img/商品一.png",false,"")
+            +product("../general/img/商品一.png",false,"")
+            section.product_wrapper
+            section.product_wrapper
+            section.product_wrapper
+            section.product_wrapper

@@ -9,7 +9,8 @@ module.exports = {
     entry: {
         "home/bundle": "./dev/home/entry.js",
         "limited_on_sale_entry/bundle": "./dev/limited_on_sale_entry/entry.js",
-        "new_hot_product/bundle": "./dev/new_hot_product/entry.js"
+        "new_hot_product/bundle": "./dev/new_hot_product/entry.js",
+        "product_intro/bundle": "./dev/product_intro/entry.js"
     },
     output: {
         path: path.resolve(__dirname, 'build'),//__dirname + "/build/" + filePath,

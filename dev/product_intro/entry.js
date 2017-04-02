@@ -1,8 +1,11 @@
 require("../_general/general.js");
-// $(document).ready(function(){
-//     $('.slick_slide').slick({
-//         dots: true,
-//         prevArrow:'<img src="./asset/Circled-Chevron-Left.png" id="slick-prev" class="slick-arrow">',
-//         nextArrow:'<img src="./asset/Circled-Chevron-Right.png" id="slick-next" class="slick-arrow">'
-//     });
-// });
+$(document).ready(function(){
+    $('#product_photo_list').slick({
+        vertical: true,
+        slidesToShow: 5,
+        slidesToScroll: 5,
+        infinite: false,
+        prevArrow:'<i class="slide_arrow fa fa-caret-up" aria-hidden="true"></i>',
+        nextArrow:'<i class="slide_arrow fa fa-caret-down" aria-hidden="true"></i>'
+    });
+});

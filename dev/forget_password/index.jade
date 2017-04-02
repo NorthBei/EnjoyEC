@@ -1,0 +1,21 @@
+extends ../_general/temp_page.jade
+
+block content
+    section.forget_password_section
+        h1 忘記密碼
+        p 請輸入當初註冊的email與生日，系統將會寄送重設密碼通知信至此信箱，謝謝。
+        form
+            input(type="text" placeholder="請輸入已經註冊Email" require).login_input
+            input(type="text" placeholder="YYY" require).year_input
+            input(type="text" placeholder="MM" require).month_input
+            input(type="text" placeholder="DD" require).day_input
+            div.error_message Email或生日輸入錯誤/該Email尚未註冊
+            input(type="submit" value="送出").login_button.email_login
+    
+    section.reset_password_section
+        h1  重設密碼
+        form
+            input(type="password" placeholder="請輸入已經註冊Email" require).login_input
+            input(type="password" placeholder="請再次輸入密碼" require).login_input
+            div.error_message 密碼輸入錯誤或兩次密碼輸入不符
+            input(type="submit" value="送出").login_button.email_login

@@ -55,7 +55,7 @@ gulp.task('jade', function(){
 
     //process jade templates
     .pipe(jade({
-      //pretty: true
+      pretty: true
     }))
 
     .on('error', handleError)

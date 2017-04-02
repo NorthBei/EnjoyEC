@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="6px" height="31px" viewBox="0 0 6 31" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>Group</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="1.3.1-商品介紹" transform="translate(-787.000000, -984.000000)" fill="#D6645F">
+            <g id="數量" transform="translate(735.000000, 974.500000)">
+                <g id="Group" transform="translate(52.000000, 10.000000)">
+                    <polygon id="Triangle-right-Copy" transform="translate(3.000000, 27.500000) scale(-1, -1) rotate(-270.000000) translate(-3.000000, -27.500000) " points="5.5 24.5 5.5 30.5 0.5 27.5"></polygon>
+                    <polygon id="Triangle-right-Copy-2" transform="translate(3.000000, 2.500000) scale(-1, -1) rotate(-90.000000) translate(-3.000000, -2.500000) " points="5.5 -0.5 5.5 5.5 0.5 2.5"></polygon>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

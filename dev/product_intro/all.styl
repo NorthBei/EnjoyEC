@@ -1,5 +1,236 @@
 @import "../_general/general"
 @import "../_general/banner_section/banner_section"
+@import "../_general/product/product"
+
+$product_big_photo_height = 560px
+$product_big_photo_rwd_height = 318px
 
 .commodity_count
     display:none
+
+.product_intro_wrapper,.product_detial,.product_histroy
+    max-width: $banner_max_width
+    width: 100%
+    
+.product_intro_wrapper
+    display: flex
+    &>section
+        display: flex
+
+#product_photo_list
+    size: 85px $product_big_photo_height
+    overflow: hidden
+    position: relative
+
+    img
+        size: 85px 97px
+        margin-bottom: 15px
+        cursor: pointer
+        outline: none
+    
+#product_photo
+    size: 485px $product_big_photo_height
+    margin-left: 15px
+    margin-right: 20px
+    color: $pink_deep
+
+.product_info_wrapper
+    flex-direction: column
+    .coupon
+        background: #D6645F
+        color: white
+        padding: 3px 15px
+        font-size: 16px
+        display: inline-table;
+
+    &>h1
+        color:#4A4A4A
+        font-size: 34px
+        margin: 11px 0 25px
+    
+    div
+        display: flex
+        align-items: center
+
+.product_info_sub_wrapper
+    color: #9B9B9B
+    font-size: 16px
+    font-weight: 200;
+
+    &>h2
+        font-weight: inherit
+        font-size: inherit
+    &>p
+        margin: 10px 0 30px
+    .price
+        color: #4A4A4A
+        font-size: 34px
+        font-weight: bold
+        margin: 29px 0 20px
+        &>span
+            margin-right: 27px
+        
+        .fake_price_strikethrough
+            text-decoration:line-through
+            color: $pink_deep
+
+        .fake_price
+            color: #4A4A4A
+
+.color_img_list>img
+        size: 39px
+        margin-right: 15px
+
+.buttons>*
+    background: #F6EAE6
+    color: $pink_medium
+    display: flex
+    flex-axis: center
+    height: 50px
+    margin-right: 3px
+
+#product_num
+    width: 64px
+    padding: 13px
+    box-sizing: border-box
+#add_shopping_cart
+    width: 266px
+    border: none
+    cursor: pointer
+    outline: none
+
+#add_favorite
+    width: 50px
+    font-size: 19px
+    cursor: pointer
+
+/* Spin Buttons modified */
+input[type="number"] {
+    position: relative;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    background: #F2DFD7 url("./asset/arrow.svg") no-repeat center center;
+    width: 1em;
+    opacity: .5; /* shows Spin Buttons per default (Chrome >= 39) */
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    cursor: pointer
+}
+
+.slide_arrow
+    position: absolute;
+    z-index: 5;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom:0;
+    color: #D5948E
+    font-size: 14px
+
+.product_detial
+    background: #FFF8F5
+    color: #8E5651
+    font-size: 16px
+    letter-spacing: 0.42px;
+    padding: 30px 100px
+    box-sizing: border-box
+    margin: 40px 0
+    flex-direction: column
+
+    &>div
+        margin-bottom: 17px
+        display: flex;
+        &:last-child
+            margin-bottom: 0
+
+.value
+    margin-right: 5px
+
+.product_histroy
+    margin-bottom: 100px
+
+    &>h2
+        font-size: 18px
+    &>hr
+        border: none
+        height: 0
+        border-top: 1px solid #D6645F
+        width: 100%
+    &>div
+        display: flex
+        justify-content: space-around
+        flex-wrap: wrap
+
++media-query( only screen ,max-width ($banner_max_width) )
+    #main
+        padding: 0 50px;
+    
+     #product_photo
+        margin-right: 0
+
+    .product_intro_wrapper
+        flex-direction: column
+        align-items: center
+
+        &>section
+            margin-bottom: 20px
+    
+    .product_detial
+        padding: 30px 60px;
+
+    span.key {
+        min-width: 85px;
+    }
+
+    .product_wrapper
+        margin-bottom: 20px
+    
+    .value
+        display: flex;
+        flex-direction: column;
+
++media-query( only screen ,max-width ($phone_rwd_width) )
+    #main
+        padding: 0 20px;
+    
+    #product_photo
+        size: 277px $product_big_photo_rwd_height
+        margin-left: 7px
+
+    #product_photo_list
+        size: 51px $product_big_photo_rwd_height
+
+        img
+            size: 51px 58px
+            margin-bottom: 5px
+
+    .product_info_wrapper
+        &>h1
+            font-size: 23px
+        .coupon
+            display: initial;
+            text-align: center;
+            font-size: 15px
+
+    .product_info_sub_wrapper  
+        font-size: 14px
+        .price
+            font-size: 26px
+
+    .color_img_list>img
+        size: 20px
+        margin-right: 10px
+
+    #add_shopping_cart
+        width: initial
+        flex: 1
+
+    .product_detial
+        padding: 30px
+    
+    // .product_histroy>div
+    //     justify-content: space-between
