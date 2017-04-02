@@ -3107,16 +3107,7 @@ body {
   margin-top: 15px;
   color: #d6645f;
 }
-#main {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-justify-content: center;
-  -ms-flex-pack: center;
-      justify-content: center;
-  -ms-align-items: center;
-  -ms-flex-align: center;
-      align-items: center;
-}
+#main,
 .section_wrapper {
   display: -ms-flexbox;
   display: flex;
@@ -3126,95 +3117,18 @@ body {
   -ms-align-items: center;
   -ms-flex-align: center;
       align-items: center;
-}
-.split_line {
-  height: 100%;
-  min-height: 500px;
-  width: 1px;
-  background: #c3c2c3;
-  margin: 0 96px;
-}
-.first_buy {
-  display: -ms-flexbox;
-  display: flex;
   -ms-flex-direction: column;
   flex-direction: column;
-  -ms-justify-content: center;
-  -ms-flex-pack: center;
-      justify-content: center;
-  -ms-align-items: center;
-  -ms-flex-align: center;
-      align-items: center;
+}
+.section_wrapper>p {
+  margin-top: 29px;
+}
+.sign_in {
   color: #d6645f;
-}
-.first_buy .title {
-  font-size: 46px;
-  font-weight: lighter;
-}
-.first_buy .not_count {
-  font-weight: lighter;
-  font-size: 31px;
-}
-.first_buy .go_to_pay {
-  width: 289px;
-  height: 51px;
-  background: #d5948e;
-  margin-top: 40px;
-  color: #fff;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-justify-content: center;
-  -ms-flex-pack: center;
-      justify-content: center;
-  -ms-align-items: center;
-  -ms-flex-align: center;
-      align-items: center;
-  font-size: 18px;
-  border-radius: 10px;
-}
-.first_buy .go_to_pay:hover {
-  background: #c8837c;
+  text-decoration: underline;
 }
 #footer {
   display: none;
-}
-@media only screen and (max-width: 850px) {
-  .split_line {
-    margin: 0;
-  }
-  .section_wrapper {
-    -ms-justify-content: space-around;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-    width: 100%;
-  }
-}
-@media only screen and (max-width: 650px) {
-  .section_wrapper {
-    -ms-flex-direction: column-reverse;
-    flex-direction: column-reverse;
-    width: initial;
-  }
-  .slogan_wrapper {
-    display: -ms-flexbox;
-    display: flex;
-  }
-  .slogan_wrapper .title,
-  .slogan_wrapper .not_count {
-    font-size: 23px;
-    margin: 0 5px;
-  }
-  .slogan_wrapper .title {
-    font-weight: initial;
-  }
-  .first_buy>.go_to_pay {
-    margin-top: 10px;
-  }
-  .split_line {
-    min-height: 1px;
-    width: 110%;
-    margin: 25px 0 15px;
-  }
 }
 
 /*# sourceMappingURL=all.css.map */

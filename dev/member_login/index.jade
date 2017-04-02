@@ -1,0 +1,8 @@
+extends ../_general/temp_page.jade
+include ../_general/login/login.jade
+
+block content
+    section.section_wrapper
+        +login()
+        p 還沒有帳戶嗎？請先在此
+            a(href="").sign_in 註冊
