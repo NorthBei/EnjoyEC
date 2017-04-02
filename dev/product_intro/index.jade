@@ -1,0 +1,15 @@
+extends ../_general/temp_page.jade
+include ../_general/banner_section/banner_section.jade
+
+block css
+    link(rel='stylesheet', type='text/css', href='../general/slick/slick-theme.css')
+
+block js
+    script(type='text/javascript', src='../general/slick/slick.min.js')
+
+block content
+    -var navArray = ["首頁","限時優惠","指甲油","Dear Mia 美甲光凝膠-瓶裝 一步膠 色膠-螢光系列 粉紅檸檬汁"]
+    +banner_section("","./asset/banner.png",navArray,false)
+
+    div#product_intro_wrapper
+

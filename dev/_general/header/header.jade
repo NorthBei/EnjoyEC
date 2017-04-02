@@ -1,12 +1,12 @@
 include ./logoImgBase64.jade
 
-header#header
+header#header.isRWD
     nav.space_block.scroll_disappear
         
     nav.nav_list_wrapper
         img(alt="Embedded Image" src=logoImgBase64)#logo_img
         
-        ul.parent_category_list
+        ul.parent_category_list.rwd_disapper
             li 限時優惠
                 div.child_category_wrapper
                     ul.child_category_list
@@ -76,5 +76,9 @@ header#header
 
                 a(href="#")
                     i.fa.fa-shopping-cart(aria-hidden='true')
+                
+                | <i class="rwd_show">|</i>
+
+                i#bars.fa.fa-bars.rwd_show(aria-hidden="true")
 
                     

@@ -1,10 +1,12 @@
 mixin page_num(from,to)
     ul(aria-hidden="true")#page_num
-        li.fa.fa-angle-left
+        a(href="")
+            li.fa.fa-angle-left
         -for(var i=from ;i<= to ;i++)
             a(href="#")
                 if(i == from)            
                     li.page_active #{i}
                 else
                     li #{i}
-        li.fa.fa-angle-right
+        a(href="")
+            li.fa.fa-angle-right

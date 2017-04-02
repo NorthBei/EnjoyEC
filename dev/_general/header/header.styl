@@ -3,7 +3,56 @@ $search_component_height = 20px
 $nav_btns_wrapper_height = 45px
 $nav_scrolled_height = 45px
 $dropdown_triangle_height = 7px
+$header_rwd_height = 67px
+/*function defined*/
+fixed_header()
+    position: fixed;
+    width: 100%;
+    z-index: 20;
+    background: $pink_light
+    display: flex;
+    // flex-wrap: wrap
+    box-shadow: 0 2px 2px 0 rgba(97,97,97,0.22);
+    //transform: translateY(-($nav_scrolled_height));
+    flex-axis:center
 
+
+    .nav_btns_wrapper
+        color: $pink_deep
+    .nav_list_wrapper
+        flex-direction: row;
+        height: 45px;
+        padding-bottom: 0;
+        max-width: $banner_max_width
+        width: 100%;
+        justify-content: space-between;
+
+    #logo_img
+        width: 125px;
+        height: 30px;
+        
+    .nav_btns_wrapper
+        display: flex;
+        line-height: $nav_scrolled_height;
+
+    .nav_btns
+        position: initial;
+    
+    .child_category_wrapper
+        margin-top: 15px
+    .scroll_disappear
+        display: none
+
+rwd_header()
+    //.parent_category_list,.nav_btns .fa-heart
+    .rwd_disapper,.nav_btns .fa-heart
+            display: none
+
+    .nav_list_wrapper
+        height: $header_rwd_height
+        padding: 10px 15px;
+        box-sizing: border-box;
+/*function defined*/
 .space_block
     background: $pink_deep
     height: $nav_btns_wrapper_height
@@ -165,6 +214,9 @@ $dropdown_triangle_height = 7px
     position: fixed;
     left: 0;
     right: initial;
+
+.rwd_show
+    display: none
 /*special request*/
 
 //search icon min and move up 1px
@@ -182,39 +234,89 @@ $dropdown_triangle_height = 7px
 
 //for scroll header css
 .scroll_header
-    position: fixed;
-    width: 100%;
-    z-index: 20;
-    background: $pink_light
-    display: flex;
-    // flex-wrap: wrap
-    box-shadow: 0 2px 2px 0 rgba(97,97,97,0.22);
-    //transform: translateY(-($nav_scrolled_height));
-    flex-axis:center
+    fixed_header()
+    // position: fixed;
+    // width: 100%;
+    // z-index: 20;
+    // background: $pink_light
+    // display: flex;
+    // // flex-wrap: wrap
+    // box-shadow: 0 2px 2px 0 rgba(97,97,97,0.22);
+    // //transform: translateY(-($nav_scrolled_height));
+    // flex-axis:center
 
 
-    .nav_btns_wrapper
-        color: $pink_deep
-    .nav_list_wrapper
-        flex-direction: row;
-        height: 45px;
-        padding: 0;
-        max-width: $banner_max_width
-        width: 100%;
-        justify-content: space-between;
+    // .nav_btns_wrapper
+    //     color: $pink_deep
+    // .nav_list_wrapper
+    //     flex-direction: row;
+    //     height: 45px;
+    //     padding: 0;
+    //     max-width: $banner_max_width
+    //     width: 100%;
+    //     justify-content: space-between;
 
-    #logo_img
-        width: 125px;
-        height: 30px;
+    // #logo_img
+    //     width: 125px;
+    //     height: 30px;
         
-    .nav_btns_wrapper
-        display: flex;
-        line-height: $nav_scrolled_height;
+    // .nav_btns_wrapper
+    //     display: flex;
+    //     line-height: $nav_scrolled_height;
 
-    .nav_btns
-        position: initial;
+    // .nav_btns
+    //     position: initial;
     
-    .child_category_wrapper
-        margin-top: 15px
-    .scroll_disappear
-        display: none
+    // .child_category_wrapper
+    //     margin-top: 15px
+    // .scroll_disappear
+    //     display: none
+
++media-query( only screen ,max-width 1200px )
+    .nav_list_wrapper
+        padding-left: 15px
+        padding-right: 15px
+        
+    .scroll_header
+        ul.parent_category_list>li:nth-last-child(2) 
+            display none
+    
+
++media-query( only screen ,max-width 1100px )
+    .scroll_header
+        ul.parent_category_list>li:nth-last-child(3) 
+            display none
+
++media-query( only screen ,max-width 950px )
+    #header.isRWD
+        ul.parent_category_list>li:nth-last-child(4) 
+            display none
+    
+
+    .scroll_header
+        rwd_header()
+
+        &.rwd_show
+            display: initial
+        // .parent_category_list,.nav_btns .fa-heart
+        //     display: none
+
+        // .nav_list_wrapper
+        //     height: $header_rwd_height
+        //     padding: 10px 15px;
+        //     box-sizing: border-box;
+// +media-query( only screen ,max-width 800px )
+//     #header
+//         ul.parent_category_list>li:nth-last-child(3)
+//             display none
+
++media-query( only screen ,max-width ($tablet_rwd_width) )
+    #header.isRWD
+        fixed_header()
+        rwd_header()
+    .rwd_show
+            display: initial
+    #main
+        margin-top: $header_rwd_height
+    
+    
