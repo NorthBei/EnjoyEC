@@ -5,7 +5,10 @@ $(document).ready(function(){
         slidesToShow: 5,
         slidesToScroll: 5,
         infinite: false,
+        swipeToSlide: true,
+        verticalSwiping:true,
         prevArrow:'<i class="slide_arrow fa fa-caret-up" aria-hidden="true"></i>',
         nextArrow:'<i class="slide_arrow fa fa-caret-down" aria-hidden="true"></i>'
     });
+    
 });

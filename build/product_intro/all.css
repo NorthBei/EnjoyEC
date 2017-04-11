@@ -2835,6 +2835,9 @@ select {
 .scroll_header .scroll_disappear {
   display: none;
 }
+.scroll_header +#main {
+  margin-top: 156px;
+}
 @media only screen and (max-width: 1200px) {
   .nav_list_wrapper {
     padding-left: 15px;
@@ -3195,7 +3198,7 @@ body {
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
   filter: alpha(opacity=0);
   opacity: 0;
-  transition: all 0.5s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 .icon_wrapper>.icon_btn {
   width: 57px;
@@ -3217,6 +3220,12 @@ body {
 }
 .icon_wrapper>.icon_btn:hover {
   transform: scale(1.1);
+}
+.icon_btn.fa-shopping-cart:before {
+  padding-top: 3px;
+}
+.icon_btn.fa-heart:before {
+  padding-top: 5px;
 }
 .add_shopping_cart {
   border: 1px solid #d5948e;
@@ -3302,7 +3311,7 @@ body {
 #product_photo_list img {
   width: 85px;
   height: 97px;
-  margin-bottom: 15px;
+  margin-bottom: 13px;
   cursor: pointer;
   outline: none;
 }
@@ -3386,6 +3395,7 @@ body {
 #product_num {
   width: 64px;
   padding: 13px;
+  padding-left: 21px;
   box-sizing: border-box;
 }
 #add_shopping_cart {
@@ -3394,10 +3404,17 @@ body {
   cursor: pointer;
   outline: none;
 }
+#add_shopping_cart:hover {
+  background: #f8dfd6;
+}
 #add_favorite {
   width: 50px;
   font-size: 19px;
   cursor: pointer;
+}
+#add_favorite:hover {
+  background: #f8dfd6;
+  color: #eb5859;
 }
 /* Spin Buttons modified */
 input[type="number"] {
@@ -3417,15 +3434,17 @@ input[type="number"]::-webkit-inner-spin-button {
   bottom: 0;
   cursor: pointer;
 }
+/*for slick lib*/
 .slide_arrow {
   position: absolute;
   z-index: 5;
   left: 50%;
   transform: translateX(-50%);
-  bottom: 0;
+  bottom: -7px;
   color: #d5948e;
-  font-size: 14px;
+  font-size: 27px;
 }
+/*for slick lib*/
 .product_detial {
   background: #fff8f5;
   color: #8e5651;
@@ -3453,6 +3472,7 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 .product_histroy>h2 {
   font-size: 18px;
+  font-weight: 400;
 }
 .product_histroy>hr {
   border: none;
@@ -3466,6 +3486,9 @@ input[type="number"]::-webkit-inner-spin-button {
   -ms-justify-content: space-around;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  -ms-align-items: center;
+  -ms-flex-align: center;
+      align-items: center;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }

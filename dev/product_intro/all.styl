@@ -24,7 +24,7 @@ $product_big_photo_rwd_height = 318px
 
     img
         size: 85px 97px
-        margin-bottom: 15px
+        margin-bottom: 13px
         cursor: pointer
         outline: none
     
@@ -92,17 +92,24 @@ $product_big_photo_rwd_height = 318px
 #product_num
     width: 64px
     padding: 13px
+    padding-left: 21px
     box-sizing: border-box
 #add_shopping_cart
     width: 266px
     border: none
     cursor: pointer
     outline: none
+    &:hover
+        background: #F8DFD6
 
 #add_favorite
     width: 50px
     font-size: 19px
     cursor: pointer
+
+    &:hover
+        background: #F8DFD6
+        color: #EB5859
 
 /* Spin Buttons modified */
 input[type="number"] {
@@ -122,14 +129,17 @@ input[type="number"]::-webkit-inner-spin-button {
     cursor: pointer
 }
 
+/*for slick lib*/
 .slide_arrow
     position: absolute;
     z-index: 5;
     left: 50%;
     transform: translateX(-50%);
-    bottom:0;
+    bottom:-7px
     color: #D5948E
-    font-size: 14px
+    font-size: 27px
+
+/*for slick lib*/
 
 .product_detial
     background: #FFF8F5
@@ -155,6 +165,7 @@ input[type="number"]::-webkit-inner-spin-button {
 
     &>h2
         font-size: 18px
+        font-weight: 400;
     &>hr
         border: none
         height: 0
@@ -163,6 +174,7 @@ input[type="number"]::-webkit-inner-spin-button {
     &>div
         display: flex
         justify-content: space-around
+        align-items: center;
         flex-wrap: wrap
 
 +media-query( only screen ,max-width ($banner_max_width) )
@@ -231,6 +243,3 @@ input[type="number"]::-webkit-inner-spin-button {
 
     .product_detial
         padding: 30px
-    
-    // .product_histroy>div
-    //     justify-content: space-between

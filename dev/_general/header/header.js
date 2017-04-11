@@ -12,10 +12,10 @@ $(document).ready(function() {
             isCrossHeader = true;
             $("#header").addClass("scroll_header");
         }
-        else if(topHeight<= 0 && isCrossHeader == true){
+        else if(topHeight< navHeight && isCrossHeader == true){
             isCrossHeader = false;
             $("#header").removeClass("scroll_header");
         }
-
+        
     });
 });

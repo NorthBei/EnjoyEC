@@ -60,7 +60,7 @@ $product_name_lineHeight = 18px
     justify-content: center;
     flex-axis: center
     opacity: 0
-    transition: all 0.5s ease-in-out
+    transition: all 0.2s ease-in-out
     &>.icon_btn
         size: $icon_button_size
         background: $pink_medium
@@ -74,6 +74,11 @@ $product_name_lineHeight = 18px
 
         &:hover
             transform: scale(1.1)
+
+.icon_btn.fa-shopping-cart:before
+    padding-top: 3px
+.icon_btn.fa-heart:before
+    padding-top: 5px
 
 .add_shopping_cart
     border: 1px solid $pink_deep

@@ -90,11 +90,11 @@ $(document).ready(function() {
             isCrossHeader = true;
             $("#header").addClass("scroll_header");
         }
-        else if(topHeight<= 0 && isCrossHeader == true){
+        else if(topHeight< navHeight && isCrossHeader == true){
             isCrossHeader = false;
             $("#header").removeClass("scroll_header");
         }
-
+        
     });
 });
 
@@ -114,9 +114,12 @@ $(document).ready(function(){
         slidesToShow: 5,
         slidesToScroll: 5,
         infinite: false,
+        swipeToSlide: true,
+        verticalSwiping:true,
         prevArrow:'<i class="slide_arrow fa fa-caret-up" aria-hidden="true"></i>',
         nextArrow:'<i class="slide_arrow fa fa-caret-down" aria-hidden="true"></i>'
     });
+    
 });
 
 /***/ })
