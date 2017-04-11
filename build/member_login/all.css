@@ -3123,6 +3123,9 @@ body {
   -ms-flex-direction: column;
   flex-direction: column;
 }
+.section_wrapper {
+  margin-top: -5%;
+}
 .section_wrapper>p {
   margin-top: 29px;
 }

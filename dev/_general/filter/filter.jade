@@ -1,8 +1,9 @@
 mixin filter()
     form
-        label.commodity_filter
-            select
-                option(value='價格低到高') 價格低到高
-                option(value='價格高到低') 價格高到低
-                option(value='價格不要出現') 價格不要出現
-                option(value='我是土豪') 我是土豪
+        div.commodity_filter 
+            span 價格低到高
+            div.options
+                span(value='價格低到高') 價格低到高
+                span(value='價格高到低') 價格高到低
+                span(value='價格不要出現') 價格不要出現
+                span(value='我是土豪') 我是土豪

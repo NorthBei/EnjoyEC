@@ -1,19 +1,56 @@
+.display_init
+    display: initial !important
+
 .commodity_filter
+    background: white
+    -webkit-appearance:initial
+    padding: 6px
+    border: 1px solid #C3C2C3;
+    size 145px 32px
+    cursor: pointer
+    padding-left: 10px;
+    margin-bottom: 20px;
+    font-size: 13px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
 
     &:after
         content:'\25BC';
         display:inline-block;
         color:#C3C2C3;
         background-color:#fff;
-        margin-left:-17px;   /* remove the damn :after space */
-        pointer-events:none; /* let the click pass trough */
+        position: absolute;
+        right: 10px;
         transform: scale(0.6);
 
-    &>select
-        background: white
-        border-radius: 0
-        -webkit-appearance:initial
-        padding: 6px
-        border: 1px solid #C3C2C3;
-        size 145px 32px
-        margin-bottom: 20px
+    .options
+        position: absolute;
+        top: 102%;
+        left: 0;
+        background: #fff;
+        box-shadow: 0 2px 1px 0 rgba(0,0,0,0.17);
+        padding: 0 7px;
+        box-sizing: border-box;
+        width: inherit;
+        z-index: 10;
+        cursor: pointer;
+        display: none
+        &:last-child
+            border-bottom: none;
+
+        &>span
+            color: #9B9B9B
+            display: block
+            border-bottom: 1px solid #D8D8D8
+            padding: 10px 0;
+            height: 39px;
+            display: flex;
+            align-items: center;
+            box-sizing: border-box;
+            padding-left: 4px;
+
+            &:hover
+                color: black
+

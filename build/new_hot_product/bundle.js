@@ -63,7 +63,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 6);
+/******/ 	return __webpack_require__(__webpack_require__.s = 7);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -139,13 +139,31 @@ $(document).ready(function() {
 });
 
 /***/ }),
-/* 3 */,
+/* 3 */
+/***/ (function(module, exports) {
+
+$(document).ready(function() { 
+    $(".commodity_filter").click(function() {
+        $(".commodity_filter>.options").toggleClass("display_init");
+    });
+
+    $(".options>span").on("click",function(e) {
+        event.stopPropagation()
+        $(".commodity_filter>span").text($(this).text());
+        $(".commodity_filter>.options").toggleClass("display_init");
+    });
+    
+});
+
+/***/ }),
 /* 4 */,
 /* 5 */,
-/* 6 */
+/* 6 */,
+/* 7 */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(2);
+__webpack_require__(3);
 __webpack_require__(0);
 
 /***/ })

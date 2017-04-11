@@ -27,7 +27,21 @@ $product_big_photo_rwd_height = 318px
         margin-bottom: 13px
         cursor: pointer
         outline: none
-    
+
+    &:after
+        content: "▼";
+        position: absolute;
+        z-index: 5;
+        left: 50%;
+        transform: translateX(-50%) scaleX(1.7);
+        color: #d5948e;
+        cursor: pointer;
+        bottom: 0;
+        transition: transform 0.3s ease-in-out;
+
+#product_photo_list.scrollBottom:after
+    transform: translateX(-50%) scaleX(1.7) rotate(-180deg);
+
 #product_photo
     size: 485px $product_big_photo_height
     margin-left: 15px
@@ -134,10 +148,11 @@ input[type="number"]::-webkit-inner-spin-button {
     position: absolute;
     z-index: 5;
     left: 50%;
-    transform: translateX(-50%);
-    bottom:-7px
+    transform: translateX(-50%) scaleX(1.7)
+    bottom: 0
     color: #D5948E
-    font-size: 27px
+    font-style: normal
+    cursor: pointer
 
 /*for slick lib*/
 
