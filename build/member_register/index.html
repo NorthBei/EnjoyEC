@@ -54,24 +54,42 @@
       </nav>
     </header>
     <main id="main">
-      <div class="section_wrapper">
-        <section class="login_section form_section">
-          <h1>會員登入</h1><a hrfe="" class="input_button fb_login section_box">facebook登入</a>
-          <hr/>
-          <form>
-            <input type="eamil" placeholder="請輸入Email" require="require" class="input_box section_box"/>
-            <input type="password" placeholder="請輸入密碼" require="require" class="input_box section_box"/>
-            <div class="error_message">Email或密碼輸入錯誤 / 此Email未註冊</div>
-            <input type="submit" value="登入" class="input_button input_box section_box"/>
-          </form><a href="" class="forget_password">忘記密碼?</a>
-        </section>
-        <section class="split_line"></section>
-        <section class="first_buy">
-          <div class="slogan_wrapper">
-            <h1 class="title">首次購物</h1>
-            <h2 class="not_count">還沒有帳戶?</h2>
-          </div><a href="" class="go_to_pay">直接前往結帳</a>
-        </section>
+      <section class="login_section form_section">
+        <h1>會員註冊</h1><a hrfe="" class="input_button fb_login section_box">facebook註冊</a>
+        <hr/>
+        <div class="form">
+          <input type="eamil" placeholder="請輸入Email" require="require" class="input_box section_box"/>
+          <div class="error_message">Email或生日輸入錯誤</div>
+          <input type="password" placeholder="請輸入密碼" require="require" class="input_box section_box"/>
+          <div class="error_message">輸入密碼格式不符，密碼需六碼以上，至少包含一個數字與英文字母</div>
+          <input type="password" placeholder="請輸入密碼" require="require" class="input_box section_box"/>
+          <div class="error_message">兩次密碼輸入不符 或 請再次輸入密碼</div>
+          <input type="submit" value="Email註冊" id="email_register" class="input_button input_box section_box"/>
+        </div>
+      </section>
+      <section class="register_data_section form_section">
+        <h1 class="marB32">請填寫/核對會員資料就可完成註冊</h1>
+        <div class="form">
+          <input type="email" placeholder="Eamil" require class="input_box section_box">
+          <div class="error_message">請輸入email</div>
+          <div class="reminder">請確認郵件地址是否正確，該email會做為日後訂單資料寄送地址</div>
+          <input type="text" placeholder="姓名" require class="input_box section_box">
+          <div class="error_message">請輸入姓名</div>
+          <input type="phone" placeholder="聯絡電話" require class="input_box section_box">
+          <div class="error_message">請輸入聯絡電話</div><span class="input_date_wrapper">
+            <input type="text" placeholder="YYYY" require class="input_box input_year">
+            <input type="text" placeholder="MM" require class="input_box input_month">
+            <input type="text" placeholder="DD" require class="input_box input_day"></span>
+          <div class="error_message">請輸入生日</div>
+          <div class="reminder marB32">生日填寫後即不可更改，請確認生日是否填寫正確</div>
+          <div class="reminder">按下確認就代表您已查看並同意<a href="">隱私權政策</a>與<a href="">購物須知</a></div>
+          <button id="register_button" class="input_button input_box section_box">確認</button>
+        </div>
+      </section>
+      <div id="dialog">
+        <h1>恭喜您已完成註冊</h1>
+        <p>請至信箱收取認證信完成註冊程序，謝謝！</p>
+        <button id="check_receive">確定</button>
       </div>
     </main>
     <footer id="footer">

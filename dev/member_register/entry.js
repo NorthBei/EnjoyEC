@@ -1,25 +1,21 @@
 require("../_general/general.js");
-require("../_general/login/login.js");
 
 window.addEventListener("load",function(){
+    $("#email_register").on("click",function(){
+        $("#dialog p").css("visibility","visiable");
+        showDialog();
+        $(".register_data_section").show();
+        $(".login_section").hide();
+    });
 
     $("#register_button").on("click",function(){
-        $(".forget_password_section").hide();
-        $(".reset_password_section").show();
+        $("#dialog p").css("visibility","hidden");
         showDialog();
     });
 
     $("#check_receive").on("click",function(){
         $("#dialog").hide();
     });
-
-    $("#reset_button").on("click",function(){
-        $("#dialog h1").text("重設密碼成功");
-        $("#dialog p").text("請使用新密碼重新登入");
-        showDialog();
-    });
-
-    
 });
 
 function showDialog(){

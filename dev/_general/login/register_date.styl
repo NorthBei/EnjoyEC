@@ -1,0 +1,19 @@
+.input_date_wrapper
+    display: flex
+    justify-content: space-between
+    flex-wrap: nowrap
+    .input_year
+        flex: 2 2 184px
+        width: 184px
+    .input_month,.input_day
+        flex: 1 1 100px
+        width: 100px
+        margin-left: 7px
+        
++media-query( all, max-width $phone_rwd_width )
+    .input_date_wrapper
+        .input_year
+            width: 111px
+        .input_month,.input_day
+            width: 84px
+            margin-left: 5px

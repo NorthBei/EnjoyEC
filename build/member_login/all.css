@@ -3034,6 +3034,7 @@ body {
   color: #d6645f;
   font-size: 28px;
   font-weight: lighter;
+  text-align: center;
 }
 .form_section>form,
 .form_section .form {

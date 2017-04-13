@@ -1,30 +1,33 @@
 extends ../_general/temp_page.jade
-extends ../_general/login/login.jade
+include ../_general/login/login.jade
 
 block content
-    +login()
-    
-    section.forget_password_section.form_section
-        h1 忘記密碼
-        p 請輸入當初註冊的email與生日，系統將會寄送重設密碼通知信至此信箱，謝謝。
+    +register()
+
+    section.register_data_section.form_section
+        h1.marB32 請填寫/核對會員資料就可完成註冊
         div.form
-            input(type="text" placeholder="請輸入已經註冊Email" require).input_box.section_box
+            input(type="email" placeholder="Eamil" require).input_box.section_box
+            .error_message 請輸入email
+            .reminder 請確認郵件地址是否正確，該email會做為日後訂單資料寄送地址
+            input(type="text" placeholder="姓名" require).input_box.section_box
+            .error_message 請輸入姓名
+            input(type="phone" placeholder="聯絡電話" require).input_box.section_box
+            .error_message 請輸入聯絡電話
             span.input_date_wrapper
-                input(type="text" placeholder="YYY" require).input_box.input_year
+                input(type="text" placeholder="YYYY" require).input_box.input_year
                 input(type="text" placeholder="MM" require).input_box.input_month
                 input(type="text" placeholder="DD" require).input_box.input_day
-            div.error_message Email或生日輸入錯誤/該Email尚未註冊
-            button.input_button.input_box.section_box#register_button 送出
-    
-    section.reset_password_section.form_section
-        h1  重設密碼
-        div.form
-            input(type="password" placeholder="請輸入已經註冊Email" require).input_box.section_box
-            input(type="password" placeholder="請再次輸入密碼" require).input_box.section_box
-            div.error_message 密碼輸入錯誤或兩次密碼輸入不符
-            button.input_button.input_box.section_box#reset_button 送出
+            .error_message 請輸入生日
+            .reminder.marB32 生日填寫後即不可更改，請確認生日是否填寫正確
+            .reminder 按下確認就代表您已查看並同意
+                a(href="") 隱私權政策
+                | 與
+                a(href="") 購物須知
+                
+            button.input_button.input_box.section_box#register_button 確認
     
     div#dialog
-        h1 重設密碼通知信已寄送
-        p 請到信箱收取通知信，點擊信件內的連結就可重新設定密碼，謝謝。
+        h1 恭喜您已完成註冊
+        p 請至信箱收取認證信完成註冊程序，謝謝！
         button#check_receive 確定

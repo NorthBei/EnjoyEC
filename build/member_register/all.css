@@ -3034,6 +3034,7 @@ body {
   color: #d6645f;
   font-size: 28px;
   font-weight: lighter;
+  text-align: center;
 }
 .form_section>form,
 .form_section .form {
@@ -3129,18 +3130,6 @@ body {
     width: 289px;
   }
 }
-#main {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-justify-content: center;
-  -ms-flex-pack: center;
-      justify-content: center;
-  -ms-align-items: center;
-  -ms-flex-align: center;
-      align-items: center;
-  -ms-flex-direction: column;
-  flex-direction: column;
-}
 .input_date_wrapper {
   display: -ms-flexbox;
   display: flex;
@@ -3162,23 +3151,52 @@ body {
   width: 100px;
   margin-left: 7px;
 }
-.form>button {
-  margin-top: 25px;
+@media all and (max-width: 550px) {
+  .input_date_wrapper .input_year {
+    width: 111px;
+  }
+  .input_date_wrapper .input_month,
+  .input_date_wrapper .input_day {
+    width: 84px;
+    margin-left: 5px;
+  }
 }
-.forget_password_section>p {
-  color: #4a4a4a;
-  margin: 24px 0 30px;
-  text-align: center;
+/*overrid login.styl*/
+.error_message {
+  text-align: initial;
 }
-.reset_password_section {
+/*overrid login.styl*/
+#main {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-justify-content: center;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-align-items: center;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+.register_data_section {
   display: none;
+}
+.reminder {
+  color: #d6645f;
   text-align: center;
 }
-.reset_password_section >h1 {
+.reminder a {
+  text-decoration: underline;
+}
+.marB32 {
   margin-bottom: 32px;
 }
 #footer {
   display: none;
+}
+#dialog {
+  width: 100%;
+  max-width: 500px;
 }
 /*dialig*/
 #main {
@@ -3225,23 +3243,9 @@ body {
 }
 @media all and (max-width: 550px) {
   #dialog {
-    margin: 0 10px;
+    max-width: calc(100vw - 20px);
   }
 }
 /*dialig*/
-#dialog {
-  width: 100%;
-  max-width: 500px;
-}
-@media all and (max-width: 550px) {
-  .input_date_wrapper .input_year {
-    width: 111px;
-  }
-  .input_date_wrapper .input_month,
-  .input_date_wrapper .input_day {
-    width: 84px;
-    margin-left: 5px;
-  }
-}
 
 /*# sourceMappingURL=all.css.map */

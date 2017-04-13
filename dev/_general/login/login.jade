@@ -4,8 +4,22 @@ mixin login()
         a(hrfe="").input_button.fb_login.section_box facebook登入
         hr
         form
-            input(type="text" placeholder="請輸入Email" require).input_box.section_box
+            input(type="eamil" placeholder="請輸入Email" require).input_box.section_box
             input(type="password" placeholder="請輸入密碼" require).input_box.section_box
             div.error_message Email或密碼輸入錯誤 / 此Email未註冊
             input(type="submit" value="登入").input_button.input_box.section_box
         a(href="").forget_password 忘記密碼?
+
+mixin register()
+    section.login_section.form_section
+        h1 會員註冊
+        a(hrfe="").input_button.fb_login.section_box facebook註冊
+        hr
+        .form
+            input(type="eamil" placeholder="請輸入Email" require).input_box.section_box
+            .error_message Email或生日輸入錯誤
+            input(type="password" placeholder="請輸入密碼" require).input_box.section_box
+            .error_message 輸入密碼格式不符，密碼需六碼以上，至少包含一個數字與英文字母
+            input(type="password" placeholder="請輸入密碼" require).input_box.section_box
+            .error_message 兩次密碼輸入不符 或 請再次輸入密碼
+            input(type="submit" value="Email註冊").input_button.input_box.section_box#email_register
