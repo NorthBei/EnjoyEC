@@ -2535,6 +2535,11 @@ p {
 select {
   outline: none;
 }
+button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
 .space_block {
   background: #d5948e;
   height: 45px;

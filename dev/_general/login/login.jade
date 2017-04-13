@@ -1,11 +1,11 @@
 mixin login()
-    section.login_section
+    section.login_section.form_section
         h1 會員登入
-        a(hrfe="").login_button.fb_login facebook登入
+        a(hrfe="").input_button.fb_login.section_box facebook登入
         hr
         form
-            input(type="text" placeholder="請輸入Email" require).login_input
-            input(type="password" placeholder="請輸入密碼" require).login_input
+            input(type="text" placeholder="請輸入Email" require).input_box.section_box
+            input(type="password" placeholder="請輸入密碼" require).input_box.section_box
             div.error_message Email或密碼輸入錯誤 / 此Email未註冊
-            input(type="submit" value="登入").login_button.email_login
+            input(type="submit" value="登入").input_button.input_box.section_box
         a(href="").forget_password 忘記密碼?

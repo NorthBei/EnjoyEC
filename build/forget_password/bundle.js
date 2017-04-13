@@ -63,7 +63,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 9);
+/******/ 	return __webpack_require__(__webpack_require__.s = 6);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -99,74 +99,45 @@ $(document).ready(function() {
 });
 
 /***/ }),
-/* 2 */
+/* 2 */,
+/* 3 */,
+/* 4 */
 /***/ (function(module, exports) {
 
-$(document).ready(function() { 
-    $(".page_top_button").click(function() {
-        $("html, body").animate({ scrollTop: 0 }, "fast");
-        return false;
-    });
 
-    var topBtnShow = $(document).height()*2/3;
-    var windowH = window.innerHeight;
-    var isButtonShow = false,isButtonFixed = false;
-    // console.log("top_btn_appear:"+top_btn_appear);
-    // console.log("assign_height:"+assign_height);
-    $(document).on("scroll",function(){
-        var fiexdHeight = $("#header").height()+$("#main").height();
-		var topheight= document.documentElement.scrollTop||document.body.scrollTop;
-        var height = windowH+topheight;
-        //console.log(height);
-		if(height>= topBtnShow && isButtonShow == false){
-            isButtonShow = true;
-		    $(".page_top_button").css("display","block");
-		}
-        else if(height< topBtnShow && isButtonShow == true){
-            isButtonShow = false;
-            $(".page_top_button").css("display","none");
-		}
-
-        if(height > fiexdHeight && isButtonShow == true && isButtonFixed == false){
-            isButtonFixed = true;
-            $(".page_top_button").addClass("is_bottom");
-        }
-        else if(height < fiexdHeight && isButtonFixed == true){
-            isButtonFixed = false;
-            $(".page_top_button").removeClass("is_bottom");
-        }
-	});
-});
 
 /***/ }),
-/* 3 */
-/***/ (function(module, exports) {
+/* 5 */,
+/* 6 */
+/***/ (function(module, exports, __webpack_require__) {
 
-$(document).ready(function() { 
-    $(".commodity_filter").click(function() {
-        $(".commodity_filter>.options").toggleClass("display_init");
+__webpack_require__(0);
+__webpack_require__(4);
+
+window.addEventListener("load",function(){
+
+    $("#register_button").on("click",function(){
+        $(".forget_password_section").hide();
+        $(".reset_password_section").show();
+        showDialog();
     });
 
-    $(".options>span").on("click",function(e) {
-        event.stopPropagation()
-        $(".commodity_filter>span").text($(this).text());
-        $(".commodity_filter>.options").toggleClass("display_init");
+    $("#check_receive").on("click",function(){
+        $("#dialog").hide();
     });
+
+    $("#reset_button").on("click",function(){
+        $("#dialog h1").text("重設密碼成功");
+        $("#dialog p").text("請使用新密碼重新登入");
+        showDialog();
+    });
+
     
 });
 
-/***/ }),
-/* 4 */,
-/* 5 */,
-/* 6 */,
-/* 7 */,
-/* 8 */,
-/* 9 */
-/***/ (function(module, exports, __webpack_require__) {
-
-__webpack_require__(2);
-__webpack_require__(3);
-__webpack_require__(0);
+function showDialog(){
+    $("#dialog").show().css('display', 'flex');
+}
 
 /***/ })
 /******/ ]);

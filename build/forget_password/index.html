@@ -54,27 +54,32 @@
       </nav>
     </header>
     <main id="main">
-      <section class="forget_password_section">
+      <section class="forget_password_section form_section">
         <h1>忘記密碼</h1>
         <p>請輸入當初註冊的email與生日，系統將會寄送重設密碼通知信至此信箱，謝謝。</p>
-        <form>
-          <input type="text" placeholder="請輸入已經註冊Email" require class="login_input">
-          <input type="text" placeholder="YYY" require class="year_input">
-          <input type="text" placeholder="MM" require class="month_input">
-          <input type="text" placeholder="DD" require class="day_input">
+        <div class="form">
+          <input type="text" placeholder="請輸入已經註冊Email" require class="input_box section_box"><span class="input_date_wrapper">
+            <input type="text" placeholder="YYY" require class="input_box input_year">
+            <input type="text" placeholder="MM" require class="input_box input_month">
+            <input type="text" placeholder="DD" require class="input_box input_day"></span>
           <div class="error_message">Email或生日輸入錯誤/該Email尚未註冊</div>
-          <input type="submit" value="送出" class="login_button email_login">
-        </form>
+          <button id="register_button" class="input_button input_box section_box">送出</button>
+        </div>
       </section>
-      <section class="reset_password_section">
+      <section class="reset_password_section form_section">
         <h1> 重設密碼</h1>
-        <form>
-          <input type="password" placeholder="請輸入已經註冊Email" require class="login_input">
-          <input type="password" placeholder="請再次輸入密碼" require class="login_input">
+        <div class="form">
+          <input type="password" placeholder="請輸入已經註冊Email" require class="input_box section_box">
+          <input type="password" placeholder="請再次輸入密碼" require class="input_box section_box">
           <div class="error_message">密碼輸入錯誤或兩次密碼輸入不符</div>
-          <input type="submit" value="送出" class="login_button email_login">
-        </form>
+          <button id="reset_button" class="input_button input_box section_box">送出</button>
+        </div>
       </section>
+      <div id="dialog">
+        <h1>重設密碼通知信已寄送</h1>
+        <p>請到信箱收取通知信，點擊信件內的連結就可重新設定密碼，謝謝。</p>
+        <button id="check_receive">確定</button>
+      </div>
     </main>
     <footer id="footer">
       <div id="footer_link">
