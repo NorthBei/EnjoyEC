@@ -109,14 +109,12 @@ __webpack_require__(0);
 
 window.addEventListener("load",function(){
     $("#email_register").on("click",function(){
-        $("#dialog p").css("visibility","visiable");
-        showDialog();
         $(".register_data_section").show();
         $(".login_section").hide();
     });
 
-    $("#register_button").on("click",function(){
-        $("#dialog p").css("visibility","hidden");
+    $("#check_register_button").on("click",function(){
+        $("#dialog p").css("visibility","visiable");
         showDialog();
     });
 

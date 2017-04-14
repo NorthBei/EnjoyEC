@@ -3055,18 +3055,22 @@ body {
 .input_box::-webkit-input-placeholder {
   color: #c3c2c3;
   font-size: 14px;
+  font-weight: 100;
 }
 .input_box:-moz-placeholder {
   color: #c3c2c3;
   font-size: 14px;
+  font-weight: 100;
 }
 .input_box::-moz-placeholder {
   color: #c3c2c3;
   font-size: 14px;
+  font-weight: 100;
 }
 .input_box:-ms-input-placeholder {
   color: #c3c2c3;
   font-size: 14px;
+  font-weight: 100;
 }
 .input_button {
   border-radius: 10px;
@@ -3164,6 +3168,7 @@ body {
 /*overrid login.styl*/
 .error_message {
   text-align: initial;
+  padding-left: 25px;
 }
 /*overrid login.styl*/
 #main {

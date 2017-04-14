@@ -12,7 +12,8 @@ module.exports = {
         "new_hot_product/bundle": "./dev/new_hot_product/entry.js",
         "product_intro/bundle": "./dev/product_intro/entry.js",
         "forget_password/bundle": "./dev/forget_password/entry.js",
-        "member_register/bundle": "./dev/member_register/entry.js"
+        "member_register/bundle": "./dev/member_register/entry.js",
+        "order_detail/bundle": "./dev/order_detail/entry.js"
     },
     output: {
         path: path.resolve(__dirname, 'build'),//__dirname + "/build/" + filePath,
