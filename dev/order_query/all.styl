@@ -1,0 +1,185 @@
+@import "../_general/general"
+@import "../_general/banner_section/banner_section"
+
+.commodity_count
+    display: none
+#sub_section
+    height: 17px
+
+.split
+    border: 0;
+    height: 0;
+    border-top: 1px solid #D5948E
+    width: 100%;
+    max-width: $banner_max_width
+
+.two_col
+    display: flex
+    width: 100%;
+    max-width: 1185px;
+
+.side_bar
+    width: 200px
+    margin-top: 50px
+
+    li 
+        color: #4A4A4A
+        font-weight: 100
+        font-size: 18px
+        margin-bottom: 5px
+
+.side_bar
+    li.active
+        color: #D6645F
+        font-weight: normal
+
+.order_query_info_table_wrapper
+    flex: 1
+
++media-query( all, max-width $phone_rwd_width )
+    #main
+        padding: 0 10px
+    .two_col
+        flex-direction: column
+    
+    .side_bar
+        width: 100%;
+        margin-top: 5px;
+        margin-bottom: 15px;
+        border-bottom: 1px solid #d5948e
+        padding-bottom: 5px;
+
+        ul
+            display: flex;
+            flex-wrap: wrap;
+            text-align: center;
+
+            li
+                margin-top: 5px;
+                width: 33.3%;
+
+/*rwd table 別人的code*/
+/* from http://limitedcode.blogspot.tw/2016/03/html-rwdtable.html */
+.rwd-table {
+    border-collapse: collapse;
+    width: 100%
+    margin-bottom: 50px
+}
+
+@media screen and (max-width: $phone_rwd_width) {
+  
+  .rwd-table tr {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .rwd-table th {
+      display: none;
+  }
+    
+  .rwd-table td:before {
+    content: attr(data-th) " ";
+    display: flex
+    flex-axis:center
+  }
+}
+
+/*自己增加 override rwd table*/
+
+.rwd-table 
+    th,td
+        text-align: center;
+
+.rwd-table th,td:before
+    height: 40px
+    background: #F6EAE6
+    color: #D6645F
+    font-size: 15px
+    font-weight: 400;
+    
+.rwd-table th
+    margin: 0 45px
+    box-sizing: border-box
+
+.rwd-table tbody tr
+    font-size: 14px
+    color: #8E5651
+    font-weight: 100
+    height: 60px
+    box-sizing: border-box
+    border-bottom: 1px solid #F6EAE6
+    margin-bottom: 5px;
+
+    td[data-th='訂單編號'] a
+        text-decoration: underline
+    
+    td[data-th=''] 
+        flex 1
+
+/*cancel_detial_table 直接套入rwd的模式*/
+.cancel_detial_table
+    th
+        display: none
+
+    tbody
+        tr
+            height: initial
+            margin-bottom: 10px;
+            display: flex;
+            flex-wrap: wrap;
+    td
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        width: 33.3%;
+        line-height: 48px;
+        width: 20%
+        
+        &:before
+            content: attr(data-th) " ";
+            display: flex
+            flex-axis:center
+/*cancel_detial_table 直接套入rwd的模式*/
+/*rwd_tables*/
++media-query( all, max-width $phone_rwd_width )
+    .rwd-table tbody tr
+        height: initial
+        margin-bottom: 10px;
+
+    .rwd-table td
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        width: 33.3%;
+        line-height: 48px;
+        font-size: 12px;
+
+        &:before
+            font-size: 14px
+/*rwd_tables*/
+
+
+/*上面都是複製來的 這邊開始override*/
+.order_query_info_table_wrapper
+    margin-top: 15px
+
+.do_button
+    size 80px 30px
+    border-radius: 5px
+
+.do_return
+    color: #D6645F
+    font-size: 13px
+    background: #F6EAE6
+
+.do_cancel
+    color: white
+    background: #C8837C
+
+.empty_button
+    visibility: hidden
+        
++media-query( all, max-width $phone_rwd_width )
+    .do_button
+        margin: 0 auto
+        margin-top: 9px;

@@ -3,3 +3,325 @@
 
 .commodity_count
     display: none
+#sub_section
+    height: 17px
+
+.split
+    border: 0;
+    height: 0;
+    border-top: 1px solid #D5948E
+    width: 100%;
+    max-width: $banner_max_width
+
+.two_col
+    display: flex
+    width: 100%;
+    max-width: 1185px;
+
+.side_bar
+    width: 200px
+    margin-top: 50px
+
+    li 
+        color: #4A4A4A
+        font-weight: 100
+        font-size: 18px
+        margin-bottom: 5px
+
+.side_bar
+    li.active
+        color: #D6645F
+        font-weight: normal
+
+.statistics_table
+    width: 300px;
+    align-self: flex-end;
+    &>span
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 10px;
+        font-size: 15px;
+    .count_name
+        text-align: right
+        .count_note
+            font-weight: 100
+            font-size: 13px
+
+    .count_price
+        width: 105px;
+        text-align: right;
+        font-weight: 100;
+    
+    hr
+        border-top: 1px solid #4a4a4a
+.sum_result
+    color: #8B572A
+
++media-query( all, max-width $phone_rwd_width )
+    #main
+        padding: 0 10px
+    .two_col
+        flex-direction: column
+    
+    .side_bar
+        width: 100%;
+        margin-top: 5px;
+        margin-bottom: 15px;
+        border-bottom: 1px solid #d5948e
+        padding-bottom: 5px;
+
+        ul
+            display: flex;
+            flex-wrap: wrap;
+            text-align: center;
+
+            li
+                margin-top: 5px;
+                width: 33.3%;
+    
+/*rwd table 別人的code*/
+/* from http://limitedcode.blogspot.tw/2016/03/html-rwdtable.html */
+.rwd-table {
+    border-collapse: collapse;
+    width: 100%
+    margin-bottom: 50px
+}
+
+@media screen and (max-width: $phone_rwd_width) {
+  
+  .rwd-table tr {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .rwd-table th {
+      display: none;
+  }
+    
+  .rwd-table td:before {
+    content: attr(data-th) " ";
+    display: flex
+    flex-axis:center
+  }
+}
+
+/*自己增加 override rwd table*/
+
+.rwd-table 
+    th,td
+        text-align: center;
+
+.rwd-table th,td:before
+    height: 40px
+    background: #F6EAE6
+    color: #D6645F
+    font-size: 15px
+    font-weight: 400;
+    
+.rwd-table th
+    margin: 0 45px
+    box-sizing: border-box
+
+.rwd-table tbody tr
+    font-size: 14px
+    color: #8E5651
+    font-weight: 100
+    height: 60px
+    box-sizing: border-box
+    border-bottom: 1px solid #F6EAE6
+    margin-bottom: 5px;
+
+    td[data-th='訂單編號'] a
+        text-decoration: underline
+    
+    td[data-th=''] 
+        flex 1
+
+/*cancel_detial_table 直接套入rwd的模式*/
+.cancel_detial_table
+    th
+        display: none
+
+    tbody
+        tr
+            height: initial
+            margin-bottom: 10px;
+            display: flex;
+            flex-wrap: wrap;
+    td
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        width: 33.3%;
+        line-height: 48px;
+        width: 20%
+        
+        &:before
+            content: attr(data-th) " ";
+            display: flex
+            flex-axis:center
+/*cancel_detial_table 直接套入rwd的模式*/
+/*rwd_tables*/
++media-query( all, max-width $phone_rwd_width )
+    .rwd-table tbody tr
+        height: initial
+        margin-bottom: 10px;
+
+    .rwd-table td
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        width: 33.3%;
+        line-height: 48px;
+        font-size: 12px;
+
+        &:before
+            font-size: 14px
+/*rwd_tables*/
+/*order_tables*/
+.order_tables_wrapper
+    flex: 1
+
+    .split
+        border-top: 1px solid #F6EAE6
+
+    .section_title
+        text-align: center
+        color: #4A4A4A
+        font-size: 18px
+
+.order_product_table_wrapper
+    padding: 25px
+    background: #FFF8F6
+    position: relative;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+
+    &:before
+        content: "商品";
+        color: #d6645f;
+        line-height: 40px;
+        position: absolute;
+        width: 100%;
+        background: #f6eae6;
+        height: 40px;
+        left: 0;
+        z-index: 1;
+
+.order_product_table
+    z-index: 2;
+    position: relative;
+    margin-bottom: 15px
+    
+    th
+        &:first-child
+            width: 40%
+
+    td
+        background: white
+        padding: 0
+
+    td[data-th='商品']
+        display: flex;
+        align-items: center;
+        color: #8B572A
+        
+        a
+            text-decoration: underline;
+            text-align: left;
+            margin-left: 20px;
+
+    td[data-th='單價']
+            position: relative;
+
+            .normal_price
+                position: absolute;
+                width: 100%;
+                text-align: center;
+                margin-top: 15px;
+                text-decoration: line-through;
+    td[data-th='顏色']
+        img
+            size 31px
+
+    tbody
+        tr
+            color: #4a4a4a
+            border: none;
+            &:nth-child(even)
+                height: 150px
+                border: none;
+            &:nth-child(odd)
+                height: 15px
+            &:first-child
+                height: 25px
+/*order_tables ovrrider rwd*/
++media-query( all, max-width $phone_rwd_width )
+    .order_product_table_wrapper
+        padding: 15px 5px
+    .order_product_table
+        td
+            display: flex;
+            align-items: center;
+            color: #4a4a4a
+            background: white
+            flex-direction: column;
+            padding: 0;
+            width: 19%;
+
+        td[data-th='商品']
+            width: 100%
+            flex-direction: row;
+            padding-bottom: 22px;
+
+            &:before
+                display: none
+            
+            a
+                margin-left: 10px;
+                line-height: initial;
+            
+            img
+                height: 107px
+        td[data-th='商品編號']
+            width: 24%
+        
+        td[data-th='單價']
+            position: relative;
+
+            .normal_price
+                position: initial;
+                margin-top: 0
+            .now_price,.normal_price
+                line-height: 12px;
+
+        td[data-th='顏色']
+                img
+                    margin-top: 6px;
+        tbody
+            tr
+                &:nth-child(odd)
+                    height: 5px
+                    display: none
+                &:first-child
+                    height: 35px
+                    display: block
+                &:nth-child(even)
+                    height: initial
+                    margin-bottom: 5px;
+    .order_product_table td:before
+        background: white;
+        color: #4a4a4a;
+    
+    .now_price
+        margin-top: 11px
+    .statistics_table
+        width: 100%
+
+        span
+            margin-right: calc("100% - 300px")
+/*order_tables*/
+
+
+  
