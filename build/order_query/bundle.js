@@ -63,7 +63,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 12);
+/******/ 	return __webpack_require__(__webpack_require__.s = 11);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -102,40 +102,45 @@ $(document).ready(function() {
 
 /***/ }),
 
-/***/ 12:
+/***/ 11:
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(0);
 $(document).ready(function(){
-    $('#product_photo_list').slick({
-        vertical: true,
-        slidesToShow: 5,
-        slidesToScroll: 5,
-        infinite: false,
-        verticalSwiping:true,
-        prevArrow:'<i id="prevArrow"></i>',
-        nextArrow:'<i id="nextArrow"></i>'
+    $(".do_cancel").click(function(){
+        $("#cancel_order_dialog").show();
     });
-    
-    var list = document.querySelector('#product_photo_list');
-    var scrollBottom = true;
-    list.addEventListener('click', function (e) {
-        
-        if(e.target.id != "product_photo_list"){
-            return;
+
+    $(".do_return").click(function(){
+        $("#apply_return_dialog").show();
+    });
+
+    $(".colse_dialog").on("click",colseDialog);
+    $(".dialog_cancel").on("click",colseDialog);
+    $("#cancel_orde_success_dialog .dialog_check").on("click",colseDialog);
+
+    $("#apply_return_dialog .dialog_check").on("click",function(){
+        if($("#user_check_know:checked").length > 0){
+            $("#apply_return_dialog").hide();
         }
-        if(scrollBottom){
-            $("#nextArrow").trigger("click");
+    });
+
+    $("#cancel_order_dialog .dialog_check").on("click",function(){
+        if($("#cancel_order_dialog .cancel_reason").val().length == 0){
+            $("#cancel_order_dialog .alter_msg").css('visibility', 'visible');
         }
         else{
-            $("#prevArrow").trigger("click");
+            //send to server
+            $("#cancel_order_dialog").hide();
+            $("#cancel_orde_success_dialog").css("display","flex");
         }
-        scrollBottom = !scrollBottom;
-        console.log(e.target.classList);
-        e.target.classList.toggle("scrollBottom"); 
-        
     });
+    
 });
+
+function colseDialog(){
+    $(this).parents(".do_button_dialog").hide();
+}
 
 /***/ })
 

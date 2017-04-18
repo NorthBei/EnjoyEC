@@ -163,16 +163,19 @@
 .order_query_info_table_wrapper
     margin-top: 15px
 
-.do_button
+.do_button,.dialog_button
     size 80px 30px
     border-radius: 5px
 
-.do_return
+.do_button
     color: #D6645F
-    font-size: 13px
     background: #F6EAE6
+    &:hover,&:active
+        color: white
+        background: #C8837C 
 
-.do_cancel
+
+.dialog_button
     color: white
     background: #C8837C
 
@@ -181,8 +184,147 @@
         
 .order_query_info_table tbody tr
     margin-bottom: 30px
+
+.do_button_dialog
+    display: none
+    background: #FFF8F6;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.09);
+    position: fixed;
+    transform: translate(-50%,-50%);
+    left: 50%;
+    top: 50%;
+    display: flex;
+    flex-direction: column;
+    flex-axis:center
+    color: #4A4A4A
+    text-align: center
+
+    .colse_dialog
+        position: absolute
+        top: 14px;
+        right: 14px;
+        cursor: pointer
+
+    h1
+        font-size: 30px
+        margin-bottom: 30px
+    p
+        /* 我們很遺憾您要取消訂單，為了提升網站與商: */
+        font-size: 18px;
+        letter-spacing: 0.47px;
+
+    .dialog_button_wrapper
+        display: flex
+        justify-content: center
     
+    .dialog_button
+        margin: 0 20px
+
+
+#cancel_order_dialog
+    display: none;
+    padding: 55px 135px 65px;
+
+    .radio_button_wrapper
+        display: flex
+        margin: 25px 0 15px;
+        flex-wrap: wrap;
+
+        li
+            display: flex
+            width: 50%
+            margin-bottom: 10px;
+            align-items: center;
+            label
+                margin-left: 10px
+
+    .cancel_reason
+        background: #FFFFFF;
+        border: 1px solid #8E5651;
+        width: 431px;
+        height: 121px;
+        outline: none
+    .alter_msg
+        /* 請選擇或填寫取消訂單原因: */
+        font-size: 12px;
+        color: #950012;
+        letter-spacing: 0.31px;
+        margin: 6px 0 15px
+        visibility: hidden
+    
+#cancel_orde_success_dialog
+    display: none;
+    padding: 70px 50px 56px
+    max-width: 400px
+    p
+        margin-bottom: 30px
+    .refund_detail
+        /* 退款方式：信用卡刷退: */
+        font-size: 18px;
+        color: #8B572A;
+        letter-spacing: 0.47px;
+        margin-bottom:75px
+
+#apply_return_dialog
+    display: none;
+    font-size: 15px;
+    padding: 55px 95px 67px
+    max-width: 500px;
+
+    .user_should_know
+        list-style: disc
+        margin: 20px 0
+        color: #4A4A4A;
+        letter-spacing: 0.39px;
+        font-weight: 100
+        text-align: left;
+        li
+            margin-bottom: 10px
+
+            a
+                color: #D6645F
+                text-decoration: underline
+
+        .high_light
+            color: #D6645F
+    .radio_button_wrapper 
+        align-self: flex-start;
+        display: flex
+        align-items: center;
+        font-weight: 100
+
+        label
+            margin-left: 10px
+
+    .dialog_button_wrapper
+        margin-top: 45px
 +media-query( all, max-width $phone_rwd_width )
+    #cancel_order_dialog,#apply_return_dialog,#cancel_orde_success_dialog
+        padding: 60px 40px 90px
+    .do_button_dialog
+        width: calc("100vw - 30px");
+        box-sizing: border-box;
+
+        h1
+            font-size: 20px;
+        p
+            font-size: 16px;
+    
+    #cancel_order_dialog
+
+        .radio_button_wrapper 
+            label
+                font-size: 15px 
+            
+        .cancel_reason
+            width: 100%
+
+    #apply_return_dialog
+        .user_should_know,.radio_button_wrapper
+            font-size: 12px
+        .dialog_cancel
+            display: none
+
     .do_button
         margin: 0 auto
         margin-top: 9px;

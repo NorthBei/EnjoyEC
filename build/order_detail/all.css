@@ -3155,7 +3155,6 @@ body {
   -ms-align-self: flex-end;
   -ms-flex-item-align: end;
       align-self: flex-end;
-  margin-right: 30px;
 }
 .statistics_table>span {
   display: -ms-flexbox;
@@ -3165,6 +3164,7 @@ body {
       justify-content: flex-end;
   margin-top: 10px;
   font-size: 15px;
+  margin-right: 30px;
 }
 .statistics_table .count_name {
   text-align: right;
@@ -3487,7 +3487,6 @@ td:before {
   }
   .statistics_table {
     width: 100%;
-    margin-right: initial;
   }
   .statistics_table span {
     margin-right: calc(100% - 300px);

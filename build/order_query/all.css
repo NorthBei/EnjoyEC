@@ -3302,17 +3302,22 @@ td:before {
 .order_query_info_table_wrapper {
   margin-top: 15px;
 }
-.do_button {
+.do_button,
+.dialog_button {
   width: 80px;
   height: 30px;
   border-radius: 5px;
 }
-.do_return {
+.do_button {
   color: #d6645f;
-  font-size: 13px;
   background: #f6eae6;
 }
-.do_cancel {
+.do_button:hover,
+.do_button:active {
+  color: #fff;
+  background: #c8837c;
+}
+.dialog_button {
   color: #fff;
   background: #c8837c;
 }
@@ -3322,7 +3327,175 @@ td:before {
 .order_query_info_table tbody tr {
   margin-bottom: 30px;
 }
+.do_button_dialog {
+  display: none;
+  background: #fff8f6;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.09);
+  position: fixed;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -ms-justify-content: center;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-align-items: center;
+  -ms-flex-align: center;
+      align-items: center;
+  color: #4a4a4a;
+  text-align: center;
+}
+.do_button_dialog .colse_dialog {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  cursor: pointer;
+}
+.do_button_dialog h1 {
+  font-size: 30px;
+  margin-bottom: 30px;
+}
+.do_button_dialog p {
+/* 我們很遺憾您要取消訂單，為了提升網站與商: */
+  font-size: 18px;
+  letter-spacing: 0.47px;
+}
+.do_button_dialog .dialog_button_wrapper {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-justify-content: center;
+  -ms-flex-pack: center;
+      justify-content: center;
+}
+.do_button_dialog .dialog_button {
+  margin: 0 20px;
+}
+#cancel_order_dialog {
+  display: none;
+  padding: 55px 135px 65px;
+}
+#cancel_order_dialog .radio_button_wrapper {
+  display: -ms-flexbox;
+  display: flex;
+  margin: 25px 0 15px;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+#cancel_order_dialog .radio_button_wrapper li {
+  display: -ms-flexbox;
+  display: flex;
+  width: 50%;
+  margin-bottom: 10px;
+  -ms-align-items: center;
+  -ms-flex-align: center;
+      align-items: center;
+}
+#cancel_order_dialog .radio_button_wrapper li label {
+  margin-left: 10px;
+}
+#cancel_order_dialog .cancel_reason {
+  background: #fff;
+  border: 1px solid #8e5651;
+  width: 431px;
+  height: 121px;
+  outline: none;
+}
+#cancel_order_dialog .alter_msg {
+/* 請選擇或填寫取消訂單原因: */
+  font-size: 12px;
+  color: #950012;
+  letter-spacing: 0.31px;
+  margin: 6px 0 15px;
+  visibility: hidden;
+}
+#cancel_orde_success_dialog {
+  display: none;
+  padding: 70px 50px 56px;
+  max-width: 400px;
+}
+#cancel_orde_success_dialog p {
+  margin-bottom: 30px;
+}
+#cancel_orde_success_dialog .refund_detail {
+/* 退款方式：信用卡刷退: */
+  font-size: 18px;
+  color: #8b572a;
+  letter-spacing: 0.47px;
+  margin-bottom: 75px;
+}
+#apply_return_dialog {
+  display: none;
+  font-size: 15px;
+  padding: 55px 95px 67px;
+  max-width: 500px;
+}
+#apply_return_dialog .user_should_know {
+  list-style: disc;
+  margin: 20px 0;
+  color: #4a4a4a;
+  letter-spacing: 0.39px;
+  font-weight: 100;
+  text-align: left;
+}
+#apply_return_dialog .user_should_know li {
+  margin-bottom: 10px;
+}
+#apply_return_dialog .user_should_know li a {
+  color: #d6645f;
+  text-decoration: underline;
+}
+#apply_return_dialog .user_should_know .high_light {
+  color: #d6645f;
+}
+#apply_return_dialog .radio_button_wrapper {
+  -ms-align-self: flex-start;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-align-items: center;
+  -ms-flex-align: center;
+      align-items: center;
+  font-weight: 100;
+}
+#apply_return_dialog .radio_button_wrapper label {
+  margin-left: 10px;
+}
+#apply_return_dialog .dialog_button_wrapper {
+  margin-top: 45px;
+}
 @media all and (max-width: 550px) {
+  #cancel_order_dialog,
+  #apply_return_dialog,
+  #cancel_orde_success_dialog {
+    padding: 60px 40px 90px;
+  }
+  .do_button_dialog {
+    width: calc(100vw - 30px);
+    box-sizing: border-box;
+  }
+  .do_button_dialog h1 {
+    font-size: 20px;
+  }
+  .do_button_dialog p {
+    font-size: 16px;
+  }
+  #cancel_order_dialog .radio_button_wrapper label {
+    font-size: 15px;
+  }
+  #cancel_order_dialog .cancel_reason {
+    width: 100%;
+  }
+  #apply_return_dialog .user_should_know,
+  #apply_return_dialog .radio_button_wrapper {
+    font-size: 12px;
+  }
+  #apply_return_dialog .dialog_cancel {
+    display: none;
+  }
   .do_button {
     margin: 0 auto;
     margin-top: 9px;

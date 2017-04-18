@@ -48,9 +48,9 @@ block content
                         td(data-th='下單時間') 2017/02/03 12:21
                         td(data-th='總計金額') $ 1,200
                         td(data-th='訂單狀態') 已取貨
-                        td(data-th='鑑賞期限') 
+                        td(data-th='鑑賞期限') 2017/02/10
                         td(data-th='')
-                            button.do_button.do_return 我要取消
+                            button.do_button.do_return 我要退貨
                     
                     tr
                         td(data-th='訂單編號') 
@@ -60,7 +60,7 @@ block content
                         td(data-th='訂單狀態') 已取貨
                         td(data-th='鑑賞期限') 2017/02/10
                         td(data-th='')
-                            button.do_button.do_return 我要取消
+                            button.do_button.do_return 我要退貨
                     
                     tr
                         td(data-th='訂單編號') 
@@ -81,3 +81,67 @@ block content
                         td(data-th='鑑賞期限') 
                         td(data-th='')
                             button.do_button.empty_button null
+    div.do_button_dialog#cancel_order_dialog
+        img(src="./img/delete.png").colse_dialog
+        h1 取消訂單
+        p 我們很遺憾您要取消訂單，為了提升網站與商品整體品質，請您填寫此次取消訂單的原因(必填)。
+        
+        ul.radio_button_wrapper
+            li 
+                input(type="radio" name="cancel_type" id="user_error" checked) 
+                label(for="user_error") 下錯商品
+            li  
+                input(type="radio" name="cancel_type" id="expensive") 
+                label(for="expensive") 商品價格太高
+            br
+            li
+                input(type="radio" name="cancel_type" id="more_like")
+                label(for="more_like") 看到更喜歡的商品
+            li
+                input(type="radio" name="cancel_type" id="other")
+                label(for="other") 其他
+
+        textarea(rows="4" cols="50").cancel_reason
+        div.alter_msg 請選擇或填寫取消訂單原因
+        span.dialog_button_wrapper
+            button.dialog_button.dialog_cancel 取消
+            button.dialog_button.dialog_check 確定
+    
+    div.do_button_dialog#cancel_orde_success_dialog
+        h1 訂單取消成功
+        p 訂單已成功取消，我們會盡快處理退款程序，退款需約5個工作天，如欲查看訂單最新狀態可到會員專區的訂單查詢裡，謝謝！
+
+        table.refund_detail
+            tr
+                td  退款方式：
+                td  信用卡刷退
+            tr
+                td  退款金額：
+                td  $1,200
+
+        span.dialog_button_wrapper
+            button.dialog_button.dialog_check 確定
+    
+    div.do_button_dialog#apply_return_dialog
+        img(src="./img/delete.png").colse_dialog
+        h1 申請退貨
+        p 申請退貨前請先詳細閱讀退貨須知
+        
+        ul.user_should_know
+            li 如欲申請退貨，請確保訂單未超過七天鑑賞期、商品包裝完整、無使用痕跡(缺少或味道)、無人為造成髒汙、商品未剪標等其他已使用狀況發生。
+            li 如欲申請退貨，請確保訂單未超過七天鑑賞期、商品包裝完整、無使用痕跡(缺少或味道)、無人為造成髒汙、商品未剪標等其他已使用狀況發生。
+            li 退貨商品分為正常品與瑕疵品，正常品為出於個人因素，如：買錯商品、商品色差等原因，必須
+                span.high_light 由買家負擔寄回退貨商品的運費
+                |；如退貨商品為瑕疵品，即商品有明顯瑕疵、凹痕或髒汙(擦拭不掉)、運送過程造成的損壞或內容物溢出、過期商品、寄錯商品等，
+                span.high_light 由ENJOY負擔消費者寄回退貨商品的運費
+                |，以表歉意。
+            li 退貨商品寄回方式請參考購物須知>
+                a(href="") 退貨方式
+        
+        div.radio_button_wrapper
+            input(type="radio" name="cancel_type")#user_check_know
+            label(for="user_check_know") 我已詳盡閱讀退貨須知，並確認進行退貨程序。
+        
+        span.dialog_button_wrapper
+            button.dialog_button.dialog_cancel 取消
+            button.dialog_button.dialog_check 確定
