@@ -108,11 +108,11 @@ $(document).ready(function() {
 __webpack_require__(0);
 $(document).ready(function(){
     $(".do_cancel").click(function(){
-        $("#cancel_order_dialog").show();
+        $("#cancel_order_dialog").css("display","flex");
     });
 
     $(".do_return").click(function(){
-        $("#apply_return_dialog").show();
+        $("#apply_return_dialog").css("display","flex");
     });
 
     $(".colse_dialog").on("click",colseDialog);
@@ -137,6 +137,10 @@ $(document).ready(function(){
     });
     
 });
+
+function showDialog(){
+    $(this).css("display","flex");
+}
 
 function colseDialog(){
     $(this).parents(".do_button_dialog").hide();

@@ -3395,6 +3395,7 @@ td:before {
 }
 #cancel_order_dialog .radio_button_wrapper li label {
   margin-left: 10px;
+  font-size: 15px;
 }
 #cancel_order_dialog .cancel_reason {
   background: #fff;
@@ -3482,9 +3483,6 @@ td:before {
   }
   .do_button_dialog p {
     font-size: 16px;
-  }
-  #cancel_order_dialog .radio_button_wrapper label {
-    font-size: 15px;
   }
   #cancel_order_dialog .cancel_reason {
     width: 100%;
