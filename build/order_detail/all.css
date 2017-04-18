@@ -3144,7 +3144,7 @@ body {
   color: #4a4a4a;
   font-weight: 100;
   font-size: 18px;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
 }
 .side_bar li.active {
   color: #d6645f;
@@ -3155,6 +3155,7 @@ body {
   -ms-align-self: flex-end;
   -ms-flex-item-align: end;
       align-self: flex-end;
+  margin-right: 30px;
 }
 .statistics_table>span {
   display: -ms-flexbox;
@@ -3486,6 +3487,7 @@ td:before {
   }
   .statistics_table {
     width: 100%;
+    margin-right: initial;
   }
   .statistics_table span {
     margin-right: calc(100% - 300px);
