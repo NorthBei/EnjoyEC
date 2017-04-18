@@ -1,86 +1,93 @@
-extends ../_general/temp_page.jade
-include ../_general/banner_section/banner_section.jade
+//- extends ../_general/temp_page.jade
+//- include ../_general/banner_section/banner_section.jade
 
-block content
-    -var navArray = ["首頁","會員專區","訂單查詢"]
-    +banner_section("#","../general/img/banner-會員專區.png",navArray,false)
+//- block content
+//-     -var navArray = ["首頁","會員專區","訂單查詢"]
+//-     +banner_section("#","../general/img/banner-會員專區.png",navArray,false)
 
-    hr.split
+//-     hr.split
 
-    div.two_col
-        section.side_bar
-            ul
-                li.active
-                    a(href="") 訂單查詢
-                li
-                    a(href="") 我的收藏清單
-                li
-                    a(href="") 購物金折抵券
-                li
-                    a(href="") 帳戶設定
-                li
-                    a(href="") 登出
-        section.order_query_info_table_wrapper
+//-     div.two_col
+//-         section.side_bar
+//-             ul
+//-                 li.active
+//-                     a(href="") 訂單查詢
+//-                 li
+//-                     a(href="") 我的收藏清單
+//-                 li
+//-                     a(href="") 購物金折抵券
+//-                 li
+//-                     a(href="") 帳戶設定
+//-                 li
+//-                     a(href="") 登出
+extends ../_general/member_section/temp_member_section.jade
+    
+block append content
+    block navArray
+        -var navArray = ["首頁","會員專區","訂單查詢"]
 
-            table.order_query_info_table.rwd-table
-                thead
-                    tr
-                        th 訂單編號
-                        th 下單時間
-                        th 總計金額
-                        th 訂單狀態
-                        th 鑑賞期限
-                        th 
-                tbody
-                    tr
-                        td(data-th='訂單編號') 
-                            a(href="#") EJ201702030001
-                        td(data-th='下單時間') 2017/02/03 12:21
-                        td(data-th='總計金額') $ 1,200
-                        td(data-th='訂單狀態') 訂單處理中
-                        td(data-th='鑑賞期限') 
-                        td(data-th='')
-                            button.do_button.do_cancel 我要取消
-                        //-要湊滿6個QQ
-                    tr
-                        td(data-th='訂單編號') 
-                            a(href="#") EJ201702030001
-                        td(data-th='下單時間') 2017/02/03 12:21
-                        td(data-th='總計金額') $ 1,200
-                        td(data-th='訂單狀態') 已取貨
-                        td(data-th='鑑賞期限') 2017/02/10
-                        td(data-th='')
-                            button.do_button.do_return 我要退貨
-                    
-                    tr
-                        td(data-th='訂單編號') 
-                            a(href="#") EJ201702030001
-                        td(data-th='下單時間') 2017/02/03 12:21
-                        td(data-th='總計金額') $ 1,200
-                        td(data-th='訂單狀態') 已取貨
-                        td(data-th='鑑賞期限') 2017/02/10
-                        td(data-th='')
-                            button.do_button.do_return 我要退貨
-                    
-                    tr
-                        td(data-th='訂單編號') 
-                            a(href="#") EJ201702030001
-                        td(data-th='下單時間') 2017/02/03 12:21
-                        td(data-th='總計金額') $ 1,200
-                        td(data-th='訂單狀態') 已出貨
-                        td(data-th='鑑賞期限') 
-                        td(data-th='')
-                            button.do_button.empty_button null
-                    
-                    tr
-                        td(data-th='訂單編號') 
-                            a(href="#") EJ201702030001
-                        td(data-th='下單時間') 2017/02/03 12:21
-                        td(data-th='總計金額') $ 1,200
-                        td(data-th='訂單狀態') 尚未完成付款
-                        td(data-th='鑑賞期限') 
-                        td(data-th='')
-                            button.do_button.empty_button null
+block member_section
+    section.order_query_info_table_wrapper
+
+        table.order_query_info_table.rwd-table
+            thead
+                tr
+                    th 訂單編號
+                    th 下單時間
+                    th 總計金額
+                    th 訂單狀態
+                    th 鑑賞期限
+                    th 
+            tbody
+                tr
+                    td(data-th='訂單編號') 
+                        a(href="#") EJ201702030001
+                    td(data-th='下單時間') 2017/02/03 12:21
+                    td(data-th='總計金額') $ 1,200
+                    td(data-th='訂單狀態') 訂單處理中
+                    td(data-th='鑑賞期限') 
+                    td(data-th='')
+                        button.do_button.do_cancel 我要取消
+                    //-要湊滿6個QQ
+                tr
+                    td(data-th='訂單編號') 
+                        a(href="#") EJ201702030001
+                    td(data-th='下單時間') 2017/02/03 12:21
+                    td(data-th='總計金額') $ 1,200
+                    td(data-th='訂單狀態') 已取貨
+                    td(data-th='鑑賞期限') 2017/02/10
+                    td(data-th='')
+                        button.do_button.do_return 我要退貨
+                
+                tr
+                    td(data-th='訂單編號') 
+                        a(href="#") EJ201702030001
+                    td(data-th='下單時間') 2017/02/03 12:21
+                    td(data-th='總計金額') $ 1,200
+                    td(data-th='訂單狀態') 已取貨
+                    td(data-th='鑑賞期限') 2017/02/10
+                    td(data-th='')
+                        button.do_button.do_return 我要退貨
+                
+                tr
+                    td(data-th='訂單編號') 
+                        a(href="#") EJ201702030001
+                    td(data-th='下單時間') 2017/02/03 12:21
+                    td(data-th='總計金額') $ 1,200
+                    td(data-th='訂單狀態') 已出貨
+                    td(data-th='鑑賞期限') 
+                    td(data-th='')
+                        button.do_button.empty_button null
+                
+                tr
+                    td(data-th='訂單編號') 
+                        a(href="#") EJ201702030001
+                    td(data-th='下單時間') 2017/02/03 12:21
+                    td(data-th='總計金額') $ 1,200
+                    td(data-th='訂單狀態') 尚未完成付款
+                    td(data-th='鑑賞期限') 
+                    td(data-th='')
+                        button.do_button.empty_button null
     div.do_button_dialog#cancel_order_dialog
         img(src="./img/delete.png").colse_dialog
         h1 取消訂單
@@ -106,7 +113,7 @@ block content
         span.dialog_button_wrapper
             button.dialog_button.dialog_cancel 取消
             button.dialog_button.dialog_check 確定
-    
+
     div.do_button_dialog#cancel_orde_success_dialog
         h1 訂單取消成功
         p 訂單已成功取消，我們會盡快處理退款程序，退款需約5個工作天，如欲查看訂單最新狀態可到會員專區的訂單查詢裡，謝謝！
@@ -121,7 +128,7 @@ block content
 
         span.dialog_button_wrapper
             button.dialog_button.dialog_check 確定
-    
+
     div.do_button_dialog#apply_return_dialog
         img(src="./img/delete.png").colse_dialog
         h1 申請退貨

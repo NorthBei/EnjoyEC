@@ -3150,10 +3150,6 @@ body {
   color: #d6645f;
   font-weight: normal;
 }
-.order_query_info_table_wrapper {
-  -ms-flex: 1;
-  flex: 1;
-}
 @media all and (max-width: 550px) {
   #main {
     padding: 0 10px;
@@ -3180,6 +3176,10 @@ body {
     margin-top: 5px;
     width: 33.3%;
   }
+}
+.order_query_info_table_wrapper {
+  -ms-flex: 1;
+  flex: 1;
 }
 /*rwd table 別人的code*/
 /* from http://limitedcode.blogspot.tw/2016/03/html-rwdtable.html */
@@ -3376,6 +3376,7 @@ td:before {
 #cancel_order_dialog {
   display: none;
   padding: 55px 135px 65px;
+  width: 431px;
 }
 #cancel_order_dialog .radio_button_wrapper {
   display: -ms-flexbox;
@@ -3400,7 +3401,7 @@ td:before {
 #cancel_order_dialog .cancel_reason {
   background: #fff;
   border: 1px solid #8e5651;
-  width: 431px;
+  width: 100%;
   height: 121px;
   outline: none;
 }

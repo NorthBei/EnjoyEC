@@ -3150,6 +3150,33 @@ body {
   color: #d6645f;
   font-weight: normal;
 }
+@media all and (max-width: 550px) {
+  #main {
+    padding: 0 10px;
+  }
+  .two_col {
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+  .side_bar {
+    width: 100%;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #d5948e;
+    padding-bottom: 5px;
+  }
+  .side_bar ul {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    text-align: center;
+  }
+  .side_bar ul li {
+    margin-top: 5px;
+    width: 33.3%;
+  }
+}
 .statistics_table {
   width: 300px;
   -ms-align-self: flex-end;
@@ -3183,33 +3210,6 @@ body {
 }
 .sum_result {
   color: #8b572a;
-}
-@media all and (max-width: 550px) {
-  #main {
-    padding: 0 10px;
-  }
-  .two_col {
-    -ms-flex-direction: column;
-    flex-direction: column;
-  }
-  .side_bar {
-    width: 100%;
-    margin-top: 5px;
-    margin-bottom: 15px;
-    border-bottom: 1px solid #d5948e;
-    padding-bottom: 5px;
-  }
-  .side_bar ul {
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    text-align: center;
-  }
-  .side_bar ul li {
-    margin-top: 5px;
-    width: 33.3%;
-  }
 }
 /*rwd table 別人的code*/
 /* from http://limitedcode.blogspot.tw/2016/03/html-rwdtable.html */

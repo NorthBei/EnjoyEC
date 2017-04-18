@@ -1,186 +1,189 @@
-extends ../_general/temp_page.jade
-include ../_general/banner_section/banner_section.jade
+//- extends ../_general/temp_page.jade
+//- include ../_general/banner_section/banner_section.jade
+extends ../_general/member_section/temp_member_section.jade
+    
+block append content
+    block navArray
+        -var navArray = ["首頁","會員專區","訂單查詢","訂單編號EJ201702030001"]
+    //-+banner_section("#","../general/img/banner-會員專區.png",navArray,false)
 
-block content
-    -var navArray = ["首頁","會員專區","訂單查詢","訂單編號EJ201702030001"]
-    +banner_section("#","../general/img/banner-會員專區.png",navArray,false)
+    //-hr.split
 
-    hr.split
-
-    div.two_col
-        section.side_bar
-            ul
-                li.active
-                    a(href="") 訂單查詢
-                li
-                    a(href="") 我的收藏清單
-                li
-                    a(href="") 購物金折抵券
-                li
-                    a(href="") 帳戶設定
-                li
-                    a(href="") 登出
-        section.order_tables_wrapper
-        
-            .section_title 訂購商品
-                hr.split
-                div.order_product_table_wrapper
-                    table.order_product_table.rwd-table
-                        thead
-                            tr
-                                th 商品
-                                th 商品編號
-                                th 顏色
-                                th 單價
-                                th 數量
-                                th 小計
-                        tbody
-                            tr
-                            tr
-                                td(data-th='商品') 
-                                    img(src="./img/商品一.png")
-                                    a(href="#") 如膠似漆2.0系列-We The Female 凱莉的最愛 ISLW64
-                                td(data-th='商品編號') NP00123456
-                                td(data-th='顏色') 
-                                    img(src="./img/color-3.png")
-                                td(data-th='單價') 
-                                    .now_price $ 390
-                                    .normal_price $ 490
-                                td(data-th='數量') 1
-                                td(data-th='小計') $ 390
-                            tr
-                            tr
-                                td(data-th='商品') 
-                                    img(src="./img/商品一.png")
-                                    a(href="#") 如膠似漆2.0系列-We The Female 凱莉的最愛 ISLW64
-                                td(data-th='商品編號') NP00123456
-                                td(data-th='顏色') 
-                                    img(src="./img/color-3.png")
-                                td(data-th='單價') 
-                                    .now_price $ 390
-                                    .normal_price $ 490
-                                td(data-th='數量') 1
-                                td(data-th='小計') $ 390
-                    
-                    .statistics_table
-                            span
-                                .count_name 總計金額
-                                    .count_note (不含滿額或滿量現折金額)
-                                .count_price $ 3600
-                            
-                            span
-                                .count_name 滿額/滿量現折金額
-                                .count_price -$ 700
-                            
-                            span
-                                .count_name 優惠券代碼折抵
-                                .count_price -$ 100
-                            
-                            span
-                                .count_name 購物金折抵
-                                .count_price
-                            
-                            span
-                                .count_name 運費
-                                .count_price $ 10
-                            
-                            hr
-                            
-                            span.sum_result
-                                .count_name 合計
-                                .count_price $ 2870
-
-            .section_title 訂購資訊
-                hr.split
-                table.order_info_table.rwd-table
+    //- div.two_col
+    //-     section.side_bar
+    //-         ul
+    //-             li.active
+    //-                 a(href="") 訂單查詢
+    //-             li
+    //-                 a(href="") 我的收藏清單
+    //-             li
+    //-                 a(href="") 購物金折抵券
+    //-             li
+    //-                 a(href="") 帳戶設定
+    //-             li
+    //-                 a(href="") 登出
+block member_section
+    section.order_tables_wrapper
+    
+        .section_title 訂購商品
+            hr.split
+            div.order_product_table_wrapper
+                table.order_product_table.rwd-table
                     thead
                         tr
-                            th 訂單編號
-                            th 下單時間
-                            th 付款方式
-                            th 付款狀態
-                            th 訂單狀態
+                            th 商品
+                            th 商品編號
+                            th 顏色
+                            th 單價
+                            th 數量
+                            th 小計
                     tbody
                         tr
-                            td(data-th='訂單編號') 
-                                a(href="#") EJ201702030001
-                            td(data-th='下單時間') 2017/02/03 12:21
-                            td(data-th='付款方式') 超商取貨付款
-                            td(data-th='付款狀態') 未付款
-                            td(data-th='訂單狀態') 訂單處理中
-                            td(data-th='')
-                            //-要湊滿6個QQ
                         tr
-                            td(data-th='訂單編號') 
-                                a(href="#") EJ201702030001
-                            td(data-th='下單時間') 2017/02/03 12:21
-                            td(data-th='付款方式') 超商取貨付款
-                            td(data-th='付款狀態') 未付款
-                            td(data-th='訂單狀態') 訂單處理中
-                            td(data-th='')
-                            
-            .section_title 收件人資料
-                hr.split
-                table.order_info_table.rwd-table
-                    thead
+                            td(data-th='商品') 
+                                img(src="./img/商品一.png")
+                                a(href="#") 如膠似漆2.0系列-We The Female 凱莉的最愛 ISLW64
+                            td(data-th='商品編號') NP00123456
+                            td(data-th='顏色') 
+                                img(src="./img/color-3.png")
+                            td(data-th='單價') 
+                                .now_price $ 390
+                                .normal_price $ 490
+                            td(data-th='數量') 1
+                            td(data-th='小計') $ 390
                         tr
-                            th 姓名
-                            th 電話
-                            th 送貨方式
-                            th 取貨門市名稱
-                            th 門市地址
-                            th 包裹追蹤碼
-                    tbody
                         tr
-                            td(data-th='姓名') 盧曉筱
-                            td(data-th='電話') 2017/02/03 12:21
-                            td(data-th='送貨方式') 超商取貨付款
-                            td(data-th='取貨門市名稱') 龍泉門市
-                            td(data-th='門市地址') 台北市大安區龍泉街20號
-                            td(data-th='包裹追蹤碼') 12d124455
-                        tr
-                            td(data-th='姓名') 盧曉筱
-                            td(data-th='電話') 2017/02/03 12:21
-                            td(data-th='送貨方式') 超商取貨付款
-                            td(data-th='取貨門市名稱') 龍泉門市
-                            td(data-th='門市地址') 台北市大安區龍泉街20號
-                            td(data-th='包裹追蹤碼') 12d124455
+                            td(data-th='商品') 
+                                img(src="./img/商品一.png")
+                                a(href="#") 如膠似漆2.0系列-We The Female 凱莉的最愛 ISLW64
+                            td(data-th='商品編號') NP00123456
+                            td(data-th='顏色') 
+                                img(src="./img/color-3.png")
+                            td(data-th='單價') 
+                                .now_price $ 390
+                                .normal_price $ 490
+                            td(data-th='數量') 1
+                            td(data-th='小計') $ 390
+                
+                .statistics_table
+                        span
+                            .count_name 總計金額
+                                .count_note (不含滿額或滿量現折金額)
+                            .count_price $ 3600
+                        
+                        span
+                            .count_name 滿額/滿量現折金額
+                            .count_price -$ 700
+                        
+                        span
+                            .count_name 優惠券代碼折抵
+                            .count_price -$ 100
+                        
+                        span
+                            .count_name 購物金折抵
+                            .count_price
+                        
+                        span
+                            .count_name 運費
+                            .count_price $ 10
+                        
+                        hr
+                        
+                        span.sum_result
+                            .count_name 合計
+                            .count_price $ 2870
 
-            .section_title 取消明細
-                hr.split
-                table.cancel_detial_table.rwd-table
-                    thead
-                        tr
-                            th 訂單取消時間
-                            th 取消原因
-                            th 退款方式
-                            th 退款金額
-                            th 退款時間
-                            th 退款戶名
-                            th 銀行名稱
-                            th 銀行帳號
-                    tbody
-                        tr
-                            
-                                td(data-th='訂單取消時間') 2017/02/03 12:21
-                                td(data-th='取消原因') 下錯商品
-                                td(data-th='退款方式') 信用卡刷退
-                                td(data-th='退款金額') $ 2,870
-                                td(data-th='退款時間')
-                                
-                                td(data-th='退款戶名') 盧曉筱
-                                td(data-th='銀行名稱') 國泰世華-013
-                                td(data-th='銀行帳號') 1534534354534
-                                td(data-th='') 
-                            
-                            //-要湊滿6個QQ
-                        tr
+        .section_title 訂購資訊
+            hr.split
+            table.order_info_table.rwd-table
+                thead
+                    tr
+                        th 訂單編號
+                        th 下單時間
+                        th 付款方式
+                        th 付款狀態
+                        th 訂單狀態
+                tbody
+                    tr
+                        td(data-th='訂單編號') 
+                            a(href="#") EJ201702030001
+                        td(data-th='下單時間') 2017/02/03 12:21
+                        td(data-th='付款方式') 超商取貨付款
+                        td(data-th='付款狀態') 未付款
+                        td(data-th='訂單狀態') 訂單處理中
+                        td(data-th='')
+                        //-要湊滿6個QQ
+                    tr
+                        td(data-th='訂單編號') 
+                            a(href="#") EJ201702030001
+                        td(data-th='下單時間') 2017/02/03 12:21
+                        td(data-th='付款方式') 超商取貨付款
+                        td(data-th='付款狀態') 未付款
+                        td(data-th='訂單狀態') 訂單處理中
+                        td(data-th='')
+                        
+        .section_title 收件人資料
+            hr.split
+            table.order_info_table.rwd-table
+                thead
+                    tr
+                        th 姓名
+                        th 電話
+                        th 送貨方式
+                        th 取貨門市名稱
+                        th 門市地址
+                        th 包裹追蹤碼
+                tbody
+                    tr
+                        td(data-th='姓名') 盧曉筱
+                        td(data-th='電話') 2017/02/03 12:21
+                        td(data-th='送貨方式') 超商取貨付款
+                        td(data-th='取貨門市名稱') 龍泉門市
+                        td(data-th='門市地址') 台北市大安區龍泉街20號
+                        td(data-th='包裹追蹤碼') 12d124455
+                    tr
+                        td(data-th='姓名') 盧曉筱
+                        td(data-th='電話') 2017/02/03 12:21
+                        td(data-th='送貨方式') 超商取貨付款
+                        td(data-th='取貨門市名稱') 龍泉門市
+                        td(data-th='門市地址') 台北市大安區龍泉街20號
+                        td(data-th='包裹追蹤碼') 12d124455
+
+        .section_title 取消明細
+            hr.split
+            table.cancel_detial_table.rwd-table
+                thead
+                    tr
+                        th 訂單取消時間
+                        th 取消原因
+                        th 退款方式
+                        th 退款金額
+                        th 退款時間
+                        th 退款戶名
+                        th 銀行名稱
+                        th 銀行帳號
+                tbody
+                    tr
+                        
                             td(data-th='訂單取消時間') 2017/02/03 12:21
                             td(data-th='取消原因') 下錯商品
                             td(data-th='退款方式') 信用卡刷退
                             td(data-th='退款金額') $ 2,870
-                            td(data-th='退款時間') 
+                            td(data-th='退款時間')
+                            
                             td(data-th='退款戶名') 盧曉筱
                             td(data-th='銀行名稱') 國泰世華-013
                             td(data-th='銀行帳號') 1534534354534
-                            td(data-th='')
+                            td(data-th='') 
+                        
+                        //-要湊滿6個QQ
+                    tr
+                        td(data-th='訂單取消時間') 2017/02/03 12:21
+                        td(data-th='取消原因') 下錯商品
+                        td(data-th='退款方式') 信用卡刷退
+                        td(data-th='退款金額') $ 2,870
+                        td(data-th='退款時間') 
+                        td(data-th='退款戶名') 盧曉筱
+                        td(data-th='銀行名稱') 國泰世華-013
+                        td(data-th='銀行帳號') 1534534354534
+                        td(data-th='')

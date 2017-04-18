@@ -1,37 +1,4 @@
-@import "../_general/general"
-@import "../_general/banner_section/banner_section"
-
-.commodity_count
-    display: none
-#sub_section
-    height: 17px
-
-.split
-    border: 0;
-    height: 0;
-    border-top: 1px solid #D5948E
-    width: 100%;
-    max-width: $banner_max_width
-
-.two_col
-    display: flex
-    width: 100%;
-    max-width: 1185px;
-
-.side_bar
-    width: 200px
-    margin-top: 50px
-
-    li 
-        color: #4A4A4A
-        font-weight: 100
-        font-size: 18px
-        margin-bottom: 10px
-
-.side_bar
-    li.active
-        color: #D6645F
-        font-weight: normal
+@import "../_general/member_section/member_section"
 
 .statistics_table
     width: 300px;
@@ -59,28 +26,6 @@
         border-top: 1px solid #4a4a4a
 .sum_result
     color: #8B572A
-
-+media-query( all, max-width $phone_rwd_width )
-    #main
-        padding: 0 10px
-    .two_col
-        flex-direction: column
-    
-    .side_bar
-        width: 100%;
-        margin-top: 5px;
-        margin-bottom: 15px;
-        border-bottom: 1px solid #d5948e
-        padding-bottom: 5px;
-
-        ul
-            display: flex;
-            flex-wrap: wrap;
-            text-align: center;
-
-            li
-                margin-top: 5px;
-                width: 33.3%;
     
 /*rwd table 別人的code*/
 /* from http://limitedcode.blogspot.tw/2016/03/html-rwdtable.html */
