@@ -1,0 +1,34 @@
+extends ../_general/member_section/temp_member_section.jade
+
+block append content
+    
+    block navArray
+        -var navArray = ["首頁","會員專區","購物金折抵券"]
+
+block activeIndex
+     -var activeIndex = 2
+block member_section
+    section.table_wrapper
+
+        table.coupon_list_table.rwd-table
+            thead
+                tr
+                    th.coupon_name 購物金名稱
+                    th 折抵金額
+                    th 使用期限
+                    th 使用條件
+                    th 
+            tbody
+                tr
+                    td(data-th='購物金名稱') 春節滿額禮
+                    td(data-th='折抵金額') $ 100
+                    td(data-th='使用期限') 2017/02/03 - 2017/02/10
+                    td(data-th='使用條件') 不限消費金額，全額折抵
+                    td(data-th='')
+                    //-要湊滿6個QQ
+                tr
+                    td(data-th='購物金名稱') 春節滿額禮
+                    td(data-th='折抵金額') $ 100
+                    td(data-th='使用期限') 2017/02/03 - 2017/02/10
+                    td(data-th='使用條件') 不限消費金額，全額折抵
+                    td(data-th='')

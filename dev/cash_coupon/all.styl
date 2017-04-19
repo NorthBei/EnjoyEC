@@ -1,0 +1,16 @@
+@import "../_general/member_section/member_section"
+@import "../_general/rwd_table/rwd_table"
+
+.coupon_list_table
+    margin-top: 20px
+    .coupon_name
+        width: 30%
+
++media-query( all, max-width $phone_rwd_width )
+    .coupon_list_table
+        margin-top: 0
+
+        tbody tr
+            margin-bottom: 30px
+    .rwd-table td
+        width: 50%
