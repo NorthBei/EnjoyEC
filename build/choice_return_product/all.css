@@ -3574,6 +3574,14 @@ tr.have_comment td[data-th='小計'] {
 .statistics_table .warning_bold {
   font-weight: 500;
 }
+.statistics_table .warning_wrapper {
+  font-size: 13px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  display: none;
+}
 /**/
 .radio_button_wrapper {
   display: -ms-flexbox;
@@ -3622,6 +3630,9 @@ tr.have_comment td[data-th='小計'] {
   }
   .statistics_table .sum_warning {
     font-size: 12px;
+  }
+  .statistics_table .warning_wrapper {
+    display: block;
   }
   .dialog_button_wrapper {
     margin-bottom: 40px;

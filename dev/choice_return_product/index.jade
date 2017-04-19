@@ -1,9 +1,12 @@
 extends ../_general/member_section/temp_member_section.jade
-    
+
 block append content
+    
     block navArray
         -var navArray = ["首頁","會員專區","訂單查詢","申請退貨"]
 
+block activeIndex
+     -var activeIndex = 0
 block member_section
     section.table_wrapper
         .section_title 申請退貨
@@ -142,6 +145,10 @@ block member_section
                 span.sum_result
                     .count_name 總退費金額
                     .count_price.warning_bold $ 110
+                
+                span.warning_wrapper
+                    .warning ※ 部分剩餘商品未達優惠條件，將以原價計算。
+                    .warning ※ 原訂單保留商品金額未達免運費標準，需補扣原訂單出貨的運費。
 
                 span.sum_warning.warning (請注意：我們將於收到退貨商品時檢查是否為瑕疵品，如一經查看判定為正常品退貨，將不會補貼運費，請您見諒。)
         

@@ -2,6 +2,7 @@ extends ../temp_page.jade
 include ../banner_section/banner_section.jade
 
 block content
+    
     block navArray
         //--var navArray = ["首頁","會員專區","訂單查詢","訂單編號EJ201702030001"]
     +banner_section("#","../general/img/banner-會員專區.png",navArray,false)
@@ -10,16 +11,25 @@ block content
 
     div.two_col
         section.side_bar
-            ul
-                li.active
-                    a(href="") 訂單查詢
-                li
-                    a(href="") 我的收藏清單
-                li
-                    a(href="") 購物金折抵券
-                li
-                    a(href="") 帳戶設定
-                li
-                    a(href="") 登出
+                block activeIndex
+                    -var activeIndex = 0
+                ul
+                    each val, index in ["訂單查詢","我的收藏清單","購物金折抵券","帳戶設定","登出"]
+                        if index == activeIndex
+                            li.active
+                                a(href="")= val
+                        else
+                            li 
+                                a(href="")= val
+                    //- li.active
+                    //-     a(href="") 訂單查詢
+                    //- li
+                    //-     a(href="") 我的收藏清單
+                    //- li
+                    //-     a(href="") 購物金折抵券
+                    //- li
+                    //-     a(href="") 帳戶設定
+                    //- li
+                    //-     a(href="") 登出
 
         block member_section
