@@ -33,9 +33,23 @@
         color: #D6645F
         font-weight: normal
 
+.table_wrapper
+    flex: 1
+
+    .split
+        border-top: 1px solid #F6EAE6
+
+    .section_title
+        text-align: center
+        color: #4A4A4A
+        font-size: 18px
 +media-query( all, max-width $phone_rwd_width )
     #main
         padding: 0 10px
+
+    #sub_section
+        display: none
+        
     .two_col
         flex-direction: column
     

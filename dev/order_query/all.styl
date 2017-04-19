@@ -1,67 +1,13 @@
 @import "../_general/member_section/member_section"
+@import "../_general/rwd_table/rwd_table"
 
 .order_query_info_table_wrapper
     flex: 1
 
-/*rwd table 別人的code*/
-/* from http://limitedcode.blogspot.tw/2016/03/html-rwdtable.html */
-.rwd-table {
-    border-collapse: collapse;
-    width: 100%
-    margin-bottom: 50px
-}
-
-@media screen and (max-width: $phone_rwd_width) {
-  
-  .rwd-table tr {
-    display: flex;
-    flex-wrap: wrap;
-  }
-  
-  .rwd-table th {
-      display: none;
-  }
-    
-  .rwd-table td:before {
-    content: attr(data-th) " ";
-    display: flex
-    flex-axis:center
-  }
-}
-
-/*自己增加 override rwd table*/
-
-.rwd-table 
-    th,td
-        text-align: center;
-
-.rwd-table th,td:before
-    height: 40px
-    background: #F6EAE6
-    color: #D6645F
-    font-size: 15px
-    font-weight: 400;
-    
-.rwd-table th
-    margin: 0 45px
-    box-sizing: border-box
-
 .rwd-table tbody tr
-    font-size: 14px
-    color: #8E5651
-    font-weight: 100
-    height: 60px
-    box-sizing: border-box
-    border-bottom: 1px solid #F6EAE6
-    margin-bottom: 5px;
-
     td[data-th='訂單編號'] a
         text-decoration: underline
-    
-    td[data-th=''] 
-        flex 1
-
-/*cancel_detial_table 直接套入rwd的模式*/
+/*cancel_detial_table*/
 .cancel_detial_table
     th
         display: none
@@ -84,27 +30,6 @@
             content: attr(data-th) " ";
             display: flex
             flex-axis:center
-/*cancel_detial_table 直接套入rwd的模式*/
-/*rwd_tables*/
-+media-query( all, max-width $phone_rwd_width )
-    .rwd-table tbody tr
-        height: initial
-        margin-bottom: 10px;
-
-    .rwd-table td
-        display: flex;
-        flex-direction: column;
-        padding: 0;
-        width: 33.3%;
-        line-height: 48px;
-        font-size: 12px;
-
-        &:before
-            font-size: 14px
-/*rwd_tables*/
-
-
-/*上面都是複製來的 這邊開始override*/
 
 .order_query_info_table_wrapper
     margin-top: 15px

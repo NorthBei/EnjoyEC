@@ -1,0 +1,294 @@
+@import "../_general/member_section/member_section"
+@import "../_general/rwd_table/rwd_table"
+
+.section_sub_title
+    font-size: 16px
+    font-weight: 400
+
+.input_count,.select_retun_reason
+    border: 1px solid #4A4A4A
+    border-radius: 5px
+    height: 30px
+
+.input_count
+    width: 60px
+    box-sizing: border-box;
+    text-align: center;
+.select_retun_reason
+    width: 200px
+    background: white;
+/*checkbox*/
+.section_title>.checkbox_wrapper
+    display: flex;
+    width: 100%;
+    font-size: 15px;
+    margin: 20px 31px 10px;
+    padding-left: 20px;
+
+
+.section_title
+    .split
+        margin: 16px 0
+
+.checkbox_wrapper input[type="checkbox"]
+    visibility: hidden;
+
+    &:checked + label:after
+        opacity: 1;
+.checkbox_wrapper
+    width: 25px;
+    position: relative;
+
+    label
+        cursor: pointer;
+        position: absolute;
+        width: 14px;
+        height: 14px;
+        top: 0;
+        left: 0;
+        border: 1px solid black;
+        margin-right: 13px
+
+        &:after
+            opacity: 0;
+            content: '';
+            position: absolute;
+            width: 9px;
+            height: 5px;
+            background: transparent;
+            top: 3px;
+            left: 3px;
+            border: 1px solid black;
+            border-top: none;
+            border-right: none;
+            transform: rotate(-45deg);
+
+/*checkbox*/
+/*number*/
+/* Spin Buttons modified */
+input[type="number"] {
+    position: relative;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    background: transparent url("./img/arrow.svg") no-repeat center center;
+    width: 1em;
+    opacity: .5; /* shows Spin Buttons per default (Chrome >= 39) */
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    cursor: pointer
+}
+/*number*/
+.return_product_table 
+    margin-bottom: 15px
+
+    tbody tr
+        min-height: 72px
+        color: #4A4A4A
+    
+.th_product
+    width: 28%
+.th_return_reason
+    width: 230px
+
+td[data-th='商品']
+    color: #8B572A
+    padding: 0 30px;
+    font-size: 13px
+    
+    .prodct_info_wrapper
+        display: flex
+        align-items: center
+
+    .prodct_text_wrapper
+        display: flex
+        flex-direction: column
+        margin-left: 20px;
+        text-align: left
+    a
+        text-decoration: underline;
+        color: #8B572A
+    .comment
+        color: #D6645F
+        margin-top: 7px;
+        margin-bottom: 14px;
+
+td[data-th='單價']
+        position: relative;
+
+        .normal_price
+            position: absolute;
+            width: 100%;
+            text-align: center;
+            text-decoration: line-through;
+td[data-th='顏色']
+    img
+        size 31px
+
+tr.have_comment
+    height: 100px
+    td
+        vertical-align: top;
+        padding-top: 14px;
+
+        .checkbox_wrapper
+            align-self: flex-start;
+            margin-top: 10px;
+    td[data-th='數量'],td[data-th='小計']   
+        padding-top: 24px;
+
++media-query( all, max-width $phone_rwd_width )
+    .rwd-table td
+        line-height: initial
+        height: initial;
+        min-height: 100px;
+
+        &:before
+            margin-bottom: 13px;
+            width: 100%
+    .section_title>.checkbox_wrapper
+        margin-left: 10px
+    .rwd-table tbody tr
+        margin-bottom: 30px
+    .return_product_table
+
+        td[data-th='單價'],td[data-th='數量'],td[data-th='小計']
+            display: flex;
+            align-items: center;
+            &:before
+                margin-bottom: 20px
+
+        td[data-th='商品']
+            width: 60%
+            padding: 0
+        td[data-th='顏色']
+            align-items: center;
+            width: 10%
+        td[data-th='單價']
+            width: 30%
+
+            .normal_price
+                position: initial
+        td[data-th='數量']
+            width: 15%
+        td[data-th='小計']
+            width: 20%
+        td[data-th='退貨數量']
+            width: 20%
+            align-items: center;
+
+        td[data-th='退貨原因']
+            width: 45%
+
+            .select_retun_reason
+                width: initial
+                margin: 0 10px;
+
+        .prodct_info_wrapper
+            margin:0 10px;
+
+    tr.have_comment
+        td,td[data-th='數量'],td[data-th='小計']
+            padding: 0
+
+/*.return_product_count*/
+
+.return_product_count
+    display: flex
+    justify-content: space-between
+
+    li.warning
+        font-size: 13px
+    .warning,.warning_bold
+        color:#D0011B
+
+/*statistics_table*/
+.statistics_table
+    width: 300px;
+    align-self: flex-end;
+    
+    &>span
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 10px;
+        font-size: 15px;
+        margin-right: 30px;
+        
+    .count_name
+        text-align: right
+        .count_note
+            font-weight: 100
+            font-size: 13px
+
+    .count_price
+        width: 105px;
+        text-align: right;
+        font-weight: 100;
+    
+    hr
+        border-top: 1px solid #4a4a4a
+/*override statistics_table*/
+.statistics_table
+    width: 400px;
+    font-size: 15px
+    &>span
+        margin-right: 0;
+    
+    .count_price
+        text-align: left
+        padding-left: 45px;
+    hr
+        border-top: 1px solid #8B572A
+    
+    .sum_result
+        color: #8B572A
+    
+    .sum_warning
+        margin:0
+        margin-top: 15px
+        text-align: center
+    
+    .warning_bold
+        font-weight: 500
+
+/**/
+.radio_button_wrapper
+    display: flex
+    justify-content: center;
+    margin: 50px 0;
+
+#user_check_know
+    margin-right: 10px
+
+.dialog_button_wrapper
+    display: flex
+    justify-content: center
+    margin-bottom: 175px
+
+.dialog_button
+    size 80px 30px
+    border-radius: 5px
+    color: white
+    background: #C8837C
+    margin: 0 20px
+
++media-query( all, max-width $phone_rwd_width )
+    .return_product_count
+        flex-direction: column
+        justify-content: center
+
+        ul
+            display: none
+    
+    .statistics_table
+        width: 100%
+    
+        .sum_warning
+            font-size: 12px
+
+    .dialog_button_wrapper
+        margin-bottom: 40px

@@ -1,0 +1,155 @@
+extends ../_general/member_section/temp_member_section.jade
+    
+block append content
+    block navArray
+        -var navArray = ["首頁","會員專區","訂單查詢","申請退貨"]
+
+block member_section
+    section.table_wrapper
+        .section_title 申請退貨
+            hr.split
+            h3.section_sub_title 請勾選欲退貨商品
+            .checkbox_wrapper
+                input#all_product(type='checkbox', name='')
+                label(for='all_product') 
+                span 全部商品
+            div.return_product_table_wrapper
+                table.return_product_table.rwd-table
+                    thead
+                        tr
+                            th.th_product 商品
+                            th 顏色
+                            th 單價
+                            th 數量
+                            th 小計
+                            th 退貨數量
+                            th.th_return_reason 退貨原因
+                            th 
+                    tbody
+                        tr
+                            td(data-th='商品') 
+                                //input(type="checkbox").want_return
+                                div.prodct_info_wrapper
+                                    .checkbox_wrapper
+                                        input#product1.want_return(type='checkbox', name='')
+                                        label(for='product1')
+
+                                    span.prodct_text_wrapper
+                                        a(href="#").prodct_name 如膠似漆2.0系列-We The Female 凱莉的最愛 ISLW64
+                                    
+                            td(data-th='顏色')
+                                img(src="./img/color-3.png")
+                            td(data-th='單價') 
+                                .now_price $ 390
+                                .normal_price $ 490
+                            td(data-th='數量') 1
+                            td(data-th='小計') $ 390
+                            td(data-th='退貨數量')
+                                input(type="number" min="1" max="5").input_count
+                            td(data-th='退貨原因')
+                                select.select_retun_reason
+                                    option(disabled selected value hidden) -
+                                    option XX
+                                    option YY
+                                    option ZZ
+
+                            td(data-th='')
+                        tr.have_comment
+                            td(data-th='商品') 
+                                div.prodct_info_wrapper
+                                    .checkbox_wrapper
+                                        input#product2.want_return(type='checkbox', name='')
+                                        label(for='product2')
+
+                                    span.prodct_text_wrapper
+                                        a(href="#").prodct_name 如膠似漆2.0系列-We The Female 凱莉的最愛 ISLW64
+                                        div.comment 【C&CHAT 幻彩系指油貼任選兩件500元】
+                            td(data-th='顏色')
+                                img(src="./img/color-3.png")
+                            td(data-th='單價') 
+                                .now_price $ 390
+                                .normal_price $ 490
+                            td(data-th='數量') 1
+                            td(data-th='小計') $ 390
+                            td(data-th='退貨數量')
+                                input(type="number" min="0" max="5").input_count
+                            td(data-th='退貨原因')
+                                select.select_retun_reason
+                                    option(disabled selected value hidden) -
+                                    option XX
+                                    option YY
+                                    option ZZ
+
+                            td(data-th='')
+                                
+                            //-要湊滿3的倍數個QQ
+                        tr
+                            td(data-th='商品') 
+                                //input(type="checkbox").want_return
+                                div.prodct_info_wrapper
+                                    .checkbox_wrapper
+                                        input#product1.want_return(type='checkbox', name='')
+                                        label(for='product1')
+
+                                    span.prodct_text_wrapper
+                                        a(href="#").prodct_name 如膠似漆2.0系列-We The Female 凱莉的最愛 ISLW64
+                                    
+                            td(data-th='顏色')
+                                img(src="./img/color-3.png")
+                            td(data-th='單價') 
+                                .now_price $ 390
+                                .normal_price $ 490
+                            td(data-th='數量') 1
+                            td(data-th='小計') $ 390
+                            td(data-th='退貨數量')
+                                input(type="number" min="0" max="5").input_count
+                            td(data-th='退貨原因')
+                                select.select_retun_reason
+                                    option(disabled selected value hidden) -
+                                    option XX
+                                    option YY
+                                    option ZZ
+
+                            td(data-th='')
+        div.return_product_count
+            ul
+                li.warning ※ 部分剩餘商品未達優惠條件，將以原價計算。
+                li.warning ※ 原訂單保留商品金額未達免運費標準，需補扣原訂單出貨的運費。
+            
+            .statistics_table
+                span
+                    .count_name 退貨商品金額
+                    .count_price $ 250
+                
+                span
+                    .count_name 未達優惠條件商品需補差額
+                    .count_price.warning $ 140
+                
+                span
+                    .count_name 未達免運門檻運費
+                    .count_price.warning $ 60
+                
+                span
+                    .count_name 購物金折抵
+                    .count_price $ 60
+                
+                span
+                    .count_name 瑕疵品寄回運費補貼
+                    .count_price $ 10
+                
+                hr
+                
+                span.sum_result
+                    .count_name 總退費金額
+                    .count_price.warning_bold $ 110
+
+                span.sum_warning.warning (請注意：我們將於收到退貨商品時檢查是否為瑕疵品，如一經查看判定為正常品退貨，將不會補貼運費，請您見諒。)
+        
+        div.radio_button_wrapper
+            input(type="radio" name="know")#user_check_know
+            label(for="user_check_know") 我已確認過退貨商品與退款金額無誤。
+        
+        span.dialog_button_wrapper
+            button.dialog_button.pre 上一步
+            button.dialog_button.next 下一步
+            

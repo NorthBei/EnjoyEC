@@ -3263,245 +3263,362 @@ td:before {
     font-size: 14px;
   }
 }
-.order_query_info_table_wrapper {
-  -ms-flex: 1;
-  flex: 1;
+.section_sub_title {
+  font-size: 16px;
+  font-weight: 400;
 }
-.rwd-table tbody tr td[data-th='訂單編號'] a {
-  text-decoration: underline;
+.input_count,
+.select_retun_reason {
+  border: 1px solid #4a4a4a;
+  border-radius: 5px;
+  height: 30px;
 }
-/*cancel_detial_table*/
-.cancel_detial_table th {
-  display: none;
+.input_count {
+  width: 60px;
+  box-sizing: border-box;
+  text-align: center;
 }
-.cancel_detial_table tbody tr {
-  height: initial;
-  margin-bottom: 10px;
+.select_retun_reason {
+  width: 200px;
+  background: #fff;
+}
+/*checkbox*/
+.section_title>.checkbox_wrapper {
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
+  width: 100%;
+  font-size: 15px;
+  margin: 20px 31px 10px;
+  padding-left: 20px;
 }
-.cancel_detial_table td {
+.section_title .split {
+  margin: 16px 0;
+}
+.checkbox_wrapper input[type="checkbox"] {
+  visibility: hidden;
+}
+.checkbox_wrapper input[type="checkbox"]:checked + label:after {
+  -ms-filter: none;
+  filter: none;
+  opacity: 1;
+}
+.checkbox_wrapper {
+  width: 25px;
+  position: relative;
+}
+.checkbox_wrapper label {
+  cursor: pointer;
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  top: 0;
+  left: 0;
+  border: 1px solid #000;
+  margin-right: 13px;
+}
+.checkbox_wrapper label:after {
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
+  opacity: 0;
+  content: '';
+  position: absolute;
+  width: 9px;
+  height: 5px;
+  background: transparent;
+  top: 3px;
+  left: 3px;
+  border: 1px solid #000;
+  border-top: none;
+  border-right: none;
+  transform: rotate(-45deg);
+}
+/*checkbox*/
+/*number*/
+/* Spin Buttons modified */
+input[type="number"] {
+  position: relative;
+}
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  background: transparent url("./img/arrow.svg") no-repeat center center;
+  width: 1em;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+  filter: alpha(opacity=50);
+  opacity: 0.5; /* shows Spin Buttons per default (Chrome >= 39) */
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  cursor: pointer;
+}
+/*number*/
+.return_product_table {
+  margin-bottom: 15px;
+}
+.return_product_table tbody tr {
+  min-height: 72px;
+  color: #4a4a4a;
+}
+.th_product {
+  width: 28%;
+}
+.th_return_reason {
+  width: 230px;
+}
+td[data-th='商品'] {
+  color: #8b572a;
+  padding: 0 30px;
+  font-size: 13px;
+}
+td[data-th='商品'] .prodct_info_wrapper {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-align-items: center;
+  -ms-flex-align: center;
+      align-items: center;
+}
+td[data-th='商品'] .prodct_text_wrapper {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-direction: column;
   flex-direction: column;
-  padding: 0;
-  width: 33.3%;
-  line-height: 48px;
-  width: 20%;
+  margin-left: 20px;
+  text-align: left;
 }
-.cancel_detial_table td:before {
-  content: attr(data-th) " ";
+td[data-th='商品'] a {
+  text-decoration: underline;
+  color: #8b572a;
+}
+td[data-th='商品'] .comment {
+  color: #d6645f;
+  margin-top: 7px;
+  margin-bottom: 14px;
+}
+td[data-th='單價'] {
+  position: relative;
+}
+td[data-th='單價'] .normal_price {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  text-decoration: line-through;
+}
+td[data-th='顏色'] img {
+  width: 31px;
+  height: 31px;
+}
+tr.have_comment {
+  height: 100px;
+}
+tr.have_comment td {
+  vertical-align: top;
+  padding-top: 14px;
+}
+tr.have_comment td .checkbox_wrapper {
+  -ms-align-self: flex-start;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  margin-top: 10px;
+}
+tr.have_comment td[data-th='數量'],
+tr.have_comment td[data-th='小計'] {
+  padding-top: 24px;
+}
+@media all and (max-width: 550px) {
+  .rwd-table td {
+    line-height: initial;
+    height: initial;
+    min-height: 100px;
+  }
+  .rwd-table td:before {
+    margin-bottom: 13px;
+    width: 100%;
+  }
+  .section_title>.checkbox_wrapper {
+    margin-left: 10px;
+  }
+  .rwd-table tbody tr {
+    margin-bottom: 30px;
+  }
+  .return_product_table td[data-th='單價'],
+  .return_product_table td[data-th='數量'],
+  .return_product_table td[data-th='小計'] {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-align-items: center;
+    -ms-flex-align: center;
+        align-items: center;
+  }
+  .return_product_table td[data-th='單價']:before,
+  .return_product_table td[data-th='數量']:before,
+  .return_product_table td[data-th='小計']:before {
+    margin-bottom: 20px;
+  }
+  .return_product_table td[data-th='商品'] {
+    width: 60%;
+    padding: 0;
+  }
+  .return_product_table td[data-th='顏色'] {
+    -ms-align-items: center;
+    -ms-flex-align: center;
+        align-items: center;
+    width: 10%;
+  }
+  .return_product_table td[data-th='單價'] {
+    width: 30%;
+  }
+  .return_product_table td[data-th='單價'] .normal_price {
+    position: initial;
+  }
+  .return_product_table td[data-th='數量'] {
+    width: 15%;
+  }
+  .return_product_table td[data-th='小計'] {
+    width: 20%;
+  }
+  .return_product_table td[data-th='退貨數量'] {
+    width: 20%;
+    -ms-align-items: center;
+    -ms-flex-align: center;
+        align-items: center;
+  }
+  .return_product_table td[data-th='退貨原因'] {
+    width: 45%;
+  }
+  .return_product_table td[data-th='退貨原因'] .select_retun_reason {
+    width: initial;
+    margin: 0 10px;
+  }
+  .return_product_table .prodct_info_wrapper {
+    margin: 0 10px;
+  }
+  tr.have_comment td,
+  tr.have_comment td[data-th='數量'],
+  tr.have_comment td[data-th='小計'] {
+    padding: 0;
+  }
+}
+/*.return_product_count*/
+.return_product_count {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-justify-content: space-between;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+}
+.return_product_count li.warning {
+  font-size: 13px;
+}
+.return_product_count .warning,
+.return_product_count .warning_bold {
+  color: #d0011b;
+}
+/*statistics_table*/
+.statistics_table {
+  width: 300px;
+  -ms-align-self: flex-end;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+.statistics_table>span {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-justify-content: flex-end;
+  -ms-flex-pack: end;
+      justify-content: flex-end;
+  margin-top: 10px;
+  font-size: 15px;
+  margin-right: 30px;
+}
+.statistics_table .count_name {
+  text-align: right;
+}
+.statistics_table .count_name .count_note {
+  font-weight: 100;
+  font-size: 13px;
+}
+.statistics_table .count_price {
+  width: 105px;
+  text-align: right;
+  font-weight: 100;
+}
+.statistics_table hr {
+  border-top: 1px solid #4a4a4a;
+}
+/*override statistics_table*/
+.statistics_table {
+  width: 400px;
+  font-size: 15px;
+}
+.statistics_table>span {
+  margin-right: 0;
+}
+.statistics_table .count_price {
+  text-align: left;
+  padding-left: 45px;
+}
+.statistics_table hr {
+  border-top: 1px solid #8b572a;
+}
+.statistics_table .sum_result {
+  color: #8b572a;
+}
+.statistics_table .sum_warning {
+  margin: 0;
+  margin-top: 15px;
+  text-align: center;
+}
+.statistics_table .warning_bold {
+  font-weight: 500;
+}
+/**/
+.radio_button_wrapper {
   display: -ms-flexbox;
   display: flex;
   -ms-justify-content: center;
   -ms-flex-pack: center;
       justify-content: center;
-  -ms-align-items: center;
-  -ms-flex-align: center;
-      align-items: center;
+  margin: 50px 0;
 }
-.order_query_info_table_wrapper {
-  margin-top: 15px;
+#user_check_know {
+  margin-right: 10px;
 }
-.do_button,
+.dialog_button_wrapper {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-justify-content: center;
+  -ms-flex-pack: center;
+      justify-content: center;
+  margin-bottom: 175px;
+}
 .dialog_button {
   width: 80px;
   height: 30px;
   border-radius: 5px;
-}
-.do_button {
-  color: #d6645f;
-  background: #f6eae6;
-}
-.do_button:hover,
-.do_button:active {
   color: #fff;
   background: #c8837c;
-}
-.dialog_button {
-  color: #fff;
-  background: #c8837c;
-}
-.empty_button {
-  visibility: hidden;
-}
-.order_query_info_table tbody tr {
-  margin-bottom: 30px;
-}
-.do_button_dialog {
-  display: none;
-  background: #fff8f6;
-  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.09);
-  position: fixed;
-  transform: translate(-50%, -50%);
-  left: 50%;
-  top: 50%;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -ms-justify-content: center;
-  -ms-flex-pack: center;
-      justify-content: center;
-  -ms-align-items: center;
-  -ms-flex-align: center;
-      align-items: center;
-  color: #4a4a4a;
-  text-align: center;
-}
-.do_button_dialog .colse_dialog {
-  position: absolute;
-  top: 14px;
-  right: 14px;
-  cursor: pointer;
-}
-.do_button_dialog h1 {
-  font-size: 30px;
-  margin-bottom: 30px;
-}
-.do_button_dialog p {
-/* 我們很遺憾您要取消訂單，為了提升網站與商: */
-  font-size: 18px;
-  letter-spacing: 0.47px;
-}
-.do_button_dialog .dialog_button_wrapper {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-justify-content: center;
-  -ms-flex-pack: center;
-      justify-content: center;
-}
-.do_button_dialog .dialog_button {
   margin: 0 20px;
 }
-#cancel_order_dialog {
-  display: none;
-  padding: 55px 135px 65px;
-  width: 431px;
-}
-#cancel_order_dialog .radio_button_wrapper {
-  display: -ms-flexbox;
-  display: flex;
-  margin: 25px 0 15px;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-}
-#cancel_order_dialog .radio_button_wrapper li {
-  display: -ms-flexbox;
-  display: flex;
-  width: 50%;
-  margin-bottom: 10px;
-  -ms-align-items: center;
-  -ms-flex-align: center;
-      align-items: center;
-}
-#cancel_order_dialog .radio_button_wrapper li label {
-  margin-left: 10px;
-  font-size: 15px;
-}
-#cancel_order_dialog .cancel_reason {
-  background: #fff;
-  border: 1px solid #8e5651;
-  width: 100%;
-  height: 121px;
-  outline: none;
-}
-#cancel_order_dialog .alter_msg {
-/* 請選擇或填寫取消訂單原因: */
-  font-size: 12px;
-  color: #950012;
-  letter-spacing: 0.31px;
-  margin: 6px 0 15px;
-  visibility: hidden;
-}
-#cancel_orde_success_dialog {
-  display: none;
-  padding: 70px 50px 56px;
-  max-width: 400px;
-}
-#cancel_orde_success_dialog p {
-  margin-bottom: 30px;
-}
-#cancel_orde_success_dialog .refund_detail {
-/* 退款方式：信用卡刷退: */
-  font-size: 18px;
-  color: #8b572a;
-  letter-spacing: 0.47px;
-  margin-bottom: 75px;
-}
-#apply_return_dialog {
-  display: none;
-  font-size: 15px;
-  padding: 55px 95px 67px;
-  max-width: 500px;
-}
-#apply_return_dialog .user_should_know {
-  list-style: disc;
-  margin: 20px 0;
-  color: #4a4a4a;
-  letter-spacing: 0.39px;
-  font-weight: 100;
-  text-align: left;
-}
-#apply_return_dialog .user_should_know li {
-  margin-bottom: 10px;
-}
-#apply_return_dialog .user_should_know li a {
-  color: #d6645f;
-  text-decoration: underline;
-}
-#apply_return_dialog .user_should_know .high_light {
-  color: #d6645f;
-}
-#apply_return_dialog .radio_button_wrapper {
-  -ms-align-self: flex-start;
-  -ms-flex-item-align: start;
-      align-self: flex-start;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-align-items: center;
-  -ms-flex-align: center;
-      align-items: center;
-  font-weight: 100;
-}
-#apply_return_dialog .radio_button_wrapper label {
-  margin-left: 10px;
-}
-#apply_return_dialog .dialog_button_wrapper {
-  margin-top: 45px;
-}
 @media all and (max-width: 550px) {
-  #cancel_order_dialog,
-  #apply_return_dialog,
-  #cancel_orde_success_dialog {
-    padding: 60px 40px 90px;
+  .return_product_count {
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-justify-content: center;
+    -ms-flex-pack: center;
+        justify-content: center;
   }
-  .do_button_dialog {
-    width: calc(100vw - 30px);
-    box-sizing: border-box;
-  }
-  .do_button_dialog h1 {
-    font-size: 20px;
-  }
-  .do_button_dialog p {
-    font-size: 16px;
-  }
-  #cancel_order_dialog .cancel_reason {
-    width: 100%;
-  }
-  #apply_return_dialog .user_should_know,
-  #apply_return_dialog .radio_button_wrapper {
-    font-size: 12px;
-  }
-  #apply_return_dialog .dialog_cancel {
+  .return_product_count ul {
     display: none;
   }
-  .do_button {
-    margin: 0 auto;
-    margin-top: 9px;
+  .statistics_table {
+    width: 100%;
+  }
+  .statistics_table .sum_warning {
+    font-size: 12px;
+  }
+  .dialog_button_wrapper {
+    margin-bottom: 40px;
   }
 }
 

@@ -1,0 +1,61 @@
+.rwd-table
+    border-collapse: collapse;
+    width: 100%
+    margin-bottom: 50px
+
+.rwd-table 
+    th,td
+        text-align: center;
+
+.rwd-table th,td:before
+    height: 40px
+    background: #F6EAE6
+    color: #D6645F
+    font-size: 15px
+    font-weight: 400;
+
+.rwd-table th
+    box-sizing: border-box
+
+.rwd-table tbody tr
+    font-size: 14px
+    color: #8E5651
+    font-weight: 100
+    height: 60px
+    box-sizing: border-box
+    border-bottom: 1px solid #F6EAE6
+
+    td[data-th=''] 
+        flex 1
++media-query( all, max-width $phone_rwd_width )
+  
+    .rwd-table tr
+        display: flex;
+        flex-wrap: wrap;
+  
+    .rwd-table th
+        display: none;
+    
+    .rwd-table td:before
+        content: attr(data-th) " ";
+        display: flex
+        flex-axis:center
+
+    .rwd-table tbody tr
+        height: initial
+        margin-bottom: 10px;
+
+    .rwd-table td
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        width: 33.3%;
+        line-height: 48px;
+        font-size: 12px;
+
+        &:before
+            font-size: 14px
+  
+
+/* from http://limitedcode.blogspot.tw/2016/03/html-rwdtable.html */
+

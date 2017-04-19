@@ -3150,9 +3150,24 @@ body {
   color: #d6645f;
   font-weight: normal;
 }
+.table_wrapper {
+  -ms-flex: 1;
+  flex: 1;
+}
+.table_wrapper .split {
+  border-top: 1px solid #f6eae6;
+}
+.table_wrapper .section_title {
+  text-align: center;
+  color: #4a4a4a;
+  font-size: 18px;
+}
 @media all and (max-width: 550px) {
   #main {
     padding: 0 10px;
+  }
+  #sub_section {
+    display: none;
   }
   .two_col {
     -ms-flex-direction: column;
@@ -3175,6 +3190,77 @@ body {
   .side_bar ul li {
     margin-top: 5px;
     width: 33.3%;
+  }
+}
+.rwd-table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-bottom: 50px;
+}
+.rwd-table th,
+.rwd-table td {
+  text-align: center;
+}
+.rwd-table th,
+td:before {
+  height: 40px;
+  background: #f6eae6;
+  color: #d6645f;
+  font-size: 15px;
+  font-weight: 400;
+}
+.rwd-table th {
+  box-sizing: border-box;
+}
+.rwd-table tbody tr {
+  font-size: 14px;
+  color: #8e5651;
+  font-weight: 100;
+  height: 60px;
+  box-sizing: border-box;
+  border-bottom: 1px solid #f6eae6;
+}
+.rwd-table tbody tr td[data-th=''] {
+  -ms-flex: 1;
+  flex: 1;
+}
+@media all and (max-width: 550px) {
+  .rwd-table tr {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+  .rwd-table th {
+    display: none;
+  }
+  .rwd-table td:before {
+    content: attr(data-th) " ";
+    display: -ms-flexbox;
+    display: flex;
+    -ms-justify-content: center;
+    -ms-flex-pack: center;
+        justify-content: center;
+    -ms-align-items: center;
+    -ms-flex-align: center;
+        align-items: center;
+  }
+  .rwd-table tbody tr {
+    height: initial;
+    margin-bottom: 10px;
+  }
+  .rwd-table td {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    padding: 0;
+    width: 33.3%;
+    line-height: 48px;
+    font-size: 12px;
+  }
+  .rwd-table td:before {
+    font-size: 14px;
   }
 }
 .statistics_table {
@@ -3211,69 +3297,7 @@ body {
 .sum_result {
   color: #8b572a;
 }
-/*rwd table 別人的code*/
-/* from http://limitedcode.blogspot.tw/2016/03/html-rwdtable.html */
-.rwd-table {
-  border-collapse: collapse;
-  width: 100%;
-  margin-bottom: 50px;
-}
-@media screen and (max-width: 550px) {
-  .rwd-table tr {
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-  }
-  .rwd-table th {
-    display: none;
-  }
-  .rwd-table td:before {
-    content: attr(data-th) " ";
-    display: -ms-flexbox;
-    display: flex;
-    -ms-justify-content: center;
-    -ms-flex-pack: center;
-        justify-content: center;
-    -ms-align-items: center;
-    -ms-flex-align: center;
-        align-items: center;
-  }
-}
-/*自己增加 override rwd table*/
-.rwd-table th,
-.rwd-table td {
-  text-align: center;
-}
-.rwd-table th,
-td:before {
-  height: 40px;
-  background: #f6eae6;
-  color: #d6645f;
-  font-size: 15px;
-  font-weight: 400;
-}
-.rwd-table th {
-  margin: 0 45px;
-  box-sizing: border-box;
-}
-.rwd-table tbody tr {
-  font-size: 14px;
-  color: #8e5651;
-  font-weight: 100;
-  height: 60px;
-  box-sizing: border-box;
-  border-bottom: 1px solid #f6eae6;
-  margin-bottom: 5px;
-}
-.rwd-table tbody tr td[data-th='訂單編號'] a {
-  text-decoration: underline;
-}
-.rwd-table tbody tr td[data-th=''] {
-  -ms-flex: 1;
-  flex: 1;
-}
-/*cancel_detial_table 直接套入rwd的模式*/
+/*cancel_detial_table*/
 .cancel_detial_table th {
   display: none;
 }
@@ -3305,41 +3329,6 @@ td:before {
   -ms-align-items: center;
   -ms-flex-align: center;
       align-items: center;
-}
-/*cancel_detial_table 直接套入rwd的模式*/
-/*rwd_tables*/
-@media all and (max-width: 550px) {
-  .rwd-table tbody tr {
-    height: initial;
-    margin-bottom: 10px;
-  }
-  .rwd-table td {
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    padding: 0;
-    width: 33.3%;
-    line-height: 48px;
-    font-size: 12px;
-  }
-  .rwd-table td:before {
-    font-size: 14px;
-  }
-}
-/*rwd_tables*/
-/*order_tables*/
-.order_tables_wrapper {
-  -ms-flex: 1;
-  flex: 1;
-}
-.order_tables_wrapper .split {
-  border-top: 1px solid #f6eae6;
-}
-.order_tables_wrapper .section_title {
-  text-align: center;
-  color: #4a4a4a;
-  font-size: 18px;
 }
 .order_product_table_wrapper {
   padding: 25px;
