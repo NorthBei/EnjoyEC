@@ -3016,6 +3016,11 @@ body {
   -ms-flex: 1;
   flex: 1;
 }
+@media all and (max-width: 550px) {
+  body {
+    overflow-x: hidden;
+  }
+}
 .form_section {
   display: -ms-flexbox;
   display: flex;
@@ -3225,6 +3230,7 @@ body {
     -ms-flex-direction: column-reverse;
     flex-direction: column-reverse;
     width: initial;
+    margin: 30px 0;
   }
   .slogan_wrapper {
     display: -ms-flexbox;

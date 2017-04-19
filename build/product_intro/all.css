@@ -3016,6 +3016,11 @@ body {
   -ms-flex: 1;
   flex: 1;
 }
+@media all and (max-width: 550px) {
+  body {
+    overflow-x: hidden;
+  }
+}
 #main {
   display: -ms-flexbox;
   display: flex;
@@ -3181,9 +3186,6 @@ body {
 .product_img_wrapper img {
   position: absolute;
   top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
   z-index: -1;
   width: 100%;
 }
@@ -3266,6 +3268,7 @@ body {
 @media only screen and (max-width: 850px) {
   .product_wrapper {
     max-width: 172px;
+    max-width: 164px;
   }
   .product_wrapper .tag {
     width: 34px;
@@ -3274,6 +3277,9 @@ body {
   .product_img_wrapper {
     width: 172px;
     height: 180px;
+    width: 164px;
+    height: 173px;
+    position: relative;
   }
   .product_info,
   .tag {

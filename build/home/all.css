@@ -3016,6 +3016,11 @@ body {
   -ms-flex: 1;
   flex: 1;
 }
+@media all and (max-width: 550px) {
+  body {
+    overflow-x: hidden;
+  }
+}
 .bg_skin_light {
   background: #fff8f6;
 }

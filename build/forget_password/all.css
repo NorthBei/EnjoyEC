@@ -3016,6 +3016,11 @@ body {
   -ms-flex: 1;
   flex: 1;
 }
+@media all and (max-width: 550px) {
+  body {
+    overflow-x: hidden;
+  }
+}
 .form_section {
   display: -ms-flexbox;
   display: flex;

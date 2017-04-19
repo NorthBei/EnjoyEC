@@ -87,8 +87,9 @@ $(document).ready(function() {
         var topHeight = document.documentElement.scrollTop||document.body.scrollTop;
         // console.log("topHeight1:"+topHeight);
         // console.log("navHeight:"+navHeight);
-        
-        if(topHeight>= navHeight && isCrossHeader == false){
+        var width = viewportSize.getWidth();
+
+        if(topHeight>= navHeight && isCrossHeader == false && width <= 850){
             isCrossHeader = true;
             $("#header").addClass("scroll_header");
         }

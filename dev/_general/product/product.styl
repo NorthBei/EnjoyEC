@@ -50,7 +50,9 @@ $product_name_lineHeight = 18px
     &:hover .icon_wrapper
         opacity: 1
     img
-        absolute: 0
+        //absolute: 0
+        position: absolute
+        top: 0
         z-index: -1
         width: 100%;
 
@@ -105,13 +107,16 @@ $product_name_lineHeight = 18px
 +media-query( only screen ,max-width $tablet_rwd_width )
     .product_wrapper
         max-width:172px
-    
+        max-width: 164px;
+
         .tag
             size: 34px
 
     .product_img_wrapper
         size: 172px 180px
-    
+        size: 164px 173px;
+        position: relative;
+
     .product_info,.tag
         font-size: 12px
     
