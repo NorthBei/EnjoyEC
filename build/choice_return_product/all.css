@@ -3568,6 +3568,8 @@ tr.have_comment td[data-th='小計'] {
   margin: 0;
   margin-top: 15px;
   text-align: center;
+  font-weight: 100;
+  font-size: 13px;
 }
 .statistics_table .warning_bold {
   font-weight: 500;
@@ -3579,6 +3581,10 @@ tr.have_comment td[data-th='小計'] {
   -ms-justify-content: center;
   -ms-flex-pack: center;
       justify-content: center;
+  -ms-align-items: center;
+  -ms-flex-align: center;
+      align-items: center;
+  font-size: 14px;
   margin: 50px 0;
 }
 #user_check_know {
