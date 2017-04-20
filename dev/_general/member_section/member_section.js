@@ -1,4 +1,4 @@
-require("..//dialog/dialog.js");
+require("../dialog/dialog.js");
 
 window.addEventListener("load",function(){
     $("#logout").on("click",function(){

@@ -1,0 +1,14 @@
+extends ../_general/temp_page.jade
+include ../_general/banner_section/banner_section.jade
+
+block content
+    
+    -var navArray = ["首頁","關於Enjoy!享受吧！"]
+    +banner_section("#","../general/img/banner-about.png",navArray,false)
+
+    hr.split
+
+    section.table_wrapper
+        .content
+            img(src="./img/enjoy.png")
+            p Enjoy享受吧是一家成立於2017年的美妝電商通路平台。Enjoy享受吧團隊以「兼具品味、實用、豐富CP值」高標準選品，網羅國內外能夠妝點女性、創造質感生活的美妝、美甲、家居等生活必備單品，我們致力於為女性創造一個最舒服輕鬆的購物體驗，現在就趕快來跟我們一起Enjoy!享受吧!

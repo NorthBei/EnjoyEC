@@ -1,0 +1,81 @@
+extends ../_general/temp_page.jade
+include ../_general/banner_section/banner_section.jade
+
+block content
+    
+    -var navArray = ["首頁","購物須知"]
+    +banner_section("#","../general/img/banner-購物須知.png",navArray,false)
+
+    hr.split
+
+    div.two_col
+        section.side_bar
+
+                -var activeIndex = 0
+                ul
+                    each val, index in ["會員常見問題","購物常見問題","配送取貨須知","退換貨及退款"]
+                        if index == activeIndex
+                            li.active
+                                a(href="")= val
+                        else
+                            li 
+                                a(href="")= val
+                    //- li.active
+                    //-     a(href="") 訂單查詢
+                    //- li
+                    //-     a(href="") 我的收藏清單
+                    //- li
+                    //-     a(href="") 購物金折抵券
+                    //- li
+                    //-     a(href="") 帳戶設定
+                    //- li
+                    //-     a(href="") 登出
+                div.do_button_dialog#logout_dialog
+                    img(src="../general/img/delete.png").colse_dialog
+                    h1 確定登出？
+                    span.dialog_button_wrapper
+                        button.dialog_button.dialog_cancel 取消
+                        button.dialog_button.dialog_check 確定
+
+        section.table_wrapper.container
+            .qa_title
+                span 如何加入會員？
+                .expand_state
+            .qa_content
+                div 買家可透過Email或FB註冊會員帳號，即可開始購物並享有不定期會員優惠好禮。
+            
+            .qa_title
+                span 一定要先加入會員才可以購物嗎？
+                .expand_state
+            .qa_content
+                div 買家可透過Email或FB註冊會員帳號，即可開始購物並享有不定期會員優惠好禮。
+                div 買家可透過Email或FB註冊會員帳號，即可開始購物並享有不定期會員優惠好禮。
+                div 買家可透過Email或FB註冊會員帳號，即可開始購物並享有不定期會員優惠好禮。
+                div 買家可透過Email或FB註冊會員帳號，即可開始購物並享有不定期會員優惠好禮。
+            
+            .qa_title
+                span 忘記密碼怎麼辦？
+                .expand_state
+            .qa_content
+                div 買家可透過Email或FB註冊會員帳號，即可開始購物並享有不定期會員優惠好禮。
+                div 買家可透過Email或FB註冊會員帳號，即可開始購物並享有不定期會員優惠好禮。
+                div 買家可透過Email或FB註冊會員帳號，即可開始購物並享有不定期會員優惠好禮。
+                div 買家可透過Email或FB註冊會員帳號，即可開始購物並享有不定期會員優惠好禮。
+
+            .qa_title
+                span 如何修改個人資料與密碼？
+                .expand_state
+            .qa_content
+                div 買家可透過Email或FB註冊會員帳號，即可開始購物並享有不定期會員優惠好禮。
+                div 買家可透過Email或FB註冊會員帳號，即可開始購物並享有不定期會員優惠好禮。
+                div 買家可透過Email或FB註冊會員帳號，即可開始購物並享有不定期會員優惠好禮。
+                div 買家可透過Email或FB註冊會員帳號，即可開始購物並享有不定期會員優惠好禮。
+
+            .qa_title
+                span 訂閱及取消電子報
+                .expand_state
+            .qa_content
+                div 買家可透過Email或FB註冊會員帳號，即可開始購物並享有不定期會員優惠好禮。
+                div 買家可透過Email或FB註冊會員帳號，即可開始購物並享有不定期會員優惠好禮。
+                div 買家可透過Email或FB註冊會員帳號，即可開始購物並享有不定期會員優惠好禮。
+                div 買家可透過Email或FB註冊會員帳號，即可開始購物並享有不定期會員優惠好禮。

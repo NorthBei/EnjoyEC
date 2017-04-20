@@ -1,0 +1,36 @@
+@import "../_general/member_section/member_section"
+
+.container
+    color: #4A4A4A;
+    margin-top: 50px;
+
+.qa_title
+    font-size: 15px;
+    color: #9B9B9B
+    letter-spacing: 0.39px;
+    font-weight: bold;
+    margin-bottom: 15px
+    display: flex
+    align-items: center;
+    cursor: pointer
+    .expand_state
+        margin-right: 10px
+        size 13px
+        background-image: url("./img/-.png");
+.qa_title_active
+    color:#4a4a4a
+
+    .expand_state
+        background-image: url("./img/+.png");
+.qa_content
+    display: none;
+    font-size: 13px;
+    letter-spacing: 0.34px;
+    margin-bottom: 30px
+
+
++media-query( all, max-width $phone_rwd_width )
+    .side_bar ul li
+        width: 50%;
+    .container
+        margin: 20px 20px 40px;

@@ -3215,6 +3215,11 @@ body {
   width: 100%;
   max-width: 1185px;
 }
+@media all and (max-width: 550px) {
+  .page_link>img {
+    height: 100px;
+  }
+}
 .two_col {
   display: -ms-flexbox;
   display: flex;

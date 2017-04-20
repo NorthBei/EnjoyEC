@@ -3215,6 +3215,11 @@ body {
   width: 100%;
   max-width: 1185px;
 }
+@media all and (max-width: 550px) {
+  .page_link>img {
+    height: 100px;
+  }
+}
 .two_col {
   display: -ms-flexbox;
   display: flex;
@@ -3337,6 +3342,11 @@ body {
 }
 .account_setting_table .td_value input:disabled {
   color: #4a4a4a;
+  background: #fff;
+}
+.account_setting_table .td_value input[disabled] {
+  color: #4a4a4a;
+  background: #fff;
 }
 .account_setting_table .td_value .input_edit_now {
   border: 1px solid #4a4a4a;

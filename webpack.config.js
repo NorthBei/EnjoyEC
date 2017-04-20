@@ -17,7 +17,8 @@ module.exports = {
         "order_query/bundle": "./dev/order_query/entry.js",
         "choice_return_product/bundle": "./dev/choice_return_product/entry.js",
         "cash_coupon/bundle": "./dev/cash_coupon/entry.js",
-        "account_setting/bundle": "./dev/account_setting/entry.js"
+        "account_setting/bundle": "./dev/account_setting/entry.js",
+        "shopping_should_know/bundle": "./dev/shopping_should_know/entry.js",
     },
     output: {
         path: path.resolve(__dirname, 'build'),//__dirname + "/build/" + filePath,

@@ -37,7 +37,7 @@ block member_section
                         span#region_name.edit_disappear 大安區
                         div.select_wrapper
                             select#receive_city_id.city(name='receive_city')
-                                option(value='') 請選擇縣市
+                                option(value='' hidden='') 請選擇縣市
                                 option(value='台北市') 台北市
                                 option(value='基隆市') 基隆市
                                 option(value='宜蘭縣') 宜蘭縣
@@ -62,7 +62,7 @@ block member_section
                                 option(value='花蓮縣') 花蓮縣
                             
                             select#receive_region_id.area(name='receive_region')
-                                option(value='') 請選擇鄉鎮市區
+                                //-option(value='') 請選擇鄉鎮市區
                         
                         input(type="text" value="泰順街44巷25號" disabled).input_edit
                         //span 泰順街44巷25號

@@ -168,12 +168,12 @@ window.addEventListener("load",function(){
     
     $("#receive_city_id").on("change",changeCity);
     $(".reset_password").click(function(){
-        $("#reset_password_dialog").show();
+        flex($("#reset_password_dialog"));
     });
 
     $("#reset_password_dialog .dialog_check").click(function(){
         $("#reset_password_dialog").hide();
-        $("#reset_password_success_dialog").show();
+        flex($("#reset_password_success_dialog").show());
     });
 
     $("#reset_password_success_dialog .dialog_check").click(function(){
@@ -230,15 +230,15 @@ var Zone = new Array(27);
 function changeCity() {
 	var selectedCountyIndex = $("#receive_city_id").get(0).selectedIndex;
 	var regionInput = $("#receive_region_id").get(0);
-	if (selectedCountyIndex>0){
+	//if (selectedCountyIndex=>0){
 		regionInput.length = Zone[selectedCountyIndex].length +1;
-		regionInput.options[0].value = "";
-		regionInput.options[0].text = "請選擇鄉鎮市區";
+		//regionInput.options[0].value = "";
+		//regionInput.options[0].text = "";
 		for (i = 1; i <= Zone[selectedCountyIndex].length; i++) {
 			regionInput.options[i].value = Zone[selectedCountyIndex][i-1];
 			regionInput.options[i].text = Zone[selectedCountyIndex][i-1];
 		}
-    }
+    //}
 	// else{
 	// 	regionInput.length = 1;
 	// 	regionInput.options[0].value = "";

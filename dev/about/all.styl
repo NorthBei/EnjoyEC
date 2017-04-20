@@ -1,0 +1,53 @@
+@import "../_general/general"
+@import "../_general/banner_section/banner_section"
+
+/*override by other section*/
+#sub_section {
+    height: 17px;
+}
+
+.commodity_count
+    display: none
+
+.split
+    border: 0;
+    height: 0;
+    border-top: 1px solid #d5948e;
+    width: 100%;
+    max-width: 1185px;
+    margin: 0
+/*override by other section*/
+
+.content
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50vw;
+    max-width: 722px;
+    padding-top: 20px
+
+    p
+        margin: 20px 0 92px;
+        font-size: 18px;
+        color: #4A4A4A;
+        letter-spacing: 0.47px;
+        line-height: 1.5;
+
+
++media-query( all, max-width $phone_rwd_width )
+    #main
+        padding: 10px
+    
+    #sub_section
+        display: none;
+    
+    .page_link>img
+        height: 100px
+        
+    .content
+        width: 100%
+        img
+            width: 100%
+        p
+            font-size: 15px;
+            letter-spacing: 0.39px;
