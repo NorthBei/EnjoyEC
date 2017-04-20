@@ -63,17 +63,19 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 11);
+/******/ 	return __webpack_require__(__webpack_require__.s = 15);
 /******/ })
 /************************************************************************/
-/******/ ([
-/* 0 */
+/******/ ({
+
+/***/ 0:
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(1)
 
 /***/ }),
-/* 1 */
+
+/***/ 1:
 /***/ (function(module, exports) {
 
 $(document).ready(function() {
@@ -85,7 +87,7 @@ $(document).ready(function() {
         var topHeight = document.documentElement.scrollTop||document.body.scrollTop;
         // console.log("topHeight1:"+topHeight);
         // console.log("navHeight:"+navHeight);
-        var width = viewportSize.getWidth();
+        var width = window.innerWidth;
 
         if(topHeight>= navHeight && isCrossHeader == false && width <= 850){
             isCrossHeader = true;
@@ -100,7 +102,17 @@ $(document).ready(function() {
 });
 
 /***/ }),
-/* 2 */
+
+/***/ 15:
+/***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__(4);
+__webpack_require__(5);
+__webpack_require__(0);
+
+/***/ }),
+
+/***/ 4:
 /***/ (function(module, exports) {
 
 $(document).ready(function() { 
@@ -140,7 +152,8 @@ $(document).ready(function() {
 });
 
 /***/ }),
-/* 3 */
+
+/***/ 5:
 /***/ (function(module, exports) {
 
 $(document).ready(function() { 
@@ -156,20 +169,6 @@ $(document).ready(function() {
     
 });
 
-/***/ }),
-/* 4 */,
-/* 5 */,
-/* 6 */,
-/* 7 */,
-/* 8 */,
-/* 9 */,
-/* 10 */,
-/* 11 */
-/***/ (function(module, exports, __webpack_require__) {
-
-__webpack_require__(2);
-__webpack_require__(3);
-__webpack_require__(0);
-
 /***/ })
-/******/ ]);
+
+/******/ });

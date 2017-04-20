@@ -63,7 +63,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 12);
+/******/ 	return __webpack_require__(__webpack_require__.s = 16);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -87,7 +87,7 @@ $(document).ready(function() {
         var topHeight = document.documentElement.scrollTop||document.body.scrollTop;
         // console.log("topHeight1:"+topHeight);
         // console.log("navHeight:"+navHeight);
-        var width = viewportSize.getWidth();
+        var width = window.innerWidth;
 
         if(topHeight>= navHeight && isCrossHeader == false && width <= 850){
             isCrossHeader = true;
@@ -103,10 +103,39 @@ $(document).ready(function() {
 
 /***/ }),
 
-/***/ 12:
+/***/ 16:
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(0);
+__webpack_require__(2);
+
+/***/ }),
+
+/***/ 2:
+/***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__(3);
+
+window.addEventListener("load",function(){
+    $("#logout").on("click",function(){
+        $("#logout_dialog").show();
+    });
+    
+});
+
+/***/ }),
+
+/***/ 3:
+/***/ (function(module, exports) {
+
+window.addEventListener("load",function(){
+    $(".colse_dialog").on("click",colseDialog);
+    $(".dialog_cancel").on("click",colseDialog);
+});
+
+function colseDialog(){
+    $(this).parents(".do_button_dialog").hide();
+}
 
 /***/ })
 

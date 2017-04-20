@@ -1,5 +1,6 @@
 @import "../_general/member_section/member_section"
 @import "../_general/rwd_table/rwd_table"
+@require "../_general/dialog/dialog"
 
 .order_query_info_table_wrapper
     flex: 1
@@ -55,42 +56,6 @@
         
 .order_query_info_table tbody tr
     margin-bottom: 30px
-
-.do_button_dialog
-    display: none
-    background: #FFF8F6;
-    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.09);
-    position: fixed;
-    transform: translate(-50%,-50%);
-    left: 50%;
-    top: 50%;
-    display: flex;
-    flex-direction: column;
-    flex-axis:center
-    color: #4A4A4A
-    text-align: center
-
-    .colse_dialog
-        position: absolute
-        top: 14px;
-        right: 14px;
-        cursor: pointer
-
-    h1
-        font-size: 30px
-        margin-bottom: 30px
-    p
-        /* 我們很遺憾您要取消訂單，為了提升網站與商: */
-        font-size: 18px;
-        letter-spacing: 0.47px;
-
-    .dialog_button_wrapper
-        display: flex
-        justify-content: center
-    
-    .dialog_button
-        margin: 0 20px
-
 
 #cancel_order_dialog
     display: none;
@@ -173,16 +138,9 @@
         margin-top: 45px
 +media-query( all, max-width $phone_rwd_width )
     #cancel_order_dialog,#apply_return_dialog,#cancel_orde_success_dialog
-        padding: 60px 40px 90px
-    .do_button_dialog
-        width: calc("100vw - 30px");
-        box-sizing: border-box;
+        padding: 31px;
+        width: initial;
 
-        h1
-            font-size: 20px;
-        p
-            font-size: 16px;
-    
     #cancel_order_dialog
             
         .cancel_reason

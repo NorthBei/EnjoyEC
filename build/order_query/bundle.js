@@ -63,7 +63,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 13);
+/******/ 	return __webpack_require__(__webpack_require__.s = 17);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -87,7 +87,7 @@ $(document).ready(function() {
         var topHeight = document.documentElement.scrollTop||document.body.scrollTop;
         // console.log("topHeight1:"+topHeight);
         // console.log("navHeight:"+navHeight);
-        var width = viewportSize.getWidth();
+        var width = window.innerWidth;
 
         if(topHeight>= navHeight && isCrossHeader == false && width <= 850){
             isCrossHeader = true;
@@ -103,10 +103,13 @@ $(document).ready(function() {
 
 /***/ }),
 
-/***/ 13:
+/***/ 17:
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(0);
+__webpack_require__(2);
+
+
 $(document).ready(function(){
     $(".do_cancel").click(function(){
         $("#cancel_order_dialog").css("display","flex");
@@ -116,8 +119,6 @@ $(document).ready(function(){
         $("#apply_return_dialog").css("display","flex");
     });
 
-    $(".colse_dialog").on("click",colseDialog);
-    $(".dialog_cancel").on("click",colseDialog);
     $("#cancel_orde_success_dialog .dialog_check").on("click",colseDialog);
 
     $("#apply_return_dialog .dialog_check").on("click",function(){
@@ -142,6 +143,34 @@ $(document).ready(function(){
 function showDialog(){
     $(this).css("display","flex");
 }
+
+function colseDialog(){
+    $(this).parents(".do_button_dialog").hide();
+}
+
+/***/ }),
+
+/***/ 2:
+/***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__(3);
+
+window.addEventListener("load",function(){
+    $("#logout").on("click",function(){
+        $("#logout_dialog").show();
+    });
+    
+});
+
+/***/ }),
+
+/***/ 3:
+/***/ (function(module, exports) {
+
+window.addEventListener("load",function(){
+    $(".colse_dialog").on("click",colseDialog);
+    $(".dialog_cancel").on("click",colseDialog);
+});
 
 function colseDialog(){
     $(this).parents(".do_button_dialog").hide();

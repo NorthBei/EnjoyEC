@@ -56,7 +56,7 @@
     <main id="main">
       <section id="main_section"><a href="#" id="main_banner" class="page_link"><img src="../general/img/banner-會員專區.png"/></a></section>
       <div id="sub_section"><span id="page_info">
-          <div class="page_nav"><a href="#">首頁</a><span class="page_nav_separate">></span><a href="#">會員專區</a><span class="page_nav_separate">></span><a href="#">訂單查詢</a><span class="page_nav_separate">></span><a href="#">申請退貨</a>
+          <div class="page_nav"><a href="#">首頁</a><span class="page_nav_separate">></span><a href="#">會員專區</a><span class="page_nav_separate">></span><a href="#">購物金折抵券</a>
           </div>
           <div class="commodity_count">共10項商品</div></span>
       </div>
@@ -64,10 +64,10 @@
       <div class="two_col">
         <section class="side_bar">
           <ul>
-            <li class="active"><a href="">訂單查詢</a></li>
+            <li> <a href="">訂單查詢</a></li>
             <li> <a href="">我的收藏清單</a></li>
             <li> <a href="">購物金折抵券</a></li>
-            <li> <a href="">帳戶設定</a></li>
+            <li class="active"><a href="">帳戶設定</a></li>
             <li> <span id="logout">登出</span></li>
           </ul>
           <div id="logout_dialog" class="do_button_dialog"><img src="../general/img/delete.png" class="colse_dialog">
@@ -77,151 +77,107 @@
           </div>
         </section>
         <section class="table_wrapper">
-          <div class="section_title">申請退貨
-            <hr class="split">
-            <h3 class="section_sub_title">請勾選欲退貨商品</h3>
-            <div class="checkbox_wrapper">
-              <input id="all_product" type="checkbox" name="">
-              <label for="all_product"> </label><span>全部商品</span>
-            </div>
-            <div class="return_product_table_wrapper">
-              <table class="return_product_table rwd-table">
-                <thead>
-                  <tr>
-                    <th class="th_product">商品</th>
-                    <th>顏色</th>
-                    <th>單價</th>
-                    <th>數量</th>
-                    <th>小計</th>
-                    <th>退貨數量</th>
-                    <th class="th_return_reason">退貨原因</th>
-                    <th> </th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td data-th="商品"> 
-                      <!--input(type="checkbox").want_return-->
-                      <div class="prodct_info_wrapper">
-                        <div class="checkbox_wrapper">
-                          <input id="product1" type="checkbox" name="" class="want_return">
-                          <label for="product1"></label>
-                        </div><span class="prodct_text_wrapper"><a href="#" class="prodct_name">如膠似漆2.0系列-We The Female 凱莉的最愛 ISLW64</a></span>
-                      </div>
-                    </td>
-                    <td data-th="顏色"><img src="./img/color-3.png"></td>
-                    <td data-th="單價"> 
-                      <div class="now_price">$ 390</div>
-                      <div class="normal_price">$ 490</div>
-                    </td>
-                    <td data-th="數量">1</td>
-                    <td data-th="小計">$ 390</td>
-                    <td data-th="退貨數量">
-                      <input type="number" min="1" max="5" class="input_count">
-                    </td>
-                    <td data-th="退貨原因">
-                      <select class="select_retun_reason">
-                        <option disabled selected value hidden>-</option>
-                        <option>XX</option>
-                        <option>YY</option>
-                        <option>ZZ</option>
-                      </select>
-                    </td>
-                    <td data-th=""></td>
-                  </tr>
-                  <tr class="have_comment">
-                    <td data-th="商品"> 
-                      <div class="prodct_info_wrapper">
-                        <div class="checkbox_wrapper">
-                          <input id="product2" type="checkbox" name="" class="want_return">
-                          <label for="product2"></label>
-                        </div><span class="prodct_text_wrapper"><a href="#" class="prodct_name">如膠似漆2.0系列-We The Female 凱莉的最愛 ISLW64</a>
-                          <div class="comment">【C&CHAT 幻彩系指油貼任選兩件500元】</div></span>
-                      </div>
-                    </td>
-                    <td data-th="顏色"><img src="./img/color-3.png"></td>
-                    <td data-th="單價"> 
-                      <div class="now_price">$ 390</div>
-                      <div class="normal_price">$ 490</div>
-                    </td>
-                    <td data-th="數量">1</td>
-                    <td data-th="小計">$ 390</td>
-                    <td data-th="退貨數量">
-                      <input type="number" min="0" max="5" class="input_count">
-                    </td>
-                    <td data-th="退貨原因">
-                      <select class="select_retun_reason">
-                        <option disabled selected value hidden>-</option>
-                        <option>XX</option>
-                        <option>YY</option>
-                        <option>ZZ</option>
-                      </select>
-                    </td>
-                    <td data-th=""></td>
-                  </tr>
-                  <tr>
-                    <td data-th="商品"> 
-                      <!--input(type="checkbox").want_return-->
-                      <div class="prodct_info_wrapper">
-                        <div class="checkbox_wrapper">
-                          <input id="product3" type="checkbox" name="" class="want_return">
-                          <label for="product3"></label>
-                        </div><span class="prodct_text_wrapper"><a href="#" class="prodct_name">如膠似漆2.0系列-We The Female 凱莉的最愛 ISLW64</a></span>
-                      </div>
-                    </td>
-                    <td data-th="顏色"><img src="./img/color-3.png"></td>
-                    <td data-th="單價"> 
-                      <div class="now_price">$ 390</div>
-                      <div class="normal_price">$ 490</div>
-                    </td>
-                    <td data-th="數量">1</td>
-                    <td data-th="小計">$ 390</td>
-                    <td data-th="退貨數量">
-                      <input type="number" min="0" max="5" class="input_count">
-                    </td>
-                    <td data-th="退貨原因">
-                      <select class="select_retun_reason">
-                        <option disabled selected value hidden>-</option>
-                        <option>XX</option>
-                        <option>YY</option>
-                        <option>ZZ</option>
-                      </select>
-                    </td>
-                    <td data-th=""></td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-          <div class="return_product_count">
+          <table class="account_setting_table">
+            <tbody>
+              <tr>
+                <td class="td_key">電子信箱：</td>
+                <td class="td_value">
+                  <input type="email" value="abc@gmail.com" disabled class="input_edit">
+                  <div class="alter_msg">Email為您的登入帳號，一經更改後請用新的Email登入帳號。</div>
+                </td>
+              </tr>
+              <tr>
+                <td class="td_key">會員姓名：</td>
+                <td class="td_value"> 
+                  <input type="text" value="NAME" disabled class="input_edit">
+                </td>
+              </tr>
+              <tr>
+                <td class="td_key">出生日期：</td>
+                <td class="td_value">
+                  <input type="text" value="1991/10/10" disabled>
+                </td>
+              </tr>
+              <tr>
+                <td class="td_key">手機號碼：</td>
+                <td class="td_value">
+                  <input type="tel" value="0932332333" disabled class="input_edit">
+                </td>
+              </tr>
+              <tr>
+                <td class="td_key">聯絡地址：</td>
+                <td class="td_value">
+                  <!--span#regin_id.edit_disappear 106--><span id="city_name" class="edit_disappear">台北市</span><span id="region_name" class="edit_disappear">大安區</span>
+                  <div class="select_wrapper">
+                    <select id="receive_city_id" name="receive_city" class="city">
+                      <option value="">請選擇縣市</option>
+                      <option value="台北市">台北市</option>
+                      <option value="基隆市">基隆市</option>
+                      <option value="宜蘭縣">宜蘭縣</option>
+                      <option value="新北市">新北市</option>
+                      <option value="連江縣">連江縣</option>
+                      <option value="新竹市">新竹市</option>
+                      <option value="新竹縣">新竹縣</option>
+                      <option value="桃園市">桃園市</option>
+                      <option value="苗栗縣">苗栗縣</option>
+                      <option value="台中市">台中市</option>
+                      <option value="南投縣">南投縣</option>
+                      <option value="彰化縣">彰化縣</option>
+                      <option value="嘉義市">嘉義市</option>
+                      <option value="嘉義縣">嘉義縣</option>
+                      <option value="雲林縣">雲林縣</option>
+                      <option value="台南市">台南市</option>
+                      <option value="澎湖縣">澎湖縣</option>
+                      <option value="金門縣">金門縣</option>
+                      <option value="高雄市">高雄市</option>
+                      <option value="台東縣">台東縣</option>
+                      <option value="屏東縣">屏東縣</option>
+                      <option value="花蓮縣">花蓮縣</option>
+                    </select>
+                    <select id="receive_region_id" name="receive_region" class="area">
+                      <option value="">請選擇鄉鎮市區</option>
+                    </select>
+                  </div>
+                  <input type="text" value="泰順街44巷25號" disabled class="input_edit">
+                  <!--span 泰順街44巷25號-->
+                  
+                  
+                </td>
+              </tr>
+              <tr class="reset_password_row">
+                <td class="td_key">重設密碼：</td>
+                <td class="td_value"> 
+                  <button class="reset_password">重設密碼</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <button class="edit_button edit_profile">編輯</button>
+          <div id="reset_password_dialog" class="do_button_dialog"><img src="../general/img/delete.png" class="colse_dialog">
+            <h1>重設密碼</h1>
             <ul>
-              <li class="warning">※ 部分剩餘商品未達優惠條件，將以原價計算。</li>
-              <li class="warning">※ 原訂單保留商品金額未達免運費標準，需補扣原訂單出貨的運費。</li>
-            </ul>
-            <div class="statistics_table"><span>
-                <div class="count_name">退貨商品金額</div>
-                <div class="count_price">$ 250</div></span><span>
-                <div class="count_name">未達優惠條件商品需補差額</div>
-                <div class="count_price warning">$ 140</div></span><span>
-                <div class="count_name">未達免運門檻運費</div>
-                <div class="count_price warning">$ 60</div></span><span>
-                <div class="count_name">購物金折抵</div>
-                <div class="count_price">$ 60</div></span><span>
-                <div class="count_name">瑕疵品寄回運費補貼</div>
-                <div class="count_price">$ 10</div></span>
-              <hr><span class="sum_result">
-                <div class="count_name">總退費金額</div>
-                <div class="count_price warning_bold">$ 110</div></span><span class="warning_wrapper">
-                <div class="warning">※ 部分剩餘商品未達優惠條件，將以原價計算。</div>
-                <div class="warning">※ 原訂單保留商品金額未達免運費標準，需補扣原訂單出貨的運費。</div></span><span class="sum_warning warning">(請注意：我們將於收到退貨商品時檢查是否為瑕疵品，如一經查看判定為正常品退貨，將不會補貼運費，請您見諒。)</span>
-            </div>
+              <li>
+                <input type="password" placeholder="請輸入原密碼">
+                <div class="error_msg">舊密碼輸入錯誤</div>
+              </li>
+              <li>
+                <input type="password" placeholder="請輸入新密碼">
+                <div class="dialog_alter_msg">(六碼以上，至少包含一個數字與英文字母)</div>
+                <div class="error_msg">請輸入新密碼</div>
+              </li>
+              <li>
+                <input type="password" placeholder="請再次輸入新密碼">
+                <div class="error_msg"> 請再次輸入新密碼</div>
+              </li>
+            </ul><span class="dialog_button_wrapper">
+              <button class="dialog_button dialog_cancel">取消</button>
+              <button class="dialog_button dialog_check">確定</button></span>
           </div>
-          <div class="radio_button_wrapper">
-            <input type="radio" name="know" id="user_check_know">
-            <label for="user_check_know">我已確認過退貨商品與退款金額無誤。</label>
-          </div><span class="dialog_button_wrapper">
-            <button class="dialog_button pre">上一步</button>
-            <button class="dialog_button next">下一步</button></span>
+          <div id="reset_password_success_dialog" class="do_button_dialog">
+            <h1>重設密碼成功</h1>
+            <p>密碼重設成功，請用新密碼登入帳戶，謝謝。</p><span class="dialog_button_wrapper">
+              <button class="dialog_button dialog_check">確定</button></span>
+          </div>
         </section>
       </div>
     </main>

@@ -1,0 +1,104 @@
+extends ../_general/member_section/temp_member_section.jade
+
+block append content
+    
+    block navArray
+        -var navArray = ["首頁","會員專區","購物金折抵券"]
+
+block activeIndex
+     -var activeIndex = 3
+block member_section
+    section.table_wrapper
+
+        table.account_setting_table
+            tbody
+                tr
+                    td.td_key 電子信箱：
+                    td.td_value
+                        input(type="email" value="abc@gmail.com" disabled).input_edit
+                        .alter_msg Email為您的登入帳號，一經更改後請用新的Email登入帳號。
+                tr
+                    td.td_key 會員姓名：
+                    td.td_value 
+                        input(type="text" value="NAME" disabled).input_edit
+                tr
+                    td.td_key 出生日期：
+                    td.td_value
+                        input(type="text" value="1991/10/10" disabled)
+                tr
+                    td.td_key 手機號碼：
+                    td.td_value
+                        input(type="tel" value="0932332333" disabled).input_edit
+                tr
+                    td.td_key 聯絡地址：
+                    td.td_value
+                        //span#regin_id.edit_disappear 106
+                        span#city_name.edit_disappear 台北市
+                        span#region_name.edit_disappear 大安區
+                        div.select_wrapper
+                            select#receive_city_id.city(name='receive_city')
+                                option(value='') 請選擇縣市
+                                option(value='台北市') 台北市
+                                option(value='基隆市') 基隆市
+                                option(value='宜蘭縣') 宜蘭縣
+                                option(value='新北市') 新北市
+                                option(value='連江縣') 連江縣
+                                option(value='新竹市') 新竹市
+                                option(value='新竹縣') 新竹縣
+                                option(value='桃園市') 桃園市
+                                option(value='苗栗縣') 苗栗縣
+                                option(value='台中市') 台中市
+                                option(value='南投縣') 南投縣
+                                option(value='彰化縣') 彰化縣
+                                option(value='嘉義市') 嘉義市
+                                option(value='嘉義縣') 嘉義縣
+                                option(value='雲林縣') 雲林縣
+                                option(value='台南市') 台南市
+                                option(value='澎湖縣') 澎湖縣
+                                option(value='金門縣') 金門縣
+                                option(value='高雄市') 高雄市
+                                option(value='台東縣') 台東縣
+                                option(value='屏東縣') 屏東縣
+                                option(value='花蓮縣') 花蓮縣
+                            
+                            select#receive_region_id.area(name='receive_region')
+                                option(value='') 請選擇鄉鎮市區
+                        
+                        input(type="text" value="泰順街44巷25號" disabled).input_edit
+                        //span 泰順街44巷25號
+
+
+
+                tr.reset_password_row
+                    td.td_key 重設密碼：
+                    td.td_value 
+                        button.reset_password 重設密碼
+
+        button.edit_button.edit_profile 編輯
+
+        div.do_button_dialog#reset_password_dialog
+            img(src="../general/img/delete.png").colse_dialog
+            h1 重設密碼
+            
+            ul
+                li
+                    input(type="password" placeholder="請輸入原密碼")
+                    .error_msg 舊密碼輸入錯誤
+                li
+                    input(type="password" placeholder="請輸入新密碼")
+                    .dialog_alter_msg (六碼以上，至少包含一個數字與英文字母)
+                    .error_msg 請輸入新密碼
+                li
+                    input(type="password" placeholder="請再次輸入新密碼")
+                    .error_msg  請再次輸入新密碼
+            
+            span.dialog_button_wrapper
+                button.dialog_button.dialog_cancel 取消
+                button.dialog_button.dialog_check 確定
+        
+        div.do_button_dialog#reset_password_success_dialog
+            h1 重設密碼成功
+            p 密碼重設成功，請用新密碼登入帳戶，謝謝。
+
+            span.dialog_button_wrapper
+                button.dialog_button.dialog_check 確定

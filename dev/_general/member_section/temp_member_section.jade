@@ -18,6 +18,9 @@ block content
                         if index == activeIndex
                             li.active
                                 a(href="")= val
+                        else if(val == "登出")
+                            li 
+                                span#logout= val
                         else
                             li 
                                 a(href="")= val
@@ -31,5 +34,11 @@ block content
                     //-     a(href="") 帳戶設定
                     //- li
                     //-     a(href="") 登出
+                div.do_button_dialog#logout_dialog
+                    img(src="../general/img/delete.png").colse_dialog
+                    h1 確定登出？
+                    span.dialog_button_wrapper
+                        button.dialog_button.dialog_cancel 取消
+                        button.dialog_button.dialog_check 確定
 
         block member_section

@@ -1,0 +1,64 @@
+.do_button_dialog
+    display: none
+    background: #FFF8F6
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.09)
+    position: fixed
+    transform: translate(-50%,-50%)
+    left: 50%
+    top: 50%
+    display: flex
+    flex-direction: column
+    flex-axis:center
+    color: #4A4A4A
+    text-align: center
+    z-index: 10;
+    
+    .colse_dialog
+        position: absolute
+        top: 14px;
+        right: 14px;
+        cursor: pointer
+
+    h1
+        font-size: 30px
+        margin-bottom: 30px
+    p
+        /* 我們很遺憾您要取消訂單，為了提升網站與商: */
+        font-size: 18px;
+        letter-spacing: 0.47px;
+
+    .dialog_button_wrapper
+        display: flex
+        justify-content: center
+    
+    .dialog_button
+        margin: 0 20px
+        color: white
+        background:#c8837c
+        size 80px 30px
+        border-radius: 5px
+
+@media all and (max-width $phone_rwd_width)
+    .do_button_dialog
+        //width: calc("100vw - 30px");
+        box-sizing: border-box;
+        
+        position: fixed;
+        top: 10px;
+        bottom: 25px;
+        left: 10px;
+        right: 10px;
+        margin-top: 66px;
+        width: initial;
+        height: initial;
+        transform: initial;
+        
+        h1
+            font-size: 20px;
+        p
+            font-size: 16px;
+
+@media all and (max-height: 550px)
+    .do_button_dialog
+        justify-content: flex-start
+        overflow-y: scroll;

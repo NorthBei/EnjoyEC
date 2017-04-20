@@ -1,5 +1,6 @@
 @import "../general"
 @import "../banner_section/banner_section"
+@import "../_general/dialog/dialog"
 
 .commodity_count
     display: none
@@ -43,6 +44,16 @@
         text-align: center
         color: #4A4A4A
         font-size: 18px
+#logout
+    cursor: pointer
+#logout_dialog
+    padding: 95px 134px 110px
+    display: none
+    h1
+        font-weight: 400
+    .dialog_button_wrapper
+        margin-bottom: 0
+
 +media-query( all, max-width $phone_rwd_width )
     #main
         padding: 0 10px
@@ -69,3 +80,6 @@
                 margin-top: 5px;
                 width: 33.3%;
                 font-size: 14px;
+    
+    #logout_dialog
+        padding: 0

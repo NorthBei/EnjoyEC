@@ -3122,6 +3122,86 @@ body {
     padding-left: 2px;
   }
 }
+.do_button_dialog {
+  display: none;
+  background: #fff8f6;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.09);
+  position: fixed;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -ms-justify-content: center;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-align-items: center;
+  -ms-flex-align: center;
+      align-items: center;
+  color: #4a4a4a;
+  text-align: center;
+  z-index: 10;
+}
+.do_button_dialog .colse_dialog {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  cursor: pointer;
+}
+.do_button_dialog h1 {
+  font-size: 30px;
+  margin-bottom: 30px;
+}
+.do_button_dialog p {
+/* 我們很遺憾您要取消訂單，為了提升網站與商: */
+  font-size: 18px;
+  letter-spacing: 0.47px;
+}
+.do_button_dialog .dialog_button_wrapper {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-justify-content: center;
+  -ms-flex-pack: center;
+      justify-content: center;
+}
+.do_button_dialog .dialog_button {
+  margin: 0 20px;
+  color: #fff;
+  background: #c8837c;
+  width: 80px;
+  height: 30px;
+  border-radius: 5px;
+}
+@media all and (max-width: 550px) {
+  .do_button_dialog {
+    box-sizing: border-box;
+    position: fixed;
+    top: 10px;
+    bottom: 25px;
+    left: 10px;
+    right: 10px;
+    margin-top: 66px;
+    width: initial;
+    height: initial;
+    transform: initial;
+  }
+  .do_button_dialog h1 {
+    font-size: 20px;
+  }
+  .do_button_dialog p {
+    font-size: 16px;
+  }
+}
+@media all and (max-height: 550px) {
+  .do_button_dialog {
+    -ms-justify-content: flex-start;
+    -ms-flex-pack: start;
+        justify-content: flex-start;
+    overflow-y: scroll;
+  }
+}
 .commodity_count {
   display: none;
 }
@@ -3167,6 +3247,19 @@ body {
   color: #4a4a4a;
   font-size: 18px;
 }
+#logout {
+  cursor: pointer;
+}
+#logout_dialog {
+  padding: 95px 134px 110px;
+  display: none;
+}
+#logout_dialog h1 {
+  font-weight: 400;
+}
+#logout_dialog .dialog_button_wrapper {
+  margin-bottom: 0;
+}
 @media all and (max-width: 550px) {
   #main {
     padding: 0 10px;
@@ -3196,6 +3289,9 @@ body {
     margin-top: 5px;
     width: 33.3%;
     font-size: 14px;
+  }
+  #logout_dialog {
+    padding: 0;
   }
 }
 .rwd-table {
@@ -3269,6 +3365,86 @@ td:before {
     font-size: 14px;
   }
 }
+.do_button_dialog {
+  display: none;
+  background: #fff8f6;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.09);
+  position: fixed;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -ms-justify-content: center;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-align-items: center;
+  -ms-flex-align: center;
+      align-items: center;
+  color: #4a4a4a;
+  text-align: center;
+  z-index: 10;
+}
+.do_button_dialog .colse_dialog {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  cursor: pointer;
+}
+.do_button_dialog h1 {
+  font-size: 30px;
+  margin-bottom: 30px;
+}
+.do_button_dialog p {
+/* 我們很遺憾您要取消訂單，為了提升網站與商: */
+  font-size: 18px;
+  letter-spacing: 0.47px;
+}
+.do_button_dialog .dialog_button_wrapper {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-justify-content: center;
+  -ms-flex-pack: center;
+      justify-content: center;
+}
+.do_button_dialog .dialog_button {
+  margin: 0 20px;
+  color: #fff;
+  background: #c8837c;
+  width: 80px;
+  height: 30px;
+  border-radius: 5px;
+}
+@media all and (max-width: 550px) {
+  .do_button_dialog {
+    box-sizing: border-box;
+    position: fixed;
+    top: 10px;
+    bottom: 25px;
+    left: 10px;
+    right: 10px;
+    margin-top: 66px;
+    width: initial;
+    height: initial;
+    transform: initial;
+  }
+  .do_button_dialog h1 {
+    font-size: 20px;
+  }
+  .do_button_dialog p {
+    font-size: 16px;
+  }
+}
+@media all and (max-height: 550px) {
+  .do_button_dialog {
+    -ms-justify-content: flex-start;
+    -ms-flex-pack: start;
+        justify-content: flex-start;
+    overflow-y: scroll;
+  }
+}
 .order_query_info_table_wrapper {
   -ms-flex: 1;
   flex: 1;
@@ -3336,52 +3512,6 @@ td:before {
 }
 .order_query_info_table tbody tr {
   margin-bottom: 30px;
-}
-.do_button_dialog {
-  display: none;
-  background: #fff8f6;
-  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.09);
-  position: fixed;
-  transform: translate(-50%, -50%);
-  left: 50%;
-  top: 50%;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -ms-justify-content: center;
-  -ms-flex-pack: center;
-      justify-content: center;
-  -ms-align-items: center;
-  -ms-flex-align: center;
-      align-items: center;
-  color: #4a4a4a;
-  text-align: center;
-}
-.do_button_dialog .colse_dialog {
-  position: absolute;
-  top: 14px;
-  right: 14px;
-  cursor: pointer;
-}
-.do_button_dialog h1 {
-  font-size: 30px;
-  margin-bottom: 30px;
-}
-.do_button_dialog p {
-/* 我們很遺憾您要取消訂單，為了提升網站與商: */
-  font-size: 18px;
-  letter-spacing: 0.47px;
-}
-.do_button_dialog .dialog_button_wrapper {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-justify-content: center;
-  -ms-flex-pack: center;
-      justify-content: center;
-}
-.do_button_dialog .dialog_button {
-  margin: 0 20px;
 }
 #cancel_order_dialog {
   display: none;
@@ -3483,17 +3613,8 @@ td:before {
   #cancel_order_dialog,
   #apply_return_dialog,
   #cancel_orde_success_dialog {
-    padding: 60px 40px 90px;
-  }
-  .do_button_dialog {
-    width: calc(100vw - 30px);
-    box-sizing: border-box;
-  }
-  .do_button_dialog h1 {
-    font-size: 20px;
-  }
-  .do_button_dialog p {
-    font-size: 16px;
+    padding: 31px;
+    width: initial;
   }
   #cancel_order_dialog .cancel_reason {
     width: 100%;

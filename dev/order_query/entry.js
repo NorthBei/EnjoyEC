@@ -1,4 +1,7 @@
 require("../_general/general.js");
+require("../_general/member_section/member_section.js");
+
+
 $(document).ready(function(){
     $(".do_cancel").click(function(){
         $("#cancel_order_dialog").css("display","flex");
@@ -8,8 +11,6 @@ $(document).ready(function(){
         $("#apply_return_dialog").css("display","flex");
     });
 
-    $(".colse_dialog").on("click",colseDialog);
-    $(".dialog_cancel").on("click",colseDialog);
     $("#cancel_orde_success_dialog .dialog_check").on("click",colseDialog);
 
     $("#apply_return_dialog .dialog_check").on("click",function(){

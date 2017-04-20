@@ -63,7 +63,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 10);
+/******/ 	return __webpack_require__(__webpack_require__.s = 14);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -87,7 +87,7 @@ $(document).ready(function() {
         var topHeight = document.documentElement.scrollTop||document.body.scrollTop;
         // console.log("topHeight1:"+topHeight);
         // console.log("navHeight:"+navHeight);
-        var width = viewportSize.getWidth();
+        var width = window.innerWidth;
 
         if(topHeight>= navHeight && isCrossHeader == false && width <= 850){
             isCrossHeader = true;
@@ -103,7 +103,7 @@ $(document).ready(function() {
 
 /***/ }),
 
-/***/ 10:
+/***/ 14:
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(0);

@@ -1,0 +1,115 @@
+@import "../_general/member_section/member_section"
+
+.two_col
+    margin-bottom: 60px
+
+.table_wrapper
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+.account_setting_table
+    font-size: 15px
+    margin-top: 45px
+    color: #4A4A4A
+    tr
+        height: 45px;
+
+    td
+        vertical-align: top
+    .td_key
+        width: 100px;
+        padding-top: 6px;
+    .td_value
+        font-weight: 100
+        position: relative;
+
+        input
+            border: none
+            font-weight:inherit
+            size: 211px 25px
+            box-sizing: border-box;
+
+            &:disabled
+                color: #4a4a4a
+
+        .input_edit_now
+            border: 1px solid #4a4a4a
+            padding-left: 10px;
+
+.select_wrapper
+    size: 211px 25px
+    display: flex
+    justify-content: space-between
+    display: none
+    margin-bottom: 15px
+
+    &>select
+        size 96px 25px
+.edit_button,.reset_password
+    background: #D5948E;
+    border-radius: 6px;
+    font-size: 15px;
+    color: white;
+    font-weight: 100
+    
+.reset_password
+    size: 96px 30px
+.edit_button
+    size: 96px 36px
+    letter-spacing: 0.39px;
+    margin-top: 60px
+
+.alter_msg
+    color: #D6645F
+    font-size: 12px
+    margin-top: 5px
+    margin-bottom: 10px;
+
+#reset_password_dialog
+    display: none
+    padding: 55px 200px 60px
+    h1
+        margin-bottom: 60px
+    
+    .dialog_alter_msg,.error_msg
+        text-align: left;
+        margin-left: 20px;
+        font-weight: 100
+        margin-top: 5px;
+    .dialog_alter_msg
+        color: #D6645F
+        font-size: 12px
+
+    .error_msg
+        margin-bottom: 20px
+        color: #950012
+
+    input[type="password"]
+        background: #FFFFFF;
+        border: 1px solid #4A4A4A;
+        border-radius: 5px;
+        size: 300px 30px
+        padding-left: 20px
+
+        +placeholder()
+            color: #4A4A4A
+            font-size: 14px
+
+#reset_password_success_dialog
+    padding: 55px 165px 67px
+    display: none
+    p
+        margin: 50px 0
++media-query( all, max-width $phone_rwd_width )
+
+    .account_setting_table
+        margin-top: 0
+
+    .alter_msg
+        margin-top: 6px;
+        white-space: initial;
+    
+    #reset_password_dialog,#reset_password_success_dialog
+        padding: 0
