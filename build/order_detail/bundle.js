@@ -118,7 +118,7 @@ __webpack_require__(3);
 
 window.addEventListener("load",function(){
     $("#logout").on("click",function(){
-        $("#logout_dialog").show();
+        $("#logout_dialog").css("display","flex");
     });
     
 });

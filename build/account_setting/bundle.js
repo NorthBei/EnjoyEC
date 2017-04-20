@@ -107,7 +107,7 @@ __webpack_require__(3);
 
 window.addEventListener("load",function(){
     $("#logout").on("click",function(){
-        $("#logout_dialog").show();
+        $("#logout_dialog").css("display","flex");
     });
     
 });
@@ -142,15 +142,15 @@ window.addEventListener("load",function(){
         isEdit=!isEdit;
         $(".input_edit").toggleClass("input_edit_now").prop("disabled",!isEdit);
         $(".edit_disappear").toggle();
-        $(".select_wrapper").toggle().css("display","flex");
-
+                
         if(isEdit){
             var city_name = $("#city_name").text();
             var region_name = $("#region_name").text();
             $("#receive_city_id option[value='"+city_name+"']").attr('selected','selected').trigger("change");
             $("#receive_region_id option[value='"+region_name+"']").attr('selected','selected');
             $('.reset_password_row').css('visibility','hidden');
-            $(".select_wrapper").css("display","flex");
+            flex($(".select_wrapper"));
+            $(".input_address").css("display","initial");
         }
         else{
             var city_name = $("#receive_city_id option:selected").text();
@@ -159,6 +159,7 @@ window.addEventListener("load",function(){
             $("#region_name").text(region_name);
             $('.reset_password_row').css('visibility','visible');
             $(".select_wrapper").hide();
+            flex($(".input_address"));
         }
         var editButton = (isEdit? "確定":"編輯");
         $(this).text(editButton);      
@@ -248,6 +249,10 @@ function changeCity() {
 	//$("#receive_region_id").val("");
 
 	//showZipCode(countyInput, zoneInput, post ,address ,countyindex);
+}
+
+function flex(ele){
+    ele.css("display","flex");
 }
 
 /***/ })

@@ -3342,6 +3342,17 @@ body {
   border: 1px solid #4a4a4a;
   padding-left: 10px;
 }
+.account_setting_table .input_address {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-align-items: center;
+  -ms-flex-align: center;
+      align-items: center;
+}
+.account_setting_table .input_address input[type="text"] {
+  -ms-flex: 1;
+  flex: 1;
+}
 .select_wrapper {
   width: 211px;
   height: 25px;
@@ -3412,18 +3423,22 @@ body {
   padding-left: 20px;
 }
 #reset_password_dialog input[type="password"]::-webkit-input-placeholder {
+  background: #fff;
   color: #4a4a4a;
   font-size: 14px;
 }
 #reset_password_dialog input[type="password"]:-moz-placeholder {
+  background: #fff;
   color: #4a4a4a;
   font-size: 14px;
 }
 #reset_password_dialog input[type="password"]::-moz-placeholder {
+  background: #fff;
   color: #4a4a4a;
   font-size: 14px;
 }
 #reset_password_dialog input[type="password"]:-ms-input-placeholder {
+  background: #fff;
   color: #4a4a4a;
   font-size: 14px;
 }
