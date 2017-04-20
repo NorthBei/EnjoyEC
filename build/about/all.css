@@ -3122,91 +3122,12 @@ body {
     padding-left: 2px;
   }
 }
-.do_button_dialog {
-  display: none;
-  background: #fff8f6;
-  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.09);
-  position: fixed;
-  transform: translate(-50%, -50%);
-  left: 50%;
-  top: 50%;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -ms-justify-content: center;
-  -ms-flex-pack: center;
-      justify-content: center;
-  -ms-align-items: center;
-  -ms-flex-align: center;
-      align-items: center;
-  color: #4a4a4a;
-  text-align: center;
-  z-index: 10;
-}
-.do_button_dialog .colse_dialog {
-  position: absolute;
-  top: 14px;
-  right: 14px;
-  cursor: pointer;
-}
-.do_button_dialog h1 {
-  font-size: 30px;
-  margin-bottom: 30px;
-}
-.do_button_dialog p {
-/* 我們很遺憾您要取消訂單，為了提升網站與商: */
-  font-size: 18px;
-  letter-spacing: 0.47px;
-}
-.do_button_dialog .dialog_button_wrapper {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-justify-content: center;
-  -ms-flex-pack: center;
-      justify-content: center;
-}
-.do_button_dialog .dialog_button {
-  margin: 0 20px;
-  color: #fff;
-  background: #c8837c;
-  width: 80px;
-  height: 30px;
-  border-radius: 5px;
-}
-@media all and (max-width: 550px) {
-  .do_button_dialog {
-    box-sizing: border-box;
-    position: fixed;
-    top: 10px;
-    bottom: 25px;
-    left: 10px;
-    right: 10px;
-    margin-top: 66px;
-    width: initial;
-    height: initial;
-    transform: initial;
-  }
-  .do_button_dialog h1 {
-    font-size: 20px;
-  }
-  .do_button_dialog p {
-    font-size: 16px;
-  }
-}
-@media all and (max-height: 550px) {
-  .do_button_dialog {
-    -ms-justify-content: flex-start;
-    -ms-flex-pack: start;
-        justify-content: flex-start;
-    overflow-y: scroll;
-  }
+/*override by other section*/
+#sub_section {
+  height: 17px;
 }
 .commodity_count {
   display: none;
-}
-#sub_section {
-  height: 17px;
 }
 .split {
   border: 0;
@@ -3215,256 +3136,45 @@ body {
   width: 100%;
   max-width: 1185px;
 }
-@media all and (max-width: 550px) {
-  .page_link>img {
-    height: 100px;
-  }
-}
-.two_col {
-  display: -ms-flexbox;
-  display: flex;
-  width: 100%;
-  max-width: 1185px;
-}
-.side_bar {
-  width: 200px;
-  margin-top: 50px;
-}
-.side_bar li {
-  color: #4a4a4a;
-  font-weight: 100;
-  font-size: 18px;
-  margin-bottom: 10px;
-}
-.side_bar li.active {
-  color: #d6645f;
-  font-weight: normal;
-}
-.table_wrapper {
-  -ms-flex: 1;
-  flex: 1;
-}
-.table_wrapper .split {
-  border-top: 1px solid #f6eae6;
-}
-.table_wrapper .section_title {
-  text-align: center;
-  color: #4a4a4a;
-  font-size: 18px;
-}
-#logout {
-  cursor: pointer;
-}
-#logout_dialog {
-  padding: 95px 134px 110px;
-  display: none;
-}
-#logout_dialog h1 {
-  font-weight: 400;
-}
-#logout_dialog .dialog_button_wrapper {
-  margin-bottom: 0;
-}
-@media all and (max-width: 550px) {
-  #main {
-    padding: 0 10px;
-  }
-  #sub_section {
-    display: none;
-  }
-  .two_col {
-    -ms-flex-direction: column;
-    flex-direction: column;
-  }
-  .side_bar {
-    width: 100%;
-    margin-top: 5px;
-    margin-bottom: 15px;
-    border-bottom: 1px solid #d5948e;
-    padding-bottom: 5px;
-  }
-  .side_bar ul {
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    text-align: center;
-  }
-  .side_bar ul li {
-    margin-top: 5px;
-    width: 33.3%;
-    font-size: 14px;
-  }
-  #logout_dialog {
-    padding: 0;
-  }
-}
-.two_col {
-  margin-bottom: 60px;
-}
-.table_wrapper {
+/*override by other section*/
+.content {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-direction: column;
   flex-direction: column;
-  -ms-justify-content: center;
-  -ms-flex-pack: center;
-      justify-content: center;
   -ms-align-items: center;
   -ms-flex-align: center;
       align-items: center;
+  width: 50vw;
+  max-width: 722px;
+  padding-top: 20px;
 }
-.account_setting_table {
-  font-size: 15px;
-  margin-top: 45px;
+.content p {
+  margin: 20px 0 92px;
+  font-size: 18px;
   color: #4a4a4a;
-}
-.account_setting_table tr {
-  height: 45px;
-}
-.account_setting_table td {
-  vertical-align: top;
-}
-.account_setting_table .td_key {
-  width: 100px;
-  padding-top: 6px;
-}
-.account_setting_table .td_value {
-  font-weight: 100;
-  position: relative;
-}
-.account_setting_table .td_value input {
-  border: 1px solid #4a4a4a;
-  font-weight: inherit;
-  width: 211px;
-  height: 25px;
-  box-sizing: border-box;
-  padding-left: 10px;
-}
-.account_setting_table .td_value input[disabled] {
-  color: #4a4a4a;
-  background: #fff;
-  border: none;
-  padding-left: 0;
-}
-.account_setting_table .input_address {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-align-items: center;
-  -ms-flex-align: center;
-      align-items: center;
-}
-.account_setting_table .input_address input[type="text"] {
-  -ms-flex: 1;
-  flex: 1;
-}
-.select_wrapper {
-  width: 211px;
-  height: 25px;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-justify-content: space-between;
-  -ms-flex-pack: justify;
-      justify-content: space-between;
-  display: none;
-  margin-bottom: 15px;
-}
-.select_wrapper>select {
-  width: 96px;
-  height: 25px;
-}
-.edit_button,
-.reset_password {
-  background: #d5948e;
-  border-radius: 6px;
-  font-size: 15px;
-  color: #fff;
-  font-weight: 100;
-}
-.reset_password {
-  width: 96px;
-  height: 30px;
-}
-.edit_button {
-  width: 96px;
-  height: 36px;
-  letter-spacing: 0.39px;
-  margin-top: 60px;
-}
-.alter_msg {
-  color: #d6645f;
-  font-size: 12px;
-  margin-top: 5px;
-  margin-bottom: 10px;
-}
-#reset_password_dialog {
-  display: none;
-  padding: 55px 200px 60px;
-}
-#reset_password_dialog h1 {
-  margin-bottom: 60px;
-}
-#reset_password_dialog .dialog_alter_msg,
-#reset_password_dialog .error_msg {
-  text-align: left;
-  margin-left: 20px;
-  font-weight: 100;
-  margin-top: 5px;
-}
-#reset_password_dialog .dialog_alter_msg {
-  color: #d6645f;
-  font-size: 12px;
-}
-#reset_password_dialog .error_msg {
-  margin-bottom: 20px;
-  color: #950012;
-}
-#reset_password_dialog input[type="password"] {
-  background: #fff;
-  border: 1px solid #4a4a4a;
-  border-radius: 5px;
-  width: 300px;
-  height: 30px;
-  padding-left: 20px;
-}
-#reset_password_dialog input[type="password"]::-webkit-input-placeholder {
-  background: #fff;
-  color: #4a4a4a;
-  font-size: 14px;
-}
-#reset_password_dialog input[type="password"]:-moz-placeholder {
-  background: #fff;
-  color: #4a4a4a;
-  font-size: 14px;
-}
-#reset_password_dialog input[type="password"]::-moz-placeholder {
-  background: #fff;
-  color: #4a4a4a;
-  font-size: 14px;
-}
-#reset_password_dialog input[type="password"]:-ms-input-placeholder {
-  background: #fff;
-  color: #4a4a4a;
-  font-size: 14px;
-}
-#reset_password_success_dialog {
-  padding: 55px 165px 67px;
-  display: none;
-}
-#reset_password_success_dialog p {
-  margin: 50px 0;
+  letter-spacing: 0.47px;
+  line-height: 1.5;
 }
 @media all and (max-width: 550px) {
-  .account_setting_table {
-    margin-top: 0;
+  #main {
+    padding: 10px;
   }
-  .alter_msg {
-    margin-top: 6px;
-    white-space: initial;
+  #sub_section {
+    display: none;
   }
-  #reset_password_dialog,
-  #reset_password_success_dialog {
-    padding: 0;
+  .page_link>img {
+    height: 100px;
+  }
+  .content {
+    width: 100%;
+  }
+  .content img {
+    width: 100%;
+  }
+  .content p {
+    font-size: 15px;
+    letter-spacing: 0.39px;
   }
 }
 

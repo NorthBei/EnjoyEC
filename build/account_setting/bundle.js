@@ -140,7 +140,7 @@ window.addEventListener("load",function(){
     var isEdit = false;
     $(".edit_profile").on("click",function(){
         isEdit=!isEdit;
-        $(".input_edit").toggleClass("input_edit_now").prop("disabled",!isEdit);
+        $(".input_edit").prop("disabled",!isEdit);
         $(".edit_disappear").toggle();
                 
         if(isEdit){

@@ -3299,172 +3299,450 @@ body {
     padding: 0;
   }
 }
-.two_col {
-  margin-bottom: 60px;
+.rwd-table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-bottom: 50px;
 }
-.table_wrapper {
+.rwd-table th,
+.rwd-table td {
+  text-align: center;
+}
+.rwd-table th,
+td:before {
+  height: 40px;
+  background: #f6eae6;
+  color: #d6645f;
+  font-size: 15px;
+  font-weight: 400;
+}
+.rwd-table th {
+  box-sizing: border-box;
+}
+.rwd-table tbody tr {
+  font-size: 14px;
+  color: #8e5651;
+  font-weight: 100;
+  height: 60px;
+  box-sizing: border-box;
+  border-bottom: 1px solid #f6eae6;
+}
+.rwd-table tbody tr td[data-th=''] {
+  -ms-flex: 1;
+  flex: 1;
+}
+@media all and (max-width: 550px) {
+  .rwd-table tr {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+  .rwd-table th {
+    display: none;
+  }
+  .rwd-table td:before {
+    content: attr(data-th) " ";
+    display: -ms-flexbox;
+    display: flex;
+    -ms-justify-content: center;
+    -ms-flex-pack: center;
+        justify-content: center;
+    -ms-align-items: center;
+    -ms-flex-align: center;
+        align-items: center;
+  }
+  .rwd-table tbody tr {
+    height: initial;
+    margin-bottom: 10px;
+  }
+  .rwd-table td {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    padding: 0;
+    width: 33.3%;
+    line-height: 48px;
+    font-size: 12px;
+  }
+  .rwd-table td:before {
+    font-size: 14px;
+  }
+}
+.section_sub_title {
+  font-size: 16px;
+  font-weight: 400;
+}
+.input_count,
+.select_retun_reason {
+  border: 1px solid #4a4a4a;
+  border-radius: 5px;
+  height: 30px;
+}
+.input_count {
+  width: 60px;
+  box-sizing: border-box;
+  text-align: center;
+}
+.select_retun_reason {
+  width: 200px;
+  background: #fff;
+}
+/*checkbox*/
+.section_title>.checkbox_wrapper {
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  font-size: 15px;
+  margin: 20px 31px 10px;
+  padding-left: 20px;
+}
+.section_title .split {
+  margin: 16px 0;
+}
+.checkbox_wrapper input[type="checkbox"] {
+  visibility: hidden;
+}
+.checkbox_wrapper input[type="checkbox"]:checked + label:after {
+  -ms-filter: none;
+  filter: none;
+  opacity: 1;
+}
+.checkbox_wrapper {
+  width: 25px;
+  position: relative;
+}
+.checkbox_wrapper label {
+  cursor: pointer;
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  top: 0;
+  left: 0;
+  border: 1px solid #000;
+  margin-right: 13px;
+}
+.checkbox_wrapper label:after {
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
+  opacity: 0;
+  content: '';
+  position: absolute;
+  width: 9px;
+  height: 5px;
+  background: transparent;
+  top: 3px;
+  left: 3px;
+  border: 1px solid #000;
+  border-top: none;
+  border-right: none;
+  transform: rotate(-45deg);
+}
+/*checkbox*/
+/*number*/
+/* Spin Buttons modified */
+input[type="number"] {
+  position: relative;
+}
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  background: transparent url("./img/arrow.svg") no-repeat center center;
+  width: 1em;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+  filter: alpha(opacity=50);
+  opacity: 0.5; /* shows Spin Buttons per default (Chrome >= 39) */
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  cursor: pointer;
+}
+/*number*/
+.return_product_table {
+  margin-bottom: 15px;
+}
+.return_product_table tbody tr {
+  min-height: 72px;
+  color: #4a4a4a;
+}
+.th_product {
+  width: 28%;
+}
+.th_return_reason {
+  width: 230px;
+}
+td[data-th='商品'] {
+  color: #8b572a;
+  padding: 0 30px;
+  font-size: 13px;
+}
+td[data-th='商品'] .prodct_info_wrapper {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-align-items: center;
+  -ms-flex-align: center;
+      align-items: center;
+}
+td[data-th='商品'] .prodct_text_wrapper {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-direction: column;
   flex-direction: column;
+  margin-left: 20px;
+  text-align: left;
+}
+td[data-th='商品'] a {
+  text-decoration: underline;
+  color: #8b572a;
+}
+td[data-th='商品'] .comment {
+  color: #d6645f;
+  margin-top: 7px;
+  margin-bottom: 14px;
+}
+td[data-th='單價'] {
+  position: relative;
+}
+td[data-th='單價'] .normal_price {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  text-decoration: line-through;
+}
+td[data-th='顏色'] img {
+  width: 31px;
+  height: 31px;
+}
+tr.have_comment {
+  height: 100px;
+}
+tr.have_comment td {
+  vertical-align: top;
+  padding-top: 14px;
+}
+tr.have_comment td .checkbox_wrapper {
+  -ms-align-self: flex-start;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  margin-top: 10px;
+}
+tr.have_comment td[data-th='數量'],
+tr.have_comment td[data-th='小計'] {
+  padding-top: 24px;
+}
+@media all and (max-width: 550px) {
+  .rwd-table td {
+    line-height: initial;
+    height: initial;
+    min-height: 100px;
+  }
+  .rwd-table td:before {
+    margin-bottom: 13px;
+    width: 100%;
+  }
+  .section_title>.checkbox_wrapper {
+    margin-left: 10px;
+  }
+  .rwd-table tbody tr {
+    margin-bottom: 30px;
+  }
+  .return_product_table td[data-th='單價'],
+  .return_product_table td[data-th='數量'],
+  .return_product_table td[data-th='小計'] {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-align-items: center;
+    -ms-flex-align: center;
+        align-items: center;
+  }
+  .return_product_table td[data-th='單價']:before,
+  .return_product_table td[data-th='數量']:before,
+  .return_product_table td[data-th='小計']:before {
+    margin-bottom: 20px;
+  }
+  .return_product_table td[data-th='商品'] {
+    width: 60%;
+    padding: 0;
+  }
+  .return_product_table td[data-th='顏色'] {
+    -ms-align-items: center;
+    -ms-flex-align: center;
+        align-items: center;
+    width: 10%;
+  }
+  .return_product_table td[data-th='單價'] {
+    width: 30%;
+  }
+  .return_product_table td[data-th='單價'] .normal_price {
+    position: initial;
+  }
+  .return_product_table td[data-th='數量'] {
+    width: 15%;
+  }
+  .return_product_table td[data-th='小計'] {
+    width: 20%;
+  }
+  .return_product_table td[data-th='退貨數量'] {
+    width: 20%;
+    -ms-align-items: center;
+    -ms-flex-align: center;
+        align-items: center;
+  }
+  .return_product_table td[data-th='退貨原因'] {
+    width: 45%;
+  }
+  .return_product_table td[data-th='退貨原因'] .select_retun_reason {
+    width: initial;
+    margin: 0 10px;
+  }
+  .return_product_table .prodct_info_wrapper {
+    margin: 0 10px;
+  }
+  tr.have_comment td,
+  tr.have_comment td[data-th='數量'],
+  tr.have_comment td[data-th='小計'] {
+    padding: 0;
+  }
+}
+/*.return_product_count*/
+.return_product_count {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-justify-content: space-between;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+}
+.return_product_count li.warning {
+  font-size: 13px;
+}
+.return_product_count .warning,
+.return_product_count .warning_bold {
+  color: #d0011b;
+}
+/*statistics_table*/
+.statistics_table {
+  width: 300px;
+  -ms-align-self: flex-end;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+.statistics_table>span {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-justify-content: flex-end;
+  -ms-flex-pack: end;
+      justify-content: flex-end;
+  margin-top: 10px;
+  font-size: 15px;
+  margin-right: 30px;
+}
+.statistics_table .count_name {
+  text-align: right;
+}
+.statistics_table .count_name .count_note {
+  font-weight: 100;
+  font-size: 13px;
+}
+.statistics_table .count_price {
+  width: 105px;
+  text-align: right;
+  font-weight: 100;
+}
+.statistics_table hr {
+  border-top: 1px solid #4a4a4a;
+}
+/*override statistics_table*/
+.statistics_table {
+  width: 400px;
+  font-size: 15px;
+}
+.statistics_table>span {
+  margin-right: 0;
+}
+.statistics_table .count_price {
+  text-align: left;
+  padding-left: 45px;
+}
+.statistics_table hr {
+  border-top: 1px solid #8b572a;
+}
+.statistics_table .sum_result {
+  color: #8b572a;
+}
+.statistics_table .sum_warning {
+  margin: 0;
+  margin-top: 15px;
+  text-align: center;
+  font-weight: 100;
+  font-size: 13px;
+}
+.statistics_table .warning_bold {
+  font-weight: 500;
+}
+.statistics_table .warning_wrapper {
+  font-size: 13px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  display: none;
+}
+/**/
+.radio_button_wrapper {
+  display: -ms-flexbox;
+  display: flex;
   -ms-justify-content: center;
   -ms-flex-pack: center;
       justify-content: center;
   -ms-align-items: center;
   -ms-flex-align: center;
       align-items: center;
-}
-.account_setting_table {
-  font-size: 15px;
-  margin-top: 45px;
-  color: #4a4a4a;
-}
-.account_setting_table tr {
-  height: 45px;
-}
-.account_setting_table td {
-  vertical-align: top;
-}
-.account_setting_table .td_key {
-  width: 100px;
-  padding-top: 6px;
-}
-.account_setting_table .td_value {
-  font-weight: 100;
-  position: relative;
-}
-.account_setting_table .td_value input {
-  border: 1px solid #4a4a4a;
-  font-weight: inherit;
-  width: 211px;
-  height: 25px;
-  box-sizing: border-box;
-  padding-left: 10px;
-}
-.account_setting_table .td_value input[disabled] {
-  color: #4a4a4a;
-  background: #fff;
-  border: none;
-  padding-left: 0;
-}
-.account_setting_table .input_address {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-align-items: center;
-  -ms-flex-align: center;
-      align-items: center;
-}
-.account_setting_table .input_address input[type="text"] {
-  -ms-flex: 1;
-  flex: 1;
-}
-.select_wrapper {
-  width: 211px;
-  height: 25px;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-justify-content: space-between;
-  -ms-flex-pack: justify;
-      justify-content: space-between;
-  display: none;
-  margin-bottom: 15px;
-}
-.select_wrapper>select {
-  width: 96px;
-  height: 25px;
-}
-.edit_button,
-.reset_password {
-  background: #d5948e;
-  border-radius: 6px;
-  font-size: 15px;
-  color: #fff;
-  font-weight: 100;
-}
-.reset_password {
-  width: 96px;
-  height: 30px;
-}
-.edit_button {
-  width: 96px;
-  height: 36px;
-  letter-spacing: 0.39px;
-  margin-top: 60px;
-}
-.alter_msg {
-  color: #d6645f;
-  font-size: 12px;
-  margin-top: 5px;
-  margin-bottom: 10px;
-}
-#reset_password_dialog {
-  display: none;
-  padding: 55px 200px 60px;
-}
-#reset_password_dialog h1 {
-  margin-bottom: 60px;
-}
-#reset_password_dialog .dialog_alter_msg,
-#reset_password_dialog .error_msg {
-  text-align: left;
-  margin-left: 20px;
-  font-weight: 100;
-  margin-top: 5px;
-}
-#reset_password_dialog .dialog_alter_msg {
-  color: #d6645f;
-  font-size: 12px;
-}
-#reset_password_dialog .error_msg {
-  margin-bottom: 20px;
-  color: #950012;
-}
-#reset_password_dialog input[type="password"] {
-  background: #fff;
-  border: 1px solid #4a4a4a;
-  border-radius: 5px;
-  width: 300px;
-  height: 30px;
-  padding-left: 20px;
-}
-#reset_password_dialog input[type="password"]::-webkit-input-placeholder {
-  background: #fff;
-  color: #4a4a4a;
   font-size: 14px;
-}
-#reset_password_dialog input[type="password"]:-moz-placeholder {
-  background: #fff;
-  color: #4a4a4a;
-  font-size: 14px;
-}
-#reset_password_dialog input[type="password"]::-moz-placeholder {
-  background: #fff;
-  color: #4a4a4a;
-  font-size: 14px;
-}
-#reset_password_dialog input[type="password"]:-ms-input-placeholder {
-  background: #fff;
-  color: #4a4a4a;
-  font-size: 14px;
-}
-#reset_password_success_dialog {
-  padding: 55px 165px 67px;
-  display: none;
-}
-#reset_password_success_dialog p {
   margin: 50px 0;
 }
+#user_check_know {
+  margin-right: 10px;
+}
+.dialog_button_wrapper {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-justify-content: center;
+  -ms-flex-pack: center;
+      justify-content: center;
+  margin-bottom: 175px;
+}
+.dialog_button {
+  width: 80px;
+  height: 30px;
+  border-radius: 5px;
+  color: #fff;
+  background: #c8837c;
+  margin: 0 20px;
+}
 @media all and (max-width: 550px) {
-  .account_setting_table {
-    margin-top: 0;
+  .return_product_count {
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-justify-content: center;
+    -ms-flex-pack: center;
+        justify-content: center;
   }
-  .alter_msg {
-    margin-top: 6px;
-    white-space: initial;
+  .return_product_count ul {
+    display: none;
   }
-  #reset_password_dialog,
-  #reset_password_success_dialog {
-    padding: 0;
+  .statistics_table {
+    width: 100%;
+  }
+  .statistics_table .sum_warning {
+    font-size: 12px;
+  }
+  .statistics_table .warning_wrapper {
+    display: block;
+  }
+  .dialog_button_wrapper {
+    margin-bottom: 40px;
   }
 }
 
