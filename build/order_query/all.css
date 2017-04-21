@@ -3143,6 +3143,7 @@ body {
   color: #4a4a4a;
   text-align: center;
   z-index: 10;
+  transition: all 0.4 ease-in-out;
 }
 .do_button_dialog .colse_dialog {
   position: absolute;
@@ -3391,6 +3392,7 @@ td:before {
   color: #4a4a4a;
   text-align: center;
   z-index: 10;
+  transition: all 0.4 ease-in-out;
 }
 .do_button_dialog .colse_dialog {
   position: absolute;

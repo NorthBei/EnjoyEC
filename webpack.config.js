@@ -19,6 +19,7 @@ module.exports = {
         "cash_coupon/bundle": "./dev/cash_coupon/entry.js",
         "account_setting/bundle": "./dev/account_setting/entry.js",
         "shopping_should_know/bundle": "./dev/shopping_should_know/entry.js",
+        "about/bundle": "./dev/about/entry.js"
     },
     output: {
         path: path.resolve(__dirname, 'build'),//__dirname + "/build/" + filePath,
