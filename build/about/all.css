@@ -3149,12 +3149,16 @@ body {
   max-width: 722px;
   padding-top: 20px;
 }
+.content img {
+  width: 100%;
+}
 .content p {
   margin: 20px 0 92px;
   font-size: 18px;
   color: #4a4a4a;
   letter-spacing: 0.47px;
   line-height: 1.5;
+  text-align: justify;
 }
 @media all and (max-width: 550px) {
   #main {
@@ -3167,9 +3171,6 @@ body {
     height: 100px;
   }
   .content {
-    width: 100%;
-  }
-  .content img {
     width: 100%;
   }
   .content p {
