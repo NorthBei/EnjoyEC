@@ -5,8 +5,9 @@ window.addEventListener("load",function(){
     var isEdit = false;
     $(".edit_profile").on("click",function(){
         isEdit=!isEdit;
-        $(".input_edit").prop("disabled",!isEdit);
+        $(".input_edit").toggleClass("input_edit_now").prop("disabled",!isEdit);
         $(".edit_disappear").toggle();
+		$(".alter_msg").toggle();
                 
         if(isEdit){
             var city_name = $("#city_name").text();
@@ -15,7 +16,7 @@ window.addEventListener("load",function(){
             $("#receive_region_id option[value='"+region_name+"']").attr('selected','selected');
             $('.reset_password_row').css('visibility','hidden');
             flex($(".select_wrapper"));
-            $(".input_address").css("display","initial");
+            $(".input_address").css("display","block");
         }
         else{
             var city_name = $("#receive_city_id option:selected").text();
@@ -25,6 +26,9 @@ window.addEventListener("load",function(){
             $('.reset_password_row').css('visibility','visible');
             $(".select_wrapper").hide();
             flex($(".input_address"));
+
+			flex($("#modify_success_dialog"));
+			setInterval(function(){ $("#modify_success_dialog").hide(); }, 2000);
         }
         var editButton = (isEdit? "確定":"編輯");
         $(this).text(editButton);      

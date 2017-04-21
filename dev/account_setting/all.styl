@@ -32,7 +32,8 @@
             box-sizing: border-box;
             padding-left: 10px;
             
-        input[disabled]
+        input[disabled],input:disabled
+            -webkit-text-fill-color:#4a4a4a
             color: #4a4a4a
             background: white
             border: none
@@ -42,8 +43,8 @@
         display: flex
         align-items: center
 
-        input[type="text"]
-            flex: 1
+#city_name,#region_name
+    white-space: nowrap
 
 .select_wrapper
     size: 211px 25px
@@ -73,6 +74,7 @@
     font-size: 12px
     margin-top: 5px
     margin-bottom: 10px;
+    display: none
 
 #reset_password_dialog
     display: none
@@ -102,7 +104,8 @@
 
         +placeholder()
             background: #FFFFFF;
-            color: #4A4A4A
+            color: #C3C2C3
+            font-weight: 100
             font-size: 14px
 
 #reset_password_success_dialog
@@ -110,14 +113,25 @@
     display: none
     p
         margin: 50px 0
+#modify_success_dialog
+    display: none
+    padding: 90px 126px
+
 +media-query( all, max-width $phone_rwd_width )
 
     .account_setting_table
         margin-top: 0
 
+        .td_value
+            input
+                width: 150px;
+        
+            .input_edit_now
+                size: 211px 25px
+
     .alter_msg
         margin-top: 6px;
         white-space: initial;
     
-    #reset_password_dialog,#reset_password_success_dialog
+    #reset_password_dialog,#reset_password_success_dialog,#modify_success_dialog
         padding: 0

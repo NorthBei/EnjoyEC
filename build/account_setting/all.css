@@ -3342,7 +3342,9 @@ body {
   box-sizing: border-box;
   padding-left: 10px;
 }
-.account_setting_table .td_value input[disabled] {
+.account_setting_table .td_value input[disabled],
+.account_setting_table .td_value input:disabled {
+  -webkit-text-fill-color: #4a4a4a;
   color: #4a4a4a;
   background: #fff;
   border: none;
@@ -3355,9 +3357,9 @@ body {
   -ms-flex-align: center;
       align-items: center;
 }
-.account_setting_table .input_address input[type="text"] {
-  -ms-flex: 1;
-  flex: 1;
+#city_name,
+#region_name {
+  white-space: nowrap;
 }
 .select_wrapper {
   width: 211px;
@@ -3397,6 +3399,7 @@ body {
   font-size: 12px;
   margin-top: 5px;
   margin-bottom: 10px;
+  display: none;
 }
 #reset_password_dialog {
   display: none;
@@ -3430,22 +3433,26 @@ body {
 }
 #reset_password_dialog input[type="password"]::-webkit-input-placeholder {
   background: #fff;
-  color: #4a4a4a;
+  color: #c3c2c3;
+  font-weight: 100;
   font-size: 14px;
 }
 #reset_password_dialog input[type="password"]:-moz-placeholder {
   background: #fff;
-  color: #4a4a4a;
+  color: #c3c2c3;
+  font-weight: 100;
   font-size: 14px;
 }
 #reset_password_dialog input[type="password"]::-moz-placeholder {
   background: #fff;
-  color: #4a4a4a;
+  color: #c3c2c3;
+  font-weight: 100;
   font-size: 14px;
 }
 #reset_password_dialog input[type="password"]:-ms-input-placeholder {
   background: #fff;
-  color: #4a4a4a;
+  color: #c3c2c3;
+  font-weight: 100;
   font-size: 14px;
 }
 #reset_password_success_dialog {
@@ -3455,16 +3462,28 @@ body {
 #reset_password_success_dialog p {
   margin: 50px 0;
 }
+#modify_success_dialog {
+  display: none;
+  padding: 90px 126px;
+}
 @media all and (max-width: 550px) {
   .account_setting_table {
     margin-top: 0;
+  }
+  .account_setting_table .td_value input {
+    width: 150px;
+  }
+  .account_setting_table .td_value .input_edit_now {
+    width: 211px;
+    height: 25px;
   }
   .alter_msg {
     margin-top: 6px;
     white-space: initial;
   }
   #reset_password_dialog,
-  #reset_password_success_dialog {
+  #reset_password_success_dialog,
+  #modify_success_dialog {
     padding: 0;
   }
 }

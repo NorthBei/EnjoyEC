@@ -3321,14 +3321,14 @@ body {
   margin-right: 10px;
   width: 13px;
   height: 13px;
-  background-image: url("./img/-.png");
+  background-image: url("./img/+.png");
   margin-left: 10px;
 }
 .qa_title_active {
   color: #4a4a4a;
 }
 .qa_title_active .expand_state {
-  background-image: url("./img/+.png");
+  background-image: url("./img/-.png");
 }
 .qa_content {
   display: none;
