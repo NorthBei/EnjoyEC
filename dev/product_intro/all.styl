@@ -114,18 +114,14 @@ $product_big_photo_rwd_height = 318px
         right: 0;
         justify-content: center;
         cursor: pointer;
-        font-size-adjust: initial;
 
-        .desktop,.rwd
+        .arrow_icon
             color: #D6645F;
             font-size: x-small;
             transform: scale(0.6);
 
             &::selection
                 background: inherit
-        
-        .rwd
-            display: none
         
     .num_arrow_left
         top: 0
@@ -280,11 +276,8 @@ input[type="number"]::-webkit-inner-spin-button {
             width: 30px;
             height: 100%;
 
-            .desktop
-                display: none
-            
-            .rwd
-                display: block
+            .arrow_icon
+                    transform: scale(0.6) rotate(90deg);
 
     #product_photo
         size: 277px $product_big_photo_rwd_height

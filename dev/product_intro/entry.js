@@ -25,7 +25,7 @@ $(document).ready(function(){
             $("#prevArrow").trigger("click");
         }
         scrollBottom = !scrollBottom;
-        console.log(e.target.classList);
+        //console.log(e.target.classList);
         e.target.classList.toggle("scrollBottom"); 
         
     });
@@ -42,7 +42,7 @@ $(document).ready(function(){
         var num = parseInt(content.text());
         var min = content.attr("min");
         var max = content.attr("max");
-        console.log(min,num,max);
+        //console.log(min,num,max);
         if((num+i) <= max && (num+i)>=min){
             content.text(num+i);
         }
