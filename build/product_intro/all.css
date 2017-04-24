@@ -3403,9 +3403,55 @@ body {
   height: 39px;
   margin-right: 15px;
 }
-#product_num,
+.number_section {
+  width: 64px;
+  box-sizing: border-box;
+  text-align: center;
+  padding-right: 16px;
+  -ms-justify-content: center;
+  -ms-flex-pack: center;
+      justify-content: center;
+  font-weight: 400;
+  position: relative;
+}
+.number_section .num_arrow {
+  width: 16px;
+  background: #f2dfd7;
+  height: 50%;
+  position: absolute;
+  right: 0;
+  -ms-justify-content: center;
+  -ms-flex-pack: center;
+      justify-content: center;
+  cursor: pointer;
+  font-size-adjust: initial;
+}
+.number_section .num_arrow .desktop,
+.number_section .num_arrow .rwd {
+  color: #d6645f;
+  font-size: x-small;
+  transform: scale(0.6);
+}
+.number_section .num_arrow .desktop::-moz-selection,
+.number_section .num_arrow .rwd::-moz-selection {
+  background: inherit;
+}
+.number_section .num_arrow .desktop::selection,
+.number_section .num_arrow .rwd::selection {
+  background: inherit;
+}
+.number_section .num_arrow .rwd {
+  display: none;
+}
+.number_section .num_arrow_left {
+  top: 0;
+}
+.number_section .num_arrow_right {
+  bottom: 0;
+}
 #add_shopping_cart,
-#add_favorite {
+#add_favorite,
+.number_section {
   background: #f6eae6;
   color: #d6645f;
   height: 50px;
@@ -3420,12 +3466,6 @@ body {
   -ms-align-items: center;
   -ms-flex-align: center;
       align-items: center;
-}
-#product_num {
-  width: 64px;
-  box-sizing: border-box;
-  text-align: center;
-  padding-right: 16px;
 }
 #add_shopping_cart {
   width: 266px;
@@ -3559,6 +3599,31 @@ input[type="number"]::-webkit-inner-spin-button {
   #main {
     padding: 0 20px;
   }
+  .number_section {
+    width: 109px;
+    padding: 0;
+    -ms-flex-direction: row-reverse;
+    flex-direction: row-reverse;
+  }
+  .number_section .number_content {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-justify-content: center;
+    -ms-flex-pack: center;
+        justify-content: center;
+    width: 49px;
+  }
+  .number_section .num_arrow {
+    position: initial;
+    width: 30px;
+    height: 100%;
+  }
+  .number_section .num_arrow .desktop {
+    display: none;
+  }
+  .number_section .num_arrow .rwd {
+    display: block;
+  }
   #product_photo {
     width: 277px;
     height: 318px;
@@ -3591,9 +3656,6 @@ input[type="number"]::-webkit-inner-spin-button {
     width: 20px;
     height: 20px;
     margin-right: 10px;
-  }
-  #product_num {
-    padding: 0;
   }
   #add_shopping_cart {
     width: initial;

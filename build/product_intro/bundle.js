@@ -88,8 +88,8 @@ $(document).ready(function() {
         // console.log("topHeight1:"+topHeight);
         // console.log("navHeight:"+navHeight);
         var width = window.innerWidth;
-
-        if(topHeight>= navHeight && isCrossHeader == false && width <= 850){
+        
+        if(topHeight>= navHeight && isCrossHeader == false && width >= 850){
             isCrossHeader = true;
             $("#header").addClass("scroll_header");
         }
@@ -107,6 +107,7 @@ $(document).ready(function() {
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(0);
+
 $(document).ready(function(){
     $('#product_photo_list').slick({
         vertical: true,
@@ -134,6 +135,25 @@ $(document).ready(function(){
         scrollBottom = !scrollBottom;
         console.log(e.target.classList);
         e.target.classList.toggle("scrollBottom"); 
+        
+    });
+
+    $(".num_arrow").click(function(){
+        var i = 0;
+        if($(this).hasClass("num_arrow_left")){
+            i+=1;
+        }
+        else{
+            i-=1;
+        }
+        var content = $(".number_content");
+        var num = parseInt(content.text());
+        var min = content.attr("min");
+        var max = content.attr("max");
+        console.log(min,num,max);
+        if((num+i) <= max && (num+i)>=min){
+            content.text(num+i);
+        }
         
     });
 });

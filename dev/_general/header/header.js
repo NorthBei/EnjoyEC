@@ -8,8 +8,8 @@ $(document).ready(function() {
         // console.log("topHeight1:"+topHeight);
         // console.log("navHeight:"+navHeight);
         var width = window.innerWidth;
-
-        if(topHeight>= navHeight && isCrossHeader == false && width <= 850){
+        
+        if(topHeight>= navHeight && isCrossHeader == false && width >= 850){
             isCrossHeader = true;
             $("#header").addClass("scroll_header");
         }
