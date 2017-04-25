@@ -126,7 +126,11 @@ rwd_header()
     .nav_btns.right &
         /*因為nav icon高度都不同，所以排列不整齊，導致margin會有些許差距需要特別設定*/
         margin-top: (34px + 2)
-
+#bars
+    width: 18px;
+.bars_rwd
+    display: none
+    
 #search_input
     border-bottom: 1px solid $pink_medium
     height: ($search_component_height - 3)
@@ -211,6 +215,18 @@ rwd_header()
 .more_option
     min-height: 220px
     max-height: initial;
+    
+    .first_layer_triangle
+            position: absolute;
+            top: 12px;
+            left: 90px;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 3px 0 3px 5px;
+            border-color: transparent transparent transparent #d6655f;
+            transition: top 0.4s ease-in-out;
+
     .child_category_list
         &:before
             content: "";
@@ -223,7 +239,7 @@ rwd_header()
         >li
 
             &:hover > .more_option_child_wrapper
-                width: initial;
+                visibility: visible;
                 padding: 0px 20px;
             &:hover > .more_option_child_wrapper>li
                 transform: translateX(0);
@@ -237,7 +253,7 @@ rwd_header()
     //border-left: 1px solid #D5948E;
     padding: 0px 20px;
     overflow: hidden;
-    width: 0;
+    visibility: hidden;
     padding: 0;
     
     &:hover > li
@@ -294,7 +310,73 @@ rwd_header()
 }
 
 
+.mobile_menu
+    position: fixed;
+    top: 67px;
+    width: 100%;
+    background: white;
+    box-shadow: 0 1px 0 0 rgba(0,0,0,0.26);
+    padding: 20px
+    color: #8B572A
+    font-size: 14px
+    box-sizing: border-box
+    //display: flex;
+    //display: none
+    visibility: hidden
+    opacity: 0
+    transform: translateY(20px);
+    transition: all 0.3s ease-in-out
+    .first_layer
+        white-space: nowrap;
+        padding-right: 20px;
+        border-right: 1px solid #D5948E;
+        display: flex;
+        flex-direction: column;
+        position: relative
 
+        .first_layer_triangle
+            position: absolute;
+            top: 5px;
+            right: -5px;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 3px 0 3px 5px;
+            border-color: transparent transparent transparent #d6655f;
+            transition: top 0.4s ease-in-out;
+        .active
+            color: #D6645F
+        &>li
+            padding-bottom: 12px
+            cursor: pointer
+            &:last-child
+                padding-bottom: none
+
+            &:hover
+                color: #D6645F
+    
+    .second_layer
+        padding-left: 20px
+        flex: 1;
+        &>span
+            display: none
+        .active
+            display: block        
+        a
+            padding-bottom: 12px
+            cursor: pointer
+            display: block;
+            &:last-child
+                padding-bottom: none
+            &:hover
+                color: #D6645F
+        
+    
+.mobile_menu_active
+    display: flex
+    transform: translateY(0);
+    visibility: visible
+    opacity: 1
 
 //+media-query( only screen ,max-width 900px )
 
@@ -303,6 +385,8 @@ rwd_header()
 .scroll_header
     fixed_header()
 
+    .dropdown_block:before
+        border-top: 7px solid #fff8f6;
     +#main
         margin-top: 156px //height of header
     // position: fixed;
@@ -341,7 +425,8 @@ rwd_header()
     //     margin-top: 15px
     // .scroll_disappear
     //     display: none
-
+.rwd950
+    display: none
 +media-query( only screen ,max-width 1200px )
     .nav_list_wrapper
         padding-left: 15px
@@ -359,9 +444,10 @@ rwd_header()
 
 +media-query( only screen ,max-width 950px )
     #header.isRWD
-        ul.parent_category_list>li:nth-last-child(4) 
+        ul.parent_category_list>li:nth-last-child(2) 
             display none
-    
+    .rwd950
+        display: list-item
 
     .scroll_header
         rwd_header()
@@ -389,6 +475,14 @@ rwd_header()
     #main
         margin-top: $header_rwd_height
 
+    .bars_rwd
+        display: inline-block;
+    
+    .search_rwd
+        visibility: visible
+        opacity: 1
+        transform: translate(0)
+
     .dropdown_block
         width: 100%;
         left: 0;
@@ -399,19 +493,5 @@ rwd_header()
         &:before
             display: none
 
-
-    // .more_option
-    //     position: fixed
-    //     top: 45px
-    //     left: initial
-    //     right: 0
-    //     width: 100%;
-        
-    //     img
-    //         display: none
-
-    //.more_option .child_category_list >li:hover > 
-      //  width: 100%;
-
-    
-    
+    .mobile_menu
+        display: flex

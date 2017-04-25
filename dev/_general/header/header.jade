@@ -6,8 +6,8 @@ header#header.isRWD
     nav.nav_list_wrapper
         img(alt="Embedded Image" src=logoImgBase64)#logo_img
         
-        ul.parent_category_list
-            li.rwd_disapper 限時優惠
+        ul.parent_category_list.rwd_disapper
+            li 限時優惠
                 div.child_category_wrapper
                     ul.child_category_list
                         li 
@@ -18,7 +18,7 @@ header#header.isRWD
                             a(href="") 歡慶母親節·美體保養消費滿1500元現折500元
                     img(src="../general/img/pic1.png")
                     
-            li.rwd_disapper 最新商品
+            li 最新商品
                 div.child_category_wrapper
                     ul.child_category_list
                         li 
@@ -28,17 +28,27 @@ header#header.isRWD
                         li 
                             a(href="") 歡慶母親節·美體保養消費滿1500元現折500元
                     img(src="../general/img/pic1.png")
-            li.rwd_disapper 熱門商品
-            li.rwd_disapper 美甲彩繪
+            li 熱門商品
+            li 美甲彩繪
                 
-            li.rwd_disapper 時尚彩妝
-            li.rwd_disapper 美體保養
+            li 時尚彩妝
+            li 美體保養
                 
-            li.rwd_disapper 香氛香氣
+            li 香氛香氣
                 
             li.more_option_wrapper 更多品項
                 div.child_category_wrapper.more_option
+                    
                     ul.child_category_list
+                        span.first_layer_triangle
+                        li.rwd950 香氛香氣
+                            ol.more_option_child_wrapper
+                                li 
+                                    a(href="") 既然那是隻能下蛋的雞，為何幻化成人之後卻是個男人
+                                li 
+                                    a(href="") 這首真是好聽的莫名奇妙XD
+                                li 
+                                    a(href="") 聽到我雞雞皮疙瘩都起來了﻿
                         li 護膚保養
                             ol.more_option_child_wrapper
                                 li 
@@ -100,7 +110,7 @@ header#header.isRWD
             .nav_btns.right
 
                 span.dropdown_block_wrapper
-                    i.fa.fa-search.small_icon(aria-hidden='true')
+                    i.fa.fa-search.small_icon(aria-hidden='true')#search_button
                     form.dropdown_block
                         input(type="text" placeholder="Search...")#search_input
                         input(type="submit" value="GO")#search_go
@@ -110,6 +120,46 @@ header#header.isRWD
                 
                 | <i class="rwd_show">|</i>
 
-                i#bars.fa.fa-bars.rwd_show(aria-hidden="true")
+                i#bars.bars_rwd.fa.fa-bars(aria-hidden="true")
 
-                    
+    div.mobile_menu
+        ul.first_layer
+            span.first_layer_triangle
+            li(data-order=1).active 限時優惠
+            li(data-order=2) 最新商品
+            li(data-order=3) 熱門商品
+            li(data-order=4) 美甲彩繪
+            li(data-order=5) 時尚彩妝
+            li(data-order=6) 美體保養
+            li(data-order=7) 香氛香氣
+        
+        div.second_layer 
+            span(data-order=1).active
+                a(href="") C&CHAT 幻彩系指油貼任選兩件500元
+                a(href="") Dear Mia系列產品消費滿2,000元現折200元 
+                a(href="") 歡慶母親節·美體保養消費滿1500元現折500元
+            span(data-order=2)
+                a(href="") 癢癢又臭臭的
+                a(href="") 接下來就可以獲得跨裝置的資訊 
+                a(href="") 輸入以上網址，就可以看到Prepos全部的專案
+
+            span(data-order=3)
+                a(href="") 看了吉田穗波的精彩人生，希望我們也都能夠為
+                a(href="") 時間跟愛人、家人做更多有意義的事 ! 
+                a(href="") 好文章 分享給朋友吧~
+            span(data-order=4)
+                a(href="") 癢癢又臭臭的
+                a(href="") 接下來就可以獲得跨裝置的資訊 
+                a(href="") 輸入以上網址，就可以看到Prepos全部的專案
+            span(data-order=5)
+                a(href="") 看了吉田穗波的精彩人生，希望我們也都能夠為
+                a(href="") 時間跟愛人、家人做更多有意義的事 ! 
+                a(href="") 好文章 分享給朋友吧~
+            span(data-order=6)
+                a(href="") 癢癢又臭臭的
+                a(href="") 接下來就可以獲得跨裝置的資訊 
+                a(href="") 輸入以上網址，就可以看到Prepos全部的專案
+            span(data-order=7)
+                a(href="") 看了吉田穗波的精彩人生，希望我們也都能夠為
+                a(href="") 時間跟愛人、家人做更多有意義的事 ! 
+                a(href="") 好文章 分享給朋友吧~

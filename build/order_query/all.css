@@ -2656,6 +2656,12 @@ button {
 /*因為nav icon高度都不同，所以排列不整齊，導致margin會有些許差距需要特別設定*/
   margin-top: 36px;
 }
+#bars {
+  width: 18px;
+}
+.bars_rwd {
+  display: none;
+}
 #search_input {
   border-bottom: 1px solid #d6645f;
   height: 17px;
@@ -2783,6 +2789,17 @@ button {
   min-height: 220px;
   max-height: initial;
 }
+.more_option .first_layer_triangle {
+  position: absolute;
+  top: 12px;
+  left: 90px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 3px 0 3px 5px;
+  border-color: transparent transparent transparent #d6655f;
+  transition: top 0.4s ease-in-out;
+}
 .more_option .child_category_list:before {
   content: "";
   position: absolute;
@@ -2792,7 +2809,7 @@ button {
   left: 90px;
 }
 .more_option .child_category_list >li:hover > .more_option_child_wrapper {
-  width: initial;
+  visibility: visible;
   padding: 0px 20px;
 }
 .more_option .child_category_list >li:hover > .more_option_child_wrapper>li {
@@ -2806,7 +2823,7 @@ button {
   height: 100%;
   padding: 0px 20px;
   overflow: hidden;
-  width: 0;
+  visibility: hidden;
   padding: 0;
 }
 .more_option_child_wrapper:hover > li {
@@ -2867,6 +2884,88 @@ button {
   top: -1px;
   font-size: 15px;
 }
+.mobile_menu {
+  position: fixed;
+  top: 67px;
+  width: 100%;
+  background: #fff;
+  box-shadow: 0 1px 0 0 rgba(0,0,0,0.26);
+  padding: 20px;
+  color: #8b572a;
+  font-size: 14px;
+  box-sizing: border-box;
+  visibility: hidden;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.3s ease-in-out;
+}
+.mobile_menu .first_layer {
+  white-space: nowrap;
+  padding-right: 20px;
+  border-right: 1px solid #d5948e;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  position: relative;
+}
+.mobile_menu .first_layer .first_layer_triangle {
+  position: absolute;
+  top: 5px;
+  right: -5px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 3px 0 3px 5px;
+  border-color: transparent transparent transparent #d6655f;
+  transition: top 0.4s ease-in-out;
+}
+.mobile_menu .first_layer .active {
+  color: #d6645f;
+}
+.mobile_menu .first_layer>li {
+  padding-bottom: 12px;
+  cursor: pointer;
+}
+.mobile_menu .first_layer>li:last-child {
+  padding-bottom: none;
+}
+.mobile_menu .first_layer>li:hover {
+  color: #d6645f;
+}
+.mobile_menu .second_layer {
+  padding-left: 20px;
+  -ms-flex: 1;
+  flex: 1;
+}
+.mobile_menu .second_layer>span {
+  display: none;
+}
+.mobile_menu .second_layer .active {
+  display: block;
+}
+.mobile_menu .second_layer a {
+  padding-bottom: 12px;
+  cursor: pointer;
+  display: block;
+}
+.mobile_menu .second_layer a:last-child {
+  padding-bottom: none;
+}
+.mobile_menu .second_layer a:hover {
+  color: #d6645f;
+}
+.mobile_menu_active {
+  display: -ms-flexbox;
+  display: flex;
+  transform: translateY(0);
+  visibility: visible;
+  -ms-filter: none;
+  filter: none;
+  opacity: 1;
+}
 .scroll_header {
   position: fixed;
   width: 100%;
@@ -2914,8 +3013,14 @@ button {
 .scroll_header .scroll_disappear {
   display: none;
 }
+.scroll_header .dropdown_block:before {
+  border-top: 7px solid #fff8f6;
+}
 .scroll_header +#main {
   margin-top: 156px;
+}
+.rwd950 {
+  display: none;
 }
 @media only screen and (max-width: 1200px) {
   .nav_list_wrapper {
@@ -2932,8 +3037,11 @@ button {
   }
 }
 @media only screen and (max-width: 950px) {
-  #header.isRWD ul.parent_category_list>li:nth-last-child(4) {
+  #header.isRWD ul.parent_category_list>li:nth-last-child(2) {
     display: none;
+  }
+  .rwd950 {
+    display: list-item;
   }
   .scroll_header .rwd_disapper,
   .scroll_header .nav_btns .fa-heart {
@@ -3011,6 +3119,16 @@ button {
   #main {
     margin-top: 67px;
   }
+  .bars_rwd {
+    display: inline-block;
+  }
+  .search_rwd {
+    visibility: visible;
+    -ms-filter: none;
+    filter: none;
+    opacity: 1;
+    transform: translate(0);
+  }
   .dropdown_block {
     width: 100%;
     left: 0;
@@ -3020,6 +3138,10 @@ button {
   }
   .dropdown_block:before {
     display: none;
+  }
+  .mobile_menu {
+    display: -ms-flexbox;
+    display: flex;
   }
 }
 #footer {
