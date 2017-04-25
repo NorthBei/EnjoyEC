@@ -180,7 +180,7 @@ rwd_header()
     color: $brown_icon_hover
     display: flex
     background: white
-    height: 220px
+    max-height: 220px
     padding: 17px 20px
     box-sizing: border-box
     box-shadow: 0 1px 2px 0 rgba(97,97,97,0.70)
@@ -195,23 +195,90 @@ rwd_header()
     .child_category_list
         padding-left: 10px
         padding-right: 40px
+        position: relative
 
         >li
-            padding-top: 15px
+            padding: 8px 0
             width: 230px
             white-space: normal
 
 
             &:hover
                 color: $pink_medium
+    img
+        height: 170px
 
+.more_option
+    min-height: 220px
+    max-height: initial;
+    .child_category_list
+        &:before
+            content: "";
+            position: absolute;
+            width: 1px;
+            height: 100%;
+            background: #D5948E;
+            left: 90px;
+
+        >li
+
+            &:hover > .more_option_child_wrapper
+                width: initial;
+                padding: 0px 20px;
+            &:hover > .more_option_child_wrapper>li
+                transform: translateX(0);
+
+.more_option_child_wrapper
+    position: absolute;
+    top: 0;
+    left: 90px;
+    list-style: none;
+    height: 100%;
+    //border-left: 1px solid #D5948E;
+    padding: 0px 20px;
+    overflow: hidden;
+    width: 0;
+    padding: 0;
+    
+    &:hover > li
+        transform: translateX(0);
+
+    >li
+        color:#8B572A
+        padding: 8px 0
+        transform: translateX(-100%);
+        transition: all 0.3s ease-in-out;
+
+        &:hover
+            color: #D6645F
+        a
+            cursor: pointer
+    
+    >li:nth-child(1)
+        transition-delay:0s
+    >li:nth-child(2)
+        transition-delay:0.1s
+    >li:nth-child(3)
+        transition-delay:0.2s
+    >li:nth-child(4)
+        transition-delay:0.3s
+    >li:nth-child(5)
+        transition-delay:0.4s
+    >li:nth-child(6)
+        transition-delay:0.5s
+    >li:nth-child(7)
+        transition-delay:0.6s
+    >li:nth-child(8)
+        transition-delay:0.7s
+
+.parent_category_list
+    .child_will_attach
+        position: initial
 .child_category_wrapper_attach_right
-    position: fixed;
     right: 0;
     left: initial;
 
 .child_category_wrapper_attach_left
-    position: fixed;
     left: 0;
     right: initial;
 
@@ -321,5 +388,30 @@ rwd_header()
             display: initial
     #main
         margin-top: $header_rwd_height
+
+    .dropdown_block
+        width: 100%;
+        left: 0;
+        top: 31px;
+        padding: 0 25px;
+        height: 45px;
+
+        &:before
+            display: none
+
+
+    // .more_option
+    //     position: fixed
+    //     top: 45px
+    //     left: initial
+    //     right: 0
+    //     width: 100%;
+        
+    //     img
+    //         display: none
+
+    //.more_option .child_category_list >li:hover > 
+      //  width: 100%;
+
     
     
