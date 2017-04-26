@@ -3600,7 +3600,8 @@ body {
 @media only screen and (max-width: 850px) {
   .product_wrapper {
     max-width: 172px;
-    max-width: 164px;
+    max-width: 168px;
+    width: 168px;
   }
   .product_wrapper .tag {
     width: 34px;
@@ -3609,8 +3610,8 @@ body {
   .product_img_wrapper {
     width: 172px;
     height: 180px;
-    width: 164px;
-    height: 173px;
+    width: 168px;
+    height: 177px;
     position: relative;
   }
   .product_info,
