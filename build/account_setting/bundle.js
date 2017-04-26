@@ -126,9 +126,6 @@ $(document).ready(function() {
         
         //child_category_wrapper
     });
-    $("#search_button").click(function(){
-        $("#search_button + .dropdown_block").toggleClass("search_rwd");
-    });
 
     $("#bars").click(function(){
         $(this).toggleClass("fa-bars").toggleClass("fa-times");
