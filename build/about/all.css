@@ -2656,6 +2656,21 @@ button {
 /*因為nav icon高度都不同，所以排列不整齊，導致margin會有些許差距需要特別設定*/
   margin-top: 36px;
 }
+.dropdown_block_active {
+  visibility: visible;
+  -ms-filter: none;
+  filter: none;
+  opacity: 1;
+  transform: translateY(0px);
+}
+form.dropdown_block:after {
+  content: "";
+  width: calc(100% - 20px);
+  height: 1px;
+  background: #d6645f;
+  position: absolute;
+  bottom: 10px;
+}
 #bars {
   width: 18px;
 }
@@ -2663,7 +2678,6 @@ button {
   display: none;
 }
 #search_input {
-  border-bottom: 1px solid #d6645f;
   height: 17px;
   -ms-flex: 1;
   flex: 1;
@@ -2684,7 +2698,6 @@ button {
   width: 45px;
   height: 20px;
   background: #d6645f;
-  border: 1px solid #d6645f;
   color: #fff;
   cursor: pointer;
   box-sizing: border-box;
@@ -2958,10 +2971,10 @@ button {
   color: #d6645f;
 }
 .mobile_menu_active {
-  display: -ms-flexbox;
-  display: flex;
-  transform: translateY(0);
-  visibility: visible;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  transform: translateY(0) !important;
+  visibility: visible !important;
   -ms-filter: none;
   filter: none;
   opacity: 1;
@@ -3043,6 +3056,10 @@ button {
   .rwd950 {
     display: list-item;
   }
+  form.dropdown_block:after {
+    width: calc(100% - 50px);
+    bottom: 12px;
+  }
   .scroll_header .rwd_disapper,
   .scroll_header .nav_btns .fa-heart {
     display: none;
@@ -3119,6 +3136,16 @@ button {
   #main {
     margin-top: 67px;
   }
+  .nav_btns i {
+    font-size: 23px;
+  }
+  i.fa.fa-user-circle-o.small_icon {
+    font-size: 22px;
+    padding-top: 11px;
+  }
+  #search_button:before {
+    font-size: 20px;
+  }
   .bars_rwd {
     display: inline-block;
   }
@@ -3138,6 +3165,9 @@ button {
   }
   .dropdown_block:before {
     display: none;
+  }
+  ul.dropdown_block>li {
+    margin: 0 5px;
   }
   .mobile_menu {
     display: -ms-flexbox;

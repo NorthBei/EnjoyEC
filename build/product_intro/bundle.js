@@ -137,6 +137,10 @@ $(document).ready(function() {
         $(".mobile_menu").toggleClass("mobile_menu_active");
     });
 
+    $(".dropdown_block_wrapper").click(function(){
+        $(this).find(".dropdown_block").toggleClass("dropdown_block_active");
+    });
+
     var now_select = 1;
     $(".first_layer>li").click(function(){
         $(".first_layer>li[data-order="+now_select+"]").removeClass("active");
