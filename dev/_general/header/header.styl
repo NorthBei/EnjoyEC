@@ -141,6 +141,87 @@ form.dropdown_block:after
     position: absolute;
     bottom: 10px;
 
+#shopping_cart
+    width: 396px;
+    background: #fff;
+    box-shadow: 0 1px 2px 0 rgba(97,97,97,0.7);
+    color: #8e5651;
+    font-size: 12px;
+    padding: 0 24px;
+    padding-bottom: 30px;
+    box-sizing: border-box;
+    height: initial;
+    top: -3px;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    line-height: normal
+    &:before
+        display: none
+
+    .shopping_cart_product
+        display: flex
+        align-items: center
+        justify-content: space-between;
+        padding: 25px 5px;
+        width: 100%
+        min-height: 82px
+        border-bottom: 1px solid #C3C2C3
+        box-sizing: border-box
+        .product_wrapper
+            display: flex
+            align-items: center;
+        .remove_product
+            size : 13px
+            margin-right: 30px;
+            cursor: pointer
+
+    .product_info_wrapper
+        display: flex
+        flex-direction: column
+
+        .product_name
+            white-space: normal
+            letter-spacing: 0.31px;
+            
+        .number
+            margin-left: 25px
+
+        .product_info
+            display: flex
+            margin: 10px 0;
+
+    .product_img
+        height:82px
+        margin-left: 39px
+    
+    
+    .shopping_cart_calc
+        height: 40px
+        padding: 10px 0
+        padding-left: 43px
+        box-sizing: border-box
+        border-bottom: 1px solid #C3C2C3
+        display: flex;
+        align-items: center;
+        width: 100%
+        .calc_num
+            margin-left: 96px
+    
+    .go_to_pay
+        width: 100%
+        height: 45px
+        text-align: center
+        line-height: 45px
+        font-size: 15px
+        color: white
+        background: #D5948E
+        margin-top: 15px
+    
+.scroll_header
+    #shopping_cart       
+        top: 9px;
+        right: 0;
 #bars
     width: 18px;
 .bars_rwd
@@ -529,5 +610,11 @@ form.dropdown_block:after
             display: none
     ul.dropdown_block>li
         margin: 0 5px
+    
+    #shopping_cart
+        width: 100%
+        top: 31px;
+    //#shopping_cart
+        
     .mobile_menu
         display: flex
