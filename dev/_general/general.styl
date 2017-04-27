@@ -74,38 +74,38 @@ topDownTriangle(height,width,face-color)
 
 //1.animation
 
-show_dropdown_animation(trgger_hover_selector)
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(20px)
-    transition: visibility 0.15s linear, opacity 0.3s ease, transform 0.3s ease;
+// show_dropdown_animation(trgger_hover_selector)
+//     opacity: 0;
+//     visibility: hidden;
+//     transform: translateY(20px)
+//     transition: visibility 0.15s linear, opacity 0.3s ease, transform 0.3s ease;
 
-    &:hover,/{trgger_hover_selector}
-        visibility: visible;
-        opacity: 1;
-        transform: translateY(0);
+//     &:hover,/{trgger_hover_selector}
+//         visibility: visible;
+//         opacity: 1;
+//         transform: translateY(0);
 
-    &:hover:before
-        border-top-width: 7px;
-        transform: translateY(0);
-    // &:after
-    //     content: '';
-    //     position: absolute;
-    //     top: -15px;
-    //     left: 50%;
-    //     transform: translateX(-50%);
-    //     height: 15px;
-    //     width: 100%;
+//     &:hover:before
+//         border-top-width: 7px;
+//         transform: translateY(0);
+//     // &:after
+//     //     content: '';
+//     //     position: absolute;
+//     //     top: -15px;
+//     //     left: 50%;
+//     //     transform: translateX(-50%);
+//     //     height: 15px;
+//     //     width: 100%;
 
     
-    // &:hover:after
-    //     border-top-width: 7px
-    //     cursor: pointer
+//     // &:hover:after
+//     //     border-top-width: 7px
+//     //     cursor: pointer
     
-    {trgger_hover_selector}:before
-        border-top-width: 7px
-        transform: translateY(0)
-        transition: transform 0.15s linear 0.3s,border-top-width 0.15s linear 0.3s
+//     {trgger_hover_selector}:before
+//         border-top-width: 7px
+//         transform: translateY(0)
+//         transition: transform 0.15s linear 0.3s,border-top-width 0.15s linear 0.3s
     
 
 
