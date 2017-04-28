@@ -3215,12 +3215,15 @@ form.dropdown_block:after {
   .nav_btns i {
     font-size: 25px;
   }
-  i.fa.fa-user-circle-o.small_icon {
+  i.fa.fa-user-circle-o {
     font-size: 24px;
     padding-top: 4px;
     position: relative;
-    top: 6px;
+    top: 5px;
     left: -3px;
+  }
+  i.fa.fa-shopping-cart {
+    margin-top: 1px;
   }
   #search_button:before {
     font-size: 23px;
