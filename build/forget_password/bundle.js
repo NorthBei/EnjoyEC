@@ -163,6 +163,10 @@ $(document).ready(function() {
         dropUp.toggleClass("dropdown_block_active");
     });
 
+    $(".dropdown_block").hover(function(){
+        $(this).toggleClass("dropdown_block_active");
+    });
+
     $(".dropdown_block_wrapper").click(function(){
         var width = document.body.clientWidth;
         if(width > tablet_width){
