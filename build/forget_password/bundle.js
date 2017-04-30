@@ -197,36 +197,18 @@ $(document).ready(function() {
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(0);
-__webpack_require__(6);
+__webpack_require__(4);
 
 window.addEventListener("load",function(){
 
     $("#register_button").on("click",function(){
-        $(".forget_password_section").hide();
-        $(".reset_password_section").show();
-        showDialog();
-    });
-
-    $("#check_receive").on("click",function(){
-        $("#dialog").hide();
-    });
-
-    $("#reset_button").on("click",function(){
-        $("#dialog h1").text("重設密碼成功");
-        $("#dialog p").text("請使用新密碼重新登入");
-        showDialog();
-    });
-
-    
+        $("#dialog").show().css('display', 'flex');
+    });    
 });
-
-function showDialog(){
-    $("#dialog").show().css('display', 'flex');
-}
 
 /***/ }),
 
-/***/ 6:
+/***/ 4:
 /***/ (function(module, exports) {
 
 

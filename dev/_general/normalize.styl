@@ -1,0 +1,46 @@
+@import "../../node_modules/kouto-swiss"
+@require "general"
+normalize()
+
+
+ul
+    margin: 0
+    padding: 0
+    list-style-type: none
+
+a
+    text-decoration: none
+    color: inherit
+
+input
+    border: none
+    outline: none
+
+h1,h2,h3,h4,h5,h6,p
+    margin: 0
+
+select
+    outline: none
+
+button
+    border: none
+    outline: none
+    cursor: pointer
+//main css override
+html
+    height: 100%;
+    font-size: 12px
+    overflow-x: hidden
+
+body
+    min-height: 100%
+    display: flex
+    flex-direction: column
+    font-family: "微軟正黑體"
+
+#main
+    flex: 1
+
++media-query( all, max-width $phone_rwd_width )
+    body
+        overflow-x: hidden

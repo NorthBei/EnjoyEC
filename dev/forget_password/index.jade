@@ -12,16 +12,8 @@ block content
                 input(type="text" placeholder="DD" require).input_box.input_day
             div.error_message Email或生日輸入錯誤/該Email尚未註冊
             button.input_button.input_box.section_box#register_button 送出
-    
-    section.reset_password_section.form_section
-        h1  重設密碼
-        div.form
-            input(type="password" placeholder="請輸入已經註冊Email" require).input_box.section_box
-            input(type="password" placeholder="請再次輸入密碼" require).input_box.section_box
-            div.error_message 密碼輸入錯誤或兩次密碼輸入不符
-            button.input_button.input_box.section_box#reset_button 送出
-    
+
     div#dialog
         h1 重設密碼通知信已寄送
         p 請到信箱收取通知信，點擊信件內的連結就可重新設定密碼，謝謝。
-        button#check_receive 確定
+        a(href="#") 確定

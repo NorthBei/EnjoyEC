@@ -1,12 +1,12 @@
 /*kouto-swiss*/
 @import "../../node_modules/kouto-swiss"
-normalize()
+//@import "normalize"
 /*font-awesome*/
 // Set font path
 //$fa-font-path = "../fonts"
 // OR
-$fa-font-path = "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/fonts"
-@import "../../font-awesome-stylus/stylus/index"
+// $fa-font-path = "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/fonts"
+// @import "../../font-awesome-stylus/stylus/index"
 // Include icon using mixin
 // .my-icon
 //   fa(user)
@@ -34,29 +34,30 @@ $font24 = 24px
 $font35 = 35px
 
 /*CSS reset*/
-ul
-    margin: 0
-    padding: 0
-    list-style-type: none
+// @import "reset"
+// ul
+//     margin: 0
+//     padding: 0
+//     list-style-type: none
 
-a
-    text-decoration: none
-    color: inherit
+// a
+//     text-decoration: none
+//     color: inherit
 
-input
-    border: none
-    outline: none
+// input
+//     border: none
+//     outline: none
 
-h1,h2,h3,h4,h5,h6,p
-    margin: 0
+// h1,h2,h3,h4,h5,h6,p
+//     margin: 0
 
-select
-    outline: none
+// select
+//     outline: none
 
-button
-    border: none
-    outline: none
-    cursor: pointer
+// button
+//     border: none
+//     outline: none
+//     cursor: pointer
 /*RWD width define*/
 $footer_rwd_width = 850px
 $phone_rwd_width = 550px
@@ -111,26 +112,26 @@ topDownTriangle(height,width,face-color)
 
 
 /*header*/
-@import "./header/header"
+//@import "./header/header"
 /*footer*/
-@import "./footer/footer"
+//@import "./footer/footer"
 
-html
-    height: 100%;
-    font-size: $font12
-    overflow-x: hidden
+// html
+//     height: 100%;
+//     font-size: $font12
+//     overflow-x: hidden
 
-body
-    min-height: 100%
-    display: flex
-    flex-direction: column
+// body
+//     min-height: 100%
+//     display: flex
+//     flex-direction: column
 
-#main
-    flex: 1
+// #main
+//     flex: 1
 
-+media-query( all, max-width $phone_rwd_width )
-    body
-        overflow-x: hidden
+// +media-query( all, max-width $phone_rwd_width )
+//     body
+//         overflow-x: hidden
 
 
 

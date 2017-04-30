@@ -1,3 +1,7 @@
+@require "../../../node_modules/kouto-swiss"
+@require "../general"
+
+$footer_rwd_width = 850px
 #footer
     background: $pink_light
     padding: 30px 0
@@ -29,8 +33,7 @@
 
 
 .copyright
-    margin-top: 20px
-
+    margin-top: 20px;
 
 +media-query( only screen ,max-width $footer_rwd_width )
     #footer_link

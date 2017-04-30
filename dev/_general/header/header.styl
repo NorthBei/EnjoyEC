@@ -1,3 +1,6 @@
+@require "../../../node_modules/kouto-swiss"
+@require "../general"
+
 $nav_btns_margin = 13.2%
 $search_component_height = 20px
 $nav_btns_wrapper_height = 45px
@@ -9,7 +12,7 @@ fixed_header()
     position: fixed;
     width: 100%;
     z-index: 20;
-    background: $pink_light
+    background: #FFF8F6
     display: flex;
     // flex-wrap: wrap
     box-shadow: 0 2px 2px 0 rgba(97,97,97,0.22);
@@ -18,7 +21,7 @@ fixed_header()
 
 
     .nav_btns_wrapper
-        color: $pink_deep
+        color: #D5948E
     .nav_list_wrapper
         flex-direction: row;
         height: 45px;
@@ -53,8 +56,11 @@ rwd_header()
         padding: 10px 15px;
         box-sizing: border-box;
 /*function defined*/
+header
+    position: relative;
+
 .space_block
-    background: $pink_deep
+    background: #D5948E
     height: $nav_btns_wrapper_height
 
 .nav_btns_wrapper
@@ -72,7 +78,7 @@ rwd_header()
 
     >a,.dropdown_block_wrapper
         &:hover
-            color: $brown_icon_hover
+            color: #8E5651
 
     .dropdown_block_wrapper
         display: inline-flex
@@ -82,14 +88,14 @@ rwd_header()
     i
         margin: 0 5px
         font-style: normal
-        font-size: $font18
+        font-size: 18px
         cursor: pointer
 
     i.fa-user-circle-o
         margin-bottom: 1px
     
     .small_icon
-        font-size: $font16
+        font-size: 16px
 
 .dropdown_block_wrapper>i.fa
     padding-bottom: 16px;
@@ -113,17 +119,17 @@ rwd_header()
 
     >li
         margin: 0 10px
-        color: $brown
+        color: #8B572A
         line-height: 40px
         cursor: pointer
         &:hover
-            color: $pink_medium 
+            color: #D6645F 
     &:before
         content: ''
         position: absolute
         left: 50%
         transform: translateX(-50%) translateY(- $dropdown_triangle_height)
-        topDownTriangle( $dropdown_triangle_height, 6px , $pink_deep )
+        topDownTriangle( $dropdown_triangle_height, 6px , #D5948E )
         border-top-width:0
         align-self: flex-start;
 
@@ -233,33 +239,33 @@ form.dropdown_block:after
     display: none
     
 #search_input
-    //border-bottom: 1px solid $pink_medium
+    //border-bottom: 1px solid #D6645F
     height: ($search_component_height - 3)
     flex: 1;
 
     //&::placeholder
     +placeholder()
-        color: $pink_medium
+        color: #D6645F
 
 #search_go
     size: 45px $search_component_height
-    background: $pink_medium
-    //border: 1px solid $pink_medium
+    background: #D6645F
+    //border: 1px solid #D6645F
     color: white
     cursor: pointer
     box-sizing: border-box
     border-radius: 0
     &:active
         background: white
-        color: $pink_medium
+        color: #D6645F
 
 .nav_list_wrapper
-    background: $pink_light
+    background: #FFF8F6
     display: flex
     flex-direction: column
     flex-axis: center center
-    font-size: $font13
-    color: $brown
+    font-size: 13px
+    color: #8B572A
     padding-bottom: 10px
 
 #logo_img
@@ -278,11 +284,11 @@ form.dropdown_block:after
         position: relative
 
         &:hover
-            color: $pink_medium
+            color: #D6645F
             
 
 .child_category_wrapper
-    color: $brown_icon_hover
+    color: #8E5651
     display: flex
     background: white
     max-height: 220px
@@ -313,7 +319,7 @@ form.dropdown_block:after
 
 
             &:hover
-                color: $pink_medium
+                color: #D6645F
     img
         height: 170px
 
@@ -421,7 +427,7 @@ form.dropdown_block:after
 .fa-search:before {
     position: relative;
     top: -1px;
-    font-size: $font15
+    font-size: 15px
 }
 
 
@@ -503,12 +509,12 @@ form.dropdown_block:after
 
     .dropdown_block:before
         border-top: 7px solid #fff8f6;
-    +#main
+    +#main,+#content
         margin-top: 156px //height of header
     // position: fixed;
     // width: 100%;
     // z-index: 20;
-    // background: $pink_light
+    // background: #FFF8F6
     // display: flex;
     // // flex-wrap: wrap
     // box-shadow: 0 2px 2px 0 rgba(97,97,97,0.22);
@@ -517,7 +523,7 @@ form.dropdown_block:after
 
 
     // .nav_btns_wrapper
-    //     color: $pink_deep
+    //     color: #D5948E
     // .nav_list_wrapper
     //     flex-direction: row;
     //     height: 45px;

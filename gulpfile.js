@@ -91,8 +91,46 @@ gulp.task('stylus',['clean:css'], function () {
     .pipe(gulp.dest('./build'));
 });
 
+gulp.task('stylus_fragment', function () {
+  return gulp.src('./dev/**/*.styl')
+    .pipe(sourcemaps.init())
+
+    .pipe(progeny())
+
+    .pipe(stylus({
+            "use": koutoSwiss(),
+            // compress: true
+            //是否在CSS中保留註解
+            //linenos: true
+    }).on('error', handleError))
+
+    .on('error', handleError)
+    .pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4'))
+    .pipe(sourcemaps.write('.'))
+    .pipe(gulp.dest('./build/fragment/'));
+});
+
+gulp.task('stylus_general', function () {
+  return gulp.src(['./dev/_general/header/*.styl','./dev/_general/footer/*.styl','./dev/_general/normalize.styl','./dev/_general/reset.styl'])
+    .pipe(sourcemaps.init())
+
+    .pipe(progeny())
+
+    .pipe(stylus({
+            "use": koutoSwiss(),
+            // compress: true
+            //是否在CSS中保留註解
+            //linenos: true
+    }).on('error', handleError))
+
+    .on('error', handleError)
+    .pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4'))
+    .pipe(sourcemaps.write('.'))
+    .pipe(gulp.dest('./build/general/css/'));
+});
+
 gulp.task('clean:css', function(){
-    var deletedPath = del.sync(['./build/**/*.css','!build/**']);
+    var deletedPath = del.sync(['build/**/*.css','!build/general','!build/general/**/*.css','!build/fragment','!build/fragment/**/*.css']);
     //return del.sync(['./build/**/all.css','!build/**']);
     console.log('Files and folders that would be deleted:\n', deletedPath.join('\n'));
     // Return the promise that del produces.

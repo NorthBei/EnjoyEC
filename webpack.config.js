@@ -12,6 +12,7 @@ module.exports = {
         "new_hot_product/bundle": "./dev/new_hot_product/entry.js",
         "product_intro/bundle": "./dev/product_intro/entry.js",
         "forget_password/bundle": "./dev/forget_password/entry.js",
+        "reset_password/bundle": "./dev/reset_password/entry.js",
         "member_register/bundle": "./dev/member_register/entry.js",
         "order_detail/bundle": "./dev/order_detail/entry.js",
         "order_query/bundle": "./dev/order_query/entry.js",
