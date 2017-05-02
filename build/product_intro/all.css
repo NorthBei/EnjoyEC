@@ -491,11 +491,12 @@ input[type="number"]::-webkit-inner-spin-button {
   color: #8e5651;
   font-size: 16px;
   letter-spacing: 0.42px;
-  padding: 30px 100px;
+  padding: 30px 100px 20px;
   box-sizing: border-box;
   margin: 40px 0;
   -ms-flex-direction: column;
   flex-direction: column;
+  white-space: nowrap;
 }
 .product_detial>div {
   margin-bottom: 17px;
@@ -507,6 +508,16 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 .value {
   margin-right: 5px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+.value>span {
+  margin-right: 36px;
+}
+.specification>.value>span {
+  margin-bottom: 10px;
 }
 .product_histroy {
   margin-bottom: 100px;
@@ -520,13 +531,14 @@ input[type="number"]::-webkit-inner-spin-button {
   height: 0;
   border-top: 1px solid #d6645f;
   width: 100%;
+  margin: 10px 0 20px;
 }
 .product_histroy>div {
   display: -ms-flexbox;
   display: flex;
-  -ms-justify-content: space-around;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -ms-justify-content: space-between;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
   -ms-align-items: center;
   -ms-flex-align: center;
       align-items: center;
