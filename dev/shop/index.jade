@@ -1,0 +1,50 @@
+extends ../_general/temp_page.jade
+include ../_general/banner_section/banner_section.jade
+include ../_general/product/product.jade
+include ../_general/filter/filter.jade
+include ../_general/page_num/page_num.jade
+
+block content
+    include ../_general/page_top/page_top_button.jade
+    -var navArray = ["首頁","限時優惠","C&CHAT 幻彩系指油貼任選兩件500元"]
+    +banner_section("","./img/banner.png",navArray,false)
+
+    section.two_col
+        div#category
+            +filter()
+
+            h3 商品分類
+            ul.category_list
+                li.category_list_active
+                    a(href="") 指甲油
+                li
+                    a(href="") 指甲油組合
+                li
+                    a(href="") 光凝膠
+                li
+                    a(href="") 指甲貼片
+                li
+                    a(href="") 指甲保養
+                li
+                    a(href="") 卸甲商品
+                li
+                    a(href="") 修剪指甲工具
+                li
+                    a(href="") 指彩飾品
+
+        div#product
+            - var rows = 3,product = 10
+            - for (var x = 1; x <= 3*4 ; x++)
+                if(x <= 10)
+                    if(x%5 == 0)
+                        +product("../general/img/商品一.png",false,"new")
+                    else if(x%3 == 0)
+                        +product("../general/img/商品一.png",false,"hot")
+                    else if(x%4 == 0)
+                        +product("../general/img/商品一.png",false,"sale")
+                    else
+                        +product("../general/img/商品一.png",false,"")
+                else
+                    section.product_wrapper
+        
+    +page_num(1,3)

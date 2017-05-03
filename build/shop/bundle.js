@@ -63,37 +63,33 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 11);
+/******/ 	return __webpack_require__(__webpack_require__.s = 20);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ 0:
-/***/ (function(module, exports) {
-
-//require("./header/header.js")
-
-/***/ }),
-
-/***/ 11:
+/***/ 20:
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(0);
-__webpack_require__(4);
-
-window.addEventListener("load",function(){
-
-    $("#register_button").on("click",function(){
-        $("#dialog").show().css('display', 'flex');
-    });    
-});
+__webpack_require__(3);
 
 /***/ }),
 
-/***/ 4:
+/***/ 3:
 /***/ (function(module, exports) {
 
+$(document).ready(function() { 
+    $(".commodity_filter").click(function() {
+        $(".commodity_filter>.options").toggleClass("display_init");
+    });
 
+    $(".options>span").on("click",function(e) {
+        event.stopPropagation()
+        $(".commodity_filter>span").text($(this).text());
+        $(".commodity_filter>.options").toggleClass("display_init");
+    });
+    
+});
 
 /***/ })
 

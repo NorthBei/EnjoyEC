@@ -1,0 +1,97 @@
+@import "../_general/general"
+@import "../_general/page_top/page_top_button"
+@import "../_general/banner_section/banner_section"
+@import "../_general/filter/filter"
+@import "../_general/product/product"
+@import "../_general/filter/filter"
+@import "../_general/page_num/page_num"
+
+#main
+    padding: 0 5px
+/*override css in page_top_button*/
+.is_bottom
+    bottom: 160px;
+/*override css in page_top_button*/
+/*自己新增的 另外都是繼承new_hot_product*/
+.two_col
+    display: flex
+    max-width: $banner_max_width
+
+#category
+    width: 300px
+    min-width: 300px;
+    display: flex
+    flex-direction: column
+
+    h3
+        color: #4A4A4A
+        font-size: 18px
+        padding:20px 10px 10px
+        width: 200px
+        border-bottom:1px solid #D8D8D8 
+        box-sizing: border-box;
+        
+.category_list
+    padding-left: 20px;
+    list-style-type: disc;
+    margin-top: 10px;
+
+    &>li
+        color: #D8D8D8
+        margin-bottom: 7px
+        a
+            color: #4A4A4A
+            font-size: 15px
+
+    .category_list_active
+        color: #D5948E
+
+        a
+            color: #D6645F
+
++media-query( only screen ,max-width ($banner_max_width) )
+    .two_col
+        flex-direction: column
+        margin-top: -31px;
+    #category
+        width: 100%
+
+        h3
+            width: 100%
+            padding-top: 0;
+
+    .category_list
+        display: flex
+        flex-direction: row
+        flex-wrap: wrap;
+        margin-bottom: 5px;
+        &>li
+            width: 33%
+
+
+/*自己新增的 另外都是繼承new_hot_product*/
+#main
+    padding: 0 10px
+#product
+    max-width: $banner_max_width
+    width: 100%
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+
+.product_wrapper
+    margin-bottom: 50px
+
+#page_num
+    margin: 20px 0 70px
+
++media-query( only screen ,max-width ($banner_max_width) )
+    #product
+        max-width: ($banner_max_width * 250/300)
+        justify-content: space-around
+
+//+media-query( only screen ,max-width ($banner_max_width * 250/300) )
+    
++media-query( only screen ,max-width $tablet_rwd_width )
+    .product_wrapper
+        margin-bottom: 20px

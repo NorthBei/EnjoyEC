@@ -78,13 +78,31 @@
 /***/ 15:
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(4);
 __webpack_require__(5);
+__webpack_require__(3);
 __webpack_require__(0);
 
 /***/ }),
 
-/***/ 4:
+/***/ 3:
+/***/ (function(module, exports) {
+
+$(document).ready(function() { 
+    $(".commodity_filter").click(function() {
+        $(".commodity_filter>.options").toggleClass("display_init");
+    });
+
+    $(".options>span").on("click",function(e) {
+        event.stopPropagation()
+        $(".commodity_filter>span").text($(this).text());
+        $(".commodity_filter>.options").toggleClass("display_init");
+    });
+    
+});
+
+/***/ }),
+
+/***/ 5:
 /***/ (function(module, exports) {
 
 $(document).ready(function() { 
@@ -121,24 +139,6 @@ $(document).ready(function() {
             $(".page_top_button").removeClass("is_bottom");
         }
 	});
-});
-
-/***/ }),
-
-/***/ 5:
-/***/ (function(module, exports) {
-
-$(document).ready(function() { 
-    $(".commodity_filter").click(function() {
-        $(".commodity_filter>.options").toggleClass("display_init");
-    });
-
-    $(".options>span").on("click",function(e) {
-        event.stopPropagation()
-        $(".commodity_filter>span").text($(this).text());
-        $(".commodity_filter>.options").toggleClass("display_init");
-    });
-    
 });
 
 /***/ })
