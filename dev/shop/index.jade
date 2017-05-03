@@ -16,21 +16,28 @@ block content
             h3 商品分類
             ul.category_list
                 li.category_list_active
-                    a(href="") 指甲油
+                    span.category_parent 指甲油
+                    div.category_child
+                        div 指甲油
+                        div 指甲油
+                        div 指甲油
+                        div 指甲油
+                        div 指甲油
+
                 li
-                    a(href="") 指甲油組合
+                    span 指甲油組合
                 li
-                    a(href="") 光凝膠
+                    span 光凝膠
                 li
-                    a(href="") 指甲貼片
+                    span 指甲貼片
                 li
-                    a(href="") 指甲保養
+                    span 指甲保養
                 li
-                    a(href="") 卸甲商品
+                    span 卸甲商品
                 li
-                    a(href="") 修剪指甲工具
+                    span 修剪指甲工具
                 li
-                    a(href="") 指彩飾品
+                    span 指彩飾品
 
         div#product
             - var rows = 3,product = 10

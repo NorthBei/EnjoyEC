@@ -478,14 +478,22 @@
   color: #d8d8d8;
   margin-bottom: 7px;
 }
-.category_list>li a {
+.category_list>li span {
   color: #4a4a4a;
   font-size: 15px;
+}
+.category_list .category_child {
+  display: none;
+  color: #4a4a4a;
+}
+.category_list .category_child div {
+  font-size: 13px;
+  margin-top: 5px;
 }
 .category_list .category_list_active {
   color: #d5948e;
 }
-.category_list .category_list_active a {
+.category_list .category_list_active span {
   color: #d6645f;
 }
 @media only screen and (max-width: 1185px) {
