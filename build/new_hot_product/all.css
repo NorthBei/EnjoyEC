@@ -338,6 +338,7 @@
   .product_wrapper .tag {
     width: 34px;
     height: 34px;
+    font-size: 12px;
   }
   .product_img_wrapper {
     width: 172px;
@@ -346,8 +347,7 @@
     height: 177px;
     position: relative;
   }
-  .product_info,
-  .tag {
+  .product_info {
     font-size: 12px;
   }
   .icon_btn {
