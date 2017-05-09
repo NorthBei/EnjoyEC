@@ -1,0 +1,61 @@
+@import "../_general/member_section/member_section"
+@import "../_general/dialog/dialog"
+
+.section_title
+    .split
+        margin: 16px 0
+
+.section_sub_title
+    font-size: 16px
+    font-weight: 400
+
+input[type = text]
+    border: 1px solid #4a4a4a
+    
+.refund_table
+    font-size: 15px
+    color: #4A4A4A
+    width: 250px
+    margin: 60px auto;
+
+    tr
+        height: 40px;
+    .td_key
+        width: 100px;
+        white-space: nowrap
+    .td_value
+        font-weight: 100
+        height: 25px
+        vertical-align: middle;
+   
+#bank_name
+    width: 100%
+
+.dialog_button_wrapper
+    display: flex
+    justify-content: center
+    margin-bottom: 175px
+
+.dialog_button
+    size 80px 30px
+    border-radius: 5px
+    color: white
+    background: #C8837C
+    margin: 0 20px
+
+#dialog
+    padding: 45px 227px 94px
+    display: none
+    p
+        min-width: 530px;
+        font-weight: 100
+    
+        &:nth-of-type(3)
+            margin: 20px 0 50px;
+
++media-query( all, max-width $phone_rwd_width )
+    #dialog
+        padding: 50px 36px
+
+        p
+            min-width: initial;

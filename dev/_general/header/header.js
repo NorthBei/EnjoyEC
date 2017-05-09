@@ -65,9 +65,9 @@ $(document).ready(function() {
         var dropUp = $(this).parent().find(".dropdown_block");
         
         var dropUpWidth = dropUp.width();
-        console.log(dropUpWidth);
+        //console.log(dropUpWidth);
         var postion = dropUp.offset();
-        console.log(postion.top,postion.left,width);
+        //console.log(postion.top,postion.left,width);
 
 
         if(postion == undefined){

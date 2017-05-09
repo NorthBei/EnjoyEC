@@ -1,0 +1,36 @@
+extends ../_general/member_section/temp_member_section.jade
+    
+block append content
+    block navArray
+        -var navArray = ["首頁","會員專區","訂單查詢","申請退貨","請核對退款資料"]
+
+block activeIndex
+     -var activeIndex = 0
+block member_section
+    section.table_wrapper
+        .section_title 申請退貨
+            hr.split
+            h3.section_sub_title 請核對退款資料
+            
+        table.refund_table
+            tbody
+                tr
+                    td.td_key 退款方式：
+                    td.td_value 信用卡退款
+                
+                tr
+                    td.td_key 退款金額：
+                    td.td_value $ 50
+                
+        span.dialog_button_wrapper
+            button.dialog_button.pre 上一步
+            button.dialog_button.next 下一步
+
+    
+    div#dialog.do_button_dialog
+        h1 退貨申請已送出
+        p 退貨申請已成功送出，請將退貨商品寄回以下地址：
+        p 106台北市大安區泰順街44巷25號1F
+        p 我們將於收到您的退貨商品並審核符合退貨條件後，進行退款程序，退款的作業時間為收到退貨商品後的5個工作天，謝謝！
+        button.dialog_button#check_receive 確定
+                    

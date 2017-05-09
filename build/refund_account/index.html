@@ -2,8 +2,6 @@
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.8, maximum-scale=2.0, user-scalable=no">
-    <!--link(rel='stylesheet', type='text/css', href='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.css')-->
-    <link rel="stylesheet" type="text/css" href="../general/slick/slick-theme.css">
     <link href="../general/css/normalize.css" rel="stylesheet">
     <link href="../general/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link href="../general/css/header.css" rel="stylesheet">
@@ -13,8 +11,6 @@
     <script src="../general/js/jquery-3.2.0.min.js"></script>
     <script src="../general/js/header.js"></script>
     <script src="bundle.js"></script>
-    <script type="text/javascript" src="../general/slick/slick.min.js"></script>
-    <!--script-->
   </head>
   <body>
     <header id="header" class="isRWD">
@@ -139,64 +135,78 @@
       </div>
     </header>
     <main id="main">
-      <section id="top_banner">
-        <div class="col_center bg_pink_medium slick_slide">
-          <div><img src="./asset/banner.png" alt=""></div>
-          <div><img src="./asset/banner.png" alt=""></div>
-          <div><img src="./asset/banner.png" alt=""></div>
-          <div><img src="./asset/banner.png" alt=""></div>
+      <section id="main_section"><a href="#" id="main_banner" class="page_link"><img src="../general/img/banner-會員專區.png"/></a></section>
+      <div id="sub_section"><span id="page_info">
+          <div class="page_nav"><a href="#">首頁</a><span class="page_nav_separate">></span><a href="#">會員專區</a><span class="page_nav_separate">></span><a href="#">訂單查詢</a><span class="page_nav_separate">></span><a href="#">申請退貨</a><span class="page_nav_separate">></span><a href="#">填寫退款帳戶資料</a>
+          </div>
+          <div class="commodity_count">共10項商品</div></span>
+      </div>
+      <hr class="split">
+      <div class="two_col">
+        <section class="side_bar">
+          <ul>
+            <li class="active"><a href="">訂單查詢</a></li>
+            <li> <a href="">我的收藏清單</a></li>
+            <li> <a href="">購物金折抵券</a></li>
+            <li> <a href="">帳戶設定</a></li>
+            <li> <span id="logout">登出</span></li>
+          </ul>
+          <div id="logout_dialog" class="do_button_dialog"><img src="../general/img/delete.png" class="colse_dialog">
+            <h1>確定登出？</h1><span class="dialog_button_wrapper">
+              <button class="dialog_button dialog_cancel">取消</button>
+              <button class="dialog_button dialog_check">確定</button></span>
+          </div>
+        </section>
+        <section class="table_wrapper">
+          <div class="section_title">申請退貨
+            <hr class="split">
+            <h3 class="section_sub_title">請填寫退款帳戶資料</h3>
+          </div>
+          <table class="refund_table">
+            <tbody>
+              <tr>
+                <td class="td_key">退款方式：</td>
+                <td class="td_value">退回銀行帳戶</td>
+              </tr>
+              <tr>
+                <td class="td_key">帳戶姓名：</td>
+                <td class="td_value">
+                  <input type="text">
+                </td>
+              </tr>
+              <tr>
+                <td class="td_key">銀行名稱：</td>
+                <td class="td_value">
+                  <select id="bank_name">
+                    <option hidden>銀行名稱</option>
+                    <option>郵局</option>
+                    <option>泰山銀行</option>
+                  </select>
+                </td>
+              </tr>
+              <tr>
+                <td class="td_key">帳　　號：</td>
+                <td class="td_value">
+                  <input type="text">
+                </td>
+              </tr>
+              <tr>
+                <td class="td_key">退款金額：</td>
+                <td class="td_value">$ 50</td>
+              </tr>
+            </tbody>
+          </table><span class="dialog_button_wrapper">
+            <button class="dialog_button pre">上一步</button>
+            <button class="dialog_button next">下一步</button></span>
+        </section>
+        <div id="dialog" class="do_button_dialog">
+          <h1>退貨申請已送出</h1>
+          <p>退貨申請已成功送出，請將退貨商品寄回以下地址：</p>
+          <p>106台北市大安區泰順街44巷25號1F</p>
+          <p>我們將於收到您的退貨商品並審核符合退貨條件後，進行退款程序，退款的作業時間為收到退貨商品後的5個工作天，謝謝！</p>
+          <button id="check_receive" class="dialog_button">確定</button>
         </div>
-        <div class="col_left">
-          <div class="row bg_skin_deep"><a href="#"><img src="./asset/美甲彩繪banner.png">
-              <div class="category_text">
-                <h2 class="category_text_zhtw">美甲<br>彩繪</h2>
-                <h6 class="category_text_en">Nail Art</h6>
-              </div></a></div>
-          <div class="row bg_pink_deep"><a href="#"><img src="./asset/時尚彩妝banner.png">
-              <div class="category_text">
-                <h2 class="category_text_zhtw">時尚<br>彩妝</h2>
-                <h6 class="category_text_en">Make Up</h6>
-              </div></a></div>
-        </div>
-        <div class="col_right">
-          <div class="row bg_skin_deep"><a href="#"><img src="./asset/美體保養banner.png">
-              <div class="category_text">
-                <h2 class="category_text_zhtw">美體<br>保養</h2>
-                <h6 class="category_text_en">Skin Care</h6>
-              </div></a></div>
-          <div class="row bg_skin_light"><a href="#"><img src="./asset/香氛香氣banner.png">
-              <div class="category_text">
-                <h2 class="category_text_zhtw">香氛<br>香氣</h2>
-                <h6 class="category_text_en">Aroma</h6>
-              </div></a></div>
-        </div>
-      </section>
-      <section id="bottom_banner">
-        <div class="col row bg_skin_light"><a href="#"><img src="./asset/限時優惠banner.png">
-            <div class="category_text">
-              <h2 class="category_text_zhtw">限時優惠</h2>
-              <h6 class="category_text_en">Sale</h6>
-            </div></a></div>
-        <div class="col row bg_skin_light"><a href="#"><img src="./asset/最新商品banner.png">
-            <div class="category_text">
-              <h2 class="category_text_zhtw">最新商品</h2>
-              <h6 class="category_text_en">New Arrival</h6>
-            </div></a></div>
-        <div class="col row bg_skin_light"><a href="#"><img src="./asset/熱門商品banner.png">
-            <div class="category_text">
-              <h2 class="category_text_zhtw">熱門商品</h2>
-              <h6 class="category_text_en">Hot Deals</h6>
-            </div></a></div>
-      </section>
-      <section id="subscribe_newsletters">
-        <h1>訂閱電子報取得第一手優惠資訊！</h1>
-        <h2>SIGN UP TO OUR WEEKLY NEWSLETTER</h2>
-        <form>
-          <input type="eamil" placeholder="Your email address">
-          <input type="submit" value="SUBSCRIBE" id="subscribe_btn">
-        </form>
-        <div><a href="#"><i aria-hidden="true" class="fa fa-instagram"></i></a><a href="#"><i aria-hidden="true" class="fa fa-facebook-official"></i></a></div>
-      </section>
+      </div>
     </main>
     <footer id="footer">
       <div id="footer_link">

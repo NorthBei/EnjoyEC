@@ -63,48 +63,18 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 22);
+/******/ 	return __webpack_require__(__webpack_require__.s = 20);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ 22:
-/***/ (function(module, exports, __webpack_require__) {
-
-__webpack_require__(3);
-
-window.addEventListener("load",function(){
-    $(".category_parent").click(function () {
-
-        var $parent = $(this);
-
-        $parent.parent().toggleClass("category_list_active");
-        
-        $child = $parent.next();
-        
-        $child.slideToggle(300, function () {
-            
-        });
-
-    });
-});
-
-/***/ }),
-
-/***/ 3:
+/***/ 20:
 /***/ (function(module, exports) {
 
-$(document).ready(function() { 
-    $(".commodity_filter").click(function() {
-        $(".commodity_filter>.options").toggleClass("display_init");
+window.addEventListener("load",function(){
+    $(".next").click(function(){
+        $("#dialog").css("display","flex");
     });
-
-    $(".options>span").on("click",function(e) {
-        event.stopPropagation()
-        $(".commodity_filter>span").text($(this).text());
-        $(".commodity_filter>.options").toggleClass("display_init");
-    });
-    
 });
 
 /***/ })

@@ -481,7 +481,7 @@
 .category_list>li span {
   color: #4a4a4a;
   font-size: 15px;
-  cursor: pointer;
+  cursor: default;
 }
 .category_list .category_child {
   display: none;
@@ -497,7 +497,13 @@
 .category_list .category_list_active span {
   color: #d6645f;
 }
+#main {
+  padding: 0;
+}
 @media only screen and (max-width: 1185px) {
+  #main {
+    padding: 0 10px;
+  }
   .two_col {
     -ms-flex-direction: column;
     flex-direction: column;
@@ -524,9 +530,6 @@
   }
 }
 /*自己新增的 另外都是繼承new_hot_product*/
-#main {
-  padding: 0 10px;
-}
 #product {
   max-width: 1185px;
   width: 100%;

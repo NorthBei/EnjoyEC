@@ -42,7 +42,7 @@
         span
             color: #4A4A4A
             font-size: 15px
-            cursor: pointer
+            cursor: default
     
     .category_child
         display: none;
@@ -57,8 +57,11 @@
 
         span
             color: #D6645F
-
+#main
+        padding: 0
 +media-query( only screen ,max-width ($banner_max_width) )
+    #main
+        padding: 0 10px
     .two_col
         flex-direction: column
         margin-top: -31px;
@@ -76,11 +79,11 @@
         margin-bottom: 5px;
         &>li
             width: 33%
-
+  
+    
 
 /*自己新增的 另外都是繼承new_hot_product*/
-#main
-    padding: 0 10px
+
 #product
     max-width: $banner_max_width
     width: 100%

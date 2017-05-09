@@ -18,6 +18,8 @@ module.exports = {
         "order_detail/bundle": "./dev/order_detail/entry.js",
         "order_query/bundle": "./dev/order_query/entry.js",
         "choice_return_product/bundle": "./dev/choice_return_product/entry.js",
+        "refund_account/bundle": "./dev/refund_account/entry.js",
+        "refund_credit_card/bundle": "./dev/refund_credit_card/entry.js",
         "cash_coupon/bundle": "./dev/cash_coupon/entry.js",
         "account_setting/bundle": "./dev/account_setting/entry.js",
         "shopping_should_know/bundle": "./dev/shopping_should_know/entry.js",
