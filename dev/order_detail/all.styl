@@ -27,7 +27,12 @@
         border-top: 1px solid #4a4a4a
 .sum_result
     color: #8B572A
-    
+
+.section_title
+    margin-top: 12px;
+    .split
+        margin: 16px 0
+
 /*cancel_detial_table*/
 .cancel_detial_table
     th
@@ -187,5 +192,6 @@
             margin-right: calc("100% - 300px")
 /*order_tables*/
 
-
-  
++media-query( all, max-width $phone_rwd_width )
+  .section_title
+        margin-top: 0;

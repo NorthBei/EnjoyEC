@@ -376,6 +376,9 @@ td:before {
   margin: 20px 31px 10px;
   padding-left: 20px;
 }
+.section_title {
+  margin-top: 12px;
+}
 .section_title .split {
   margin: 16px 0;
 }
@@ -519,6 +522,9 @@ tr.have_comment td[data-th='小計'] {
   .rwd-table td:before {
     margin-bottom: 13px;
     width: 100%;
+  }
+  .section_title {
+    margin-top: 0;
   }
   .section_title>.checkbox_wrapper {
     margin-left: 10px;

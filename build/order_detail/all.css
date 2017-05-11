@@ -382,6 +382,12 @@ td:before {
 .sum_result {
   color: #8b572a;
 }
+.section_title {
+  margin-top: 12px;
+}
+.section_title .split {
+  margin: 16px 0;
+}
 /*cancel_detial_table*/
 .cancel_detial_table th {
   display: none;
@@ -569,5 +575,10 @@ td:before {
   }
 }
 /*order_tables*/
+@media all and (max-width: 550px) {
+  .section_title {
+    margin-top: 0;
+  }
+}
 
 /*# sourceMappingURL=all.css.map */

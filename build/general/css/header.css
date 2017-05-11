@@ -161,7 +161,7 @@ form.dropdown_block:after {
   -ms-flex-direction: column;
   flex-direction: column;
 }
-#shopping_cart .shopping_cart_product_info_wrapper .product_name {
+#shopping_cart .shopping_cart_product_info_wrapper .shopping_cart_product_name {
   white-space: normal;
   letter-spacing: 0.31px;
 }
@@ -177,6 +177,7 @@ form.dropdown_block:after {
 }
 #shopping_cart .product_img {
   height: 82px;
+  width: 71px;
   margin-left: 39px;
 }
 #shopping_cart .shopping_cart_calc {

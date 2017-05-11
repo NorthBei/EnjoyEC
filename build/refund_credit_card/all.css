@@ -358,6 +358,9 @@
     overflow-y: scroll;
   }
 }
+.section_title {
+  margin-top: 12px;
+}
 .section_title .split {
   margin: 16px 0;
 }
@@ -406,23 +409,27 @@ input[type = text] {
   margin: 0 20px;
 }
 #dialog {
-  padding: 45px 227px 94px;
+  padding: 45px 0 94px;
+  width: 985px;
   display: none;
 }
 #dialog p {
-  min-width: 530px;
   font-weight: 100;
 }
-#dialog p:nth-of-type(3) {
+#dialog p:nth-of-type(2) {
   margin: 20px 0 50px;
 }
 @media all and (max-width: 550px) {
+  .section_title {
+    margin-top: 0;
+  }
   #dialog {
     padding: 50px 36px;
+    width: initial;
   }
-  #dialog p {
-    min-width: initial;
-  }
+}
+.refund_table {
+  width: initial;
 }
 
 /*# sourceMappingURL=all.css.map */
