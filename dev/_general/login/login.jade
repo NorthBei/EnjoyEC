@@ -16,10 +16,10 @@ mixin register()
         a(hrfe="").input_button.fb_login.section_box facebook註冊
         hr
         .form
-            input(type="eamil" placeholder="請輸入Email" require).input_box.section_box
+            input(type="eamil" placeholder="請輸入Email" require).input_box.section_box#register_mail
             .error_message Email或生日輸入錯誤
-            input(type="password" placeholder="請輸入密碼(六碼以上，至少包含一個數字與英文字母)" require).input_box.section_box
+            input(type="password" placeholder="請輸入密碼(六碼以上，至少包含一個數字與英文字母)" require).input_box.section_box#register_password
             .error_message 輸入密碼格式不符，密碼需六碼以上，至少包含一個數字與英文字母
-            input(type="password" placeholder="請再次輸入密碼" require).input_box.section_box
+            input(type="password" placeholder="請再次輸入密碼" require).input_box.section_box#register_password_twice
             .error_message 兩次密碼輸入不符 或 請再次輸入密碼
             input(type="submit" value="Email註冊").input_button.input_box.section_box#email_register

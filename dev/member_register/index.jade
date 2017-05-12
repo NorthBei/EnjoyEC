@@ -9,14 +9,14 @@ block content
         div.form
             input(type="email" placeholder="Eamil" require).input_box.section_box
             .error_message 請輸入email
-            input(type="text" placeholder="姓名" require).input_box.section_box
+            input(type="text" placeholder="姓名" require).input_box.section_box#register_name
             .error_message 請輸入姓名
-            input(type="phone" placeholder="聯絡電話" require).input_box.section_box
+            input(type="phone" placeholder="聯絡電話" require).input_box.section_box#register_phone
             .error_message 請輸入聯絡電話
             span.input_date_wrapper
-                input(type="text" placeholder="YYYY" require).input_box.input_year
-                input(type="text" placeholder="MM" require).input_box.input_month
-                input(type="text" placeholder="DD" require).input_box.input_day
+                input(type="text" placeholder="YYYY" require).input_box.input_year#register_year
+                input(type="text" placeholder="MM" require).input_box.input_month#register_month
+                input(type="text" placeholder="DD" require).input_box.input_day#register_day
             .error_message 請輸入生日
             .reminder.marB32 生日填寫後即不可更改，請確認生日是否填寫正確
             .reminder 按下確認就代表您已查看並同意

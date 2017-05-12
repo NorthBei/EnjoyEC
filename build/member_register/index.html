@@ -139,11 +139,11 @@
         <h1>會員註冊</h1><a hrfe="" class="input_button fb_login section_box">facebook註冊</a>
         <hr/>
         <div class="form">
-          <input type="eamil" placeholder="請輸入Email" require="require" class="input_box section_box"/>
+          <input type="eamil" placeholder="請輸入Email" require="require" id="register_mail" class="input_box section_box"/>
           <div class="error_message">Email或生日輸入錯誤</div>
-          <input type="password" placeholder="請輸入密碼(六碼以上，至少包含一個數字與英文字母)" require="require" class="input_box section_box"/>
+          <input type="password" placeholder="請輸入密碼(六碼以上，至少包含一個數字與英文字母)" require="require" id="register_password" class="input_box section_box"/>
           <div class="error_message">輸入密碼格式不符，密碼需六碼以上，至少包含一個數字與英文字母</div>
-          <input type="password" placeholder="請再次輸入密碼" require="require" class="input_box section_box"/>
+          <input type="password" placeholder="請再次輸入密碼" require="require" id="register_password_twice" class="input_box section_box"/>
           <div class="error_message">兩次密碼輸入不符 或 請再次輸入密碼</div>
           <input type="submit" value="Email註冊" id="email_register" class="input_button input_box section_box"/>
         </div>
@@ -153,13 +153,13 @@
         <div class="form">
           <input type="email" placeholder="Eamil" require class="input_box section_box">
           <div class="error_message">請輸入email</div>
-          <input type="text" placeholder="姓名" require class="input_box section_box">
+          <input type="text" placeholder="姓名" require id="register_name" class="input_box section_box">
           <div class="error_message">請輸入姓名</div>
-          <input type="phone" placeholder="聯絡電話" require class="input_box section_box">
+          <input type="phone" placeholder="聯絡電話" require id="register_phone" class="input_box section_box">
           <div class="error_message">請輸入聯絡電話</div><span class="input_date_wrapper">
-            <input type="text" placeholder="YYYY" require class="input_box input_year">
-            <input type="text" placeholder="MM" require class="input_box input_month">
-            <input type="text" placeholder="DD" require class="input_box input_day"></span>
+            <input type="text" placeholder="YYYY" require id="register_year" class="input_box input_year">
+            <input type="text" placeholder="MM" require id="register_month" class="input_box input_month">
+            <input type="text" placeholder="DD" require id="register_day" class="input_box input_day"></span>
           <div class="error_message">請輸入生日</div>
           <div class="reminder marB32">生日填寫後即不可更改，請確認生日是否填寫正確</div>
           <div class="reminder">按下確認就代表您已查看並同意<a href="">隱私權政策</a>與<a href="">購物須知</a></div>

@@ -152,6 +152,7 @@
 .error_message {
   text-align: initial;
   padding-left: 25px;
+  display: none;
 }
 /*overrid login.styl*/
 #main {
