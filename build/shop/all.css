@@ -452,6 +452,7 @@
   display: -ms-flexbox;
   display: flex;
   max-width: 1185px;
+  width: 100%;
 }
 #category {
   width: 300px;

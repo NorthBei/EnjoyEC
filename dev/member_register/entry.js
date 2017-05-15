@@ -85,8 +85,25 @@ window.addEventListener("load",function(){
             formdata.phone = phone;
             formdata.birth = [DD,MM,YYYY];
             
-            $("#dialog p").css("visibility","visiable");
-            showDialog();
+            $.ajax({
+				url: "../wp-content/themes/EnjoyEC/utility/ajax-member-register.php",
+				type:"POST",
+				dataType:'json',
+				data: formdata,
+
+				success: function(msg){
+					console.log(msg);
+                    $("#dialog p").css("visibility","visiable");
+                    showDialog();                
+				},
+
+				 error:function(xhr){
+					console.log(xhr);
+				 }
+			});
+
+
+            
         }
 
     });

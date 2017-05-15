@@ -42,7 +42,7 @@ fixed_header()
         position: initial;
     
     .child_category_wrapper
-        margin-top: 15px
+        margin-top: 29px
     .scroll_disappear
         display: none
 
@@ -85,19 +85,19 @@ header
         flex-direction: column
         flex-axis: center center
     
-    i
+    .fa,i
         margin: 0 5px
         font-style: normal
         font-size: 18px
         cursor: pointer
 
-    i.fa-user-circle-o
+    .fa-user-circle-o
         margin-bottom: 1px
     
     .small_icon
         font-size: 16px
 
-.dropdown_block_wrapper>i.fa
+.dropdown_block_wrapper>.fa
     padding-bottom: 16px;
 
 .dropdown_block
@@ -269,7 +269,7 @@ form.dropdown_block:after
     flex-axis: center center
     font-size: 13px
     color: #8B572A
-    padding-bottom: 10px
+    //padding-bottom: 10px
 
 #logo_img
     height: 47px
@@ -289,6 +289,8 @@ form.dropdown_block:after
         &:hover
             color: #D6645F
             
+.parent_category
+    padding-bottom: 10px
 
 .child_category_wrapper
     color: #8E5651
@@ -301,7 +303,7 @@ form.dropdown_block:after
     position: absolute
     left: -40px
     z-index: 10
-    margin-top: 10px
+    margin-top: 24px
     white-space: nowrap
     opacity: 0;
     visibility: hidden;
@@ -514,6 +516,9 @@ form.dropdown_block:after
         border-top: 7px solid #fff8f6;
     +#main,+#content
         margin-top: 156px //height of header
+
+    .parent_category
+        padding-bottom: 0;
     // position: fixed;
     // width: 100%;
     // z-index: 20;
@@ -604,18 +609,18 @@ form.dropdown_block:after
     #main
         margin-top: $header_rwd_height
     
-    .nav_btns i
+    .nav_btns .fa, .nav_btns i
         font-size: 25px
 
         //.small_font
-    i.fa.fa-user-circle-o
+    .fa.fa-user-circle-o
         font-size: 24px;
         padding-top: 4px;
         position: relative;
         top: 5px;
         left: -3px;
     
-    i.fa.fa-shopping-cart
+    .fa.fa-shopping-cart
         margin-top: 1px;
 
     #search_button:before
@@ -637,7 +642,7 @@ form.dropdown_block:after
         display: flex;
         align-items: center;
     
-    .dropdown_block_wrapper>i.fa
+    .dropdown_block_wrapper>.fa
         padding-bottom: 0;
 
     .dropdown_block
