@@ -381,12 +381,23 @@
   margin-bottom: 10px;
   display: none;
 }
+.error_msg {
+  text-align: left;
+  font-weight: 100;
+  margin-top: 5px;
+  color: #950012;
+  font-size: 12px;
+  display: none;
+}
 #reset_password_dialog {
   display: none;
   padding: 55px 200px 60px;
 }
 #reset_password_dialog h1 {
   margin-bottom: 60px;
+}
+#reset_password_dialog ul>li {
+  margin-bottom: 20px;
 }
 #reset_password_dialog .dialog_alter_msg,
 #reset_password_dialog .error_msg {
@@ -398,10 +409,6 @@
 #reset_password_dialog .dialog_alter_msg {
   color: #d6645f;
   font-size: 12px;
-}
-#reset_password_dialog .error_msg {
-  margin-bottom: 20px;
-  color: #950012;
 }
 #reset_password_dialog input[type="password"] {
   background: #fff;
@@ -434,6 +441,9 @@
   color: #c3c2c3;
   font-weight: 100;
   font-size: 14px;
+}
+#reset_password_dialog .dialog_button_wrapper {
+  margin-top: 40px;
 }
 #reset_password_success_dialog {
   padding: 55px 165px 67px;

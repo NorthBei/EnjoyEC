@@ -2,13 +2,9 @@ require("../_general/general.js");
 require("../_general/member_section/member_section.js");
 
 window.addEventListener("load",function(){
-    var isEdit = false;
+    var isEdit = true;
     $(".edit_profile").on("click",function(){
-        isEdit=!isEdit;
-        $(".input_edit").toggleClass("input_edit_now").prop("disabled",!isEdit);
-        $(".edit_disappear").toggle();
-		$(".alter_msg").toggle();
-                
+        
         if(isEdit){
             var city_name = $("#city_name").text();
             var region_name = $("#region_name").text();
@@ -19,18 +15,85 @@ window.addEventListener("load",function(){
             $(".input_address").css("display","block");
         }
         else{
+			//console.log("按下確定");
+			var emalInput = $(".td_value input[type=email]");
+
+			var isEmailValid,isNameValid,isPhoneValid,isAddressValid = false;
+			var emailValue = emalInput.val();
+			isEmailValid = validateEmail(emailValue);
+			//console.log(isEmailValid);
+			judgeShowErrorMsg(emalInput,isEmailValid);
+
+			var nameInput = $(".td_value .input_name");
+			var nameValue = nameInput.val()
+			isNameValid = (nameValue == "" ? false : true);
+			//onsole.log(isNameValid);
+			judgeShowErrorMsg(nameInput,isNameValid);
+
+			var phoneInput = $(".td_value input[type=tel]");
+			var phoneValue = phoneInput.val();
+			isPhoneValid = (phoneValue == "" ? false : true);
+			//console.log(isPhoneValid);
+			judgeShowErrorMsg(phoneInput,isPhoneValid);
+
             var city_name = $("#receive_city_id option:selected").text();
             var region_name = $("#receive_region_id option:selected").text();
-            $("#city_name").text(city_name);
-            $("#region_name").text(region_name);
-            $('.reset_password_row').css('visibility','visible');
-            $(".select_wrapper").hide();
-            flex($(".input_address"));
+			var address = $(".input_address input[type=text]").val();
+			if(city_name!= "" && region_name != "" && address != ""){
+				isAddressValid = true;
+			}
+			judgeShowErrorMsg($(".input_address>div"),isAddressValid);
+			
+			if(isEmailValid && isNameValid && isPhoneValid && isAddressValid){
+				
+				var formdata = {};
 
-			flex($("#modify_success_dialog"));
-			setInterval(function(){ $("#modify_success_dialog").hide(); }, 2000);
+				formdata.mail = emailValue;
+				formdata.mail = nameValue;
+				formdata.mail = phoneValue;
+				formdata.mail = city_name+region_name+address;
+				
+				$.ajax({
+					url: ajaxurl,
+					type:"POST",
+					dataType:'json',
+					data: formdata,
+					success: function(msg){
+						console.log(msg);
+						//judge format
+						if(msg[0]["check"]){
+							flex($("#modify_success_dialog"));
+							setInterval(function(){ $("#modify_success_dialog").hide(); }, 2000);
+						}
+						else{
+							console.log("error");
+							//error_message.text(msg[0]["message"]);
+						}  
+					},
+
+					error:function(xhr){
+						console.log(xhr);
+					}
+				});
+
+				$("#city_name").text(city_name);
+				$("#region_name").text(region_name);
+				$('.reset_password_row').css('visibility','visible');
+				$(".select_wrapper").hide();
+				flex($(".input_address"));
+
+			}
+			else{
+				return;
+			}
+			
         }
-        var editButton = (isEdit? "確定":"編輯");
+		isEdit=!isEdit;
+        $(".input_edit").toggleClass("input_edit_now").prop("disabled",isEdit);
+        $(".edit_disappear").toggle();
+		$(".alter_msg").toggle();
+
+        var editButton = (isEdit? "編輯":"確定");
         $(this).text(editButton);      
 
     });
@@ -41,8 +104,62 @@ window.addEventListener("load",function(){
     });
 
     $("#reset_password_dialog .dialog_check").click(function(){
-        $("#reset_password_dialog").hide();
-        flex($("#reset_password_success_dialog").show());
+		var regexp = new RegExp("(?=.*?[A-Za-z])(?=.*?[0-9]).{6,}");
+		var oldPasswrodValid,newPasswrodValid,isPasswordSame = false;
+
+		var old_password = $("#old_passwrord");
+		var oldPasswordValue = old_password.val();
+		oldPasswrodValid = (oldPasswordValue == "" ? false : true);
+		console.log(oldPasswrodValid);
+		judgeShowErrorMsg(old_password,oldPasswrodValid);
+
+		var new_passwrord = $("#new_passwrord");
+        var newPasswrodValue = new_passwrord.val();
+        newPasswrodValid = regexp.test(newPasswrodValue);
+		judgeShowErrorMsg(new_passwrord,newPasswrodValid);
+		console.log("newPasswrodValid:"+newPasswrodValid);
+		if(!newPasswrodValid){
+			new_passwrord.parent().find(".dialog_alter_msg").hide();
+		}
+
+		var new_same_passwrord = $("#new_same_passwrord");
+        isPasswordSame = (new_same_passwrord.val() == newPasswrodValue ? true : false);
+        judgeShowErrorMsg(new_same_passwrord,isPasswordSame);
+		console.log(isPasswordSame);
+
+		if(oldPasswrodValid && newPasswrodValid & isPasswordSame){
+			//ajax
+			var formdata = {}
+
+			formdata.oldPass = oldPasswordValue;
+			formdata.newPass = newPasswrodValue;
+
+			$.ajax({
+				url: ajaxurl,
+				type:"POST",
+				dataType:'json',
+				data: formdata,
+				success: function(msg){
+					console.log(msg);
+					//judge format
+					if(msg[0]["check"]){
+						$("#reset_password_dialog").hide();
+        				flex($("#reset_password_success_dialog").show());
+					}
+					else{
+						console.log("error");
+						//error_message.text(msg[0]["message"]);
+					}  
+				},
+
+				error:function(xhr){
+					console.log(xhr);
+				}
+			});
+
+			$("#reset_password_dialog").hide();
+        	flex($("#reset_password_success_dialog").show());
+		}
     });
 
     $("#reset_password_success_dialog .dialog_check").click(function(){
@@ -122,4 +239,18 @@ function changeCity() {
 
 function flex(ele){
     ele.css("display","flex");
+}
+
+function validateEmail(email) {
+    var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(email);
+}
+
+function judgeShowErrorMsg(ele,isValid){
+    if(isValid){
+        ele.next().hide();
+    }
+    else{
+        ele.next().show();
+    }
 }

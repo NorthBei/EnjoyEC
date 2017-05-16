@@ -71,7 +71,7 @@ window.addEventListener("load",function(){
         var str = DD+"/"+MM+"/"+YYYY;
 
         isBirthValid = regexp.test(str);
-        console.log(str+" = register_birth "+isBirthValid);
+        //console.log(str+" = register_birth "+isBirthValid);
         judgeShowErrorMsg($("#register_year").parent(),isBirthValid);
 
         if(!isBirthValid){
