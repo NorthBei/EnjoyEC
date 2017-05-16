@@ -222,13 +222,15 @@
   font-size: 18px;
   margin: 20px 0 45px;
 }
-#dialog button {
+#dialog button,
+#dialog a {
   display: -ms-flexbox;
   display: flex;
   padding: 7px 32px;
   background: #d5948e;
   border-radius: 6px;
   color: #fff;
+  cursor: pointer;
 }
 @media all and (max-width: 550px) {
   #dialog {
