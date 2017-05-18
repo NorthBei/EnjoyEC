@@ -221,6 +221,9 @@
   border-radius: 6px;
   color: #fff;
 }
+.error_message {
+  visibility: hidden;
+}
 @media all and (max-width: 550px) {
   #dialog {
     max-width: calc(100vw - 20px);
