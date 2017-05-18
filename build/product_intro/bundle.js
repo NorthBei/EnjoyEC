@@ -79,6 +79,7 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(0);
+__webpack_require__(3);
 
 $(document).ready(function(){
     $('#product_photo_list').slick({
@@ -128,6 +129,27 @@ $(document).ready(function(){
         }
         
     });
+});
+
+/***/ }),
+
+/***/ 3:
+/***/ (function(module, exports) {
+
+$(document).ready(function() { 
+    $(".commodity_filter").click(function() {
+        $(this).find(".options").toggleClass("display_init");
+        //$(".commodity_filter>.options").toggleClass("display_init");
+    });
+
+    $(".options>span").on("click",function(e) {
+        event.stopPropagation()
+        $(this).parent().prev().text($(this).text());
+        $(this).parent().toggleClass("display_init");
+        // $(".commodity_filter>span").text($(this).text());
+        // $(".commodity_filter>.options").toggleClass("display_init");
+    });
+    
 });
 
 /***/ })

@@ -61,7 +61,7 @@ $(document).ready(function(){
                     "cancel_note":cancel_note,
                     "order_id":order_id},
             success: function(msg){
-                if(msg["status"]){
+                if(msg[0]["status"]){
 					$("#cancel_order_dialog").hide();
                     $("#cancel_orde_success_dialog").css("display","flex");
                 }

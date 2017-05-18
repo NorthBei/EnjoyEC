@@ -29,7 +29,7 @@ $(document).ready(function(){
             data: "action=subscriber&q="+email,
             success: function(msg){
                 console.log(msg);
-                if(msg["status"]){
+                if(msg[0]["status"]){
                     
                 }
                 else{

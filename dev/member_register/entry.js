@@ -60,14 +60,17 @@ window.addEventListener("load",function(){
         judgeShowErrorMsg(register_phone,isPhoneValid);
 
         //Match entries that appear in the DD-MM-YYYY format
-        var $DD_MM_YYYY = "[0-9]{2}[-|\/]{1}[0-9]{2}[-|\/]{1}[0-9]{4}";
-        var regexp = new RegExp($DD_MM_YYYY);
+        //var $DD_MM_YYYY = "[0-9]{2}[-|\/]{1}[0-9]{2}[-|\/]{1}[0-9]{4}";
+        //var regexp = new RegExp($DD_MM_YYYY);
+        //var regexp2 = new RegExp(/(?:0[1-9]|[12][0-9]|3[01])\/(?:0[1-9]|1[0-2])\/(?:19|20\d{2})/);
+        var expression =   "(?:19|20)[0-9]{2}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1[0-9]|2[0-9])|(?:(?!02)(?:0[1-9]|1[0-2])-(?:30))|(?:(?:0[13578]|1[02])-31))";
+        var regexp = new RegExp(expression);
 
         var YYYY = $("#register_year").val();
         var MM = $("#register_month").val();
         var DD = $("#register_day").val();
 
-        var str = DD+"/"+MM+"/"+YYYY;
+        var str = YYYY+"-"+YY+"-"+DD;
 
         isBirthValid = regexp.test(str);
         //console.log(str+" = register_birth "+isBirthValid);
@@ -92,7 +95,7 @@ window.addEventListener("load",function(){
 
 				success: function(msg){
 					console.log(msg);
-                    if(msg["status"]){
+                    if(msg[0]["status"]){
                         $("#dialog p").css("visibility","visiable");
                         showDialog();                    
                     }

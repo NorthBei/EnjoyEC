@@ -63,7 +63,7 @@ window.addEventListener("load",function(){
 					success: function(msg){
 						console.log(msg);
 						//judge format
-						if(msg["status"]){
+						if(msg[0]["status"]){
 							flex($("#modify_success_dialog"));
 							setInterval(function(){ $("#modify_success_dialog").hide(); }, 2000);
 						}
@@ -144,7 +144,7 @@ window.addEventListener("load",function(){
 				success: function(msg){
 					console.log(msg);
 					//judge format
-					if(msg["status"]){
+					if(msg[0]["status"]){
 						$("#reset_password_dialog").hide();
         				flex($("#reset_password_success_dialog").show());
 					}
