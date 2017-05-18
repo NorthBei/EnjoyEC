@@ -129,5 +129,21 @@
   font-weight: normal;
   line-height: 25px;
 }
+@media all and (max-width: 550px) {
+  #main {
+    padding: 0 10px;
+  }
+  #sub_section {
+    display: none;
+  }
+  .split {
+    margin: 0;
+  }
+  .content {
+    font-size: 15px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+  }
+}
 
 /*# sourceMappingURL=all.css.map */

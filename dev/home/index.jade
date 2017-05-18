@@ -91,9 +91,9 @@ block content
     section#subscribe_newsletters
         h1 訂閱電子報取得第一手優惠資訊！
         h2 SIGN UP TO OUR WEEKLY NEWSLETTER
-        form
-            input(type='eamil' placeholder='Your email address')
-            input(type='submit' value='SUBSCRIBE')#subscribe_btn
+        .form
+            input(type='eamil' placeholder='Your email address' maxlength='30')#useremail
+            input(type='submit' name='add-user' value='SUBSCRIBE')#subscribe_btn
         div
             a(href="#")
                 i.fa.fa-instagram(aria-hidden='true')

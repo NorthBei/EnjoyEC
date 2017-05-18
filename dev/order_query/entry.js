@@ -61,8 +61,14 @@ $(document).ready(function(){
                     "cancel_note":cancel_note,
                     "order_id":order_id},
             success: function(msg){
-                $("#cancel_order_dialog").hide();
-                $("#cancel_orde_success_dialog").css("display","flex");
+                if(msg["status"]){
+					$("#cancel_order_dialog").hide();
+                    $("#cancel_orde_success_dialog").css("display","flex");
+                }
+                else{
+                    console.log("error");
+                    //msg["message"]
+                }
             }
         });
         

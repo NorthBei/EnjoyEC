@@ -156,11 +156,11 @@ window.addEventListener("load",function(){
 			if(isEmailValid && isNameValid && isPhoneValid && isAddressValid){
 				
 				var formdata = {};
-
-				formdata.mail = emailValue;
-				formdata.mail = nameValue;
-				formdata.mail = phoneValue;
-				formdata.mail = city_name+region_name+address;
+				formdata.action = 'edit_member_detail';
+				formdata.email = emailValue;
+				formdata.name = nameValue;
+				formdata.phone = phoneValue;
+				formdata.address = city_name+region_name+address;
 				
 				$.ajax({
 					url: ajaxurl,
@@ -170,13 +170,13 @@ window.addEventListener("load",function(){
 					success: function(msg){
 						console.log(msg);
 						//judge format
-						if(msg[0]["check"]){
+						if(msg["status"]){
 							flex($("#modify_success_dialog"));
 							setInterval(function(){ $("#modify_success_dialog").hide(); }, 2000);
 						}
 						else{
 							console.log("error");
-							//error_message.text(msg[0]["message"]);
+							//msg["message"]
 						}  
 					},
 
@@ -239,7 +239,7 @@ window.addEventListener("load",function(){
 		if(oldPasswrodValid && newPasswrodValid & isPasswordSame){
 			//ajax
 			var formdata = {}
-
+			formdata.action = 'change_password';
 			formdata.oldPass = oldPasswordValue;
 			formdata.newPass = newPasswrodValue;
 
@@ -251,13 +251,13 @@ window.addEventListener("load",function(){
 				success: function(msg){
 					console.log(msg);
 					//judge format
-					if(msg[0]["check"]){
+					if(msg["status"]){
 						$("#reset_password_dialog").hide();
         				flex($("#reset_password_success_dialog").show());
 					}
 					else{
 						console.log("error");
-						//error_message.text(msg[0]["message"]);
+						//msg["message"]
 					}  
 				},
 
