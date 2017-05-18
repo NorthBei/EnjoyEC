@@ -60,7 +60,6 @@ window.addEventListener("load",function(){
         judgeShowErrorMsg(register_phone,isPhoneValid);
 
         //Match entries that appear in the DD-MM-YYYY format
-        //Match entries that appear in the DD/MM/YYYY format
         var $DD_MM_YYYY = "[0-9]{2}[-|\/]{1}[0-9]{2}[-|\/]{1}[0-9]{4}";
         var regexp = new RegExp($DD_MM_YYYY);
 
@@ -80,30 +79,29 @@ window.addEventListener("load",function(){
         }
 
         if(isNameValid && isPhoneValid && isBirthValid){
-
+            formdata.action = "member_register";
             formdata.name = name;
             formdata.phone = phone;
             formdata.birth = [DD,MM,YYYY];
             
             $.ajax({
-				url: "../wp-content/themes/EnjoyEC/utility/ajax-member-register.php",
+				url: ajaxurl,
 				type:"POST",
 				dataType:'json',
 				data: formdata,
 
 				success: function(msg){
 					console.log(msg);
-                    $("#dialog p").css("visibility","visiable");
-                    showDialog();                
+                    if(msg["status"]){
+                        $("#dialog p").css("visibility","visiable");
+                        showDialog();                    
+                    }
 				},
 
 				 error:function(xhr){
 					console.log(xhr);
 				 }
 			});
-
-
-            
         }
 
     });

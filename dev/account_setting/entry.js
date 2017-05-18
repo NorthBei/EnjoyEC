@@ -51,7 +51,9 @@ window.addEventListener("load",function(){
 				formdata.email = emailValue;
 				formdata.name = nameValue;
 				formdata.phone = phoneValue;
-				formdata.address = city_name+region_name+address;
+				formdata.city = city_name;
+				formdata.area = region_name;
+				formdata.address = address;
 				
 				$.ajax({
 					url: ajaxurl,
