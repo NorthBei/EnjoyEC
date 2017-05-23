@@ -51,6 +51,7 @@ $(document).ready(function() {
     });
 
     $("#bars").click(function(){
+        event.stopPropagation();
         $(this).toggleClass("fa-bars").toggleClass("fa-times");
         $(".mobile_menu").toggleClass("mobile_menu_active");
     });
@@ -75,7 +76,7 @@ $(document).ready(function() {
         }
         else{
             if(postion.left+dropUpWidth > width){
-                console.log($(this).parent());
+                //console.log($(this).parent());
                 $(this).parent().addClass("dropdown_will_attach_right");
             }
         }
@@ -88,6 +89,7 @@ $(document).ready(function() {
     });
 
     $(".dropdown_block_wrapper").click(function(){
+        event.stopPropagation();
         var width = document.body.clientWidth;
         if(width > tablet_width){
             return;
@@ -108,5 +110,24 @@ $(document).ready(function() {
         $(".second_layer>span[data-order="+now_select+"]").removeClass("active");
         $(".second_layer>span[data-order="+order+"]").addClass("active");
         now_select = order;
+    });
+
+    $(document).click(function() {
+
+        var bars = $("#bars");
+        
+        if(bars.hasClass("fa-times")){
+            $("#bars").toggleClass("fa-bars").toggleClass("fa-times");
+            $(".mobile_menu").toggleClass("mobile_menu_active");
+        }
+
+        var block = $(".dropdown_block_wrapper").find(".dropdown_block");
+        if(block.hasClass("dropdown_block_active")){
+            var width = document.body.clientWidth;
+            if(width > tablet_width){
+                return;
+            }
+            block.removeClass("dropdown_block_active");
+        }
     });
 });

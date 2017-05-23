@@ -55,8 +55,9 @@ window.addEventListener("load",function(){
 					console.log(msg);
                     if(msg["0"]["status"]){
                         $("#dialog").show().css('display', 'flex');
-					}else{
-						alert("fuck");
+					}
+					else{
+						
 					}
 				},
 

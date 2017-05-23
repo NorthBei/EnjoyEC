@@ -150,7 +150,7 @@ window.addEventListener("load",function(){
         var MM = $("#register_month").val();
         var DD = $("#register_day").val();
 
-        var str = YYYY+"-"+YY+"-"+DD;
+        var str = YYYY+"-"+MM+"-"+DD;
 
         isBirthValid = regexp.test(str);
         //console.log(str+" = register_birth "+isBirthValid);

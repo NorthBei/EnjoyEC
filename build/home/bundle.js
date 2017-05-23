@@ -106,11 +106,12 @@ $(document).ready(function(){
         $.ajax({
             type: "POST",
             url: ajaxurl,
-            data: "action=subscriber&q="+email,
+            data: {"action":"add_subscriber",
+				        "q":email},
             success: function(msg){
                 console.log(msg);
                 if(msg[0]["status"]){
-                    
+                    $("#useremail").val("");
                 }
                 else{
                     console.log("error");
