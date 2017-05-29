@@ -108,6 +108,7 @@ $(document).ready(function(){
             url: ajaxurl,
             data: {"action":"add_subscriber",
 				        "q":email},
+            datatype : 'json',
             success: function(msg){
                 console.log(msg);
                 if(msg[0]["status"]){

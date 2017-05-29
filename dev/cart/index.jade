@@ -1,0 +1,93 @@
+extends ../_general/temp_page.jade
+
+block content
+    section.steps_section
+        h1 結帳
+        .circles_wrapper
+            .circle_wrapper.circle_active
+                .circle_num 1
+                .circle_text.marT2
+                    span 選擇配送
+                    span.rwd_disappear /
+                    span 付款方式
+            
+            .circle_wrapper
+                .circle_num 2
+                .circle_text 收件資料
+            
+            .circle_wrapper
+                .circle_num 3
+                .circle_text 付款
+            
+            .circle_wrapper
+                .circle_num 4
+                .circle_text 完成交易
+
+    section.order_tables_wrapper.table_wrapper
+        .section_title 訂購商品
+            hr.split
+            form.order_product_table_wrapper
+                table.order_product_table.rwd-table
+                    thead
+                        tr
+                            th 商品
+                            th 商品編號
+                            th 顏色
+                            th 單價
+                            th 數量
+                            th 小計
+                    tbody
+                        tr
+                        tr
+                            td(data-th='商品') 
+                                img(src="./img/商品一.png")
+                                a(href="#") 如膠似漆2.0系列-We The Female 凱莉的最愛 ISLW64
+                            td(data-th='商品編號') NP00123456
+                            td(data-th='顏色') 
+                                img(src="./img/color-3.png")
+                            td(data-th='單價') 
+                                .now_price $ 390
+                                .normal_price $ 490
+                            td(data-th='數量') 1
+                            td(data-th='小計') $ 390
+                        tr
+                        tr
+                            td(data-th='商品') 
+                                img(src="./img/商品一.png")
+                                a(href="#") 如膠似漆2.0系列-We The Female 凱莉的最愛 ISLW64
+                            td(data-th='商品編號') NP00123456
+                            td(data-th='顏色') 
+                                img(src="./img/color-3.png")
+                            td(data-th='單價') 
+                                .now_price $ 390
+                                .normal_price $ 490
+                            td(data-th='數量') 1
+                            td(data-th='小計') $ 390
+                
+                .statistics_table
+                        span
+                            .count_name 總計金額
+                                .count_note (不含滿額或滿量現折金額)
+                            .count_price $ 3600
+                        
+                        span
+                            .count_name 滿額/滿量現折金額
+                            .count_price -$ 700
+                        
+                        span
+                            .count_name 優惠券代碼折抵
+                            .count_price -$ 100
+                        
+                        span
+                            .count_name 購物金折抵
+                            .count_price
+                        
+                        span
+                            .count_name 運費
+                            .count_price $ 10
+                        
+                        hr
+                        
+                        span.sum_result
+                            .count_name 合計
+                            .count_price $ 2870

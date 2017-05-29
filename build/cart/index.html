@@ -135,19 +135,89 @@
       </div>
     </header>
     <main id="main">
-      <section class="reset_password_section form_section">
-        <h1> 重設密碼</h1>
-        <div class="form">
-          <input type="password" placeholder="請輸入密碼(六碼以上，至少包含一個數字與英文字母)" require id="check_password" class="input_box section_box">
-          <input type="password" placeholder="請再次輸入密碼" require id="double_check_password" class="input_box section_box">
-          <div class="error_message">密碼輸入錯誤或兩次密碼輸入不符</div>
-          <button id="reset_button" class="input_button input_box section_box">送出</button>
+      <section class="steps_section">
+        <h1>結帳</h1>
+        <div class="circles_wrapper">
+          <div class="circle_wrapper circle_active">
+            <div class="circle_num">1</div>
+            <div class="circle_text marT2"><span>選擇配送</span><span class="rwd_disappear">/</span><span>付款方式</span></div>
+          </div>
+          <div class="circle_wrapper">
+            <div class="circle_num">2</div>
+            <div class="circle_text">收件資料</div>
+          </div>
+          <div class="circle_wrapper">
+            <div class="circle_num">3</div>
+            <div class="circle_text">付款</div>
+          </div>
+          <div class="circle_wrapper">
+            <div class="circle_num">4</div>
+            <div class="circle_text">完成交易</div>
+          </div>
         </div>
       </section>
-      <div id="dialog">
-        <h1>重設密碼成功</h1>
-        <p>請使用新密碼重新登入</p><a href="#">確定</a>
-      </div>
+      <section class="order_tables_wrapper table_wrapper">
+        <div class="section_title">訂購商品
+          <hr class="split">
+          <form class="order_product_table_wrapper">
+            <table class="order_product_table rwd-table">
+              <thead>
+                <tr>
+                  <th>商品</th>
+                  <th>商品編號</th>
+                  <th>顏色</th>
+                  <th>單價</th>
+                  <th>數量</th>
+                  <th>小計</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr></tr>
+                <tr>
+                  <td data-th="商品"> <img src="./img/商品一.png"><a href="#">如膠似漆2.0系列-We The Female 凱莉的最愛 ISLW64</a></td>
+                  <td data-th="商品編號">NP00123456</td>
+                  <td data-th="顏色"> <img src="./img/color-3.png"></td>
+                  <td data-th="單價"> 
+                    <div class="now_price">$ 390</div>
+                    <div class="normal_price">$ 490</div>
+                  </td>
+                  <td data-th="數量">1</td>
+                  <td data-th="小計">$ 390</td>
+                </tr>
+                <tr></tr>
+                <tr>
+                  <td data-th="商品"> <img src="./img/商品一.png"><a href="#">如膠似漆2.0系列-We The Female 凱莉的最愛 ISLW64</a></td>
+                  <td data-th="商品編號">NP00123456</td>
+                  <td data-th="顏色"> <img src="./img/color-3.png"></td>
+                  <td data-th="單價"> 
+                    <div class="now_price">$ 390</div>
+                    <div class="normal_price">$ 490</div>
+                  </td>
+                  <td data-th="數量">1</td>
+                  <td data-th="小計">$ 390</td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="statistics_table"><span>
+                <div class="count_name">總計金額
+                  <div class="count_note">(不含滿額或滿量現折金額)</div>
+                </div>
+                <div class="count_price">$ 3600</div></span><span>
+                <div class="count_name">滿額/滿量現折金額</div>
+                <div class="count_price">-$ 700</div></span><span>
+                <div class="count_name">優惠券代碼折抵</div>
+                <div class="count_price">-$ 100</div></span><span>
+                <div class="count_name">購物金折抵</div>
+                <div class="count_price"></div></span><span>
+                <div class="count_name">運費</div>
+                <div class="count_price">$ 10</div></span>
+              <hr><span class="sum_result">
+                <div class="count_name">合計</div>
+                <div class="count_price">$ 2870</div></span>
+            </div>
+          </form>
+        </div>
+      </section>
     </main>
     <footer id="footer">
       <div id="footer_link">

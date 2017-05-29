@@ -1,13 +1,16 @@
 require("../_general/general.js");
 
+var isFB_Register = false;
+var fb_data = {};
 window.addEventListener("load",function(){
-    var formdata = {};
+    
     // = {mail:regEmail,
 	// 						pass:regPass,
 	// 						name:regName,
 	// 						phone:regPhone,
 	// 						birth:birthArray};
     $("#email_register").on("click",function(){
+        var formdata = {};
         //At least one upper case english letter, (?=.*?[A-Z])
         //At least one lower case english letter, (?=.*?[a-z])
         //At least one digit, (?=.*?[0-9])
@@ -45,6 +48,7 @@ window.addEventListener("load",function(){
     });
 
     $("#check_register_button").on("click",function(){
+        var formdata = {};
         var isNameValid,isPhoneValid,isBirthValid = false;
 
         var register_name = $("#register_name");
@@ -86,7 +90,18 @@ window.addEventListener("load",function(){
             formdata.name = name;
             formdata.phone = phone;
             formdata.birth = [DD,MM,YYYY];
-            
+
+            if(isFB_Register){
+				formdata.action = "fb_login_user";
+                formdata.fb_id = fb_data.fb_id;
+                //formdata.mail = fb_data.mail;
+                formdata.mail = $("#register_fb_email").val();
+				console.log('user is using fb login');
+			}
+            else{
+				formdata.action = "member_register";
+			}
+			
             $.ajax({
 				url: ajaxurl,
 				type:"POST",
@@ -100,7 +115,6 @@ window.addEventListener("load",function(){
                         showDialog();                    
                     }
 				},
-
 				 error:function(xhr){
 					console.log(xhr);
 				 }
@@ -112,6 +126,65 @@ window.addEventListener("load",function(){
     $("#check_receive").on("click",function(){
         $("#dialog").hide();
     });
+
+    $("#fb_register").on("click",function(){
+		if( navigator.userAgent.match('CriOS') ) {
+           FB.getLoginStatus( handleResponse );
+        } 
+        else {
+            try {
+                FB.login(handleResponse, {
+                    scope: 'email,public_profile',//只能要到這兩個，這兩個是公開可以要的資料
+                    return_scopes: true,
+                    auth_type: 'rerequest'
+                });
+            } catch (err) {
+                alert('Facebook Init is not loaded. Check that you are not running any blocking software or that you have tracking protection turned off if you use Firefox');
+            }
+        }
+	});
+	var handleResponse = function( response ) {
+        if (response.status == 'connected') {
+            var fb_response = response;
+			//console.log(response.authResponse.email);
+            /**
+             * Send the obtained token to server side for extra checks and user data retrieval
+             */
+            $.ajax({
+                data: {
+                    action: "fb_login_data",
+                    fb_response: fb_response,
+                },
+                type: "POST",
+				dataType: 'json',
+                url: ajaxurl,
+                success: function (msg) {
+					if(msg[0]["status"]){// true is 已註冊過的 看是要
+                        //$("#dialog p").css("visibility","visiable");
+                        //showDialog();
+                        alert("已註冊過");
+                    }
+                    else{// false is 未註冊過的 跳填寫資料頁面
+                        isFB_Register = true;
+						fb_data.mail = msg.email;
+						fb_data.fb_id = msg.id;
+                        $(".register_data_section>h1").text("請核對會員資料就可完成註冊");
+                        $("#register_fb_email").val(msg.email).show();
+						$("#register_name").val(msg.last_name+msg.first_name);
+						$(".register_data_section").show();
+						$(".login_section").hide();
+					}
+                },
+                error: function (data) {
+                    alert('Enjoy server error');
+                }
+            });
+
+        } else {
+            
+        }
+	};
+	
 });
 
 function showDialog(){

@@ -4,8 +4,8 @@ block content
     section.reset_password_section.form_section
         h1  重設密碼
         div.form
-            input(type="password" placeholder="請輸入密碼(六碼以上，至少包含一個數字與英文字母)" require).input_box.section_box
-            input(type="password" placeholder="請再次輸入密碼" require).input_box.section_box
+            input(type="password" placeholder="請輸入密碼(六碼以上，至少包含一個數字與英文字母)" require).input_box.section_box#check_password
+            input(type="password" placeholder="請再次輸入密碼" require).input_box.section_box#double_check_password
             div.error_message 密碼輸入錯誤或兩次密碼輸入不符
             button.input_button.input_box.section_box#reset_button 送出
 

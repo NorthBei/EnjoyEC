@@ -1,0 +1,309 @@
+    //以下是複製order_detial/ all.styl
+@import "../_general/member_section/member_section"
+@import "../_general/rwd_table/rwd_table"
+
+.statistics_table
+    width: 300px;
+    align-self: flex-end;
+    
+    &>span
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 10px;
+        font-size: 15px;
+        margin-right: 30px;
+
+    .count_name
+        text-align: right
+        .count_note
+            font-weight: 100
+            font-size: 13px
+
+    .count_price
+        width: 105px;
+        text-align: right;
+        font-weight: 100;
+    
+    hr
+        border-top: 1px solid #4a4a4a
+.sum_result
+    color: #8B572A
+
+.section_title
+    margin-top: 12px;
+    .split
+        margin: 16px 0
+
+/*cancel_detial_table*/
+.cancel_detial_table
+    th
+        display: none
+
+    tbody
+        tr
+            height: initial
+            margin-bottom: 10px;
+            display: flex;
+            flex-wrap: wrap;
+    td
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        width: 33.3%;
+        line-height: 48px;
+        
+        &:before
+            content: attr(data-th) " ";
+            display: flex
+            flex-axis:center
+
+.order_product_table_wrapper
+    padding: 25px
+    background: #FFF8F6
+    position: relative;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+
+    &:before
+        content: "商品";
+        color: #d6645f;
+        line-height: 40px;
+        position: absolute;
+        width: 100%;
+        background: #f6eae6;
+        height: 40px;
+        left: 0;
+        z-index: 1;
+
+.order_product_table
+    z-index: 2;
+    position: relative;
+    margin-bottom: 15px
+    
+    th
+        &:first-child
+            width: 40%
+
+    td
+        background: white
+        padding: 0
+
+    td[data-th='商品']
+        display: flex;
+        align-items: center;
+        color: #8B572A
+        
+        a
+            text-decoration: underline;
+            text-align: left;
+            margin-left: 20px;
+
+        img
+            height: 150px
+
+    td[data-th='單價']
+            position: relative;
+
+            .normal_price
+                position: absolute;
+                width: 100%;
+                text-align: center;
+                margin-top: 15px;
+                text-decoration: line-through;
+    td[data-th='顏色']
+        img
+            size 31px
+
+    tbody
+        tr
+            color: #4a4a4a
+            border: none;
+            &:nth-child(even)
+                height: 150px
+                border: none;
+            &:nth-child(odd)
+                height: 15px
+            &:first-child
+                height: 25px
+/*order_tables ovrrider rwd*/
++media-query( all, max-width $phone_rwd_width )
+    .order_product_table_wrapper
+        padding: 15px 5px
+    .order_product_table
+        td
+            display: flex;
+            align-items: center;
+            color: #4a4a4a
+            background: white
+            flex-direction: column;
+            padding: 0;
+            width: 19%;
+
+        td[data-th='商品']
+            width: 100%
+            flex-direction: row;
+            padding-bottom: 22px;
+
+            &:before
+                display: none
+            
+            a
+                margin-left: 10px;
+                line-height: initial;
+            
+            img
+                height: 107px
+        td[data-th='商品編號']
+            width: 24%
+        
+        td[data-th='單價']
+            position: relative;
+
+            .normal_price
+                position: initial;
+                margin-top: 0
+            .now_price,.normal_price
+                line-height: 12px;
+
+        td[data-th='顏色']
+                img
+                    margin-top: 6px;
+        tbody
+            tr
+                &:nth-child(odd)
+                    height: 5px
+                    display: none
+                &:first-child
+                    height: 35px
+                    display: block
+                &:nth-child(even)
+                    height: initial
+                    margin-bottom: 5px;
+    .order_product_table td:before
+        background: white;
+        color: #4a4a4a;
+    
+    .now_price
+        margin-top: 11px
+    .statistics_table
+        width: 100%
+
+        span
+            margin-right: calc("100% - 300px")
+/*order_tables*/
+
++media-query( all, max-width $phone_rwd_width )
+  .section_title
+        margin-top: 0;
+
+/*以上直接reference到order_detial page all.styl (copy and paste)*/
+
+#main
+    width: 100%;
+    max-width: 985px;
+    margin: 0 auto;
+
+
+.steps_section
+    display: flex
+    flex-direction: column
+    align-items: center
+    
+    h1
+        /* 結帳: */
+        font-size: 30px;
+        color: #4A4A4A;
+        letter-spacing: 0.78px;
+        margin: 60px 0 30px
+        font-weight: 400
+
+.circles_wrapper
+    display: flex
+    justify-content: center
+    align-items: center
+    position: relative;
+    width: 513px;
+    
+
+    &:before
+        content: "";
+        position: absolute;
+        width: 485px;
+        height: 1px;
+        background: #d5948e;
+        z-index: -1;
+        top: 39px;
+
+    .circle_wrapper
+        display: flex
+        justify-content: center
+        align-items: center
+        flex-direction: column
+        color: #D5948E
+        margin: 0 32px;
+        width: 77px;
+
+        .circle_num
+            height: 43px
+            width: 43px
+            border: 16px solid white;
+            border-radius: 50%
+            background: #D5948E
+            display: flex
+            justify-content: center
+            align-items: center
+            font-size: 18px
+            color: white
+
+        .circle_text
+            margin-top: 13px
+            font-size: 14px
+            color: inherit
+            white-space: nowrap
+    
+    .circle_active
+        color: #D6645F
+
+        .circle_num
+            background: #D6645F
+        
+    
++media-query( all, max-width $phone_rwd_width )
+    .rwd_disappear
+        display: none
+
+    #main
+        margin-top: 67px
+        padding: 0 10px
+        box-sizing: border-box
+        
+    
+    .steps_section
+    
+        h1
+            margin: 20px 0
+            font-size: 20px
+
+    .circles_wrapper
+        width: 308px
+
+        &:before
+            top: 25px;
+            width: 260px;
+        .circle_wrapper
+            margin: 0 25px;
+
+            .circle_num
+                width: 34px
+                height: 34px
+                font-size: 15px
+                border: 6px solid white;
+
+            .circle_text
+                font-size: 12px
+                display: flex;
+                flex-direction: column;
+            
+            .marT2
+                margin-top: 2px
