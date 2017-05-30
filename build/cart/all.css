@@ -581,6 +581,58 @@ td:before {
   }
 }
 /*以上直接reference到order_detial page all.styl (copy and paste)*/
+.order_product_table {
+  margin-bottom: 0;
+}
+td[data-th='商品'] img {
+  width: 150px;
+}
+@media all and (max-width: 550px) {
+  .order_product_table td {
+    width: 20%;
+  }
+  td[data-th='商品'] img {
+    width: 107px;
+  }
+}
+.statistics_table {
+  width: 400px;
+}
+.statistics_table>span {
+  margin-right: 135px;
+}
+.statistics_table .button_wrapper {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-justify-content: center;
+  -ms-flex-pack: center;
+      justify-content: center;
+  margin: 45px 0 130px;
+}
+.statistics_table .button_wrapper>button,
+.statistics_table .button_wrapper a {
+  width: 96px;
+  height: 36px;
+  border-radius: 6px;
+  font-size: 15px;
+  font-weight: 300;
+  letter-spacing: 0.4px;
+  margin: 0 20px;
+  cursor: pointer;
+}
+.statistics_table .button_wrapper .keep_buy {
+  background: #fff;
+  border: solid 1.2px #d5948e;
+  color: #d5948e;
+}
+.statistics_table .button_wrapper .next_step {
+  background-color: #d5948e;
+  color: #fff;
+}
+.delete_img {
+  width: 20px;
+  height: 24px;
+}
 #main {
   width: 100%;
   max-width: 985px;
@@ -594,6 +646,7 @@ td:before {
   -ms-align-items: center;
   -ms-flex-align: center;
       align-items: center;
+  margin-bottom: 44px;
 }
 .steps_section h1 {
 /* 結帳: */

@@ -607,7 +607,11 @@ input[type="number"]::-webkit-inner-spin-button {
 .value>span {
   white-space: normal;
 }
-.specification>.value>span {
+.specification>.value {
+  width: 100%;
+  word-break: break-all;
+}
+.specification>.value >span {
   margin-bottom: 10px;
 }
 .product_histroy {
