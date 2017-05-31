@@ -108,33 +108,38 @@ $(document).ready(function(){
             url: ajaxurl,
             data: {"action":"add_subscriber",
 				        "q":email},
-            datatype : 'json',
+            dataType : 'json',
             success: function(msg){
                 console.log(msg);
                 if(msg[0]["status"]){
-                    $("#subscribe_success").text("訂閱成功").show();
+                    $("#subscribe_success h1").text("訂閱成功").show();
                     $("#useremail").val("");
+                    closeDialog2s();
                 }
                 else{
                     switch(msg[0]["message"]){
                         case "email error":
-                            $("#subscribe_success").text("Email格式錯誤").show();
+                            $("#subscribe_success h1").text("Email格式錯誤").show();
                             break;
                         case "email existed":
-                            $("#subscribe_success").text("已經訂閱過囉").show();
+                            $("#subscribe_success h1").text("已經訂閱過囉").show();
                             break;
                     }
+                    closeDialog2s();
                 }
             },
             error:function(){
-                $("#subscribe_success").text("訂閱功能出了點問題").show();
+                $("#subscribe_success h1").text("訂閱功能出了點問題").show();
                 console.log("error");
+                closeDialog2s();
             }
         });
     });
 
 });
-
+function closeDialog2s(){
+    setInterval(function(){ $("#subscribe_success").hide(); }, 2000);
+}
 function validateEmail(email) {
     var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return re.test(email);

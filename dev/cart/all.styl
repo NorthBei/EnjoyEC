@@ -223,7 +223,7 @@ td[data-th='商品']
         display: flex
         justify-content: center;
         margin: 45px 0 130px
-        &>button,a
+        &>a
             width: 96px;
             height: 36px;
             border-radius: 6px;
@@ -232,6 +232,11 @@ td[data-th='商品']
             letter-spacing: 0.4px;
             margin: 0 20px;
             cursor: pointer
+            box-sizing: border-box;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
 
         .keep_buy
             background: white;
@@ -241,8 +246,18 @@ td[data-th='商品']
         .next_step
             background-color: #d5948e;
             color: white;
++media-query( all, max-width $phone_rwd_width )
+    .statistics_table
+        width: 100%;
+        display: flex;
+        flex-direction: column;
 
+        &>span
+            margin-right: calc("100% - 300px")
 
+        hr
+            width: 100%;
+    
 .delete_img
     size: 20px 24px
 

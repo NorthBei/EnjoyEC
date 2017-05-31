@@ -609,8 +609,7 @@ td[data-th='商品'] img {
       justify-content: center;
   margin: 45px 0 130px;
 }
-.statistics_table .button_wrapper>button,
-.statistics_table .button_wrapper a {
+.statistics_table .button_wrapper>a {
   width: 96px;
   height: 36px;
   border-radius: 6px;
@@ -619,6 +618,16 @@ td[data-th='商品'] img {
   letter-spacing: 0.4px;
   margin: 0 20px;
   cursor: pointer;
+  box-sizing: border-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-justify-content: center;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-align-items: center;
+  -ms-flex-align: center;
+      align-items: center;
+  text-align: center;
 }
 .statistics_table .button_wrapper .keep_buy {
   background: #fff;
@@ -628,6 +637,21 @@ td[data-th='商品'] img {
 .statistics_table .button_wrapper .next_step {
   background-color: #d5948e;
   color: #fff;
+}
+@media all and (max-width: 550px) {
+  .statistics_table {
+    width: 100%;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+  .statistics_table>span {
+    margin-right: calc(100% - 300px);
+  }
+  .statistics_table hr {
+    width: 100%;
+  }
 }
 .delete_img {
   width: 20px;

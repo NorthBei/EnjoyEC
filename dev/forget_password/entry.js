@@ -55,9 +55,12 @@ window.addEventListener("load",function(){
 					console.log(msg);
                     if(msg["0"]["status"]){
                         $("#dialog").show().css('display', 'flex');
+						// ("status"=>true, "message"=>"有寄出去");
 					}
 					else{
-						
+						// ("status"=>false, "message"=>"沒寄出去");
+						// ("status"=>false, "message"=>"該Email尚未註冊");
+						// ("status"=>false, "message"=>"Email或生日輸入錯誤");
 					}
 				},
 

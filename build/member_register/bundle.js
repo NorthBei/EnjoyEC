@@ -175,13 +175,13 @@ window.addEventListener("load",function(){
 				formdata.action = "fb_login_user";
                 formdata.fb_id = fb_data.fb_id;
                 //formdata.mail = fb_data.mail;
-                formdata.mail = $("#register_fb_email").val();
-				console.log('user is using fb login');
+				//console.log('user is using fb login');
 			}
             else{
 				formdata.action = "member_register";
 			}
-			
+			formdata.mail = $("#register_fb_email").val();
+            
             $.ajax({
 				url: ajaxurl,
 				type:"POST",
