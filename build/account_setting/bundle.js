@@ -116,13 +116,13 @@ window.addEventListener("load",function(){
         
         if(isEdit){
             var city_name = $("#city_name").text();
-			alert("city_name:"+city_name);
+			alert("city_name:x"+city_name+"x");
             var region_name = $("#region_name").text();
 			alert("region_name:"+region_name);
-            $('#receive_city_id option[value="'+city_name+'"]').attr('selected',true).prop('selected', true);
+            $('#receive_city_id option[value="'+city_name+'"]').eq(0).attr('selected',true).prop('selected', true);
 			$("#receive_city_id").trigger("change");
 			alert("city option:");
-            $("#receive_region_id option[value='"+region_name+"']").attr('selected',true).prop('selected', true);
+            $("#receive_region_id option[value='"+region_name+"']").eq(0).attr('selected',true).prop('selected', true);
 			alert("region option:");
             $('.reset_password_row').css('visibility','hidden');
             flex($(".select_wrapper"));
@@ -331,11 +331,11 @@ var Zone = new Array(27);
 
 function changeCity() {
 	try {
-
+	var xx = $("#receive_city_id option:selected").index();
+	alert("xx"+xx);
 	var selectedCountyIndex = $("#receive_city_id").get(0).selectedIndex;
 	alert(selectedCountyIndex);
 	var regionInput = $("#receive_region_id").get(0);
-	alert(regionInput);
 	//if (selectedCountyIndex=>0){
 		regionInput.length = Zone[selectedCountyIndex].length +1;
 		//regionInput.options[0].value = "";
