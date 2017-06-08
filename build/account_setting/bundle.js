@@ -119,10 +119,11 @@ window.addEventListener("load",function(){
 			alert("city_name:"+city_name);
             var region_name = $("#region_name").text();
 			alert("region_name:"+region_name);
-            $("#receive_city_id option[value='"+city_name+"']").attr('selected',true);
+			alert("option is :"+$('#receive_city_id option[value="'+city_name+'"]').toString());
+            $('#receive_city_id option[value="'+city_name+'"]').attr('selected',true).prop('selected', true);
 			$("#receive_city_id").trigger("change");
 			alert("city option:");
-            $("#receive_region_id option[value='"+region_name+"']").attr('selected',true);
+            $("#receive_region_id option[value='"+region_name+"']").attr('selected',true).prop('selected', true);
 			alert("region option:");
             $('.reset_password_row').css('visibility','hidden');
 			alert("4");
