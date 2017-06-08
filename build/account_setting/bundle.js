@@ -334,7 +334,9 @@ var Zone = new Array(27);
 
 function changeCity() {
 	var selectedCountyIndex = $("#receive_city_id").get(0).selectedIndex;
+	alter(selectedCountyIndex);
 	var regionInput = $("#receive_region_id").get(0);
+	alter(regionInput);
 	//if (selectedCountyIndex=>0){
 		regionInput.length = Zone[selectedCountyIndex].length +1;
 		//regionInput.options[0].value = "";
