@@ -120,11 +120,11 @@ window.addEventListener("load",function(){
             var region_name = $("#region_name").text();
 			alert("region_name:"+region_name);
             //$('#receive_city_id option[value="'+city_name+'"]').eq(0).attr('selected',true).prop('selected', true);
-			$('#receive_city_id option[value="台中市"]').eq(0).attr('selected',true).prop('selected', true);
+			$('[name=receive_city]').val(city_name);
+			//$('#receive_city_id option[value="台中市"]').eq(0).attr('selected',true).prop('selected', true);
 			$("#receive_city_id").trigger("change");
-			alert("city option:");
-            $("#receive_region_id option[value='"+region_name+"']").eq(0).attr('selected',true).prop('selected', true);
-			alert("region option:");
+			$('[name=receive_region]').val(region_name);
+            //$("#receive_region_id option[value='"+region_name+"']").eq(0).attr('selected',true).prop('selected', true);
             $('.reset_password_row').css('visibility','hidden');
             flex($(".select_wrapper"));
             $(".input_address").css("display","block");
