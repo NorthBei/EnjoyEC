@@ -119,7 +119,8 @@ window.addEventListener("load",function(){
 			alert("city_name:x"+city_name+"x");
             var region_name = $("#region_name").text();
 			alert("region_name:"+region_name);
-            $('#receive_city_id option[value="'+city_name+'"]').eq(0).attr('selected',true).prop('selected', true);
+            //$('#receive_city_id option[value="'+city_name+'"]').eq(0).attr('selected',true).prop('selected', true);
+			$('#receive_city_id option[value="台中市"]').eq(0).attr('selected',true).prop('selected', true);
 			$("#receive_city_id").trigger("change");
 			alert("city option:");
             $("#receive_region_id option[value='"+region_name+"']").eq(0).attr('selected',true).prop('selected', true);
