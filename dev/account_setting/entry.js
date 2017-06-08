@@ -10,10 +10,10 @@ window.addEventListener("load",function(){
 			alert("city_name:"+city_name);
             var region_name = $("#region_name").text();
 			alert("region_name:"+region_name);
-            $("#receive_city_id option[value='"+city_name+"']").attr('selected','selected');
+            $("#receive_city_id option[value='"+city_name+"']").attr('selected',true);
 			$("#receive_city_id").trigger("change");
 			alert("city option:");
-            $("#receive_region_id option[value='"+region_name+"']").attr('selected','selected');
+            $("#receive_region_id option[value='"+region_name+"']").attr('selected',true);
 			alert("region option:");
             $('.reset_password_row').css('visibility','hidden');
 			alert("4");
@@ -224,6 +224,8 @@ var Zone = new Array(27);
 	Zone[22]=new Array("花蓮市","新城鄉","秀林鄉","吉安鄉","壽豐鄉","鳳林鎮","光復鄉","豐濱鄉","瑞穗鄉","萬榮鄉","玉里鎮","卓溪鄉","富里鄉")
 
 function changeCity() {
+	try {
+
 	var selectedCountyIndex = $("#receive_city_id").get(0).selectedIndex;
 	alert(selectedCountyIndex);
 	var regionInput = $("#receive_region_id").get(0);
@@ -236,6 +238,10 @@ function changeCity() {
 			regionInput.options[i].value = Zone[selectedCountyIndex][i-1];
 			regionInput.options[i].text = Zone[selectedCountyIndex][i-1];
 		}
+	}
+	catch(err) {
+		alert(err);
+	}
     //}
 	// else{
 	// 	regionInput.length = 1;
