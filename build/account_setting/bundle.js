@@ -331,8 +331,7 @@ var Zone = new Array(27);
 
 function changeCity() {
 	try {
-	var xx = $("#receive_city_id option:selected").index();
-	alert("xx"+xx);
+	$("#receive_city_id").show();
 	var selectedCountyIndex = $("#receive_city_id").get(0).selectedIndex;
 	alert(selectedCountyIndex);
 	var regionInput = $("#receive_region_id").get(0);
