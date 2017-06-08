@@ -116,12 +116,19 @@ window.addEventListener("load",function(){
         
         if(isEdit){
             var city_name = $("#city_name").text();
+			alert("city_name:"+city_name);
             var region_name = $("#region_name").text();
+			alert("region_name:"+region_name);
             $("#receive_city_id option[value='"+city_name+"']").attr('selected','selected').trigger("change");
+			alert("city option:");
             $("#receive_region_id option[value='"+region_name+"']").attr('selected','selected');
+			alert("region option:");
             $('.reset_password_row').css('visibility','hidden');
+			alert("4");
             flex($(".select_wrapper"));
+			alert("5");
             $(".input_address").css("display","block");
+			alert("6");
         }
         else{
 			//console.log("按下確定");
