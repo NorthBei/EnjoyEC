@@ -119,7 +119,8 @@ window.addEventListener("load",function(){
 			alert("city_name:"+city_name);
             var region_name = $("#region_name").text();
 			alert("region_name:"+region_name);
-            $("#receive_city_id option[value='"+city_name+"']").attr('selected','selected').trigger("change");
+            $("#receive_city_id option[value='"+city_name+"']").attr('selected','selected');
+			$("#receive_city_id").trigger("change");
 			alert("city option:");
             $("#receive_region_id option[value='"+region_name+"']").attr('selected','selected');
 			alert("region option:");
