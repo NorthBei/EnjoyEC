@@ -116,10 +116,7 @@ window.addEventListener("load",function(){
         
         if(isEdit){
             var city_name = $("#city_name").text();
-            alert("city_name:x"+city_name+"x");
-            var region_name = $("#region_name").text();
-            alert("region_name:"+region_name);
-            
+            var region_name = $("#region_name").text();            
             $('#receive_city_id[name=receive_city]').val(city_name);
             $("#receive_city_id").trigger("change");
 
