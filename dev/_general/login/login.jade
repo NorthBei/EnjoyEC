@@ -18,6 +18,7 @@ mixin register()
         .form
             input(type="eamil" placeholder="請輸入Email" require).input_box.section_box#register_mail
             .error_message Email或生日輸入錯誤
+            .error_message#mail_already_register Email已經註冊過
             input(type="password" placeholder="請輸入密碼(六碼以上，至少包含一個數字與英文字母)" require).input_box.section_box#register_password
             .error_message 輸入密碼格式不符，密碼需六碼以上，至少包含一個數字與英文字母
             input(type="password" placeholder="請再次輸入密碼" require).input_box.section_box#register_password_twice

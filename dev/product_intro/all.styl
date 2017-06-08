@@ -1,12 +1,27 @@
 @import "../_general/general"
 @import "../_general/banner_section/banner_section"
 @import "../_general/product/product"
+@import "../_general/filter/filter"
 
 $product_big_photo_height = 560px
 $product_big_photo_rwd_height = 318px
 
 .commodity_count
     display:none
+
+.commodity_filter
+    margin: 0;
+    width: 105px;
+
+.select_wrapper
+    margin-top: 25px
+    margin-right: 25px;
+
++media-query( only screen ,max-width ($phone_rwd_width) )
+    .product_intro_wrapper .two_selects
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
 
 .product_intro_wrapper,.product_detial,.product_histroy
     max-width: $banner_max_width
@@ -216,10 +231,15 @@ input[type="number"]::-webkit-inner-spin-button {
     display: flex
     flex-wrap: wrap
     &>span
-        margin-right: 36px
+        white-space: normal;
+        // margin-right: 36px
 
-.specification>.value>span
-    margin-bottom: 10px;
+.specification>.value
+    width: 100%;
+    word-break: break-all;
+    
+    >span
+        margin-bottom: 10px;
 
 .product_histroy
     margin-bottom: 100px

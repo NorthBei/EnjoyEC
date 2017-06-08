@@ -700,6 +700,8 @@ td[data-th='商品'] img {
   background: #d5948e;
   z-index: -1;
   top: 39px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 .circles_wrapper .circle_wrapper {
   display: -ms-flexbox;

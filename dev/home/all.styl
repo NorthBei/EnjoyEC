@@ -266,28 +266,46 @@ $slide_arrow_side_distance = 25px
         &>h2
             font-size: $font12
 
-@media screen and (max-width: 700px) {
-  
-    .col_center{
++media-query( screen , max-width 700px )
+    //手機版直接顯示hover效果
+    .row
+
+         a
+            &:before, &:after
+                opacity: 1;
+                transform: scale(1);
+                z-index: ($row_after_layer + 1);
+
+        
+        
+         .category_text
+            opacity: 1
+
+         .category_text_en
+            transform: translateY(0)
+    
+    .row:after
+            background: rgba(79,51,37,0.7);
+
+    .col_center
         width:100%;
         order:1;
-    }
-    .col_left,.col_right{
+    
+    .col_left,.col_right
         width:50%;
         order:2;
-    }
+    
 
-    #bottom_banner{
+    #bottom_banner
         flex-direction: column
         flex-wrap: wrap
-    }
+    
 
-    .col{
+    .col
         width: 100%;
         padding-bottom: 54%;
-    }
+    
 
-    .slick_slide{
+    .slick_slide
         padding-bottom: 61%;
-    }
-}
+    

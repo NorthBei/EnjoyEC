@@ -86,6 +86,9 @@ $(document).ready(function(){
                         $("#refund_money").text(total_money);
                         $("#cancel_orde_success_dialog").css("display","flex");
                     }
+                    else{
+                        location.reload();
+                    }
                 }
                 else{
                     console.log("error");

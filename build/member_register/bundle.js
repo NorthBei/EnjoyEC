@@ -83,14 +83,31 @@ __webpack_require__(0);
 var isFB_Register = false;
 var fb_data = {};
 window.addEventListener("load",function(){
-    
+
+    $("#register_password_twice").keydown(function(event){
+        var trigger = event.which || event.keyCode;
+        //console.log(trigger);
+        if(trigger == 13){
+            $("#email_register").trigger("click");                    
+        }
+    });
+
+    $("#register_day").keydown(function(event){
+        var trigger = event.which || event.keyCode;
+        //console.log(trigger);
+        if(trigger == 13){
+            $("#check_register_button").trigger("click");                    
+        }
+    });
+
+    var formdata = {};
     // = {mail:regEmail,
 	// 						pass:regPass,
 	// 						name:regName,
 	// 						phone:regPhone,
 	// 						birth:birthArray};
     $("#email_register").on("click",function(){
-        var formdata = {};
+        //var formdata = {};
         //At least one upper case english letter, (?=.*?[A-Z])
         //At least one lower case english letter, (?=.*?[a-z])
         //At least one digit, (?=.*?[0-9])
@@ -121,14 +138,15 @@ window.addEventListener("load",function(){
             formdata.mail = mail;
             formdata.pass = pass;
             
-            $(".register_data_section").show();
-            $(".login_section").hide();
+            checkEmailRepeat(mail);
+            // $(".register_data_section").show();
+            // $(".login_section").hide();
         }
         
     });
 
     $("#check_register_button").on("click",function(){
-        var formdata = {};
+        
         var isNameValid,isPhoneValid,isBirthValid = false;
 
         var register_name = $("#register_name");
@@ -166,7 +184,7 @@ window.addEventListener("load",function(){
         }
 
         if(isNameValid && isPhoneValid && isBirthValid){
-            formdata.action = "member_register";
+            
             formdata.name = name;
             formdata.phone = phone;
             formdata.birth = [DD,MM,YYYY];
@@ -174,13 +192,13 @@ window.addEventListener("load",function(){
             if(isFB_Register){
 				formdata.action = "fb_login_user";
                 formdata.fb_id = fb_data.fb_id;
+                formdata.mail = $("#register_fb_email").val();
                 //formdata.mail = fb_data.mail;
 				//console.log('user is using fb login');
 			}
             else{
 				formdata.action = "member_register";
 			}
-			formdata.mail = $("#register_fb_email").val();
             
             $.ajax({
 				url: ajaxurl,
@@ -192,7 +210,11 @@ window.addEventListener("load",function(){
 					console.log(msg);
                     if(msg[0]["status"]){
                         $("#dialog p").css("visibility","visiable");
-                        showDialog();                    
+                        showDialog(); 
+                        //註冊完要登入
+                        login(formdata.mail,formdata.pass);
+                        formdata = {};
+                        
                     }
 				},
 				 error:function(xhr){
@@ -283,6 +305,71 @@ function judgeShowErrorMsg(ele,isValid){
     else{
         ele.next().show();
     }
+}
+function checkEmailRepeat(mail){
+    var formdata = {};
+    formdata.action = "check_register";
+	formdata.mail = mail;
+			
+    $.ajax({
+        url: ajaxurl,
+        type:"POST",
+        dataType:'json',
+        data: formdata,
+
+        success: function(msg){
+            console.log(msg);
+            if(msg[0]["status"]){
+                //email尚未註冊過
+                $("#mail_already_register").hide();
+                $(".register_data_section").show();
+                $(".login_section").hide();
+            }
+            else{
+                //email已經註冊過
+                $("#mail_already_register").show();
+            }
+        },
+        error:function(xhr){
+            console.log(xhr);
+        }
+    });
+}
+function login(logEmail,logPass){
+    
+    var formdata = {};
+    formdata.action = "check_user";
+    formdata.mail = logEmail;
+    formdata.pass = logPass;
+    $.ajax({
+        url: ajaxurl,
+        type:"POST",
+        dataType:'json',
+        data: formdata,
+
+        success: function(msg){
+            console.log(msg);
+            if(msg[0]["status"]){
+                window.location = msg[0]["message"]; 
+            }
+            else{
+                console.log("error");
+                //msg["message"]
+                error_message.text(msg[0]["message"]);
+            }
+
+            // if(msg[0]["check"]){
+            //     window.location = msg[0]["message"]; 
+            // }
+            // else{
+            //     error_message.text(msg[0]["message"]);
+            // }                       
+        },
+
+        error:function(xhr){
+            console.log(xhr);
+        }
+    });
 }
 
 /***/ })

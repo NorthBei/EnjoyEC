@@ -1,27 +1,8 @@
 extends ../_general/temp_page.jade
+include ../_general/steps/steps.jade
 
 block content
-    section.steps_section
-        h1 結帳
-        .circles_wrapper
-            .circle_wrapper.circle_active
-                .circle_num 1
-                .circle_text.marT2
-                    span 選擇配送
-                    span.rwd_disappear /
-                    span 付款方式
-            
-            .circle_wrapper
-                .circle_num 2
-                .circle_text 收件資料
-            
-            .circle_wrapper
-                .circle_num 3
-                .circle_text 付款
-            
-            .circle_wrapper
-                .circle_num 4
-                .circle_text 完成交易
+    +steps_section(1)
 
     section.order_tables_wrapper.table_wrapper
         .section_title 訂購商品

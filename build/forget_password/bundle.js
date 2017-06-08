@@ -136,8 +136,15 @@ window.addEventListener("load",function(){
                     if(msg["0"]["status"]){
                         $("#dialog").show().css('display', 'flex');
 						// ("status"=>true, "message"=>"有寄出去");
+						$(".form .error_message").css("visibility","hidden");;
 					}
 					else{
+						if(msg["0"]["message"] == "沒寄出去"){
+							$(".form .error_message").text("Enjoy server error").css("visibility","visible");
+						}
+						else{
+							$(".form .error_message").text(msg["0"]["message"]).css("visibility","visible");
+						}
 						// ("status"=>false, "message"=>"沒寄出去");
 						// ("status"=>false, "message"=>"該Email尚未註冊");
 						// ("status"=>false, "message"=>"Email或生日輸入錯誤");

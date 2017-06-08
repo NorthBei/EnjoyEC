@@ -135,43 +135,31 @@
       </div>
     </header>
     <main id="main">
-      <section class="login_section form_section">
-        <h1>會員註冊</h1>
-        <div id="fb_register" class="input_button fb_login section_box">facebook註冊</div>
-        <hr/>
-        <div class="form">
-          <input type="eamil" placeholder="請輸入Email" require="require" id="register_mail" class="input_box section_box"/>
-          <div class="error_message">Email或生日輸入錯誤</div>
-          <div id="mail_already_register" class="error_message">Email已經註冊過</div>
-          <input type="password" placeholder="請輸入密碼(六碼以上，至少包含一個數字與英文字母)" require="require" id="register_password" class="input_box section_box"/>
-          <div class="error_message">輸入密碼格式不符，密碼需六碼以上，至少包含一個數字與英文字母</div>
-          <input type="password" placeholder="請再次輸入密碼" require="require" id="register_password_twice" class="input_box section_box"/>
-          <div class="error_message">兩次密碼輸入不符 或 請再次輸入密碼</div>
-          <input type="submit" value="Email註冊" id="email_register" class="input_button input_box section_box"/>
+      <section class="steps_section">
+        <h1>結帳</h1>
+        <div class="circles_wrapper">
+          <div class="circle_wrapper circle_active">
+            <div class="circle_num">1</div>
+            <div class="circle_text marT2"><span>選擇配送</span><span class="rwd_disappear">/</span><span>付款方式</span></div>
+          </div>
+          <div class="circle_wrapper circle_active">
+            <div class="circle_num">2</div>
+            <div class="circle_text">收件資料</div>
+          </div>
+          <div class="circle_wrapper circle_active">
+            <div class="circle_num">3</div>
+            <div class="circle_text">付款</div>
+          </div>
+          <div class="circle_wrapper circle_active">
+            <div class="circle_num">4</div>
+            <div class="circle_text">完成交易</div>
+          </div>
         </div>
       </section>
-      <section class="register_data_section form_section">
-        <h1 class="marB32">請填寫/核對會員資料就可完成註冊</h1>
-        <div class="form">
-          <input type="email" placeholder="Eamil" require id="register_fb_email" class="input_box section_box">
-          <div class="error_message">請輸入email</div>
-          <input type="text" placeholder="姓名" require id="register_name" class="input_box section_box">
-          <div class="error_message">請輸入姓名</div>
-          <input type="phone" placeholder="聯絡電話" require id="register_phone" class="input_box section_box">
-          <div class="error_message">請輸入聯絡電話</div><span class="input_date_wrapper">
-            <input type="text" placeholder="YYYY" require id="register_year" class="input_box input_year">
-            <input type="text" placeholder="MM" require id="register_month" class="input_box input_month">
-            <input type="text" placeholder="DD" require id="register_day" class="input_box input_day"></span>
-          <div class="error_message">請輸入生日</div>
-          <div class="reminder marB32">生日填寫後即不可更改，請確認生日是否填寫正確</div>
-          <div class="reminder">按下確認就代表您已查看並同意<a href="">隱私權政策</a>與<a href="">購物須知</a></div>
-          <button id="check_register_button" class="input_button input_box section_box">確認</button>
-        </div>
+      <section class="result_section">
+        <!--div.face *\(^o^)/*--><img src="./img/face.png" alt="" class="face">
+        <p>您已成功下單，我們會盡快籌備出貨，如欲<br>查詢訂單明細請到會員專區，謝謝！</p><a class="button">回首頁~~</a>
       </section>
-      <div id="dialog">
-        <h1>恭喜您已完成註冊</h1>
-        <p>請至信箱收取認證信完成註冊程序，謝謝！</p><a href="#" id="check_receive">確定</a>
-      </div>
     </main>
     <footer id="footer">
       <div id="footer_link">

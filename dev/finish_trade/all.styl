@@ -1,0 +1,44 @@
+@import "../_general/general"
+@import "../_general/steps/steps"
+
+.result_section
+    margin-top: 70px
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .face
+        height: 105px
+
+    p
+        margin: 30px 0 50px
+        color: #D6645F
+        font-size: 20px
+        text-align: center;
+    
+    .button
+        /* Rectangle: */
+        background: #D5948E;
+        border-radius: 6px;
+        /* 回首頁: */
+        font-size: 15px;
+        color: #FFFFFF;
+        letter-spacing: 0.39px;
+        size: 96px 36px
+        display: flex
+        justify-content: center
+        align-items: center
+        margin-bottom: 50px
+
++media-query( only screen ,max-width ($phone_rwd_width) )
+    .result_section
+        .face
+            height: initial
+            width: 90%
+
+        p
+            font-size: 15px
+        
+        .button
+            font-size: 12px
+            

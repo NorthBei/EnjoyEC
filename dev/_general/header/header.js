@@ -98,7 +98,8 @@ $(document).ready(function() {
     });
 
     var now_select = 1;
-    $(".first_layer>li").click(function(){
+    $(".first_layer>li").click(function(e){
+        e.stopPropagation();
         $(".first_layer>li[data-order="+now_select+"]").removeClass("active");
         var li = $(this);
         li.addClass("active");

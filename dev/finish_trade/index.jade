@@ -1,0 +1,10 @@
+extends ../_general/temp_page.jade
+include ../_general/steps/steps.jade
+
+block content
+    +steps_section(4)
+    section.result_section
+        //div.face *\(^o^)/*
+        img(src="./img/face.png", alt="").face
+        p 您已成功下單，我們會盡快籌備出貨，如欲<br>查詢訂單明細請到會員專區，謝謝！
+        a.button 回首頁~~

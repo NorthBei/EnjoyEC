@@ -390,6 +390,25 @@
   }
 }
 @media screen and (max-width: 700px) {
+  .row a:before,
+  .row a:after {
+    -ms-filter: none;
+    filter: none;
+    opacity: 1;
+    transform: scale(1);
+    z-index: 4;
+  }
+  .row .category_text {
+    -ms-filter: none;
+    filter: none;
+    opacity: 1;
+  }
+  .row .category_text_en {
+    transform: translateY(0);
+  }
+  .row:after {
+    background: rgba(79,51,37,0.7);
+  }
   .col_center {
     width: 100%;
     -ms-order: 1;

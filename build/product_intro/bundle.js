@@ -97,7 +97,7 @@ $(document).ready(function(){
     $('#product_photo_list img').click(function(){
         var link = $(this).attr("data-url");
         if(link != undefined){
-            $("#product_photo").attr("src",link);
+            $("#product_photo").attr("src",link).attr("srcset",link);
         }
     });
 
