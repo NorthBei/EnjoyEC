@@ -147,6 +147,18 @@
   border-left: none;
   border-right: none;
   padding: 10px 0;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-justify-content: center;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-align-items: center;
+  -ms-flex-align: center;
+      align-items: center;
+}
+.product.price .fake_price {
+  margin-right: 50px;
+  text-decoration: line-through;
 }
 .product_img_wrapper {
   width: 285px;
