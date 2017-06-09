@@ -340,6 +340,7 @@
 #city_name,
 #region_name {
   white-space: nowrap;
+  font-weight: 400;
 }
 .select_wrapper {
   width: 211px;

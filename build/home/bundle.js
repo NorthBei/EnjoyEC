@@ -112,21 +112,22 @@ $(document).ready(function(){
             success: function(msg){
                 console.log(msg);
                 if(msg[0]["status"]){
-                    $("#subscribe_success h1").text("訂閱成功").show();
+                    $("#subscribe_success h1").text("訂閱成功");
                     $("#useremail").val("");
-                    closeDialog2s();
                 }
                 else{
                     switch(msg[0]["message"]){
                         case "email error":
-                            $("#subscribe_success h1").text("Email格式錯誤").show();
+                            $("#subscribe_success h1").text("Email格式錯誤");
                             break;
                         case "email existed":
-                            $("#subscribe_success h1").text("已經訂閱過囉").show();
+                            $("#subscribe_success h1").text("已經訂閱過囉");
                             break;
                     }
-                    closeDialog2s();
+                    
                 }
+                $("#subscribe_success").show();
+                closeDialog2s();
             },
             error:function(){
                 $("#subscribe_success h1").text("訂閱功能出了點問題").show();

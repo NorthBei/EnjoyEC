@@ -96,6 +96,8 @@
   display: flex;
   -ms-flex-direction: column;
   flex-direction: column;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
 }
 #top_banner {
   width: 100%;
@@ -346,6 +348,8 @@
 .slick-track {
   display: -ms-flexbox;
   display: flex;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
 }
 .slick-dotted.slick-slider {
   margin: 0;

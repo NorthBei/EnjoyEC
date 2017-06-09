@@ -116,11 +116,15 @@ window.addEventListener("load",function(){
         
         if(isEdit){
             var city_name = $("#city_name").text();
-            var region_name = $("#region_name").text();            
-            $('#receive_city_id[name=receive_city]').val(city_name);
-            $("#receive_city_id").trigger("change");
+            var region_name = $("#region_name").text();
+            
+            if(city_name != "" && region_name != ""){
+                $('#receive_city_id[name=receive_city]').val(city_name);
+                $("#receive_city_id").trigger("change");
 
-            $('#receive_region_id[name=receive_region]').val(region_name);
+                $('#receive_region_id[name=receive_region]').val(region_name);
+            }
+
             $('.reset_password_row').css('visibility','hidden');
             flex($(".select_wrapper"));
             $(".input_address").css("display","block");
