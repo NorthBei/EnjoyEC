@@ -216,6 +216,11 @@ form.dropdown_block:after {
   right: 0;
   top: 9px;
 }
+.dropdown_will_attach_right #member_panel {
+  position: fixed;
+  right: 0;
+  top: 43px;
+}
 #bars {
   width: 18px;
 }
