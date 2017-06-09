@@ -96,8 +96,6 @@
   display: flex;
   -ms-flex-direction: column;
   flex-direction: column;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
 }
 #top_banner {
   width: 100%;
