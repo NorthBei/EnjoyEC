@@ -1,13 +1,20 @@
 @import "../_general/general"
 @import "../_general/login/login"
 
+/*for IE11*/
+$main_height = "100vh - "+$desktop_header_height
 #main
-    flex: 1
-    
+    height: calc($main_height);//for IE11
+
++media-query( all, max-width $phone_rwd_width )
+    #main
+        height: initial
+        flex: 1;
+/*for IE11*/
 #main,.section_wrapper
     display: flex;
     flex-axis: center
-
+    //flex-direction: column//for IE11
 .section_wrapper
     //margin-top: -5%
     flex-direction: column

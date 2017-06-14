@@ -117,10 +117,18 @@
     width: 289px;
   }
 }
+/*for IE11*/
 #main {
-  -ms-flex: 1;
-  flex: 1;
+  height: calc(100vh - 159px);
 }
+@media all and (max-width: 550px) {
+  #main {
+    height: initial;
+    -ms-flex: 1;
+    flex: 1;
+  }
+}
+/*for IE11*/
 #main,
 .section_wrapper {
   display: -ms-flexbox;

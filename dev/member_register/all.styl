@@ -11,8 +11,18 @@
 #main
     display: flex
     flex-axis:center
-    // flex-direction: column
-    flex: 1
+    // flex-direction: column//for IE11
+
+/*for IE11*/
+$main_height = "100vh - "+$desktop_header_height
+#main
+    height: calc($main_height);//for IE11
+
++media-query( all, max-width $phone_rwd_width )
+    #main
+        height: initial
+        flex: 1;
+/*for IE11*/
 
 .register_data_section
     display: none;
