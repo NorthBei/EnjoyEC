@@ -121,7 +121,7 @@ form.dropdown_block:after {
   padding: 0 24px;
   padding-bottom: 30px;
   box-sizing: border-box;
-  height: initial;
+  height: inherit;
   top: -3px;
   z-index: 10;
   display: -ms-flexbox;
@@ -307,6 +307,7 @@ form.dropdown_block:after {
   box-shadow: 0 1px 2px 0 rgba(97,97,97,0.7);
   position: absolute;
   left: -40px;
+  min-width: 475px;
   z-index: 10;
   margin-top: 24px;
   white-space: nowrap;
@@ -322,6 +323,7 @@ form.dropdown_block:after {
   padding-left: 10px;
   padding-right: 40px;
   position: relative;
+  background: #fff;
 }
 .child_category_wrapper .child_category_list >li {
   padding: 8px 0;
@@ -348,7 +350,7 @@ form.dropdown_block:after {
 }
 .more_option {
   min-height: 220px;
-  max-height: initial;
+  max-height: inherit;
 }
 .more_option .first_layer_triangle {
   position: absolute;
@@ -427,15 +429,15 @@ form.dropdown_block:after {
   transition-delay: 0.7s;
 }
 .parent_category_list .child_will_attach {
-  position: initial;
+  position: static;
 }
 .child_category_wrapper_attach_right {
   right: 0;
-  left: initial;
+  left: auto;
 }
 .child_category_wrapper_attach_left {
   left: 0;
-  right: initial;
+  right: auto;
 }
 .rwd_show {
   display: none;
@@ -568,7 +570,7 @@ form.dropdown_block:after {
   line-height: 45px;
 }
 .scroll_header .nav_btns {
-  position: initial;
+  position: static;
 }
 .scroll_header .child_category_wrapper {
   margin-top: 29px;
@@ -668,7 +670,7 @@ form.dropdown_block:after {
     line-height: 45px;
   }
   #header.isRWD .nav_btns {
-    position: initial;
+    position: static;
   }
   #header.isRWD .child_category_wrapper {
     margin-top: 29px;
