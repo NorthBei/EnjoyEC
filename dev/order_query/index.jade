@@ -151,4 +151,7 @@ block member_section
         
         span.dialog_button_wrapper
             button.dialog_button.dialog_cancel 取消
-            button.dialog_button.dialog_check 確定
+            form(action)
+                input(type="hidden" name="orderID" value="")
+                input(type="submit" value="確定").dialog_button.dialog_check
+            //button.dialog_button.dialog_check 確定

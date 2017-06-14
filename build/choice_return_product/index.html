@@ -180,7 +180,7 @@
                   </tr>
                 </thead>
                 <tbody>
-                  <tr>
+                  <tr class="t_row">
                     <td data-th="商品"> 
                       <!--input(type="checkbox").want_return-->
                       <div class="prodct_info_wrapper">
@@ -201,7 +201,7 @@
                       <input type="number" min="1" max="5" class="input_count">
                     </td>
                     <td data-th="退貨原因">
-                      <select class="select_retun_reason">
+                      <select class="select_return_reason">
                         <option disabled selected value hidden>-</option>
                         <option>XX</option>
                         <option>YY</option>
@@ -210,7 +210,7 @@
                     </td>
                     <td data-th=""></td>
                   </tr>
-                  <tr class="have_comment">
+                  <tr class="have_comment t_row">
                     <td data-th="商品"> 
                       <div class="prodct_info_wrapper">
                         <div class="checkbox_wrapper">
@@ -231,7 +231,7 @@
                       <input type="number" min="0" max="5" class="input_count">
                     </td>
                     <td data-th="退貨原因">
-                      <select class="select_retun_reason">
+                      <select class="select_return_reason">
                         <option disabled selected value hidden>-</option>
                         <option>XX</option>
                         <option>YY</option>
@@ -240,7 +240,7 @@
                     </td>
                     <td data-th=""></td>
                   </tr>
-                  <tr>
+                  <tr class="t_row">
                     <td data-th="商品"> 
                       <!--input(type="checkbox").want_return-->
                       <div class="prodct_info_wrapper">
@@ -261,7 +261,7 @@
                       <input type="number" min="0" max="5" class="input_count">
                     </td>
                     <td data-th="退貨原因">
-                      <select class="select_retun_reason">
+                      <select class="select_return_reason">
                         <option disabled selected value hidden>-</option>
                         <option>XX</option>
                         <option>YY</option>
@@ -281,18 +281,18 @@
             </ul>
             <div class="statistics_table"><span>
                 <div class="count_name">退貨商品金額</div>
-                <div class="count_price">$ 250</div></span><span>
+                <div class="count_price">$ <span id="count_price">250</span></div></span><span>
                 <div class="count_name">未達優惠條件商品需補差額</div>
                 <div class="count_price warning">$ 140</div></span><span>
                 <div class="count_name">未達免運門檻運費</div>
                 <div class="count_price warning">$ 60</div></span><span>
                 <div class="count_name">購物金折抵</div>
-                <div class="count_price">$ 60</div></span><span>
+                <div class="count_price">$ <span id="discount">60</span></div></span><span>
                 <div class="count_name">瑕疵品寄回運費補貼</div>
-                <div class="count_price">$ 10</div></span>
+                <div class="count_price">$ <span id="retrun_shipping_fee">10</span></div></span>
               <hr><span class="sum_result">
                 <div class="count_name">總退費金額</div>
-                <div class="count_price warning_bold">$ 110</div></span><span class="warning_wrapper">
+                <div class="count_price warning_bold">$ <span id="refund_total">110</span></div></span><span class="warning_wrapper">
                 <div class="warning">※ 部分剩餘商品未達優惠條件，將以原價計算。</div>
                 <div class="warning">※ 原訂單保留商品金額未達免運費標準，需補扣原訂單出貨的運費。</div></span><span class="sum_warning warning">(請注意：我們將於收到退貨商品時檢查是否為瑕疵品，如一經查看判定為正常品退貨，將不會補貼運費，請您見諒。)</span>
             </div>
@@ -300,9 +300,14 @@
           <div class="radio_button_wrapper">
             <input type="radio" name="know" id="user_check_know">
             <label for="user_check_know">我已確認過退貨商品與退款金額無誤。</label>
-          </div><span class="dialog_button_wrapper">
-            <button class="dialog_button pre">上一步</button>
-            <button class="dialog_button next">下一步</button></span>
+          </div><span class="dialog_button_wrapper"><a class="dialog_button pre">上一步</a>
+            <form action>
+              <input type="hidden" name="return_note" value="">
+              <input type="hidden" name="order_id" value="">
+              <input type="hidden" name="is_defective" value="">
+              <input type="submit" value="下一步" class="dialog_button next">
+            </form>
+            <!--button.dialog_button.next 下一步--></span>
         </section>
       </div>
     </main>

@@ -29,7 +29,7 @@ block member_section
                             th.th_return_reason 退貨原因
                             th 
                     tbody
-                        tr
+                        tr.t_row
                             td(data-th='商品') 
                                 //input(type="checkbox").want_return
                                 div.prodct_info_wrapper
@@ -50,14 +50,14 @@ block member_section
                             td(data-th='退貨數量')
                                 input(type="number" min="1" max="5").input_count
                             td(data-th='退貨原因')
-                                select.select_retun_reason
+                                select.select_return_reason
                                     option(disabled selected value hidden) -
                                     option XX
                                     option YY
                                     option ZZ
 
                             td(data-th='')
-                        tr.have_comment
+                        tr.have_comment.t_row
                             td(data-th='商品') 
                                 div.prodct_info_wrapper
                                     .checkbox_wrapper
@@ -77,7 +77,7 @@ block member_section
                             td(data-th='退貨數量')
                                 input(type="number" min="0" max="5").input_count
                             td(data-th='退貨原因')
-                                select.select_retun_reason
+                                select.select_return_reason
                                     option(disabled selected value hidden) -
                                     option XX
                                     option YY
@@ -86,7 +86,7 @@ block member_section
                             td(data-th='')
                                 
                             //-要湊滿3的倍數個QQ
-                        tr
+                        tr.t_row
                             td(data-th='商品') 
                                 //input(type="checkbox").want_return
                                 div.prodct_info_wrapper
@@ -107,7 +107,7 @@ block member_section
                             td(data-th='退貨數量')
                                 input(type="number" min="0" max="5").input_count
                             td(data-th='退貨原因')
-                                select.select_retun_reason
+                                select.select_return_reason
                                     option(disabled selected value hidden) -
                                     option XX
                                     option YY
@@ -122,7 +122,8 @@ block member_section
             .statistics_table
                 span
                     .count_name 退貨商品金額
-                    .count_price $ 250
+                    .count_price $ 
+                        span#count_price 250
                 
                 span
                     .count_name 未達優惠條件商品需補差額
@@ -134,17 +135,20 @@ block member_section
                 
                 span
                     .count_name 購物金折抵
-                    .count_price $ 60
+                    .count_price $ 
+                        span#discount 60
                 
                 span
                     .count_name 瑕疵品寄回運費補貼
-                    .count_price $ 10
+                    .count_price $ 
+                        span#retrun_shipping_fee 10
                 
                 hr
                 
                 span.sum_result
                     .count_name 總退費金額
-                    .count_price.warning_bold $ 110
+                    .count_price.warning_bold $ 
+                        span#refund_total 110
                 
                 span.warning_wrapper
                     .warning ※ 部分剩餘商品未達優惠條件，將以原價計算。
@@ -157,6 +161,12 @@ block member_section
             label(for="user_check_know") 我已確認過退貨商品與退款金額無誤。
         
         span.dialog_button_wrapper
-            button.dialog_button.pre 上一步
-            button.dialog_button.next 下一步
+            a.dialog_button.pre 上一步
+            
+            form(action)
+                input(type="hidden" name="return_note" value="")
+                input(type="hidden" name="order_id" value="")
+                input(type="hidden" name="is_defective" value="")
+                input(type="submit" value="下一步").dialog_button.next
+            //button.dialog_button.next 下一步
             

@@ -408,6 +408,10 @@ input[type = text] {
   background: #c8837c;
   margin: 0 20px;
 }
+a.dialog_button {
+  text-align: content '';
+  line-height: 30px;
+}
 #dialog {
   padding: 45px 0 94px;
   width: 985px;

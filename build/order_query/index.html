@@ -278,7 +278,11 @@
             <label for="user_check_know">我已詳盡閱讀退貨須知，並確認進行退貨程序。</label>
           </div><span class="dialog_button_wrapper">
             <button class="dialog_button dialog_cancel">取消</button>
-            <button class="dialog_button dialog_check">確定</button></span>
+            <form action>
+              <input type="hidden" name="orderID" value="">
+              <input type="submit" value="確定" class="dialog_button dialog_check">
+            </form>
+            <!--button.dialog_button.dialog_check 確定--></span>
         </div>
       </div>
     </main>

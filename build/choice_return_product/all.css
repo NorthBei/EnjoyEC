@@ -353,7 +353,8 @@ td:before {
   font-weight: 400;
 }
 .input_count,
-.select_retun_reason {
+.select_return_reason,
+.input_other {
   border: 1px solid #4a4a4a;
   border-radius: 5px;
   height: 30px;
@@ -363,9 +364,28 @@ td:before {
   box-sizing: border-box;
   text-align: center;
 }
-.select_retun_reason {
+.select_return_reason,
+.input_other {
   width: 200px;
   background: #fff;
+}
+.input_other {
+  border-radius: 0;
+  box-sizing: border-box;
+  margin: 5px 10px 16px;
+  padding: 4px 5px;
+}
+.input_other::-webkit-input-placeholder {
+  color: #4a4a4a;
+}
+.input_other:-moz-placeholder {
+  color: #4a4a4a;
+}
+.input_other::-moz-placeholder {
+  color: #4a4a4a;
+}
+.input_other:-ms-input-placeholder {
+  color: #4a4a4a;
 }
 /*checkbox*/
 .section_title>.checkbox_wrapper {
@@ -577,9 +597,13 @@ tr.have_comment td[data-th='小計'] {
   .return_product_table td[data-th='退貨原因'] {
     width: 45%;
   }
-  .return_product_table td[data-th='退貨原因'] .select_retun_reason {
+  .return_product_table td[data-th='退貨原因'] .select_return_reason,
+  .return_product_table td[data-th='退貨原因'] .input_other {
     width: initial;
     margin: 0 10px;
+  }
+  .return_product_table td[data-th='退貨原因'] .input_other {
+    margin: 10px;
   }
   .return_product_table .prodct_info_wrapper {
     margin: 0 10px;
@@ -704,6 +728,10 @@ tr.have_comment td[data-th='小計'] {
   color: #fff;
   background: #c8837c;
   margin: 0 20px;
+}
+a.dialog_button {
+  text-align: center;
+  line-height: 30px;
 }
 @media all and (max-width: 550px) {
   .return_product_count {

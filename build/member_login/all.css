@@ -117,6 +117,10 @@
     width: 289px;
   }
 }
+#main {
+  -ms-flex: 1;
+  flex: 1;
+}
 #main,
 .section_wrapper {
   display: -ms-flexbox;
@@ -127,6 +131,8 @@
   -ms-align-items: center;
   -ms-flex-align: center;
       align-items: center;
+}
+.section_wrapper {
   -ms-flex-direction: column;
   flex-direction: column;
 }

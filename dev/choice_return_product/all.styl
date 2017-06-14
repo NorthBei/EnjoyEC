@@ -5,7 +5,7 @@
     font-size: 16px
     font-weight: 400
 
-.input_count,.select_retun_reason
+.input_count,.select_return_reason,.input_other
     border: 1px solid #4A4A4A
     border-radius: 5px
     height: 30px
@@ -14,9 +14,19 @@
     width: 60px
     box-sizing: border-box;
     text-align: center;
-.select_retun_reason
+.select_return_reason,.input_other
     width: 200px
     background: white;
+
+.input_other
+    border-radius: 0;
+    box-sizing: border-box;
+    margin: 5px 10px 16px;
+    padding: 4px 5px;
+
+    +placeholder()
+        color: #4A4A4A
+
 /*checkbox*/
 .section_title>.checkbox_wrapper
     display: flex;
@@ -187,9 +197,12 @@ tr.have_comment
         td[data-th='退貨原因']
             width: 45%
 
-            .select_retun_reason
+            .select_return_reason,.input_other
                 width: initial
                 margin: 0 10px;
+            
+            .input_other
+                margin: 10px;
 
         .prodct_info_wrapper
             margin:0 10px;
@@ -288,6 +301,10 @@ tr.have_comment
     color: white
     background: #C8837C
     margin: 0 20px
+    
+a.dialog_button   
+    text-align: center
+    line-height: 30px
 
 +media-query( all, max-width $phone_rwd_width )
     .return_product_count

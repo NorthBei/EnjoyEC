@@ -22,7 +22,9 @@ $(document).ready(function(){
     });
 
     $(".do_return").click(function(){
-        $("#apply_return_dialog").css("display","flex");
+        var orderID = $(this).parent().parent().find("td[data-th=訂單編號]").text().trim();
+        $("#apply_return_dialog").css("display","flex")
+            .find(".dialog_button_wrapper input[name='orderID']").val(orderID);
     });
 
     $("#cancel_orde_success_dialog .dialog_check").on("click",function(){
@@ -30,9 +32,15 @@ $(document).ready(function(){
         location.reload();
     });
 
-    $("#apply_return_dialog .dialog_check").on("click",function(){
+    $("#apply_return_dialog .dialog_check").on("click",function(event){
         if($("#user_check_know:checked").length > 0){
-            $("#apply_return_dialog").hide();
+            // $("#apply_return_dialog").hide();
+            // var url = $(this).attr("data-url");
+            // var order_id = $(this).attr(data_orderID);
+            // window.location = url+"?orderID="+order_id;
+        }
+        else{
+            event.preventDefault();
         }
     });
 
