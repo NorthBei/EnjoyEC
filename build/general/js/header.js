@@ -57,7 +57,7 @@ $(document).ready(function() {
     });
 
     
-    $(".dropdown_block_wrapper>i.fa").hover(function(){
+    $(".dropdown_block_wrapper>.fa").hover(function(){
         var width = document.body.clientWidth;
         if(width < tablet_width){
             return;

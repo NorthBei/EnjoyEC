@@ -1,0 +1,302 @@
+@import "../_general/member_section/member_section"
+@import "../_general/rwd_table/rwd_table"
+
+.section_sub_title
+    font-size: 16px
+    font-weight: 400
+
+.input_count,.select_return_reason,.input_other
+    border: 1px solid #4A4A4A
+    border-radius: 5px
+    height: 30px
+
+.input_count
+    width: 60px
+    box-sizing: border-box;
+    text-align: center;
+.select_return_reason,.input_other
+    width: 200px
+    background: white;
+
+.input_other
+    border-radius: 0;
+    box-sizing: border-box;
+    margin: 5px 10px 16px;
+    padding: 4px 5px;
+
+    +placeholder()
+        color: #4A4A4A
+
+/*checkbox*/
+.section_title>.checkbox_wrapper
+    display: flex;
+    width: 100%;
+    font-size: 15px;
+    margin: 20px 31px 10px;
+    padding-left: 20px;
+
+
+.section_title
+    margin-top: 12px;
+    .split
+        margin: 16px 0
+
+.checkbox_wrapper input[type="checkbox"]
+    visibility: hidden;
+
+    &:checked + label:after
+        opacity: 1;
+.checkbox_wrapper
+    width: 25px;
+    position: relative;
+
+    label
+        cursor: pointer;
+        position: absolute;
+        width: 14px;
+        height: 14px;
+        top: 0;
+        left: 0;
+        border: 1px solid black;
+        margin-right: 13px
+
+        &:after
+            opacity: 0;
+            content: '';
+            position: absolute;
+            width: 9px;
+            height: 5px;
+            background: transparent;
+            top: 3px;
+            left: 3px;
+            border: 1px solid black;
+            border-top: none;
+            border-right: none;
+            transform: rotate(-45deg);
+
+/*checkbox*/
+/*number*/
+/* Spin Buttons modified */
+input[type="number"] {
+    position: relative;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    background: transparent url("./img/arrow.svg") no-repeat center center;
+    width: 1em;
+    opacity: .5; /* shows Spin Buttons per default (Chrome >= 39) */
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    cursor: pointer
+}
+/*number*/
+.return_product_table 
+    margin-bottom: 15px
+
+    tbody tr
+        min-height: 72px
+        color: #4A4A4A
+    
+.th_product
+    width: 28%
+.th_return_reason
+    width: 230px
+
+td[data-th='商品']
+    color: #8B572A
+    padding: 0 30px;
+    font-size: 13px
+    
+    .prodct_info_wrapper
+        display: flex
+        align-items: center
+
+    .prodct_text_wrapper
+        display: flex
+        flex-direction: column
+        margin-left: 20px;
+        text-align: left
+    a
+        text-decoration: underline;
+        color: #8B572A
+    .comment
+        color: #D6645F
+        margin-top: 7px;
+        margin-bottom: 14px;
+
+td[data-th='單價']
+        position: relative;
+
+        .normal_price
+            position: absolute;
+            width: 100%;
+            text-align: center;
+            text-decoration: line-through;
+td[data-th='顏色']
+    img
+        size 31px
+
+tr.have_comment
+    height: 100px
+    
+    td
+        vertical-align: top;
+        padding-top: 14px;
+
+        .checkbox_wrapper
+            align-self: flex-start;
+            margin-top: 10px;
+
+    td[data-th='數量'],td[data-th='小計']   
+        padding-top: 24px;
+    
+
+
+.coupon_table_wrapper
+    margin-top: 30px
+
+    .coupon_table
+        margin-top: 10px
+
++media-query( all, max-width $phone_rwd_width )
+    .rwd-table td
+        line-height: initial
+        height: initial;
+        min-height: 100px;
+
+        &:before
+            width: 100%
+    .section_title
+        margin-top: 0;
+        &>.checkbox_wrapper
+            margin-left: 10px
+    .rwd-table tbody tr
+        margin-bottom: 30px
+    /*return_product_table*/
+    .return_product_table
+        
+        td[data-th='單價'],td[data-th='數量'],td[data-th='小計']
+            display: flex;
+            align-items: center;
+            // &:before
+            //     margin-bottom: 20px
+
+        td[data-th='商品']
+            width: 60%
+            padding: 0
+        td[data-th='顏色']
+            align-items: center;
+            width: 10%
+        td[data-th='單價']
+            width: 30%
+
+            .normal_price
+                position: initial
+        td[data-th='數量']
+            width: 15%
+        td[data-th='小計']
+            width: 20%
+        td[data-th='退貨數量']
+            width: 20%
+            align-items: center;
+
+        td[data-th='退貨原因']
+            width: 45%
+
+            .select_return_reason,.input_other
+                width: initial
+                width: calc("100% - 20px");
+                margin: 0 10px;
+
+        .prodct_info_wrapper
+            margin:0 10px;
+
+        .content_text
+            min-height: 62px
+            padding: 10px 0;
+            height: calc("100% - 40px");
+            //40px is rwd header height
+            box-sizing: border-box;
+            display: flex
+            justify-content: center
+            align-items: center
+            flex-direction: column
+
+    .return_product_table
+        tr.have_comment
+            position: relative;
+            margin-bottom: 50px;
+
+            td,td[data-th='數量'],td[data-th='小計']
+                padding: 0
+            
+            // td .checkbox_wrapper
+            //     align-self: inherit
+            //     margin: 0
+            .comment
+                margin-bottom: 0
+            .input_other
+                border: 1px solid black;
+                position: absolute;
+                //width: 100%;
+                left: 0;
+                bottom: -40px;
+                height: 30px;
+                box-sizing: border-box;
+    /*return_product_table*/
+    /*coupon_table*/
+    .coupon_table 
+
+        td
+            width: 50%
+            min-height: inherit;
+
+        .rwd_hide
+            display: none
+
+        .content_text
+            height: 40px;
+            padding: 0 30px;
+            box-sizing: border-box;
+            white-space: normal;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+    /*coupon_table*/
+
+/**/
+.radio_button_wrapper
+    display: flex
+    justify-content: center;
+    align-items: center;
+    font-size: 14px
+    margin: 50px 0;
+
+#user_check_know
+    margin-right: 10px
+
+.dialog_button_wrapper
+    display: flex
+    justify-content: center
+    margin-bottom: 175px
+
+.dialog_button
+    size 80px 30px
+    border-radius: 5px
+    color: white
+    background: #C8837C
+    margin: 0 20px
+    
+a.dialog_button   
+    text-align: center
+    line-height: 30px
+
++media-query( all, max-width $phone_rwd_width )
+
+    .dialog_button_wrapper
+        margin-bottom: 40px

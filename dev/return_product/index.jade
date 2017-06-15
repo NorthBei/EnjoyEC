@@ -1,0 +1,210 @@
+extends ../_general/member_section/temp_member_section.jade
+
+block append content
+    
+    block navArray
+        -var navArray = ["首頁","會員專區","訂單查詢","申請退貨"]
+
+block activeIndex
+     -var activeIndex = 0
+block member_section
+    section.table_wrapper
+        .section_title 申請退貨
+            hr.split
+            h3.section_sub_title 請勾選欲退貨商品
+            .checkbox_wrapper
+                input#all_product(type='checkbox', name='')
+                label(for='all_product') 
+                span 全部商品
+            div.return_product_table_wrapper
+                table.return_product_table.rwd-table
+                    thead
+                        tr
+                            th.th_product 商品
+                            th 顏色
+                            th 單價
+                            th 數量
+                            th 小計
+                            th 退貨數量
+                            th.th_return_reason 退貨原因
+                            th 
+                    tbody
+                        tr.t_row
+                            td(data-th='商品') 
+                                //input(type="checkbox").want_return
+                                .content_text
+                                    div.prodct_info_wrapper
+                                        .checkbox_wrapper
+                                            input#product1.want_return(type='checkbox', name='')
+                                            label(for='product1')
+
+                                        span.prodct_text_wrapper
+                                            a(href="#").prodct_name 如膠似漆2.0系列-We The Female 凱莉的最愛 ISLW64
+                                    
+                            td(data-th='顏色')
+                                .content_text
+                                    img(src="./img/color-3.png")
+                            td(data-th='單價') 
+                                .content_text
+                                    .now_price $ 390
+                                    .normal_price $ 490
+                            td(data-th='數量') 
+                                .content_text 1
+                            td(data-th='小計') 
+                                .content_text $ 390
+                            td(data-th='退貨數量')
+                                .content_text 
+                                    input(type="number" min="1" max="5").input_count
+                            td(data-th='退貨原因')
+                                .content_text
+                                    select.select_return_reason
+                                        option(disabled selected value hidden) -
+                                        option XX
+                                        option YY
+                                        option ZZ
+
+                            td(data-th='')
+                        tr.have_comment.t_row
+                            td(data-th='商品') 
+                                .content_text
+                                    div.prodct_info_wrapper
+                                        .checkbox_wrapper
+                                            input#product2.want_return(type='checkbox', name='')
+                                            label(for='product2')
+
+                                        span.prodct_text_wrapper
+                                            a(href="#").prodct_name 如膠似漆2.0系列-We The Female 凱莉的最愛 ISLW64
+                                            div.comment 【C&CHAT 幻彩系指油貼任選兩件500元】
+                            td(data-th='顏色')
+                                .content_text
+                                    img(src="./img/color-3.png")
+                            td(data-th='單價') 
+                                .content_text
+                                    .now_price $ 390
+                                    .normal_price $ 490
+                            td(data-th='數量') 
+                                .content_text 1
+                            td(data-th='小計') 
+                                .content_text $ 390
+                            td(data-th='退貨數量')
+                                .content_text
+                                    input(type="number" min="0" max="5").input_count
+                            td(data-th='退貨原因')
+                                .content_text
+                                    select.select_return_reason
+                                        option(disabled selected value hidden) -
+                                        option XX
+                                        option YY
+                                        option ZZ
+                                input(type="text" placeholder="請輸入").input_other
+                            td(data-th='')
+                                
+                            //-要湊滿3的倍數個QQ
+                        tr.t_row
+                            td(data-th='商品') 
+                                //input(type="checkbox").want_return
+                                .content_text
+                                    div.prodct_info_wrapper
+                                        .checkbox_wrapper
+                                            input#product1.want_return(type='checkbox', name='')
+                                            label(for='product1')
+
+                                        span.prodct_text_wrapper
+                                            a(href="#").prodct_name 如膠似漆2.0系列-We The Female 凱莉的最愛 ISLW64
+                                    
+                            td(data-th='顏色')
+                                .content_text
+                                    img(src="./img/color-3.png")
+                            td(data-th='單價') 
+                                .content_text
+                                    .now_price $ 390
+                                        .normal_price $ 490
+                            td(data-th='數量') 
+                                .content_text 1
+                            td(data-th='小計') 
+                                .content_text $ 390
+                            td(data-th='退貨數量')
+                                .content_text 
+                                    input(type="number" min="1" max="5").input_count
+                            td(data-th='退貨原因')
+                                .content_text
+                                    select.select_return_reason
+                                        option(disabled selected value hidden) -
+                                        option XX
+                                        option YY
+                                        option ZZ
+
+                            td(data-th='')
+
+        section.coupon_table_wrapper.table_wrapper
+            .section_title
+                h3.section_sub_title 本訂單使用的優惠
+
+                table.coupon_table.rwd-table
+                    thead
+                        tr
+                            th 優惠名稱
+                            th.rwd_hide 優惠種類
+                            th 使用方式
+                            th 優惠金額
+                            th 使用期限
+                    tbody
+                        tr
+                            td(data-th='優惠名稱') 
+                                span.content_text 指甲油系列商品滿額贈購物金活動
+                            td(data-th='優惠種類').rwd_hide
+                                span.content_text 優惠券序號
+                            td(data-th='使用方式') 
+                                span.content_text 保養系列商品任選兩件只要500元
+                            td(data-th='優惠金額') 
+                                span.content_text 現折$100
+                            td(data-th='使用期限') 
+                                span.content_text
+                                    | 2017/06/12 
+                                    span.rwd_hide - 
+                                    | 2017/06/30
+                        
+                        tr
+                            td(data-th='優惠名稱') 
+                                span.content_text 指甲油系列商品滿額贈購物金活動
+                            td(data-th='優惠種類').rwd_hide
+                                span.content_text 優惠券序號
+                            td(data-th='使用方式') 
+                                span.content_text 保養系列商品任選兩件只要500元
+                            td(data-th='優惠金額') 
+                                span.content_text 現折$100
+                            td(data-th='使用期限') 
+                                span.content_text
+                                    | 2017/06/12 
+                                    span.rwd_hide - 
+                                    | 2017/06/30
+
+                        tr
+                            td(data-th='優惠名稱') 
+                                span.content_text 指甲油系列商品滿額贈購物金活動
+                            td(data-th='優惠種類').rwd_hide
+                                span.content_text 優惠券序號
+                            td(data-th='使用方式') 
+                                span.content_text 保養系列商品任選兩件只要500元
+                            td(data-th='優惠金額') 
+                                span.content_text 現折$100
+                            td(data-th='使用期限') 
+                                span.content_text 
+                                    | 2017/06/12 
+                                    span.rwd_hide - 
+                                    | 2017/06/30
+        
+        div.radio_button_wrapper
+            input(type="radio" name="know")#user_check_know
+            label(for="user_check_know") 我已確認過退貨商品與退款金額無誤。
+        
+        span.dialog_button_wrapper
+            a.dialog_button.pre 上一步
+            
+            form(action)
+                input(type="hidden" name="return_note" value="")
+                input(type="hidden" name="order_id" value="")
+                input(type="hidden" name="is_defective" value="")
+                input(type="submit" value="下一步").dialog_button.next
+            //button.dialog_button.next 下一步
+            
