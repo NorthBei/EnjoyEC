@@ -155,16 +155,6 @@
   display: none;
 }
 /*overrid login.styl*/
-#main {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-justify-content: center;
-  -ms-flex-pack: center;
-      justify-content: center;
-  -ms-align-items: center;
-  -ms-flex-align: center;
-      align-items: center;
-}
 /*for IE11*/
 #main {
   height: calc(100vh - 159px);
@@ -177,6 +167,16 @@
   }
 }
 /*for IE11*/
+#main {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-justify-content: center;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-align-items: center;
+  -ms-flex-align: center;
+      align-items: center;
+}
 .register_data_section {
   display: none;
 }

@@ -11,6 +11,7 @@ $footer_rwd_width = 850px
     flex-axis: center center
     font-size: $font12
     box-sizing: border-box
+    height: $desktop_footer_height
 
 #footer_link
     display: flex
@@ -36,6 +37,9 @@ $footer_rwd_width = 850px
     margin-top: 20px;
 
 +media-query( only screen ,max-width $footer_rwd_width )
+    #footer
+        height:inherit
+        
     #footer_link
         flex-direction: column-reverse
 

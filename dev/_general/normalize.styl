@@ -44,6 +44,13 @@ body
 #main
     flex: 1
     flex:0 0 auto //for IE11
+    $main_height = "100vh - "+$desktop_header_height+" - "+$desktop_footer_height
+    min-height: calc($main_height);
+
++media-query( all, max-width $tablet_rwd_width )
+    #main
+        min-height: initial;
+        flex: 1
 
 +media-query( all, max-width $phone_rwd_width )
     body

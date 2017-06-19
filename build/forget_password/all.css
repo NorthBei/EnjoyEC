@@ -148,6 +148,18 @@
     margin-left: 5px;
   }
 }
+/*for IE11*/
+#main {
+  height: calc(100vh - 159px);
+}
+@media all and (max-width: 550px) {
+  #main {
+    height: initial;
+    -ms-flex: 1;
+    flex: 1;
+  }
+}
+/*for IE11*/
 #main {
   display: -ms-flexbox;
   display: flex;

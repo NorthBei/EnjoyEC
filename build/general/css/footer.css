@@ -14,6 +14,7 @@
       align-items: center;
   font-size: 12px;
   box-sizing: border-box;
+  height: 106px;
 }
 #footer_link {
   display: -ms-flexbox;
@@ -39,6 +40,9 @@
   margin-top: 20px;
 }
 @media only screen and (max-width: 850px) {
+  #footer {
+    height: inherit;
+  }
   #footer_link {
     -ms-flex-direction: column-reverse;
     flex-direction: column-reverse;

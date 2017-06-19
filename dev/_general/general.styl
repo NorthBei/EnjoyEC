@@ -69,10 +69,24 @@ $desktop_header_height = 159px
 $mobile_header_height = 67px
 /*minix*/
 
+$desktop_footer_height = 106px
+
 topDownTriangle(height,width,face-color)
     border-top: height solid face-color
     border-left: (width/2) solid transparent
     border-right: (width/2) solid transparent
+
+mainNoFooter()
+    /*for IE11*/
+    $main_height = "100vh - "+$desktop_header_height
+    #main
+        height: calc($main_height);//for IE11
+
+    +media-query( all, max-width $phone_rwd_width )
+        #main
+            height: initial
+            flex: 1;
+    /*for IE11*/
 
 /*OOCSS for reuse*/
 

@@ -245,6 +245,14 @@ body {
   flex: 1;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
+  min-height: calc(100vh - 159px - 106px);
+}
+@media all and (max-width: 850px) {
+  #main {
+    min-height: initial;
+    -ms-flex: 1;
+    flex: 1;
+  }
 }
 @media all and (max-width: 550px) {
   body {
