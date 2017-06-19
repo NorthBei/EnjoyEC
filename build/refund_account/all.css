@@ -277,87 +277,6 @@
     padding: 0;
   }
 }
-.do_button_dialog {
-  display: none;
-  background: #fff8f6;
-  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.09);
-  position: fixed;
-  transform: translate(-50%, -50%);
-  left: 50%;
-  top: 50%;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -ms-justify-content: center;
-  -ms-flex-pack: center;
-      justify-content: center;
-  -ms-align-items: center;
-  -ms-flex-align: center;
-      align-items: center;
-  color: #4a4a4a;
-  text-align: center;
-  z-index: 10;
-  transition: all 0.4 ease-in-out;
-}
-.do_button_dialog .colse_dialog {
-  position: absolute;
-  top: 14px;
-  right: 14px;
-  cursor: pointer;
-}
-.do_button_dialog h1 {
-  font-size: 30px;
-  margin-bottom: 30px;
-}
-.do_button_dialog p {
-/* 我們很遺憾您要取消訂單，為了提升網站與商: */
-  font-size: 18px;
-  letter-spacing: 0.47px;
-}
-.do_button_dialog .dialog_button_wrapper {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-justify-content: center;
-  -ms-flex-pack: center;
-      justify-content: center;
-}
-.do_button_dialog .dialog_button {
-  margin: 0 20px;
-  color: #fff;
-  background: #c8837c;
-  width: 80px;
-  height: 30px;
-  border-radius: 5px;
-}
-@media all and (max-width: 550px) {
-  .do_button_dialog {
-    box-sizing: border-box;
-    position: fixed;
-    top: 10px;
-    bottom: 25px;
-    left: 10px;
-    right: 10px;
-    margin-top: 66px;
-    width: initial;
-    height: initial;
-    transform: initial;
-  }
-  .do_button_dialog h1 {
-    font-size: 20px;
-  }
-  .do_button_dialog p {
-    font-size: 16px;
-  }
-}
-@media all and (max-height: 550px) {
-  .do_button_dialog {
-    -ms-justify-content: flex-start;
-    -ms-flex-pack: start;
-        justify-content: flex-start;
-    overflow-y: scroll;
-  }
-}
 .section_title {
   margin-top: 12px;
 }
@@ -409,7 +328,7 @@ input[type = text] {
   margin: 0 20px;
 }
 a.dialog_button {
-  text-align: content '';
+  text-align: center;
   line-height: 30px;
 }
 #dialog {
@@ -422,6 +341,29 @@ a.dialog_button {
 }
 #dialog p:nth-of-type(2) {
   margin: 20px 0 50px;
+}
+#check_dialog {
+  padding: 50px 130px 80px;
+  box-sizing: border-box;
+  display: none;
+}
+#check_dialog .warning_img {
+  width: 62px;
+  height: 62px;
+}
+#check_dialog>p {
+  margin: 25px 0 20px;
+  font-size: 17px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  text-align: center;
+  width: 240px;
+}
+#check_dialog>p .notice {
+  color: #d0011b;
+}
+#check_dialog .dialog_button_wrapper {
+  margin: 0;
 }
 @media all and (max-width: 550px) {
   .section_title {

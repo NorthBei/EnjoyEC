@@ -80,7 +80,7 @@
           </li>
         </ul>
         <div class="nav_btns_wrapper">
-          <div class="nav_btns left"><a href="#" class="scroll_disappear"><i aria-hidden="true" class="fa fa-instagram"></i></a><a href="#" class="scroll_disappear"><i aria-hidden="true" class="fa fa-facebook-official"></i></a><i class="scroll_disappear">|</i><span class="dropdown_block_wrapper"><a aria-hidden="true" class="fa fa-user-circle-o small_icon"></a>
+          <div class="nav_btns left"><a href="#" class="scroll_disappear"><i aria-hidden="true" class="fa fa-instagram"></i></a><a href="#" class="scroll_disappear"><i aria-hidden="true" class="fa fa-facebook-official"></i></a><i class="scroll_disappear">|</i><span class="dropdown_block_wrapper"><i aria-hidden="true" class="fa fa-user-circle-o small_icon"></i>
               <ul id="member_panel" class="dropdown_block">
                 <li> <a href="#">訂單查詢</a></li>
                 <li><a href="#">我的收藏清單</a></li>
@@ -215,10 +215,20 @@
                     <td data-th="退貨原因">
                       <div class="content_text">
                         <select class="select_return_reason">
-                          <option disabled selected value hidden>-</option>
-                          <option>XX</option>
-                          <option>YY</option>
-                          <option>ZZ</option>
+                          <option disabled="" selected="" value="" hidden="">-</option>
+                          <optgroup label="正常品">
+                            <option selected="">買錯商品</option>
+                            <option>商品有色差</option>
+                            <option>不喜歡已購買的商品</option>
+                            <option>其他</option>
+                          </optgroup>
+                          <optgroup label="瑕疵品">
+                            <option>商品有瑕疵(凹痕或髒汙，擦拭不掉)</option>
+                            <option>運送過程造成的損害(Ex:內容物溢出)</option>
+                            <option>過期商品</option>
+                            <option>寄錯商品(與訂單上商品不同)</option>
+                            <option>其他</option>
+                          </optgroup>
                         </select>
                       </div>
                     </td>
@@ -259,13 +269,23 @@
                     <td data-th="退貨原因">
                       <div class="content_text">
                         <select class="select_return_reason">
-                          <option disabled selected value hidden>-</option>
-                          <option>XX</option>
-                          <option>YY</option>
-                          <option>ZZ</option>
+                          <option disabled="" selected="" value="" hidden="">-</option>
+                          <optgroup label="正常品">
+                            <option selected="">買錯商品</option>
+                            <option>商品有色差</option>
+                            <option>不喜歡已購買的商品</option>
+                            <option>其他</option>
+                          </optgroup>
+                          <optgroup label="瑕疵品">
+                            <option>商品有瑕疵(凹痕或髒汙，擦拭不掉)</option>
+                            <option>運送過程造成的損害(Ex:內容物溢出)</option>
+                            <option>過期商品</option>
+                            <option>寄錯商品(與訂單上商品不同)</option>
+                            <option>其他</option>
+                          </optgroup>
                         </select>
+                        <input type="text" placeholder="請輸入" class="input_other">
                       </div>
-                      <input type="text" placeholder="請輸入" class="input_other">
                     </td>
                     <td data-th=""></td>
                   </tr>
@@ -305,10 +325,20 @@
                     <td data-th="退貨原因">
                       <div class="content_text">
                         <select class="select_return_reason">
-                          <option disabled selected value hidden>-</option>
-                          <option>XX</option>
-                          <option>YY</option>
-                          <option>ZZ</option>
+                          <option disabled="" selected="" value="" hidden="">-</option>
+                          <optgroup label="正常品">
+                            <option selected="">買錯商品</option>
+                            <option>商品有色差</option>
+                            <option>不喜歡已購買的商品</option>
+                            <option>其他</option>
+                          </optgroup>
+                          <optgroup label="瑕疵品">
+                            <option>商品有瑕疵(凹痕或髒汙，擦拭不掉)</option>
+                            <option>運送過程造成的損害(Ex:內容物溢出)</option>
+                            <option>過期商品</option>
+                            <option>寄錯商品(與訂單上商品不同)</option>
+                            <option>其他</option>
+                          </optgroup>
                         </select>
                       </div>
                     </td>
@@ -358,11 +388,7 @@
                 </tbody>
               </table>
             </div>
-          </section>
-          <div class="radio_button_wrapper">
-            <input type="radio" name="know" id="user_check_know">
-            <label for="user_check_know">我已確認過退貨商品與退款金額無誤。</label>
-          </div><span class="dialog_button_wrapper"><a class="dialog_button pre">上一步</a>
+          </section><span class="dialog_button_wrapper"><a class="dialog_button pre">上一步</a>
             <form action>
               <input type="hidden" name="return_note" value="">
               <input type="hidden" name="order_id" value="">
@@ -371,6 +397,21 @@
             </form>
             <!--button.dialog_button.next 下一步--></span>
         </section>
+        <div id="dialog" class="do_button_dialog">
+          <h1>退貨申請已送出</h1>
+          <h3>退款方式：
+            <spna class="text">信運卡退款</spna>
+          </h3>
+          <p>
+            退貨申請已成功送出，請將退貨商品寄回以下地址：
+            <br/> 241新北市三重區中央南路72巷14號1F
+          </p>
+          <p>
+            我們將於收到您的退貨商品並審核符合退貨條件後，進行退款程
+            <br/> 序，退款的作業時間為收到退貨商品後的5個工作天，謝謝！
+          </p>
+          <button id="check_receive" class="dialog_button">確定</button>
+        </div>
       </div>
     </main>
     <footer id="footer">

@@ -1,5 +1,6 @@
 @import "../_general/member_section/member_section"
 @import "../_general/rwd_table/rwd_table"
+@import "../_general/dialog/dialog"
 
 .section_sub_title
     font-size: 16px
@@ -270,15 +271,15 @@ tr.have_comment
     /*coupon_table*/
 
 /**/
-.radio_button_wrapper
-    display: flex
-    justify-content: center;
-    align-items: center;
-    font-size: 14px
-    margin: 50px 0;
+// .radio_button_wrapper
+//     display: flex
+//     justify-content: center;
+//     align-items: center;
+//     font-size: 14px
+//     margin: 50px 0;
 
-#user_check_know
-    margin-right: 10px
+// #user_check_know
+//     margin-right: 10px
 
 .dialog_button_wrapper
     display: flex
@@ -300,3 +301,33 @@ a.dialog_button
 
     .dialog_button_wrapper
         margin-bottom: 40px
+
+#dialog
+    padding: 45px 0 94px;
+    width: 985px;
+    display: none
+    h1
+        margin: 0
+    h3
+        font-size: 16px
+        font-weight: 500;
+        letter-spacing: 0.4px;
+        margin: 36px 0 26px
+        
+        .text
+            font-weight: 100
+    p
+        font-weight: 100
+    
+        &:nth-of-type(2)
+            margin: 20px 0 50px;
+
++media-query( all, max-width $phone_rwd_width )
+    .section_title
+        margin-top: 0;
+    #dialog
+        padding: 50px 36px
+        width: initial;
+
+        h3 
+            margin: 20px 0

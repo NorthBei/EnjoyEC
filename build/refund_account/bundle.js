@@ -68,17 +68,36 @@
 /************************************************************************/
 /******/ ({
 
+/***/ 1:
+/***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__(2);
+
+window.addEventListener("load",function(){
+    $("#logout").on("click",function(){
+        $("#logout_dialog").css("display","flex");
+    });
+    
+});
+
+/***/ }),
+
 /***/ 19:
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__(1);
 
 window.addEventListener("load",function(){
     $(".next").click(function(){
-        
-        var return_note = $(this).attr("data-return_note");
-        var order_id = $(this).attr("data-order_id");
-        var is_defective = $(this).attr("data-is_defective");
+        $("#check_dialog").css("display","flex");
+    });
+    $("#check_dialog .dialog_check").click(function(){
+        var next = $(".next");
+        var return_note = next.attr("data-return_note");
+        var order_id = next.attr("data-order_id");
+        var is_defective = next.attr("data-is_defective");
 
-        if(return_note == "" || return_note == "" || return_note == ""){
+        if(return_note == "" || order_id == "" || is_defective == ""){
             alert("data error");
         }
         var account_name = $("#account_name").val();
@@ -89,11 +108,14 @@ window.addEventListener("load",function(){
             alert("input error");
         }
 
+        var dialog = $(this).closest(".do_button_dialog");
+
         $.ajax({
             type: "POST",
             url: ajaxurl,
+            dataType:"json",
             data: {
-                "action":" return",
+                "action":"return",
                 "return_note" :return_note, 
                 "order_id":order_id,
                 "is_defective": is_defective, 
@@ -105,16 +127,32 @@ window.addEventListener("load",function(){
             success: function(msg){
                 console.log(msg);
                 if(msg[0]["status"]){
+                    dialog.hide();
                     $("#dialog").css("display","flex");
                 }
             },
             error:function(result){
+                alert("error");
                 console.log("error",result);
             }
         });
         
     });
 });
+
+/***/ }),
+
+/***/ 2:
+/***/ (function(module, exports) {
+
+window.addEventListener("load",function(){
+    $(".colse_dialog").on("click",colseDialog);
+    $(".dialog_cancel").on("click",colseDialog);
+});
+
+function colseDialog(){
+    $(this).parents(".do_button_dialog").hide();
+}
 
 /***/ })
 

@@ -1,5 +1,4 @@
 @import "../_general/member_section/member_section"
-@import "../_general/dialog/dialog"
 
 .section_title
     margin-top: 12px;
@@ -46,7 +45,7 @@ input[type = text]
     margin: 0 20px
 
 a.dialog_button
-    text-align: content ''
+    text-align: center
     line-height: 30px;
 
 #dialog
@@ -58,6 +57,26 @@ a.dialog_button
     
         &:nth-of-type(2)
             margin: 20px 0 50px;
+
+#check_dialog
+    padding: 50px 130px 80px
+    box-sizing: border-box
+    display: none
+    
+    .warning_img
+        size: 62px
+    &>p
+        margin: 25px 0 20px
+        font-size: 17px;
+        font-weight: 500;
+        letter-spacing: 0.5px;
+        text-align: center
+        width: 240px;
+        .notice
+            color: #d0011b
+
+    .dialog_button_wrapper
+        margin: 0
 
 +media-query( all, max-width $phone_rwd_width )
     .section_title

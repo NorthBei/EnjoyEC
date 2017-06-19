@@ -58,10 +58,18 @@ block member_section
                             td(data-th='退貨原因')
                                 .content_text
                                     select.select_return_reason
-                                        option(disabled selected value hidden) -
-                                        option XX
-                                        option YY
-                                        option ZZ
+                                        option(disabled='', selected='', value='', hidden='') -
+                                        optgroup(label='正常品')
+                                            option(selected='') 買錯商品
+                                            option 商品有色差
+                                            option 不喜歡已購買的商品
+                                            option 其他
+                                        optgroup(label='瑕疵品')
+                                            option 商品有瑕疵(凹痕或髒汙，擦拭不掉)
+                                            option 運送過程造成的損害(Ex:內容物溢出)
+                                            option 過期商品
+                                            option 寄錯商品(與訂單上商品不同)
+                                            option 其他
 
                             td(data-th='')
                         tr.have_comment.t_row
@@ -92,11 +100,19 @@ block member_section
                             td(data-th='退貨原因')
                                 .content_text
                                     select.select_return_reason
-                                        option(disabled selected value hidden) -
-                                        option XX
-                                        option YY
-                                        option ZZ
-                                input(type="text" placeholder="請輸入").input_other
+                                        option(disabled='', selected='', value='', hidden='') -
+                                        optgroup(label='正常品')
+                                            option(selected='') 買錯商品
+                                            option 商品有色差
+                                            option 不喜歡已購買的商品
+                                            option 其他
+                                        optgroup(label='瑕疵品')
+                                            option 商品有瑕疵(凹痕或髒汙，擦拭不掉)
+                                            option 運送過程造成的損害(Ex:內容物溢出)
+                                            option 過期商品
+                                            option 寄錯商品(與訂單上商品不同)
+                                            option 其他
+                                    input(type="text" placeholder="請輸入").input_other
                             td(data-th='')
                                 
                             //-要湊滿3的倍數個QQ
@@ -129,10 +145,19 @@ block member_section
                             td(data-th='退貨原因')
                                 .content_text
                                     select.select_return_reason
-                                        option(disabled selected value hidden) -
-                                        option XX
-                                        option YY
-                                        option ZZ
+                                        option(disabled='', selected='', value='', hidden='') -
+                                        optgroup(label='正常品')
+                                            option(selected='') 買錯商品
+                                            option 商品有色差
+                                            option 不喜歡已購買的商品
+                                            option 其他
+                                        optgroup(label='瑕疵品')
+                                            option 商品有瑕疵(凹痕或髒汙，擦拭不掉)
+                                            option 運送過程造成的損害(Ex:內容物溢出)
+                                            option 過期商品
+                                            option 寄錯商品(與訂單上商品不同)
+                                            option 其他
+
 
                             td(data-th='')
 
@@ -194,9 +219,9 @@ block member_section
                                     span.rwd_hide - 
                                     | 2017/06/30
         
-        div.radio_button_wrapper
-            input(type="radio" name="know")#user_check_know
-            label(for="user_check_know") 我已確認過退貨商品與退款金額無誤。
+        //- div.radio_button_wrapper
+        //-     input(type="radio" name="know")#user_check_know
+        //-     label(for="user_check_know") 我已確認過退貨商品與退款金額無誤。
         
         span.dialog_button_wrapper
             a.dialog_button.pre 上一步
@@ -207,4 +232,13 @@ block member_section
                 input(type="hidden" name="is_defective" value="")
                 input(type="submit" value="下一步").dialog_button.next
             //button.dialog_button.next 下一步
-            
+
+    div#dialog.do_button_dialog
+        h1 退貨申請已送出
+        h3 退款方式：
+            spna.text 信運卡退款
+        p 退貨申請已成功送出，請將退貨商品寄回以下地址：
+            | <br/> 241新北市三重區中央南路72巷14號1F
+        p 我們將於收到您的退貨商品並審核符合退貨條件後，進行退款程
+            | <br/> 序，退款的作業時間為收到退貨商品後的5個工作天，謝謝！
+        button.dialog_button#check_receive 確定
