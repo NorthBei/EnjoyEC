@@ -7,9 +7,9 @@ block content
         div.form
             input(type="text" placeholder="請輸入已經註冊Email" require).input_box.section_box#forget_mail
             span.input_date_wrapper
-                input(type="text" placeholder="YYYY" require).input_box.input_year#forget_date_year
-                input(type="text" placeholder="MM" require).input_box.input_month#forget_date_month
-                input(type="text" placeholder="DD" require).input_box.input_day#forget_date_day
+                input(type="text" placeholder="YYYY" maxLength="4" require).input_box.input_year#forget_date_year
+                input(type="text" placeholder="MM" maxLength="2" require).input_box.input_month#forget_date_month
+                input(type="text" placeholder="DD" maxLength="2" require).input_box.input_day#forget_date_day
             div.error_message Email或生日輸入錯誤/該Email尚未註冊
             button.input_button.input_box.section_box#register_button 送出
 

@@ -1,0 +1,27 @@
+extends ../_general/member_section/temp_member_section.jade
+
+include ../_general/product/product.jade
+
+block append content
+    
+    block navArray
+        -var navArray = ["首頁","會員專區","我的收藏清單"]
+
+block activeIndex
+     -var activeIndex = 2
+block member_section
+    div#product
+        - var rows = 3,product = 10
+        - for (var x = 1; x <= 3*4 ; x++)
+            if(x <= 10)
+                if(x%5 == 0)
+                    +product("../general/img/商品一.png",true,"new")
+                else if(x%3 == 0)
+                    +product("../general/img/商品一.png",true,"hot")
+                else if(x%4 == 0)
+                    +product("../general/img/商品一.png",true,"sale")
+                else
+                    +product("../general/img/商品一.png",true,"")
+            else
+                 section.product_wrapper
+    

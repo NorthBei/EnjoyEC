@@ -116,9 +116,10 @@ block member_section
 
     div.do_button_dialog#cancel_orde_success_dialog
         h1 訂單取消成功
-        p 訂單已成功取消，我們會盡快處理退款程序，退款需約5個工作天，如欲查看訂單最新狀態可到會員專區的訂單查詢裡，謝謝！
+        p.cancel_with_mart 訂單已成功取消，可在會員專區裡的訂單查詢查看訂單狀態，謝謝。
+        p.cancel_with_credit_card 訂單已成功取消，我們會盡快處理退款程序，退款需約5個工作天，如欲查看訂單最新狀態可到會員專區的訂單查詢裡，謝謝！
 
-        table.refund_detail
+        table.refund_detail.cancel_with_credit_card
             tr
                 td  退款方式：
                 td  信用卡刷退
@@ -135,7 +136,6 @@ block member_section
         p 申請退貨前請先詳細閱讀退貨須知
         
         ul.user_should_know
-            li 如欲申請退貨，請確保訂單未超過七天鑑賞期、商品包裝完整、無使用痕跡(缺少或味道)、無人為造成髒汙、商品未剪標等其他已使用狀況發生。
             li 如欲申請退貨，請確保訂單未超過七天鑑賞期、商品包裝完整、無使用痕跡(缺少或味道)、無人為造成髒汙、商品未剪標等其他已使用狀況發生。
             li 退貨商品分為正常品與瑕疵品，正常品為出於個人因素，如：買錯商品、商品色差等原因，必須
                 span.high_light 由買家負擔寄回退貨商品的運費

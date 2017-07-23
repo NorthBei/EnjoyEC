@@ -94,10 +94,11 @@ window.addEventListener("load",function(){
     $("#check_dialog .dialog_check").click(function(){
         var next = $(".next");
         var return_note = next.attr("data-return_note");
+        var return_items = next.attr("data-return_items");
         var order_id = next.attr("data-order_id");
         var is_defective = next.attr("data-is_defective");
 
-        if(return_note == "" || order_id == "" || is_defective == ""){
+        if(return_note == "" || return_items == "" || order_id == "" || is_defective == ""){
             alert("data error");
         }
         var account_name = $("#account_name").val();
@@ -106,16 +107,18 @@ window.addEventListener("load",function(){
 
         if(account_name == "" || bank_name == "" || account == ""){
             alert("input error");
+            return;
         }
 
         var dialog = $(this).closest(".do_button_dialog");
-
+        var return_items_array = JSON.parse(return_items);
         $.ajax({
             type: "POST",
             url: ajaxurl,
             dataType:"json",
             data: {
                 "action":"return",
+                "return_items":return_items_array,
                 "return_note" :return_note, 
                 "order_id":order_id,
                 "is_defective": is_defective, 

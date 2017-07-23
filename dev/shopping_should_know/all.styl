@@ -3,6 +3,10 @@
 .container
     color: #4A4A4A;
     margin-top: 50px;
+    
+    &:not(#member_question)
+        display: none
+
 
 .qa_title
     font-size: 15px;
@@ -25,10 +29,10 @@
         background-image: url("./img/-.png");
 .qa_content
     display: none;
-    font-size: 13px;
+    font-size: 14px;
     letter-spacing: 0.34px;
     margin-bottom: 30px
-
+    
 
 +media-query( all, max-width $phone_rwd_width )
     .side_bar ul li

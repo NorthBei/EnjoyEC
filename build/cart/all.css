@@ -569,9 +569,8 @@ td:before {
   }
   .statistics_table {
     width: 100%;
-  }
-  .statistics_table span {
-    margin-right: calc(100% - 300px);
+/*span
+            margin-right: calc("100% - 300px")*/
   }
 }
 /*order_tables*/

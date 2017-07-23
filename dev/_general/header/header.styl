@@ -162,9 +162,14 @@ form.dropdown_block:after
     display: flex;
     flex-direction: column;
     line-height: normal
+    max-height: 600px;
+    overflow-y: auto;
+    justify-content: flex-start;
     &:before
         display: none
-
+    &>div
+        width: 100%
+        
     .shopping_cart_product
         display: flex
         align-items: center
@@ -205,7 +210,7 @@ form.dropdown_block:after
     
     
     .shopping_cart_calc
-        height: 40px
+        min-height: 40px
         padding: 10px 0
         padding-left: 43px
         box-sizing: border-box
@@ -258,12 +263,15 @@ form.dropdown_block:after
 
 #search_go
     size: 45px $search_component_height
+    line-height: $search_component_height
     background: #D6645F
     //border: 1px solid #D6645F
     color: white
     cursor: pointer
     box-sizing: border-box
     border-radius: 0
+    padding: 0;
+    
     &:active
         background: white
         color: #D6645F
@@ -328,7 +336,7 @@ form.dropdown_block:after
 
         >li
             padding: 8px 0
-            width: 230px
+            //width: 230px
             white-space: normal
 
 
@@ -336,6 +344,7 @@ form.dropdown_block:after
                 color: #D6645F
     img
         height: 170px
+        margin-left: auto
 
 .dropdown_block_active
     visibility: visible;
@@ -364,6 +373,9 @@ form.dropdown_block:after
             transition: top 0.4s ease-in-out;
 
     .child_category_list
+        //fix width to fill out the space of child_category
+        width: 230px;
+
         &:before
             content: "";
             position: absolute;

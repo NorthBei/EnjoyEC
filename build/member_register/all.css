@@ -153,6 +153,7 @@
   text-align: initial;
   padding-left: 25px;
   display: none;
+  height: inherit;
 }
 /*overrid login.styl*/
 /*for IE11*/
@@ -179,6 +180,10 @@
 }
 .register_data_section {
   display: none;
+}
+.notice_message {
+  color: #d6645f;
+  text-align: center;
 }
 .reminder {
   color: #d6645f;

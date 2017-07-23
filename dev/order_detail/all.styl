@@ -33,15 +33,18 @@
     .split
         margin: 16px 0
 
-/*cancel_detial_table*/
-.cancel_detial_table
+.order_info_table
+    margin-bottom: 0;
+
+/*cancel_detial_table and shop_note - start*/
+.cancel_detial_table,.shop_note
     th
         display: none
 
     tbody
         tr
             height: initial
-            margin-bottom: 10px;
+            //margin-bottom: 10px;
             display: flex;
             flex-wrap: wrap;
     td
@@ -56,6 +59,13 @@
             display: flex
             flex-axis:center
 
+.shop_note
+    td
+        width: 100%;
+        height: 100px
+        line-height: 60px;
+
+/*cancel_detial_table and shop_note - end*/
 .order_product_table_wrapper
     padding: 25px
     background: #FFF8F6
@@ -195,3 +205,11 @@
 +media-query( all, max-width $phone_rwd_width )
   .section_title
         margin-top: 0;
+
++media-query( all, max-width $phone_rwd_width )
+    .order_info_table tbody tr
+                margin-bottom:0;
+        
+    .order_info_table_note td
+            width: 100%;
+

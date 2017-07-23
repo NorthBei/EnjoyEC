@@ -159,7 +159,7 @@ window.addEventListener("load",function(){
         event.preventDefault();
         
         var obj = prepareArugment();
-        if(obj["return_note"] == ""){
+        if(obj["return_items"].length == 0){
             alert("choice return product");
             return;
         }
@@ -175,6 +175,7 @@ window.addEventListener("load",function(){
                 data: {
                     "action":"return",
                     "return_note" :obj["return_note"], 
+                    "return_items" :obj["return_items"], 
                     "order_id":$(".dialog_button_wrapper input[name=order_id]").val(),
                     "is_defective": obj["is_defective"],
                     "refund_type": "credit_card"
@@ -193,6 +194,7 @@ window.addEventListener("load",function(){
         }
         else{
             $(".dialog_button_wrapper input[name=return_note]").val(obj["return_note"]);
+            $(".dialog_button_wrapper input[name=return_items]").val(JSON.stringify(obj["return_items"]));
             $(".dialog_button_wrapper input[name=is_defective]").val(obj["is_defective"]);
             form.submit();
         }
@@ -201,21 +203,29 @@ window.addEventListener("load",function(){
 });
 
 function prepareArugment(){
-    var return_note = "";
+    var return_items = [];
     var isDefective = 0;
+    var return_note = "";
     $('.t_row').each(function(){
         var isCheck = $(this).find(".want_return").prop('checked');
-        
-        //ex “如膠似漆2.0系列 ,退貨數量:2,退貨原因:買錯;”
-        
+                
         if(isCheck){
+            
+            var product = [];
+            var link = $(this).find(".prodct_text_wrapper>.prodct_name");
+            //"product_id"
+            product[0] = link.attr("data-product-id");
+            //"product_title"
+            product[1] = link.text().trim();
             return_note+=$(this).find(".prodct_text_wrapper>a").text().trim()+",";
-
+            
             var counter = $(this).find(".input_count")
             var max = parseInt(counter.attr("max"));
             var val = parseInt(counter.val());
             var number = (val> max)? max : val;
             
+            //"return_quanity"
+            product[2] = number;
             return_note+="退貨數量:"+number+","
             
             var selected = $(this).find('.select_return_reason :selected');
@@ -224,6 +234,8 @@ function prepareArugment(){
             if(reason == "其他"){
                 reason = $(this).find('.input_other').val();
             }
+            //"return_reason"
+            product[3] = reason;
             return_note+="退貨原因:"+reason+";"
 
             var label = selected.closest("optgroup").attr("label");
@@ -231,6 +243,8 @@ function prepareArugment(){
             if(label == "瑕疵品"){
                 isDefective++;
             }
+
+            return_items.push(product);
         }
     });
     //console.log(return_note);
@@ -238,6 +252,7 @@ function prepareArugment(){
 
     return {
         "return_note":return_note,
+        "return_items":return_items,
         "is_defective":isDefective
     };
 }

@@ -128,6 +128,27 @@ window.addEventListener("load",function(){
         });
 
     });
+
+    var preSelectCat = $(".side_bar li").first();
+    var preSelectID = $(".side_bar li").find("a").attr("href");
+    $(".side_bar li").click(function(event){
+        event.preventDefault();
+        if(preSelectID == id){
+            return;
+        }
+        console.log(preSelectCat);
+        console.log(preSelectID);
+        var id = $(this).find("a").attr("href");
+        preSelectCat.removeClass("active");
+        $(this).addClass("active");
+        preSelectCat = $(this);
+        if(id == undefined){
+            return;
+        }
+        $(preSelectID).hide();
+        $(id).show();
+        preSelectID = id;
+    });
 });
 
 

@@ -328,6 +328,7 @@
 }
 .slick_slide img {
   height: 100%;
+  position: absolute;
 }
 .slick-arrow {
   position: absolute;

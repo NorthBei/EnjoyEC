@@ -167,6 +167,9 @@
       align-items: center;
   margin-bottom: 50px;
 }
+#footer {
+  display: none;
+}
 @media only screen and (max-width: 550px) {
   .result_section .face {
     height: initial;

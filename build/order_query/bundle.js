@@ -186,11 +186,15 @@ $(document).ready(function(){
                     if(pay_way == "credit_card"){
                         var total_money = $("#cancel_order_dialog").attr(data_total_money);
                         $("#refund_money").text(total_money);
-                        $("#cancel_orde_success_dialog").css("display","flex");
+                        $("#cancel_orde_success_dialog .cancel_with_mart").hide();
+                        $("#cancel_orde_success_dialog .cancel_with_credit_card").show();
+                        
                     }
                     else{
-                        location.reload();
+                        $("#cancel_orde_success_dialog .cancel_with_mart").show();
+                        $("#cancel_orde_success_dialog .cancel_with_credit_card").hide();
                     }
+                    $("#cancel_orde_success_dialog").css("display","flex");
                 }
                 else{
                     console.log("error");

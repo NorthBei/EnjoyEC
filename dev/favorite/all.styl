@@ -1,0 +1,25 @@
+@import "../_general/member_section/member_section"
+@import "../_general/product/product"
+
+.two_col
+    margin-bottom: 60px
+    
+.side_bar
+    width: 300px;
+    min-width: 300px;
+
+#product
+    margin-top: 20px
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between;
+
+    .product_wrapper
+        margin-bottom: 50px;
+
++media-query( only screen ,max-width ($phone_rwd_width) )
+    .side_bar
+        width: 100%
+        
+    #product
+        justify-content: space-around;

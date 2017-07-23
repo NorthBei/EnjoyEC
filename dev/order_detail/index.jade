@@ -113,18 +113,18 @@ block member_section
                         td(data-th='訂單狀態') 訂單處理中
                         td(data-th='')
                         //-要湊滿6個QQ
+
+            table.order_info_table_note.rwd-table
+                thead
                     tr
-                        td(data-th='訂單編號') 
-                            a(href="#") EJ201702030001
-                        td(data-th='下單時間') 2017/02/03 12:21
-                        td(data-th='付款方式') 超商取貨付款
-                        td(data-th='付款狀態') 未付款
-                        td(data-th='訂單狀態') 訂單處理中
-                        td(data-th='')
+                        th 備註
+                tbody
+                    tr
+                        td(data-th="備註") 備註資料
                         
         .section_title 收件人資料
             hr.split
-            table.order_info_table.rwd-table
+            table.order_recipient.rwd-table
                 thead
                     tr
                         th 姓名
@@ -177,13 +177,14 @@ block member_section
                         td(data-th='') 
                         
                         //-要湊滿6個QQ
-                    tr
-                        td(data-th='訂單取消時間') 2017/02/03 12:21
-                        td(data-th='取消原因') 下錯商品
-                        td(data-th='退款方式') 信用卡刷退
-                        td(data-th='退款金額') $ 2,870
-                        td(data-th='退款時間') 
-                        td(data-th='退款戶名') 盧曉筱
-                        td(data-th='銀行名稱') 國泰世華-013
-                        td(data-th='銀行帳號') 1534534354534
-                        td(data-th='')
+                    
+
+        .section_title 店家備註
+            hr.split
+            table.shop_note.rwd-table
+                tbody
+                    tr    
+                        td(data-th='2017/02/03 12:21') 已確定更改送貨地址！
+                        
+                    tr    
+                        td(data-th='2017/02/03 12:21') 已確定更改送貨地址！

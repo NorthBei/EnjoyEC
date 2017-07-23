@@ -138,6 +138,68 @@ $(document).ready(function(){
         }
         
     });
+
+    $("#add_favorite").click(function(){
+        var fa = $(this).find(".fa");
+        var action_do = "";
+
+        if(fa.hasClass("fa-heart-o")){
+            action_do = "add";
+        }
+        else if(fa.hasClass("fa-heart")){
+            action_do = "delete";
+        }
+        else{
+            console.log("fa class error");
+            return;
+        }
+        console.log(action_do);
+        
+		var product_id = $("#product_id").val();
+		//參數 新增商品進入收藏清單的話 
+		//action_do = 'add'
+		//product_id ='商品id'
+		//狀態
+		//array("status"=>true, "message"=>'it successful to update.');	
+		//array("status"=>false, "message"=>'it has existed.');		
+		
+		//參數 移除收藏清單之商品
+		//action_do = 'delete'
+		//product_id ='商品id'
+		//狀態
+		//array("status"=>true, "message"=>'it is successful to delete.');
+		//array("status"=>false, "message"=>"it's illegal !");	
+		
+        $.ajax({
+            type: "POST",
+            url: ajaxurl,
+			dataType: 'json',
+            data: {
+                "action":"favorite_list",
+				"action_do":action_do,
+				"product_id":product_id,
+			},
+            success: function(msg){
+				 console.log(msg)
+                if(msg[0]["status"]){
+ 					console.log(msg)
+                    if(action_do == "add"){
+                        fa.removeClass("fa-heart-o");
+                        fa.addClass("fa-heart");
+                    }
+                    else if(action_do == "delete"){
+                        fa.removeClass("fa-heart");
+                        fa.addClass("fa-heart-o");
+                    }
+                }
+                else{			
+                    console.log("error");
+                }
+                
+            }   
+        });
+    });
+
 });
 
 /***/ }),
