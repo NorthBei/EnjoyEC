@@ -152,6 +152,9 @@
   position: absolute;
   right: 10px;
   transform: scale(0.6);
+/*用來置中的(Mobile)*/
+  top: 9px;
+  bottom: 9px;
 }
 .commodity_filter .options {
   position: absolute;
