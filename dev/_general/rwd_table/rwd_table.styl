@@ -10,6 +10,7 @@
 
 .rwd-table th,td:before
     height: 40px
+    min-height: 40px;
     background: #F6EAE6
     color: #D6645F
     font-size: 15px
@@ -28,6 +29,18 @@
 
     td[data-th=''] 
         flex 1
+    /*目前暫時不套用在有商品欄位的rwd-table , 只給純資料的rwd-table*/
+    .td_data
+        min-height: 50px;
+        line-height: normal;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        word-break: break-word;
+        padding: 10px 0;
+        height: 100%;
+        box-sizing: border-box;
+
 +media-query( all, max-width $phone_rwd_width )
   
     .rwd-table tr

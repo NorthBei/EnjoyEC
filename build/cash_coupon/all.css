@@ -289,6 +289,7 @@
 .rwd-table th,
 td:before {
   height: 40px;
+  min-height: 40px;
   background: #f6eae6;
   color: #d6645f;
   font-size: 15px;
@@ -304,10 +305,27 @@ td:before {
   height: 60px;
   box-sizing: border-box;
   border-bottom: 1px solid #f6eae6;
+/*目前暫時不套用在有商品欄位的rwd-table , 只給純資料的rwd-table*/
 }
 .rwd-table tbody tr td[data-th=''] {
   -ms-flex: 1;
   flex: 1;
+}
+.rwd-table tbody tr .td_data {
+  min-height: 50px;
+  line-height: normal;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-justify-content: center;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-align-items: center;
+  -ms-flex-align: center;
+      align-items: center;
+  word-break: break-word;
+  padding: 10px 0;
+  height: 100%;
+  box-sizing: border-box;
 }
 @media all and (max-width: 550px) {
   .rwd-table tr {
