@@ -155,6 +155,11 @@
   display: none;
   height: inherit;
 }
+@media all and (max-width: 550px) {
+  .error_message {
+    padding: 0 24px;
+  }
+}
 /*overrid login.styl*/
 /*for IE11*/
 #main {

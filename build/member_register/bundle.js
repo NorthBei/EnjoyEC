@@ -84,13 +84,11 @@ var isFB_Register = false;
 var fb_data = {};
 window.addEventListener("load",function(){
 
-    $("#register_year,#register_month").on("keydown",function(e) {
-		if (e.keyCode != 13 && e.keyCode != 8 && e.keyCode != 37 && e.keyCode != 38 && e.keyCode != 39 && e.button != 1 && e.button != 2 && e.button != 3) {
-			if (this.value.length == this.maxLength) {
-				$(this).next('.input_box').focus();
-			}
+    $("#register_year,#register_month").on("input",function(e) {
+		if (this.value.length == this.maxLength) {
+			$(this).next('.input_box').focus();
 		}
-    });
+	});
     
     $("#register_password_twice").keydown(function(event){
         var trigger = event.which || event.keyCode;
