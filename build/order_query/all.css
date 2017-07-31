@@ -609,28 +609,30 @@ td:before {
 #apply_return_dialog .radio_button_wrapper label {
   margin-left: 10px;
 }
-#apply_return_dialog .dialog_button_wrapper {
-  margin-top: 45px;
+#apply_return_dialog .notice {
+  font-size: 15px;
+  visibility: hidden;
+  margin: 14px 0;
 }
 @media all and (max-width: 550px) {
-  #cancel_order_dialog,
-  #apply_return_dialog,
-  #cancel_orde_success_dialog {
+  #apply_return_dialog #cancel_order_dialog,
+  #apply_return_dialog #apply_return_dialog,
+  #apply_return_dialog #cancel_orde_success_dialog {
     padding: 31px;
     width: initial;
   }
-  #cancel_order_dialog .cancel_reason {
+  #apply_return_dialog #cancel_order_dialog .cancel_reason {
     width: 100%;
     resize: none;
   }
-  #apply_return_dialog .user_should_know,
-  #apply_return_dialog .radio_button_wrapper {
+  #apply_return_dialog #apply_return_dialog .user_should_know,
+  #apply_return_dialog #apply_return_dialog .radio_button_wrapper {
     font-size: 12px;
   }
-  #apply_return_dialog .dialog_cancel {
+  #apply_return_dialog #apply_return_dialog .dialog_cancel {
     display: none;
   }
-  .do_button {
+  #apply_return_dialog .do_button {
     margin: 0 auto;
     margin-top: 9px;
   }

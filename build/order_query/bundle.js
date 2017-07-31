@@ -134,6 +134,7 @@ $(document).ready(function(){
             // window.location = url+"?orderID="+order_id;
         }
         else{
+            $("#apply_return_dialog .notice").css("visibility","visible");
             event.preventDefault();
         }
     });
