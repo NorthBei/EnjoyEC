@@ -100,6 +100,9 @@ header
 .dropdown_block_wrapper>.fa
     padding-bottom: 16px;
 
+#search_button+.dropdown_block
+    min-width: 205px;
+
 .dropdown_block
     background: white
     display: flex
@@ -127,6 +130,7 @@ header
     &:before
         content: ''
         position: absolute
+        top: 0
         left: 50%
         transform: translateX(-50%) translateY(- $dropdown_triangle_height)
         topDownTriangle( $dropdown_triangle_height, 6px , #D5948E )

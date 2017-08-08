@@ -391,6 +391,7 @@ td:before {
 }
 .statistics_table .count_price {
   width: 105px;
+  min-width: 105px;
   text-align: right;
   font-weight: 100;
 }

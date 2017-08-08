@@ -63,97 +63,55 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 16);
+/******/ 	return __webpack_require__(__webpack_require__.s = 11);
 /******/ })
 /************************************************************************/
-/******/ ({
-
-/***/ 0:
+/******/ ([
+/* 0 */
 /***/ (function(module, exports) {
 
 //require("./header/header.js")
 
 /***/ }),
-
-/***/ 16:
+/* 1 */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(5);
-__webpack_require__(3);
-__webpack_require__(0);
+__webpack_require__(2);
 
-/***/ }),
-
-/***/ 3:
-/***/ (function(module, exports) {
-
-$(document).ready(function() { 
-    $(".commodity_filter").click(function() {
-        $(this).find(".options").toggleClass("display_init");
-        event.stopPropagation();
-        //$(".commodity_filter>.options").toggleClass("display_init");
-    });
-
-    $(".options>span").on("click",function(e) {
-        event.stopPropagation();
-        $(this).parent().prev().text($(this).text());
-        $(this).parent().toggleClass("display_init");
-        // $(".commodity_filter>span").text($(this).text());
-        // $(".commodity_filter>.options").toggleClass("display_init");
-    });
-
-    $(document).click(function() {
-        var option =  $('.commodity_filter .options');
-        if(option.hasClass('display_init')){
-            option.removeClass('display_init');
-        }
+window.addEventListener("load",function(){
+    $("#logout").on("click",function(){
+        $("#logout_dialog").css("display","flex");
     });
     
 });
 
-
-
 /***/ }),
-
-/***/ 5:
+/* 2 */
 /***/ (function(module, exports) {
 
-$(document).ready(function() { 
-    $(".page_top_button").click(function() {
-        $("html, body").animate({ scrollTop: 0 }, "fast");
-        return false;
-    });
-
-    var topBtnShow = $(document).height()*2/3;
-    var windowH = window.innerHeight;
-    var isButtonShow = false,isButtonFixed = false;
-    // console.log("top_btn_appear:"+top_btn_appear);
-    // console.log("assign_height:"+assign_height);
-    $(document).on("scroll",function(){
-        var fiexdHeight = $("#header").height()+$("#main").height();
-		var topheight= document.documentElement.scrollTop||document.body.scrollTop;
-        var height = windowH+topheight;
-        //console.log(height);
-		if(height>= topBtnShow && isButtonShow == false){
-            isButtonShow = true;
-		    $(".page_top_button").css("display","block");
-		}
-        else if(height< topBtnShow && isButtonShow == true){
-            isButtonShow = false;
-            $(".page_top_button").css("display","none");
-		}
-
-        if(height > fiexdHeight && isButtonShow == true && isButtonFixed == false){
-            isButtonFixed = true;
-            $(".page_top_button").addClass("is_bottom");
-        }
-        else if(height < fiexdHeight && isButtonFixed == true){
-            isButtonFixed = false;
-            $(".page_top_button").removeClass("is_bottom");
-        }
-	});
+window.addEventListener("load",function(){
+    $(".colse_dialog").on("click",colseDialog);
+    $(".dialog_cancel").on("click",colseDialog);
 });
 
-/***/ })
+function colseDialog(){
+    $(this).parents(".do_button_dialog").hide();
+}
 
-/******/ });
+/***/ }),
+/* 3 */,
+/* 4 */,
+/* 5 */,
+/* 6 */,
+/* 7 */,
+/* 8 */,
+/* 9 */,
+/* 10 */,
+/* 11 */
+/***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__(0);
+__webpack_require__(1);
+
+/***/ })
+/******/ ]);

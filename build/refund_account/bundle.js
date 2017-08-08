@@ -63,7 +63,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 19);
+/******/ 	return __webpack_require__(__webpack_require__.s = 20);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -82,7 +82,21 @@ window.addEventListener("load",function(){
 
 /***/ }),
 
-/***/ 19:
+/***/ 2:
+/***/ (function(module, exports) {
+
+window.addEventListener("load",function(){
+    $(".colse_dialog").on("click",colseDialog);
+    $(".dialog_cancel").on("click",colseDialog);
+});
+
+function colseDialog(){
+    $(this).parents(".do_button_dialog").hide();
+}
+
+/***/ }),
+
+/***/ 20:
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(1);
@@ -142,20 +156,6 @@ window.addEventListener("load",function(){
         
     });
 });
-
-/***/ }),
-
-/***/ 2:
-/***/ (function(module, exports) {
-
-window.addEventListener("load",function(){
-    $(".colse_dialog").on("click",colseDialog);
-    $(".dialog_cancel").on("click",colseDialog);
-});
-
-function colseDialog(){
-    $(this).parents(".do_button_dialog").hide();
-}
 
 /***/ })
 
