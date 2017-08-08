@@ -62,7 +62,8 @@
 .circles_wrapper .circle_wrapper .circle_num {
   height: 43px;
   width: 43px;
-  border: 16px solid #fff;
+  box-shadow: 0 0 0 16px #fff;
+  margin: 16px;
   border-radius: 50%;
   background: #d5948e;
   display: -ms-flexbox;
@@ -115,7 +116,7 @@
     width: 34px;
     height: 34px;
     font-size: 15px;
-    border: 6px solid #fff;
+    box-shadow: 0 0 0 6px #fff;
   }
   .circles_wrapper .circle_wrapper .circle_text {
     font-size: 12px;

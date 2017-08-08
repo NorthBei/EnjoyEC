@@ -136,6 +136,7 @@
   letter-spacing: 0.47px;
   line-height: 1.5;
   text-align: justify;
+  max-width: inherit;
 }
 @media all and (max-width: 550px) {
   #main {
