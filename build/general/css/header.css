@@ -25,17 +25,7 @@ header {
   color: #8e5651;
 }
 .nav_btns .dropdown_block_wrapper {
-  display: -ms-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -ms-justify-content: center;
-  -ms-flex-pack: center;
-      justify-content: center;
-  -ms-align-items: center;
-  -ms-flex-align: center;
-      align-items: center;
+  position: relative;
 }
 .nav_btns .fa,
 .nav_btns i {
@@ -55,11 +45,19 @@ header {
 }
 #search_button+.dropdown_block {
   min-width: 205px;
-  top: -3px;
+  left: 50%;
+  transform: translateX(-52%);
 }
 #member_panel {
   min-width: 330px;
-  top: -1px;
+  margin-top: 31px;
+  left: 50%;
+  transform: translateX(-51.5%);
+}
+#search_button+.dropdown_block_active,
+#member_panel.dropdown_block_active,
+#shopping_cart.dropdown_block_active {
+  top: 0;
 }
 .dropdown_block {
   background: #fff;
@@ -75,16 +73,15 @@ header {
   box-sizing: border-box;
   box-shadow: 0 2px 4px 0 #f0e1db;
   position: absolute;
-  top: 0;
+  top: 20px;
   white-space: nowrap;
-  margin-top: 34px;
+  margin-top: 32px;
   height: 40px;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
   filter: alpha(opacity=0);
   opacity: 0;
   visibility: hidden;
-  transform: translateY(20px);
-  transition: visibility 0.15s linear, opacity 0.3s ease, transform 0.3s ease;
+  transition: visibility 0.15s linear, opacity 0.3s ease, top 0.3s ease;
 }
 .dropdown_block >li {
   margin: 0 10px;
@@ -109,10 +106,6 @@ header {
   -ms-flex-item-align: start;
       align-self: flex-start;
 }
-.nav_btns.right .dropdown_block {
-/*因為nav icon高度都不同，所以排列不整齊，導致margin會有些許差距需要特別設定*/
-  margin-top: 36px;
-}
 form.dropdown_block:after {
   content: "";
   left: 10px;
@@ -132,7 +125,6 @@ form.dropdown_block:after {
   padding-bottom: 30px;
   box-sizing: border-box;
   height: inherit;
-  top: -3px;
   z-index: 10;
   display: -ms-flexbox;
   display: flex;
@@ -144,6 +136,9 @@ form.dropdown_block:after {
   -ms-justify-content: flex-start;
   -ms-flex-pack: start;
       justify-content: flex-start;
+  position: absolute;
+  transform: translate(-50%, 0);
+  left: 50%;
 }
 #shopping_cart:before {
   display: none;
@@ -226,18 +221,21 @@ form.dropdown_block:after {
   margin-top: 15px;
 }
 .scroll_header #shopping_cart {
-  top: 9px;
   right: 0;
 }
 .dropdown_will_attach_right #shopping_cart {
   position: fixed;
   right: 0;
   top: 9px;
+  left: initial;
+  transform: none;
 }
 .dropdown_will_attach_right #member_panel {
   position: fixed;
   right: 0;
-  top: 43px;
+  top: 11px;
+  left: initial;
+  transform: none;
 }
 #bars {
   width: 18px;

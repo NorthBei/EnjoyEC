@@ -56,37 +56,45 @@ $(document).ready(function() {
         $(".mobile_menu").toggleClass("mobile_menu_active");
     });
 
-    
-    $(".dropdown_block_wrapper>i.fa").hover(function(){
-        var width = document.body.clientWidth;
-        if(width < tablet_width){
-            return;
-        }
-
-        var dropUp = $(this).parent().find(".dropdown_block");
-        
-        var dropUpWidth = dropUp.width();
-        //console.log(dropUpWidth);
-        var postion = dropUp.offset();
-        //console.log(postion.top,postion.left,width);
-
-
-        if(postion == undefined){
-            
-        }
-        else{
-            if(postion.left+dropUpWidth > width){
-                //console.log($(this).parent());
-                $(this).parent().addClass("dropdown_will_attach_right");
+    $(".dropdown_block_wrapper").hover(
+        function(){
+            var width = document.body.clientWidth;
+            if(width < tablet_width){
+                return;
             }
+
+            var dropUp = $(this).find(".dropdown_block");
+            
+            var dropUpWidth = dropUp.width();
+            //console.log(dropUpWidth);
+            var postion = dropUp.offset();
+            //console.log(postion.top,postion.left,width);
+
+
+            if(postion == undefined){
+                
+            }
+            else{
+                if(postion.left+dropUpWidth > width){
+                    $(this).addClass("dropdown_will_attach_right");
+                }
+            }
+
+            dropUp.addClass("dropdown_block_active");
+        },
+        function(){
+            var width = document.body.clientWidth;
+            if(width < tablet_width){
+                return;
+            }
+            var hasClass = $(this).hasClass("dropdown_will_attach_right");
+            if(hasClass){
+                $(this).removeClass("dropdown_will_attach_right");
+            }
+            var dropUp = $(this).find(".dropdown_block");
+            dropUp.removeClass("dropdown_block_active");
         }
-
-        dropUp.toggleClass("dropdown_block_active");
-    });
-
-    $(".dropdown_block").hover(function(){
-        $(this).toggleClass("dropdown_block_active");
-    });
+    );
 
     $(".dropdown_block_wrapper").click(function(){
         event.stopPropagation();

@@ -396,6 +396,8 @@
 .product_intro_wrapper>section {
   display: -ms-flexbox;
   display: flex;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
 }
 #product_photo_list {
   width: 85px;

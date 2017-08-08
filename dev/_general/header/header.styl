@@ -81,9 +81,10 @@ header
             color: #8E5651
 
     .dropdown_block_wrapper
-        display: inline-flex
-        flex-direction: column
-        flex-axis: center center
+        //display: inline-flex
+        //flex-direction: column
+        //flex-axis: center center
+        position: relative;
     
     .fa,i
         margin: 0 5px
@@ -103,12 +104,24 @@ header
 //search hover panel
 #search_button+.dropdown_block
     min-width: 205px;
-    top: -3px
+    //top: -4px
+    //margin-top: 32px;
+    left: 50%
+    transform: translateX(-52%);
 
 //member hover panel
 #member_panel
     min-width: 330px
-    top: -1px
+    //top: -3px
+    margin-top: 31px;
+    left: 50%
+    transform: translateX(-51.5%);
+
+#search_button+.dropdown_block_active,
+#member_panel.dropdown_block_active,
+#shopping_cart.dropdown_block_active
+    top: 0;
+
 
 .dropdown_block
     background: white
@@ -118,14 +131,14 @@ header
     box-sizing: border-box
     box-shadow: 0 2px 4px 0 #F0E1DB
     position: absolute
-    top: 0
+    top: 20px
     white-space: nowrap
-    margin-top: 34px
+    margin-top: 32px
     height: 40px
     opacity: 0;
     visibility: hidden;
-    transform: translateY(20px)
-    transition: visibility 0.15s linear, opacity 0.3s ease, transform 0.3s ease;
+    //transform: translateY(20px)
+    transition: visibility 0.15s linear, opacity 0.3s ease, top 0.3s ease;
     //show_dropdown_animation(".dropdown_block_wrapper>i:hover + &")
 
     >li
@@ -144,10 +157,6 @@ header
         topDownTriangle( $dropdown_triangle_height, 6px , #D5948E )
         border-top-width:0
         align-self: flex-start;
-
-    .nav_btns.right &
-        /*因為nav icon高度都不同，所以排列不整齊，導致margin會有些許差距需要特別設定*/
-        margin-top: (34px + 2)
 
 form.dropdown_block:after
     content: "";
@@ -169,7 +178,7 @@ form.dropdown_block:after
     box-sizing: border-box;
     //height: initial;//not compat IE11
     height: inherit;
-    top: -3px;
+    //top: -4px;
     z-index: 10;
     display: flex;
     flex-direction: column;
@@ -177,6 +186,9 @@ form.dropdown_block:after
     max-height: 600px;
     overflow-y: auto;
     justify-content: flex-start;
+    position: absolute;
+    transform: translate(-50%,0);
+    left: 50%;
     &:before
         display: none
     &>div
@@ -245,7 +257,6 @@ form.dropdown_block:after
     
 .scroll_header
     #shopping_cart
-        top: 9px;
         right: 0;
 
 .dropdown_will_attach_right
@@ -253,11 +264,16 @@ form.dropdown_block:after
         position: fixed;
         right: 0;
         top: 9px;
+        left: initial;
+        transform: none
     
     #member_panel
         position: fixed;
         right: 0;
-        top: 43px;
+        //top: 43px;
+        top: 11px;
+        left: initial;
+        transform: none
 
 #bars
     width: 18px;
