@@ -111,7 +111,7 @@ header
 
 //member hover panel
 #member_panel
-    min-width: 330px
+    min-width: 398px
     //top: -3px
     margin-top: 31px;
     left: 50%
@@ -122,6 +122,27 @@ header
 #shopping_cart.dropdown_block_active
     top: 0;
 
+.fa-shopping-cart
+    position: relative;
+
+.cart-contents
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    opacity: 0.7;
+    background-color: #c8837c;
+    overflow: hidden;
+    border-radius: 50%;
+    font-size: 13px;
+    line-height: 15px;
+    text-align: center;
+    right: -9px;
+    top: -5px;
+    color: white;
+    font-weight: bold;
+
+    .amount
+        display: none
 
 .dropdown_block
     background: white
@@ -667,17 +688,6 @@ form.dropdown_block:after
     .nav_btns .fa, .nav_btns i
         font-size: 25px
 
-        //.small_font
-    .fa.fa-user-circle-o
-        font-size: 24px;
-        padding-top: 4px;
-        position: relative;
-        top: 5px;
-        left: -3px;
-    
-    .fa.fa-shopping-cart
-        margin-top: 1px;
-
     #search_button:before
         font-size: 23px;
 
@@ -697,8 +707,36 @@ form.dropdown_block:after
         display: flex;
         align-items: center;
     
-    .dropdown_block_wrapper>.fa
-        padding-bottom: 0;
+    .dropdown_block_wrapper
+    
+        &>.fa
+            position: relative;
+            padding-bottom: 0;
+
+        .fa-search
+            top: 5px;
+        
+        .fa-shopping-cart
+            top: 4px
+
+            //.small_font
+        .fa-user-circle-o
+            font-size: 24px;
+            top: 6px;
+            left: -3px;
+    #search_button+.dropdown_block, 
+    #member_panel,
+    #shopping_cart
+        left: 0
+        transform: none
+    #search_button+.dropdown_block_active,
+    #member_panel.dropdown_block_active,
+    #shopping_cart.dropdown_block_active
+        top: 35px;
+        
+
+    .nav_btns .dropdown_block_wrapper
+        position: static
 
     .dropdown_block
         width: 100%;
