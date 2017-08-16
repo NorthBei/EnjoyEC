@@ -289,6 +289,8 @@
   -ms-align-items: center;
   -ms-flex-align: center;
       align-items: center;
+  -ms-flex: 1 0 25%;
+  flex: 1 0 25%;
 }
 .product_wrapper .tag {
   border-radius: 50%;
@@ -442,6 +444,8 @@
     max-width: 172px;
     max-width: 168px;
     width: 168px;
+    -ms-flex: 1 0 50%;
+    flex: 1 0 50%;
   }
   .product_wrapper .tag {
     width: 34px;
@@ -488,6 +492,8 @@
 }
 #product .product_wrapper {
   margin-bottom: 50px;
+  -ms-flex: 1 0 33.3%;
+  flex: 1 0 33.3%;
 }
 @media only screen and (max-width: 550px) {
   .side_bar {

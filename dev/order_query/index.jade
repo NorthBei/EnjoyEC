@@ -47,7 +47,8 @@ block member_section
                     td(data-th='訂單狀態') 訂單處理中
                     td(data-th='鑑賞期限') 
                     td(data-th='')
-                        button.do_button.do_cancel 我要取消
+                        span.td_data
+                            button.do_button.do_cancel 我要取消
                     //-要湊滿6個QQ
                 tr
                     td(data-th='訂單編號') 
@@ -57,7 +58,8 @@ block member_section
                     td(data-th='訂單狀態') 已取貨
                     td(data-th='鑑賞期限') 2017/02/10
                     td(data-th='')
-                        button.do_button.do_return 我要退貨
+                        span.td_data
+                            button.do_button.do_return 我要退貨
                 
                 tr
                     td(data-th='訂單編號') 
@@ -67,7 +69,8 @@ block member_section
                     td(data-th='訂單狀態') 已取貨
                     td(data-th='鑑賞期限') 2017/02/10
                     td(data-th='')
-                        button.do_button.do_return 我要退貨
+                        span.td_data
+                            button.do_button.do_return 我要退貨
                 
                 tr
                     td(data-th='訂單編號') 
@@ -87,7 +90,8 @@ block member_section
                     td(data-th='訂單狀態') 尚未完成付款
                     td(data-th='鑑賞期限') 
                     td(data-th='')
-                        button.do_button.empty_button null
+                        span.td_data
+                            button.do_button.empty_button null
     div.do_button_dialog#cancel_order_dialog
         img(src="../general/img/delete.png").colse_dialog
         h1 取消訂單

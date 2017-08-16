@@ -351,6 +351,7 @@ td:before {
   .rwd-table tbody tr {
     height: initial;
     margin-bottom: 10px;
+    font-weight: 400;
   }
   .rwd-table td {
     display: -ms-flexbox;

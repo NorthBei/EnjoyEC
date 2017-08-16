@@ -54,6 +54,9 @@ header {
   left: 50%;
   transform: translateX(-51.5%);
 }
+#member_panel {
+  min-width: 398px;
+}
 #search_button+.dropdown_block_active,
 #member_panel.dropdown_block_active,
 #shopping_cart.dropdown_block_active {
@@ -785,6 +788,7 @@ form.dropdown_block:after {
   #shopping_cart {
     left: 0;
     transform: none;
+    min-width: 100%;
   }
   #search_button+.dropdown_block_active,
   #member_panel.dropdown_block_active,
