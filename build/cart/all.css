@@ -787,11 +787,11 @@ td[data-th='商品'] img {
     width: 308px;
   }
   .circles_wrapper:before {
-    top: 25px;
+    top: 33px;
     width: 260px;
   }
   .circles_wrapper .circle_wrapper {
-    margin: 0 25px;
+    margin: 0 10px;
   }
   .circles_wrapper .circle_wrapper .circle_num {
     width: 34px;

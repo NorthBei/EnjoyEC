@@ -622,6 +622,10 @@ td:before {
     padding: 31px;
     width: initial;
   }
+  #apply_return_dialog #cancel_order_dialog {
+    padding: 55px 20px 65px;
+    width: initial;
+  }
   #apply_return_dialog #cancel_order_dialog .cancel_reason {
     width: 100%;
     resize: none;
