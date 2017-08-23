@@ -616,28 +616,24 @@ td:before {
   margin: 14px 0;
 }
 @media all and (max-width: 550px) {
-  #apply_return_dialog #cancel_order_dialog,
-  #apply_return_dialog #apply_return_dialog,
-  #apply_return_dialog #cancel_orde_success_dialog {
+  #cancel_order_dialog,
+  #apply_return_dialog,
+  #cancel_orde_success_dialog {
     padding: 31px;
     width: initial;
   }
-  #apply_return_dialog #cancel_order_dialog {
-    padding: 55px 20px 65px;
-    width: initial;
-  }
-  #apply_return_dialog #cancel_order_dialog .cancel_reason {
+  #cancel_order_dialog .cancel_reason {
     width: 100%;
     resize: none;
   }
-  #apply_return_dialog #apply_return_dialog .user_should_know,
-  #apply_return_dialog #apply_return_dialog .radio_button_wrapper {
+  #apply_return_dialog .user_should_know,
+  #apply_return_dialog .radio_button_wrapper {
     font-size: 12px;
   }
-  #apply_return_dialog #apply_return_dialog .dialog_cancel {
+  #apply_return_dialog .dialog_cancel {
     display: none;
   }
-  #apply_return_dialog .do_button {
+  .do_button {
     margin: 0 auto;
     margin-top: 9px;
   }

@@ -138,16 +138,18 @@
         font-size: 15px
         visibility: hidden
         margin: 14px 0
-    //.dialog_button_wrapper
-       //margin-top: 45px
+
+
 +media-query( all, max-width $phone_rwd_width )
-    #cancel_order_dialog,#apply_return_dialog,#cancel_orde_success_dialog
+    #cancel_order_dialog
+    #apply_return_dialog
+    #cancel_orde_success_dialog
         padding: 31px;
         width: initial;
 
     #cancel_order_dialog
-        padding: 55px 20px 65px;
-        width: initial
+        //padding: 55px 20px 65px;
+        //width: initial
         .cancel_reason
             width: 100%
             resize: none;
