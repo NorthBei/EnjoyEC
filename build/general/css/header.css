@@ -813,6 +813,8 @@ form.dropdown_block:after {
   }
   #shopping_cart {
     width: 100%;
+    height: calc(100vh - 67px);
+    max-height: 100vh;
     top: 31px;
   }
   .mobile_menu {
