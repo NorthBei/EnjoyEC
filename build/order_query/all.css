@@ -541,6 +541,7 @@ td:before {
 #cancel_order_dialog .radio_button_wrapper li label {
   margin-left: 10px;
   font-size: 15px;
+  text-align: left;
 }
 #cancel_order_dialog .cancel_reason {
   background: #fff;

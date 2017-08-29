@@ -101,10 +101,10 @@ var data_total_money = "data-total_money";
 
 $(document).ready(function(){
     $(".do_cancel").click(function(){
-        var orderID = $(this).parent().parent().find("td[data-th=訂單編號]").text().trim();
+        var orderID = $(this).closest("tr").find("td[data-th=訂單編號]").text().trim();
         //console.log();
         if($(this).hasClass("credit_card")){
-            var total_money = $(this).parent().parent().find("td[data-th=總計金額]").text();
+            var total_money = $(this).closest("tr").find("td[data-th=總計金額]").text();
             $("#cancel_order_dialog")
                 .attr(data_pay_way,"credit_card")
                 .attr(data_total_money,total_money);
@@ -116,7 +116,7 @@ $(document).ready(function(){
     });
 
     $(".do_return").click(function(){
-        var orderID = $(this).parent().parent().find("td[data-th=訂單編號]").text().trim();
+        var orderID = $(this).closest("tr").find("td[data-th=訂單編號]").text().trim();
         $("#apply_return_dialog").css("display","flex")
             .find(".dialog_button_wrapper input[name='orderID']").val(orderID);
     });
