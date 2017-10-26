@@ -55,7 +55,17 @@ $(document).ready(function() {
         $(this).toggleClass("fa-bars").toggleClass("fa-times");
         $(".mobile_menu").toggleClass("mobile_menu_active");
     });
-
+    //set .more_option height
+    var max_height = 0;
+    $(".more_option_child_wrapper").each(function(index){
+        if($( this ).outerHeight()>max_height){
+            max_height = $( this ).outerHeight();
+        }
+    });
+    
+    $(".more_option").height(max_height);
+    //set .more_option height
+    
     $(".dropdown_block_wrapper").hover(
         function(){
             var width = document.body.clientWidth;

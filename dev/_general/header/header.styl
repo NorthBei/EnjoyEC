@@ -220,7 +220,7 @@ form.dropdown_block:after
         
     .shopping_cart_product
         display: flex
-        align-items: center
+        //align-items: center
         justify-content: space-between;
         padding: 25px 5px;
         width: 100%
@@ -228,6 +228,11 @@ form.dropdown_block:after
         border-bottom: 1px solid #C3C2C3
         box-sizing: border-box
         
+        .remove_product_wrapper
+            height: 13px
+            margin-top: 40px
+
+
         .remove_product
             size : 13px
             margin-right: 30px;
@@ -238,23 +243,36 @@ form.dropdown_block:after
         display: flex
         flex-direction: column
 
+        min-height: inherit;
+        justify-content: space-between;
+
         .shopping_cart_product_name
             white-space: normal
             letter-spacing: 0.31px;
             
-        .number
-            margin-left: 25px
+        
+        .shopping_cart_product_base_info
+            display: flex
+            //.number
+            .shopping_cart_product_price
+                margin-left: 25px
+        
         
         .shopping_cart_product_info
             display: flex
-            margin: 10px 0;
+            flex-direction: column
+            margin: 3px 0;
             color: #8e5651;
             font-size: 12px;
+
+            .product_parameter
+                margin: 3px 0
 
     .product_img
         height:82px
         width: 71px;
         margin-left: 39px
+        align-self: flex-start
     
     
     .shopping_cart_calc
@@ -449,7 +467,7 @@ form.dropdown_block:after
     top: 0;
     left: 90px;
     list-style: none;
-    height: 100%;
+    //height: 100%;
     //border-left: 1px solid #D5948E;
     padding: 0px 20px;
     overflow: hidden;
@@ -486,6 +504,12 @@ form.dropdown_block:after
         transition-delay:0.6s
     >li:nth-child(8)
         transition-delay:0.7s
+    >li:nth-child(9)
+        transition-delay:0.8s
+    >li:nth-child(10)
+        transition-delay:0.9s
+    >li:nth-child(11)
+        transition-delay:1s
 
 .parent_category_list
     .child_will_attach
