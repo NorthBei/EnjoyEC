@@ -388,6 +388,11 @@
     font-size: 13px;
   }
 }
+@media only screen and (max-width: 550px) {
+  .product_wrapper {
+    max-width: 48%;
+  }
+}
 #page_num {
   color: #c3c2c3;
   font-size: 18px;

@@ -388,6 +388,11 @@
     font-size: 13px;
   }
 }
+@media only screen and (max-width: 550px) {
+  .product_wrapper {
+    max-width: 48%;
+  }
+}
 .display_init {
   display: initial !important;
 }
