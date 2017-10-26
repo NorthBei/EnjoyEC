@@ -486,7 +486,9 @@
   margin: 29px 0 20px;
 }
 .product_info_sub_wrapper .price>span {
+/*.ture_price*/
   margin-right: 27px;
+  white-space: nowrap;
 }
 .product_info_sub_wrapper .price .fake_price_strikethrough {
   text-decoration: line-through;
@@ -494,6 +496,7 @@
 }
 .product_info_sub_wrapper .price .fake_price {
   color: #4a4a4a;
+  white-space: nowrap;
 }
 .color_img_list>img {
   width: 39px;
