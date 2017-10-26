@@ -268,6 +268,8 @@
   -ms-flex: 1;
   flex: 1;
   padding: 10px 20px;
+  padding-right: 0;
+  line-height: initial;
   box-sizing: border-box;
 }
 #subscribe_newsletters>form>input[type="eamil"]::-webkit-input-placeholder,
@@ -306,6 +308,7 @@
   border-left: 1px solid #d6645f;
   cursor: pointer;
   border-radius: 0;
+  padding: 0;
 }
 #subscribe_btn:active {
   background: #fff;
