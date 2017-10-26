@@ -373,6 +373,8 @@
     width: 168px;
     height: 177px;
     position: relative;
+/*為了相容iphone螢幕放大功能加上的*/
+    max-width: 100%;
   }
   .product_info {
     font-size: 12px;
