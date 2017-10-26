@@ -729,6 +729,13 @@ input[type="number"]::-webkit-inner-spin-button {
     width: 277px;
     height: 318px;
     margin-left: 7px;
+/*為了相容iphone螢幕放大功能，所以加上下面這幾行，做圖片大小的限制跟置中*/
+    max-width: 75vw;
+    max-height: 86vw;
+    -ms-align-self: center;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
   }
   #product_photo_list {
     width: 51px;
